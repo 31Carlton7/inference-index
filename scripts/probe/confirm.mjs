@@ -7,7 +7,6 @@ import { appendRun, probesDir, readRuns } from "./runs.mjs";
 
 const CONFIRM_REQUEST_TIMEOUT_MS = 45_000;
 
-// Failed scheduled runs that are recent enough to confirm and have no confirm run yet.
 export function unconfirmedFailures(runs, now) {
   const confirmedIds = new Set(runs.filter((run) => run.confirms).map((run) => run.confirms));
   return runs.filter((run) => !run.confirms && run.status !== "ok" && !confirmedIds.has(run.id) && now.getTime() - Date.parse(run.ts) <= CONFIRM_WINDOW_MS);

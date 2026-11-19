@@ -30,11 +30,11 @@ jobs:
       - run: node --version && node --test code/scripts/probe/probe.test.mjs
       - name: Name the region this runner is in
         run: |
-          location=$(curl -s -m 3 -H "Metadata: true" "http://169.254.169.254/metadata/instance/compute/location?api-version=2021-02-01&format=text" || true)
-          if ! echo "$location" | grep -Eq '^[a-z0-9]{3,30}$'; then
-            location=unknown
+          colo=$(curl -s -m 5 https://www.cloudflare.com/cdn-cgi/trace | sed -n 's/^colo=//p' | tr 'A-Z' 'a-z' || true)
+          if ! echo "$colo" | grep -Eq '^[a-z]{3}$'; then
+            colo=unknown
           fi
-          echo "PROBE_REGION=gha-$location" | tee -a "$GITHUB_ENV"
+          echo "PROBE_REGION=gha-$colo" | tee -a "$GITHUB_ENV"
       - name: Probe
         env:
           TOGETHER_API_KEY: ${{ secrets.TOGETHER_API_KEY }}

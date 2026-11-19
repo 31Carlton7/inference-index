@@ -1,6 +1,5 @@
 import { googleAccessToken } from "./google-auth.mjs";
 
-export const METHOD_VERSION = 1;
 export const PROMPT = "Explain in about 100 words how a sailboat can sail against the wind.";
 export const MAX_TOKENS = 128;
 export const TIMEOUT_MS = 30_000;

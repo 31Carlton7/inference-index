@@ -229,7 +229,7 @@ Per provider and model, the last 96 runs as `[ts, status]` pairs, oldest first, 
 
 - `runs`: scheduled runs only. Confirm runs are in the runs files but not here.
 - `interval_minutes`: the probe schedule. The status page draws one slot per interval and leaves a slot empty when no run landed in it, so a missed run shows as a gap. Do not pad `runs`.
-- An incident exists only when a failure was confirmed by a second run from a second region. `run` is the first failed run's id and `confirmed_by` is the id of the confirm run that also failed, which has a different `region` and `"confirms"` set to `run`; both must be in the runs files. While only one region is probing, `incidents` is always empty. `kind` is `error` or `timeout`. `end` is the first successful run after it, or `null` while it has not recovered.
+- An incident exists only when a failure was confirmed by a second run from a second region. `run` is the first failed run's id and `confirmed_by` is the id of the confirm run that also failed, which ran at a different location and has `"confirms"` set to `run`; both must be in the runs files. While only one region is probing, `incidents` is always empty. `kind` is `error` or `timeout`. `end` is the first successful run after it, or `null` while it has not recovered.
 - Later failures while an incident is open belong to it and do not start another.
 - The file is built from the last 7 days of runs files, so an incident that started before that is no longer listed.
 - A row with no incidents has `"incidents": []`.

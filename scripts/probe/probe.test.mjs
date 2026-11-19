@@ -380,6 +380,7 @@ test("a confirm run that succeeds, shares the region, or comes late confirms not
   const failed = run(15, "error");
   assert.deepEqual(findIncidents([failed, run(16, "ok", { region: "fra", confirms: failed.id })]), []);
   assert.deepEqual(findIncidents([failed, { ...run(16, "error", { confirms: failed.id }), id: "same-region" }]), []);
+  assert.deepEqual(findIncidents([failed, run(16, "error", { region: "cf-iad", confirms: failed.id })]), []);
   assert.deepEqual(findIncidents([failed, run(40, "error", { region: "fra", confirms: failed.id })]), []);
   assert.deepEqual(findIncidents([failed, run(16, "error", { region: "fra", confirms: "another-run" })]), []);
 });

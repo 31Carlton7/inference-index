@@ -5,9 +5,9 @@ import { fileURLToPath } from "node:url";
 
 import { probesDir, readRuns } from "./runs.mjs";
 
-export const WINDOW_DAYS = 7;
-export const INTERVAL_MINUTES = 15;
-export const STRIP_RUNS = 96;
+const WINDOW_DAYS = 7;
+const INTERVAL_MINUTES = 15;
+const STRIP_RUNS = 96;
 export const CONFIRM_WINDOW_MS = 10 * 60_000;
 
 const DAY_MS = 24 * 60 * 60_000;
@@ -58,6 +58,10 @@ export function summarize(runs, now) {
   return { generated: timestamp(now), window_days: WINDOW_DAYS, rows };
 }
 
+// Regions are named `<where the job runs>-<airport code>`, such as `gha-iad`
+// and `cf-fra`. Two regions at the same airport are not a second region.
+const site = (region) => region.split("-").at(-1);
+
 // pairRuns: every run of one provider and model, oldest first.
 export function findIncidents(pairRuns) {
   const confirmRuns = pairRuns.filter((run) => run.confirms);
@@ -72,7 +76,7 @@ export function findIncidents(pairRuns) {
     if (open) continue;
     const confirmation = confirmRuns.find((confirmRun) => {
       const delayMs = Date.parse(confirmRun.ts) - Date.parse(run.ts);
-      return confirmRun.confirms === run.id && confirmRun.status !== "ok" && confirmRun.region !== run.region && delayMs >= 0 && delayMs <= CONFIRM_WINDOW_MS;
+      return confirmRun.confirms === run.id && confirmRun.status !== "ok" && site(confirmRun.region) !== site(run.region) && delayMs >= 0 && delayMs <= CONFIRM_WINDOW_MS;
     });
     if (!confirmation) continue;
     open = { start: run.ts, end: null, kind: run.status, run: run.id, confirmed_by: confirmation.id };

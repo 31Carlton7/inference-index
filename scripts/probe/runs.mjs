@@ -4,8 +4,8 @@ import { fileURLToPath } from "node:url";
 
 export const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 
-export function probesDir(env = process.env) {
-  return path.join(env.PROBE_DATA_DIR ?? path.join(repoRoot, "data"), "probes");
+export function probesDir() {
+  return path.join(process.env.PROBE_DATA_DIR ?? path.join(repoRoot, "data"), "probes");
 }
 
 export async function readJson(file) {

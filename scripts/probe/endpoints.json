@@ -17,11 +17,13 @@
   "deepinfra": {
     "url": "https://api.deepinfra.com/v1/openai/chat/completions",
     "key_env": "DEEPINFRA_API_KEY",
+    "include_usage": false,
     "docs": "https://docs.deepinfra.com/chat/streaming"
   },
   "cerebras": {
     "url": "https://api.cerebras.ai/v1/chat/completions",
     "key_env": "CEREBRAS_API_KEY",
+    "include_usage": false,
     "docs": "https://inference-docs.cerebras.ai/api-reference/chat-completions"
   },
   "amazon-bedrock": {
@@ -33,6 +35,7 @@
     "url": "https://aiplatform.googleapis.com/v1/projects/{project_id}/locations/global/endpoints/openapi/chat/completions",
     "key_env": "GOOGLE_VERTEX_AI_API_KEY",
     "auth": "google-service-account",
+    "include_usage": false,
     "docs": "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/maas/call-open-model-apis"
   },
   "azure-ai-foundry": {
