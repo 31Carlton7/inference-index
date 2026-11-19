@@ -107,10 +107,13 @@ export const probeRun = z.object({
   status: runStatus,
   http_status: z.number().int().nullable(),
   ttft_ms: z.number().nullable(),
+  ttft_kind: z.enum(["content", "reasoning"]).nullable().optional(),
   total_ms: z.number().nullable(),
   output_tokens: z.number().int().nullable(),
+  tokens_source: z.enum(["usage", "none"]).optional(),
   tps: z.number().nullable(),
   error: z.string().nullable(),
+  confirms: z.string().min(1).optional(),
 });
 
 export const probeSummaryRow = z.object({

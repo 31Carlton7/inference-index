@@ -1,0 +1,79 @@
+{
+  "together": {
+    "url": "https://api.together.ai/v1/chat/completions",
+    "key_env": "TOGETHER_API_KEY",
+    "docs": "https://docs.together.ai/reference/chat-completions-1"
+  },
+  "fireworks": {
+    "url": "https://api.fireworks.ai/inference/v1/chat/completions",
+    "key_env": "FIREWORKS_API_KEY",
+    "docs": "https://docs.fireworks.ai/api-reference/post-chatcompletions"
+  },
+  "groq": {
+    "url": "https://api.groq.com/openai/v1/chat/completions",
+    "key_env": "GROQ_API_KEY",
+    "docs": "https://console.groq.com/docs/api-reference"
+  },
+  "deepinfra": {
+    "url": "https://api.deepinfra.com/v1/openai/chat/completions",
+    "key_env": "DEEPINFRA_API_KEY",
+    "docs": "https://docs.deepinfra.com/chat/streaming"
+  },
+  "cerebras": {
+    "url": "https://api.cerebras.ai/v1/chat/completions",
+    "key_env": "CEREBRAS_API_KEY",
+    "docs": "https://inference-docs.cerebras.ai/api-reference/chat-completions"
+  },
+  "amazon-bedrock": {
+    "url": "https://bedrock-runtime.{AMAZON_BEDROCK_REGION}.amazonaws.com/openai/v1/chat/completions",
+    "key_env": "AMAZON_BEDROCK_API_KEY",
+    "docs": "https://docs.aws.amazon.com/bedrock/latest/userguide/inference-chat-completions.html"
+  },
+  "google-vertex-ai": {
+    "url": "https://aiplatform.googleapis.com/v1/projects/{project_id}/locations/global/endpoints/openapi/chat/completions",
+    "key_env": "GOOGLE_VERTEX_AI_API_KEY",
+    "auth": "google-service-account",
+    "docs": "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/maas/call-open-model-apis"
+  },
+  "azure-ai-foundry": {
+    "url": "https://{AZURE_AI_FOUNDRY_RESOURCE}.services.ai.azure.com/openai/v1/chat/completions",
+    "key_env": "AZURE_AI_FOUNDRY_API_KEY",
+    "auth": "api-key-header",
+    "docs": "https://learn.microsoft.com/en-us/azure/foundry/openai/api-version-lifecycle"
+  },
+  "novita": {
+    "url": "https://api.novita.ai/openai/v1/chat/completions",
+    "key_env": "NOVITA_API_KEY",
+    "docs": "https://docs.novita.ai/guides/llm-api"
+  },
+  "sambanova": {
+    "url": "https://api.sambanova.ai/v1/chat/completions",
+    "key_env": "SAMBANOVA_API_KEY",
+    "docs": "https://docs.sambanova.ai/docs/en/features/openai-compatibility"
+  },
+  "nebius": {
+    "url": "https://api.tokenfactory.nebius.com/v1/chat/completions",
+    "key_env": "NEBIUS_API_KEY",
+    "docs": "https://docs.tokenfactory.nebius.com/quickstart"
+  },
+  "baseten": {
+    "url": "https://inference.baseten.co/v1/chat/completions",
+    "key_env": "BASETEN_API_KEY",
+    "docs": "https://docs.baseten.co/inference/model-apis/overview"
+  },
+  "hyperbolic": {
+    "url": "https://api.hyperbolic.ai/inference/v1/chat/completions",
+    "key_env": "HYPERBOLIC_API_KEY",
+    "docs": "https://hyperbolic.ai/docs/inference/quickstart"
+  },
+  "cloudflare-workers-ai": {
+    "url": "https://api.cloudflare.com/client/v4/accounts/{CLOUDFLARE_WORKERS_AI_ACCOUNT_ID}/ai/v1/chat/completions",
+    "key_env": "CLOUDFLARE_WORKERS_AI_API_KEY",
+    "docs": "https://developers.cloudflare.com/workers-ai/configuration/open-ai-compatibility/"
+  },
+  "parasail": {
+    "url": "https://api.parasail.io/v1/chat/completions",
+    "key_env": "PARASAIL_API_KEY",
+    "docs": "https://docs.parasail.io/parasail-docs"
+  }
+}

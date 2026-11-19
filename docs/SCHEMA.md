@@ -174,10 +174,19 @@ Probes run every 15 minutes, so their output is committed to the `data` branch t
 One line per request, written before anything is computed from it.
 
 ```json
-{ "id": "2026-11-18T12:00:03Z-example-llama-3.3-70b-iad", "ts": "2026-11-18T12:00:03Z", "provider": "example", "model": "llama-3.3-70b", "region": "iad", "status": "ok", "http_status": 200, "ttft_ms": 212, "total_ms": 1840, "output_tokens": 128, "tps": 78.6, "error": null }
+{ "id": "2026-11-18T12:00:03Z-example-llama-3.3-70b-iad", "ts": "2026-11-18T12:00:03Z", "provider": "example", "model": "llama-3.3-70b", "region": "iad", "status": "ok", "http_status": 200, "ttft_ms": 212, "ttft_kind": "content", "total_ms": 1840, "output_tokens": 128, "tokens_source": "usage", "tps": 78.6, "error": null }
 ```
 
-`status` is `ok`, `error` or `timeout`.
+- `id`: `<ts>-<provider>-<model>-<region>`. `ts` is when the request was sent, to the second.
+- `region`: where the request was sent from, as the job that sent it names it.
+- `status`: `ok`, `error` or `timeout`. The definitions are in [method-probes.md](method-probes.md).
+- `http_status`: `null` when no response headers arrived.
+- `ttft_ms`: send to the first chunk with generated text. `ttft_kind` says what that text was: `content` (the answer) or `reasoning`. Both are `null` when no text arrived.
+- `total_ms`: send to the end of the stream. `null` on a timeout.
+- `output_tokens`: the completion token count the provider reported in the stream, and `tokens_source` is then `usage`. When the provider reported none, `output_tokens` is `null` and `tokens_source` is `none`. Tokens are never estimated.
+- `tps`: `output_tokens / ((total_ms - ttft_ms) / 1000)`. `null` unless the run is `ok` and has a token count.
+- `error`: a short reason with credentials stripped, or `null`.
+- `confirms` (confirm runs only): the `id` of the failed run this request was sent to check, from a second region. A line without it is a scheduled run.
 
 ### data/probes/summary.json
 
@@ -190,6 +199,12 @@ One line per request, written before anything is computed from it.
   ]
 }
 ```
+
+Recomputed from the runs files on every run. One row per provider and model with at least one scheduled run in the last `window_days` days. Confirm runs are not counted.
+
+- `runs`, `ok`: scheduled runs in the window, and how many were `ok`. `uptime` is `ok / runs`. Runs that never happened are not in either number.
+- `ttft_ms_p50`, `ttft_ms_p95`, `tps_p50`: nearest-rank percentiles over the `ok` runs. `null` when no `ok` run has the value.
+- `first_run`, `last_run`, `last_status`: the oldest and newest scheduled run in the window.
 
 ### data/probes/status.json
 
@@ -212,8 +227,11 @@ Per provider and model, the last 96 runs as `[ts, status]` pairs, oldest first, 
 }
 ```
 
+- `runs`: scheduled runs only. Confirm runs are in the runs files but not here.
 - `interval_minutes`: the probe schedule. The status page draws one slot per interval and leaves a slot empty when no run landed in it, so a missed run shows as a gap. Do not pad `runs`.
-- An incident exists only when a failure was confirmed by a second run from a second region. `run` is the first failed run's id and `confirmed_by` is the confirming run's id; both must be in the runs files. `kind` is `error` or `timeout`. `end` is the first successful run after it, or `null` while it has not recovered.
+- An incident exists only when a failure was confirmed by a second run from a second region. `run` is the first failed run's id and `confirmed_by` is the id of the confirm run that also failed, which has a different `region` and `"confirms"` set to `run`; both must be in the runs files. While only one region is probing, `incidents` is always empty. `kind` is `error` or `timeout`. `end` is the first successful run after it, or `null` while it has not recovered.
+- Later failures while an incident is open belong to it and do not start another.
+- The file is built from the last 7 days of runs files, so an incident that started before that is no longer listed.
 - A row with no incidents has `"incidents": []`.
 
 ### data/fidelity/<date>.json and data/fidelity/latest.json

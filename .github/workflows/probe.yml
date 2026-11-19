@@ -1,0 +1,78 @@
+name: probe
+
+on:
+  schedule:
+    - cron: "4,19,34,49 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: probe
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      PROBE_DATA_DIR: ${{ github.workspace }}/data-branch/data
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: code
+      - uses: actions/checkout@v4
+        with:
+          ref: data
+          path: data-branch
+      - run: node --version && node --test code/scripts/probe/probe.test.mjs
+      - name: Name the region this runner is in
+        run: |
+          location=$(curl -s -m 3 -H "Metadata: true" "http://169.254.169.254/metadata/instance/compute/location?api-version=2021-02-01&format=text" || true)
+          if ! echo "$location" | grep -Eq '^[a-z0-9]{3,30}$'; then
+            location=unknown
+          fi
+          echo "PROBE_REGION=gha-$location" | tee -a "$GITHUB_ENV"
+      - name: Probe
+        env:
+          TOGETHER_API_KEY: ${{ secrets.TOGETHER_API_KEY }}
+          FIREWORKS_API_KEY: ${{ secrets.FIREWORKS_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          DEEPINFRA_API_KEY: ${{ secrets.DEEPINFRA_API_KEY }}
+          CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
+          AMAZON_BEDROCK_API_KEY: ${{ secrets.AMAZON_BEDROCK_API_KEY }}
+          AMAZON_BEDROCK_REGION: ${{ secrets.AMAZON_BEDROCK_REGION }}
+          GOOGLE_VERTEX_AI_API_KEY: ${{ secrets.GOOGLE_VERTEX_AI_API_KEY }}
+          AZURE_AI_FOUNDRY_API_KEY: ${{ secrets.AZURE_AI_FOUNDRY_API_KEY }}
+          AZURE_AI_FOUNDRY_RESOURCE: ${{ secrets.AZURE_AI_FOUNDRY_RESOURCE }}
+          NOVITA_API_KEY: ${{ secrets.NOVITA_API_KEY }}
+          SAMBANOVA_API_KEY: ${{ secrets.SAMBANOVA_API_KEY }}
+          NEBIUS_API_KEY: ${{ secrets.NEBIUS_API_KEY }}
+          BASETEN_API_KEY: ${{ secrets.BASETEN_API_KEY }}
+          HYPERBOLIC_API_KEY: ${{ secrets.HYPERBOLIC_API_KEY }}
+          CLOUDFLARE_WORKERS_AI_API_KEY: ${{ secrets.CLOUDFLARE_WORKERS_AI_API_KEY }}
+          CLOUDFLARE_WORKERS_AI_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_WORKERS_AI_ACCOUNT_ID }}
+          PARASAIL_API_KEY: ${{ secrets.PARASAIL_API_KEY }}
+        run: node code/scripts/probe/probe.mjs
+      - name: Ask the second region about failures
+        env:
+          PROBE_CONFIRM_URL: ${{ secrets.PROBE_CONFIRM_URL }}
+          PROBE_CONFIRM_TOKEN: ${{ secrets.PROBE_CONFIRM_TOKEN }}
+        run: node code/scripts/probe/confirm.mjs
+      - name: Roll up and commit new runs
+        working-directory: data-branch
+        run: |
+          git add data/probes/runs 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "no new rows"
+            exit 0
+          fi
+          node ../code/scripts/probe/rollup.mjs
+          git add data/probes
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Probes $(date -u +%FT%H:%MZ)"
+          git pull --rebase origin data
+          git push origin HEAD:data
