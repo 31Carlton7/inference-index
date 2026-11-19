@@ -1,0 +1,185 @@
+Skip to main content
+Trust Center
+Overview
+Principles & Approach
+Transparency Report
+Tools & Practices
+Responsible AI in Azure
+Data for AI Training
+Secure Future Initiative
+SFI progress report
+Patterns and practices overview
+Zero Trust
+Privacy Overview
+Data management overview
+Data access
+Data location
+EU Data Boundary
+GDPR
+Compliance Overview
+Compliance Offerings
+Regulations
+DORA compliance
+EU AI Act
+European Digital Resilience
+NIS2 compliance
+Regional and country compliance
+Accessibility
+Products and services
+Compliance Offerings
+Compliance Score
+Audit reports
+Data protection resources
+Microsoft Security
+Azure
+Dynamics 365
+Microsoft 365
+Microsoft Teams
+Windows 365
+Microsoft AI
+Azure Space
+Mixed reality
+Microsoft HoloLens
+Microsoft Viva
+Quantum computing
+Sustainability
+Education
+Automotive
+Financial services
+Government
+Healthcare
+Manufacturing
+Retail
+Find a partner
+Become a partner
+Partner Network
+Microsoft Marketplace
+Software companies
+Blog
+Microsoft Advertising
+Developer Center
+Documentation
+Events
+Licensing
+Microsoft Learn
+Microsoft Research
+View Sitemap
+Microsoft Data Access
+Access your data at any time with Microsoft business cloud services, which include strong security measures against unauthorized access and inappropriate use.
+Overview
+Overview
+How Microsoft handles your data in the cloud
+Government requests for customer data
+Additional resources
+OVERVIEW
+Access your data on your terms
+Who can access your data?
+Microsoft business cloud services take strong measures to help protect your data from inappropriate access or use by unauthorized persons. This includes restricting access by Microsoft personnel and subcontractors, and carefully defining requirements for responding to government requests for customer data. However, you can access your data at any time and for any reason.
+Access your data anytime
+Retrieve your data without notification if you’re an Azure, Dynamics 365, Intune, or Microsoft 365 subscriber, and keep your data if you end your subscription.
+Limited access to customer data
+Microsoft helps protect customer data from inappropriate access or use by unauthorized persons—either externally or internally—and prevents customers from accessing each other’s data.
+How does Microsoft handle your data in the cloud?
+Explore common security, privacy, and compliance questions about how Microsoft handles data you share and store using Microsoft cloud services, including third-party usage.
+Read the white paper
+Operational processes governing customer data
+The operational processes that govern access to customer data in Microsoft business cloud services are protected by strong controls and authentication, which fall into two categories: physical and logical.
+Access to physical datacenter facilities is guarded by outer and inner perimeters with increasing security at each level, including perimeter fencing, security officers, locked server racks, multifactor access control, integrated alarm systems, and around-the-clock video surveillance by the operations center.
+Virtual access to customer data is restricted based on business need by role-based access control, multifactor authentication, minimizing standing access to production data, and other controls. Access to customer data is also strictly logged, and both Microsoft and third parties perform regular audits (as well as sample audits) to attest that any access is appropriate.
+Encryption to safeguard customer data
+Microsoft products and services use industry-standard secure transport protocols when data moves over a network—between user devices and Microsoft datacenters or within the datacenters themselves. To help protect data at rest, Microsoft offers a range of built-in encryption capabilities.
+Most Microsoft business cloud services are multitenant services, meaning that your data, deployments, and virtual machines may be stored on the same physical hardware as that of other customers. Microsoft uses logical isolation to segregate storage and processing for different customers through specialized technology engineered to help ensure that your data is not combined with anyone else’s.
+Business cloud services with audited certifications such as ISO 27001 are regularly verified by Microsoft and accredited audit firms, which perform sample audits to attest that access is only for legitimate business purposes.
+Limiting access to your data by Microsoft personnel
+Microsoft operations and support personnel are available 24 hours a day, 365 days a year around the globe. A majority of our service operations are automated so that only a small set requires human interaction.
+Microsoft engineers don’t have default access to cloud customer data. Instead, they are granted access, under management oversight, only when necessary.
+Microsoft personnel will use customer data only for purposes compatible with providing you the contracted services, such as troubleshooting and improving features like protection from malware.
+Limited subprocessor access
+Microsoft business cloud services process various categories of data, including customer and personal data. Subprocessors are subcontractors hired by Microsoft to perform work that may require access to such data.
+Subprocessors may access data only to deliver the functions in support of online services that Microsoft has hired them to provide and are prohibited from using data for any other purpose. They are required to maintain the confidentiality of this data and are contractually obligated to meet strict privacy requirements. Subprocessors are also required to meet EU General Data Protection Regulation (GDPR) requirements, including those related to implementing appropriate technical and organizational measures to protect personal data.
+Microsoft requires subprocessors to join the Microsoft Supplier Security and Privacy Assurance Program. This program is designed to standardize and strengthen data handling practices, and to ensure supplier business processes and systems are consistent with those of Microsoft.
+Subprocessors who have access to customer and personal data are subject to heightened requirements.
+Third-party subprocessors can perform work in any of the following capacities:
+Powering cloud technologies integrated with Microsoft Online Services and Microsoft Cloud functions: Subprocessors may process, store, or otherwise access customer and personal data (consisting of pseudonymized personal identifiers) while helping to provide this service.
+Providing ancillary services: Subprocessors help support, operate, and maintain Microsoft Online Services. In such cases, the subprocessor(s) may process, store, or access customer and personal data (consisting of pseudonymized personal identifiers) while providing ancillary services.
+Providing contract staff: Contract staff work in close coordination with Microsoft employees to operate, deliver, and maintain Microsoft Online Services. While doing so, contract staff may process customer or personal data (consisting of pseudonymized personal identifiers) on behalf of Microsoft. In all such cases, the data resides only on Microsoft systems and is subject to Microsoft policies and supervision. The processing activities of these contract staff within Microsoft Online Services are subject to independent audits Microsoft conducts annually.
+List of subprocessors
+Microsoft defines customer data as all data provided by the customer to Microsoft through their use of our business cloud services. Some customer data is personal data as defined under GDPR. Microsoft also processes some personal data generated or collected through the operation of online services not contained within customer data.
+The Microsoft Online Services Subprocessor List identifies subprocessors authorized to subprocess customer or personal data in Microsoft Online Services. This list is applicable for all Microsoft Online Services governed by the Microsoft Data Protection Addendum.
+Microsoft publishes the names of any new subprocessors for its online services at least six months in advance of the subprocessor’s authorization to perform services that may involve access to customer data or personal data.1
+To receive notifications of updates to this Subprocessor list, please follow the instructions that describe My library functionality.
+Government requests for customer data
+Microsoft ensures there are no “back doors” and no direct or unfettered government access to your data. We impose special requirements for government and law enforcement requests for customer data.
+Learn more Read the data law blog
+Additional data access resources
+Microsoft Online Services Privacy Statement
+Learn about the personal data Microsoft processes, how we process it, and for what purposes.
+Learn more
+Microsoft licensing terms and documentation
+Access licensing terms, conditions, and supplemental information relevant to the use of products and services licensed through Microsoft Volume Licensing programs.
+Learn more
+Data collection information
+Learn about the kinds of data we collect.
+Learn more
+[1]
+Note: For information about how subprocessors are used when Microsoft provides commercial support or other professional services, including in support of online services, please see the Microsoft Professional Services and suppliers section of the Trust Center.
+Follow Microsoft
+Surface Laptop Ultra
+Surface Pro
+Surface Laptop
+Surface RTX Spark Dev Box
+Explore Copilot
+Explore Microsoft products
+Windows 11 apps
+Account profile
+Download Center
+Microsoft Store support
+Returns
+Order tracking
+Certified Refurbished
+Why buy from Microsoft Store
+Flexible Payments
+Microsoft in education
+Devices for education
+Microsoft Teams for Education
+Microsoft 365 Education
+How to buy for your school
+Educator training and development
+Deals for students and parents
+AI for education
+Microsoft AI
+Microsoft Security
+Dynamics 365
+Microsoft 365
+Microsoft Power Platform
+Microsoft Teams
+Microsoft Copilot
+Small Business
+Azure
+Microsoft Developer
+Microsoft Learn
+Support for AI marketplace apps
+Microsoft Tech Community
+Microsoft Marketplace
+Software companies
+Visual Studio
+Careers
+About Microsoft
+Company news
+Privacy at Microsoft
+Investors
+Diversity and inclusion
+Accessibility
+Sustainability
+English (United States)
+Your Privacy Choices
+Consumer Health Privacy
+Sitemap
+Contact Microsoft
+Privacy
+Manage cookies
+Terms of use
+Trademarks
+Safety & eco
+Recycling
+About our ads

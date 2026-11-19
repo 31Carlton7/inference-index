@@ -1,0 +1,233 @@
+Documentation Index
+Fetch the complete documentation index at: /llms.txt
+Use this file to discover all available pages before exploring further.
+Skip to main content
+Assistant
+Responses are generated using AI and may contain mistakes.
+Nebius AI Cloud home page
+Search...
+⌘KAsk Assistant⌘I
+Contact us
+Open web console
+Open web console
+Search...
+Navigation
+Data Processing Agreement
+Nebius Token Factory Sub-processors
+Documentation
+Infrastructure
+AI services
+Observability
+Management
+Security and cryptography
+Developer tools
+Changelog
+Legal
+Nebius legal documents
+Overview
+Services Agreement
+Terms of Use
+Privacy Policy
+Data Processing Agreement
+Data Processing Agreement for Nebius B.V.
+Data Processing Agreement for Nebius Inc.
+Data Processing Agreement for Nebius Israel Ltd.
+AI Cloud sub-processors
+Token Factory sub-processors
+Acceptable Use Policy
+Service Terms
+Token Factory Terms
+Terms for specific services
+Terms for AI features
+Service Level Agreement
+Service levels for specific services
+Rules for External Security Scans
+Technical Support Regulation
+HIPAA Implementation Guideline
+Cookies
+Digital rights
+On this page
+Back to top
+Infrastructure and inference
+Service operations, maintenance and support
+Data Processing Agreement
+Nebius Token Factory Sub-processors
+Copy MCP ServerCopy MCP Server
+Copy MCP ServerCopy MCP Server
+This page identifies the sub-processors engaged by Nebius to process Customer Personal Data on behalf of Customers in connection with Nebius Token Factory under the applicable Data Processing Agreement.
+The sub-processors relevant to a Customer depend on the Token Factory functionality used, the model or endpoint selected, the applicable processing location and, where relevant, whether the Customer requests support.
+For purposes of this list, a Nebius Group entity is included only where it is engaged by the Nebius contracting entity to process Customer Personal Data on its behalf. The role of the Nebius contracting entity itself as a processor or sub-processor depends on the Customer’s role under the applicable DPA.
+Service providers that process personal data for Nebius’ own purposes as a controller, rather than Customer Personal Data on behalf of Customers, are not included in this list.
+Infrastructure and inference
+The sub-processors applicable to a Customer depend on the model, endpoint type and processing location used. For public model endpoints, the current processing location is displayed for each model in the Token Factory interface. For dedicated endpoints, processing takes place in the region selected by the Customer.
+Sub-processor
+Entity location
+Processing activity
+Processing location (country or region)
+International transfer mechanism
+Nebius Inc.
+Nebius Group
+United States
+Cloud infrastructure supporting Token Factory model processing
+United States
+SCC
+Nebius B.V.
+Nebius Group
+Netherlands
+Cloud infrastructure supporting Token Factory model processing
+France, Iceland, Finland, United Kingdom
+EEA - no Chapter V transfer based on the listed processing location
+Nebius Israel Ltd.
+Nebius Group
+Israel
+Cloud infrastructure supporting Token Factory model processing
+Israel
+EU adequacy decision
+RunPod Inc.
+United States
+Cloud infrastructure supporting Token Factory model processing
+Iceland
+SCC
+BoostRun, LLC
+United States
+Cloud infrastructure supporting Token Factory model processing
+United States
+SCC
+Shadeform, Inc.
+United States
+Cloud infrastructure supporting Token Factory model processing
+United States
+SCC
+Axe Compute Inc.
+United States
+Cloud infrastructure supporting Token Factory model processing
+Canada
+SCC
+Service operations, maintenance and support
+The sub-processors listed below support the development, operation, maintenance, security and technical support of Token Factory, as applicable. The circumstances in which Customer Personal Data is processed depend on the function performed by each sub-processor, as described below.
+Sub-processor
+Entity location
+Processing activity
+Processing location (country or region)
+When processing occurs
+International transfer mechanism
+Nebius Inc.
+Nebius Group
+United States
+Service engineering, operations, maintenance and technical support
+Unites States
+For operations, where necessary to operate, maintain or troubleshoot the Services; for support, where necessary to respond to a Customer-initiated support request
+SCC
+Nebius B.V.
+Nebius Group
+Netherlands
+Service engineering, operations, maintenance and technical support
+Netherlands
+Same
+EEA - no Chapter V transfer based on the listed processing location
+Nebius Israel Ltd.
+Nebius Group
+Israel
+Service engineering, operations, maintenance and technical support
+Israel
+Same
+EU adequacy decision
+Nebius DC Oy
+Nebius Group
+Finland
+Service engineering, operations, maintenance and technical support
+Finland
+Same
+EEA - no Chapter V transfer based on the listed processing location
+Nebius UK Ltd.
+Nebius Group
+United Kingdom
+Service engineering, operations, maintenance and technical support
+United Kingdom
+Same
+EU adequacy decision
+Nebius CZ s.r.o.
+Nebius Group
+Czech Republic
+Service engineering, operations, maintenance and technical support
+Czech Republic
+Same
+EEA - no Chapter V transfer based on the listed processing location
+Nebius GmbH
+Nebius Group
+Germany
+Service engineering, operations, maintenance and technical support
+Germany
+Same
+EEA - no Chapter V transfer based on the listed processing location
+Nebius AI Spain S.L.U.
+Nebius Group
+Spain
+Service engineering, operations, maintenance and technical support
+Spain
+Same
+EEA - no Chapter V transfer based on the listed processing location
+Nebius France SAS
+Nebius Group
+France
+Service engineering, operations, maintenance and technical support
+France
+Same
+EEA - no Chapter V transfer based on the listed processing location
+Tech Hub IL Ltd.
+Nebius Group
+Israel
+Service engineering, operations, maintenance and technical support
+Israel
+Same
+EU adequacy decision
+EdTech Plus Tech d.o.o. Beograd
+Nebius Group
+Serbia
+Service engineering, operations, maintenance and technical support
+Serbia
+Same
+SCC
+Microsoft Corporation (Sentinel)
+United States
+Customer communications;
+Security Information and Event Management
+EU
+When relevant security logs or telemetry are ingested and processed for security monitoring and incident response
+SCC
+Functional Software, Inc. (Sentry)
+United States
+Application Performance;
+Monitoring & Error / Bug Tracking
+US
+When relevant application telemetry, error events or diagnostic data are sent to Sentry
+SCC
+Hubspot, Inc.
+United States
+Delivery of customer communications, such as in-product messages and emails
+EU
+When Customer Personal Data is entered into or otherwise processed through HubSpot in connection with customer communications or relationship management activities
+SCC
+Atlassian Pty Ltd. (Jira)
+Australia
+Customer support and ticket handling
+EU
+When a Customer submits a support request or Customer Personal Data is included in a support ticket
+SCC
+Slack Technologies, LLC
+United States
+Customer communications;
+Customer support
+EU
+When Slack is used for communications with a Customer and Customer Personal Data is shared or otherwise processed in connection with that interaction
+SCC
+Web address: https://docs.nebius.com/legal/sub-processors_tofa
+Publication date: September 23, 2026
+Effective date: September 23, 2026
+Previous version of the document: https://docs.nebius.com/legal/archive/sub-processors_tofa-20260915
+Previous version of the document: https://docs.nebius.com/legal/archive/sub-processors_tofa-20260828
+Was this page helpful?
+YesNo
+AI Cloud sub-processors
+Acceptable Use Policy
+youtubefacebooklinkedinx

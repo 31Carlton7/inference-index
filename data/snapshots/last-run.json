@@ -1,0 +1,320 @@
+{
+  "date": "2026-11-18",
+  "pages": [
+    {
+      "provider": "together",
+      "page": "privacy",
+      "url": "https://www.together.ai/privacy",
+      "result": "baseline"
+    },
+    {
+      "provider": "together",
+      "page": "terms",
+      "url": "https://www.together.ai/terms-of-service",
+      "result": "baseline"
+    },
+    {
+      "provider": "together",
+      "page": "trust",
+      "url": "https://trust.together.ai/",
+      "result": "unreadable",
+      "reason": "only 1 characters of text"
+    },
+    {
+      "provider": "fireworks",
+      "page": "privacy",
+      "url": "https://fireworks.ai/privacy-policy",
+      "result": "baseline"
+    },
+    {
+      "provider": "fireworks",
+      "page": "terms",
+      "url": "https://fireworks.ai/terms-of-service",
+      "result": "baseline"
+    },
+    {
+      "provider": "fireworks",
+      "page": "trust",
+      "url": "https://trust.fireworks.ai/",
+      "result": "unreadable",
+      "reason": "only 1 characters of text"
+    },
+    {
+      "provider": "groq",
+      "page": "privacy",
+      "url": "https://groq.com/privacy-policy",
+      "result": "baseline"
+    },
+    {
+      "provider": "groq",
+      "page": "terms",
+      "url": "https://console.groq.com/docs/legal/services-agreement",
+      "result": "baseline"
+    },
+    {
+      "provider": "groq",
+      "page": "trust",
+      "url": "https://trust.groq.com/",
+      "result": "unreadable",
+      "reason": "only 1 characters of text"
+    },
+    {
+      "provider": "deepinfra",
+      "page": "privacy",
+      "url": "https://deepinfra.com/privacy",
+      "result": "baseline"
+    },
+    {
+      "provider": "deepinfra",
+      "page": "terms",
+      "url": "https://deepinfra.com/terms",
+      "result": "baseline"
+    },
+    {
+      "provider": "deepinfra",
+      "page": "trust",
+      "url": "https://trust.deepinfra.com/",
+      "result": "baseline"
+    },
+    {
+      "provider": "deepinfra",
+      "page": "subprocessors",
+      "url": "https://trust.deepinfra.com/subprocessors",
+      "result": "baseline"
+    },
+    {
+      "provider": "cerebras",
+      "page": "privacy",
+      "url": "https://www.cerebras.ai/privacy-policy",
+      "result": "baseline"
+    },
+    {
+      "provider": "cerebras",
+      "page": "terms",
+      "url": "https://www.cerebras.ai/terms-of-service",
+      "result": "baseline"
+    },
+    {
+      "provider": "cerebras",
+      "page": "trust",
+      "url": "https://trust.cerebras.ai/",
+      "result": "unreadable",
+      "reason": "only 1 characters of text"
+    },
+    {
+      "provider": "amazon-bedrock",
+      "page": "privacy",
+      "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html",
+      "result": "baseline"
+    },
+    {
+      "provider": "amazon-bedrock",
+      "page": "terms",
+      "url": "https://aws.amazon.com/service-terms/",
+      "result": "baseline"
+    },
+    {
+      "provider": "amazon-bedrock",
+      "page": "trust",
+      "url": "https://aws.amazon.com/compliance/services-in-scope/",
+      "result": "baseline"
+    },
+    {
+      "provider": "amazon-bedrock",
+      "page": "subprocessors",
+      "url": "https://aws.amazon.com/compliance/sub-processors/",
+      "result": "baseline"
+    },
+    {
+      "provider": "google-vertex-ai",
+      "page": "privacy",
+      "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/zero-data-retention",
+      "result": "baseline"
+    },
+    {
+      "provider": "google-vertex-ai",
+      "page": "terms",
+      "url": "https://cloud.google.com/terms/service-terms",
+      "result": "baseline"
+    },
+    {
+      "provider": "google-vertex-ai",
+      "page": "trust",
+      "url": "https://cloud.google.com/security/compliance/services-in-scope",
+      "result": "baseline"
+    },
+    {
+      "provider": "google-vertex-ai",
+      "page": "subprocessors",
+      "url": "https://cloud.google.com/terms/subprocessors",
+      "result": "baseline"
+    },
+    {
+      "provider": "azure-ai-foundry",
+      "page": "privacy",
+      "url": "https://learn.microsoft.com/en-us/azure/foundry-classic/how-to/concept-data-privacy",
+      "result": "baseline"
+    },
+    {
+      "provider": "azure-ai-foundry",
+      "page": "terms",
+      "url": "https://www.microsoft.com/licensing/terms/productoffering/MicrosoftAzure/MCA",
+      "result": "baseline"
+    },
+    {
+      "provider": "azure-ai-foundry",
+      "page": "trust",
+      "url": "https://servicetrust.microsoft.com/",
+      "result": "unreadable",
+      "reason": "only 1 characters of text"
+    },
+    {
+      "provider": "azure-ai-foundry",
+      "page": "subprocessors",
+      "url": "https://www.microsoft.com/en-us/trust-center/privacy/data-access",
+      "result": "baseline"
+    },
+    {
+      "provider": "novita",
+      "page": "privacy",
+      "url": "https://novita.ai/legal/privacy-policy",
+      "result": "baseline"
+    },
+    {
+      "provider": "novita",
+      "page": "terms",
+      "url": "https://novita.ai/legal/terms-of-service",
+      "result": "baseline"
+    },
+    {
+      "provider": "novita",
+      "page": "trust",
+      "url": "https://trust.novita.ai/",
+      "result": "unreadable",
+      "reason": "only 1 characters of text"
+    },
+    {
+      "provider": "sambanova",
+      "page": "privacy",
+      "url": "https://sambanova.ai/privacy-policy",
+      "result": "baseline"
+    },
+    {
+      "provider": "sambanova",
+      "page": "terms",
+      "url": "https://sambanova.ai/cloud-end-user-license-agreement",
+      "result": "baseline"
+    },
+    {
+      "provider": "sambanova",
+      "page": "trust",
+      "url": "https://trust.sambanova.ai/",
+      "result": "unreadable",
+      "reason": "only 1 characters of text"
+    },
+    {
+      "provider": "nebius",
+      "page": "privacy",
+      "url": "https://docs.nebius.com/legal/privacy",
+      "result": "baseline"
+    },
+    {
+      "provider": "nebius",
+      "page": "terms",
+      "url": "https://docs.tokenfactory.nebius.com/legal/terms-of-service",
+      "result": "baseline"
+    },
+    {
+      "provider": "nebius",
+      "page": "trust",
+      "url": "https://nebius.com/trust-center",
+      "result": "baseline"
+    },
+    {
+      "provider": "nebius",
+      "page": "subprocessors",
+      "url": "https://docs.nebius.com/legal/sub-processors_tofa",
+      "result": "baseline"
+    },
+    {
+      "provider": "baseten",
+      "page": "privacy",
+      "url": "https://www.baseten.co/privacy-policy/",
+      "result": "baseline"
+    },
+    {
+      "provider": "baseten",
+      "page": "terms",
+      "url": "https://www.baseten.co/terms-and-conditions/",
+      "result": "baseline"
+    },
+    {
+      "provider": "baseten",
+      "page": "trust",
+      "url": "https://trust.baseten.co/",
+      "result": "unreadable",
+      "reason": "only 1 characters of text"
+    },
+    {
+      "provider": "hyperbolic",
+      "page": "privacy",
+      "url": "https://www.hyperbolic.ai/privacy",
+      "result": "baseline"
+    },
+    {
+      "provider": "hyperbolic",
+      "page": "terms",
+      "url": "https://www.hyperbolic.ai/terms",
+      "result": "baseline"
+    },
+    {
+      "provider": "hyperbolic",
+      "page": "trust",
+      "url": "https://trust.hyperbolic.ai/",
+      "result": "unreadable",
+      "reason": "only 1 characters of text"
+    },
+    {
+      "provider": "cloudflare-workers-ai",
+      "page": "privacy",
+      "url": "https://developers.cloudflare.com/workers-ai/platform/data-usage/",
+      "result": "baseline"
+    },
+    {
+      "provider": "cloudflare-workers-ai",
+      "page": "terms",
+      "url": "https://www.cloudflare.com/service-specific-terms-developer-platform/",
+      "result": "baseline"
+    },
+    {
+      "provider": "cloudflare-workers-ai",
+      "page": "trust",
+      "url": "https://www.cloudflare.com/trust-hub/compliance-resources/",
+      "result": "baseline"
+    },
+    {
+      "provider": "cloudflare-workers-ai",
+      "page": "subprocessors",
+      "url": "https://www.cloudflare.com/gdpr/subprocessors/",
+      "result": "baseline"
+    },
+    {
+      "provider": "parasail",
+      "page": "privacy",
+      "url": "https://www.parasail.io/legal/privacy-policy",
+      "result": "baseline"
+    },
+    {
+      "provider": "parasail",
+      "page": "terms",
+      "url": "https://www.parasail.io/legal/terms-of-service",
+      "result": "baseline"
+    },
+    {
+      "provider": "parasail",
+      "page": "trust",
+      "url": "https://www.parasail.io/trust",
+      "result": "baseline"
+    }
+  ]
+}

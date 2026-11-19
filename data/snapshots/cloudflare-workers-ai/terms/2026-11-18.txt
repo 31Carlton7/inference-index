@@ -1,0 +1,277 @@
+Log in
+Sign up
+Languages
+English
+English (United Kingdom)
+Deutsch
+Español (Latinoamérica)
+Español (España)
+Français
+Italiano
+日本語
+한국어
+Polski
+Português (Brasil)
+Русский
+繁體中文
+简体中文
+Platform
+Connectivity cloudCloudflare’s connectivity cloud delivers 60+ networking, security, and performance services.
+EnterpriseFor large and medium organizations
+Small businessFor small organizations
+PartnerBecome a Cloudflare partner
+use cases
+Modernize applications
+Accelerate performance
+Ensure app availability
+Optimize web experience
+Modernize security
+VPN replacement
+Phishing protection
+Secure web apps and APIs
+Modernize networks
+Coffee shop networking
+WAN modernization
+Network protection
+CxO topics
+Adopt AIBring AI into workforces and digital experiences
+AI securitySecure agentic AI and GenAI applications
+Data complianceStreamline compliance and minimize risk
+Post-quantum cryptographySafeguard data and meet compliance standards
+Industries
+Healthcare
+Financial services
+Retail
+Gaming
+Public sector
+Resources
+Product guides
+Reference architectures
+Analyst reports
+Engage
+Events
+Demos
+Webinars
+Workshops
+Request a demo
+Products
+products
+SASE (Cloudflare One)
+Zero trust network access
+Secure web gateway
+Network-as-a-service / SD-WAN
+Email security
+Application security
+L7 DDoS protection
+Web application firewall
+API security
+Bot management
+Application performance
+CDN
+DNS
+Smart routing
+Load balancing
+Networking
+L3/4 DDoS protection
+Firewall-as-a-service
+Network Interconnect
+Smart routing
+plans & pricing
+Enterprise plans
+Small business plans
+Individual plans
+Compare plans
+Domain registrationBuy and manage domains
+1.1.1.1Free DNS resolver
+Resources
+Product guides
+Reference architectures
+Analyst reports
+Product demos and tours
+Global servicesExpert-led success
+Help me choose
+Developers
+documentation
+Developer libraryDocumentation and guides
+Application demosExplore what you can build
+TutorialsStep-by-step build tutorials
+Reference architectureDiagrams and design patterns
+Products
+Artificial Intelligence
+AI GatewayObserve, control AI apps
+Workers AIRun ML models on our network
+Compute
+ObservabilityLogs, metrics, and traces
+WorkersBuild, deploy serverless apps
+Media
+ImagesTransform, optimize images
+RealtimeBuild real-time audio/video apps
+Storage & database
+D1Create serverless SQL databases
+R2Store data without costly egress fees
+Plans & Pricing
+WorkersBuild and deploy serverless apps
+Workers KVServerless key-value store for apps
+R2Store data without costly egrees fees
+Explore projectsCustomer stories
+AI Demo in 30 secondsQuick guide to get started
+Explore Workers PlaygroundBuild, test, and deploy
+Developers DiscordJoin the community
+Start building
+Partners
+Partner NetworkGrow, innovate and meet customer needs with Cloudflare
+Partner PortalFind resources and register deals
+Partnership Types
+PowerUP ProgramGrow your business while keeping your customers connected and secure
+Technology PartnersExplore our ecosystem of technology partners and integrators
+Global System IntegratorsSupport seamless large-scale digital transformation
+Service ProvidersDiscover our network of valued service providers
+Self-serve agency programManage Self-Serve Accounts for your clients
+Peer-to-peer portalTraffic insights for your network
+Find a partnerPowerUP your business - connect with Cloudflare Powered+ partners.
+Resources
+Engage
+Demos + product toursOn-demand product demos
+Case studiesDriving success with Cloudflare
+WebinarsInsightful discussions
+Test DriveLive virtual workshops
+LibraryHelpful guides, roadmaps, and more
+ReportsInsights from Cloudflare’s research
+BlogTechnical deep dives and product news
+Learning centerEducational tools and how-to content
+Build
+Reference architectureTechnical guides
+Solution + product guidesProduct documentation
+DocumentationDeveloper documentation
+Explore
+theNETExecutive insights for the digital enterprise
+Cloudflare TVInnovative series and events
+Cloudforce OneThreat research and operations
+RadarInternet traffic and security trends
+Analyst reportsIndustry research reports
+EventsUpcoming regional events
+Trust, privacy, and complianceCompliance information and policies
+Support
+Contact us
+Community forum
+Lost account access?
+Developers Discord
+Get help
+Company
+Company info
+LeadershipMeet our leaders
+Investor relationsInvestor information
+PressExplore recent news
+CareersExplore open roles
+Trust, Privacy, & Safety
+PrivacyPolicy, data, and protection
+TrustPolicy, process, and safety
+ComplianceCertification and regulation
+TransparencyPolicy and disclosures
+Public Interest
+HumanitarianProject Galileo
+GovernmentAthenian Project
+ElectionsCloudflare For Campaigns
+HealthProject Fair Shot
+Global networkGlobal locations and status
+Log inContact sales
+Service-Specific Terms
+Last updated: September 28, 2026
+These Service-Specific Terms supplement the applicable master agreement(s) located at https://www.cloudflare.com/legal/terms/ (the “Agreement”), which govern your access to and use of Cloudflare's Services. Unless defined below, all capitalized terms have the definitions given to them in the Agreement. All references to “you” and “your” in the Service-Specific Terms below refer to the Customer named in the applicable Order Form or other ordering document.
+Please click on the following links to navigate to the Service-Specific Terms applicable to your specific Cloudflare Services.
+Overview
+Application Services
+Network Services
+Zero Trust Services
+Developer Platform
+Other Terms
+Cloudflare Realtime
+Subject to your and your End Users’ compliance with these terms, you may use Cloudflare Realtime, including relevant APIs, SDKs and documentation, to enable video call functionality for your Internet Properties.
+Cloudflare may, with or without notice to you and without liability of any kind, temporarily limit the number of concurrent video calls that you or your End Users may conduct for any reason (in Cloudflare’s sole reasonable discretion), including without limitation, if processing such video calls would put an undue burden on the Cloudflare network, adversely impact the Service, or otherwise threaten the integrity of Cloudflare’s networks.
+You may not use Cloudflare Realtime to operate or enable any telecommunications service, including any use that would permit End Users to place or receive calls from any public switched telephone network.
+Content transmitted using Cloudflare Realtime that we determine in our sole judgment to be illegal or harmful may be blocked or removed, and use of Cloudflare Services for transmission of such illegal or harmful content may result in suspension or termination of Cloudflare Services. While we generally try to provide notice of such action, we reserve the right to take action without notice as appropriate. For these purposes, illegal or harmful content includes but is not limited to: (a) content containing, promoting, or facilitating child sexual exploitation and abuse or human trafficking; (b) content that infringes on another person’s intellectual property rights or is otherwise unlawful; (c) content that discloses sensitive personal information, incites or exploits violence, or is intended to defraud the public; and (d) content that seeks to distribute malware, facilitate phishing, or otherwise constitutes technical abuse. For clarity, Cloudflare has the right, but not the obligation, to block or remove illegal or harmful content. You will remain solely responsible for all content transmitted using Cloudflare Realtime.
+As between you and Cloudflare, you will provide all support of any type requested by Cloudflare, your End Users, or a third party related to your Customer Content, End User content, and Internet Properties, and be responsible for any warranty, liability or obligation to any End User or any third party that arises in connection with End User content and use of your Internet Properties.
+Cloudflare Images and Stream
+Cloudflare is not required to retain and may delete, without notice to you, any of your content in Cloudflare Stream and Cloudflare Images following the expiration or termination of your trial or subscription.
+Videos hosted or encoded by Cloudflare Stream must be served using Cloudflare Stream. The use of third-party content delivery networks to deliver videos hosted or encoded by Cloudflare Stream is not permitted, and such activity may result in suspension or termination of your Cloudflare Stream Services.
+Unlike most Cloudflare products, Cloudflare Stream and Cloudflare Images can be used to host or stream content. Content stored or streamed on Cloudflare Stream and Cloudflare Images that we determine in our sole judgment to be illegal or harmful may be blocked or removed, and use of Cloudflare Services for storage or streaming of such illegal or harmful content may result in suspension or termination of Cloudflare Services. While we generally try to provide notice of such action, we reserve the right to take action without notice as appropriate. For these purposes, illegal or harmful content includes but is not limited to: (a) content containing, promoting, or facilitating child sexual exploitation and abuse or human trafficking; (b) content that infringes on another person’s intellectual property rights or is otherwise unlawful; (c) content that discloses sensitive personal information, incites or exploits violence, or is intended to defraud the public; and (d) content that seeks to distribute malware, facilitate phishing, or otherwise constitutes technical abuse.
+Cloudflare Developer Platform
+(Cloudflare Workers; Cloudflare Pages; Workers KV; D1; Durable Objects; Vectorize; Hyperdrive; Cloudflare Queues; R2; Containers; and Workers for Platforms)
+Cloudflare may temporarily limit your storage and/or the number of requests you can make or receive using the Developer Platform if processing such requests would put an undue burden on the Cloudflare network, adversely impact the Service, or otherwise threaten the integrity of Cloudflare’s networks.
+You acknowledge that you are solely responsible for your Customer Content, including (i) the performance and functioning of Customer Content with the Services and any reference libraries, machine learning models, or other resources that Cloudflare may make available from time to time; and (ii) maintaining licenses and adhering to the license terms of any third-party software that may be incorporated into your Customer Content.
+As between you and Cloudflare, you will provide all support of any type requested by Cloudflare or your End Users related to your Customer Content and Internet Properties, and be responsible for any warranty, liability or obligation to any End User or any third party that arises in connection with their use of your Customer Content or Internet Properties. You acknowledge and agree that you are solely responsible for the acts of your End Users. Cloudflare may, but is not obligated to, limit or suspend your or your End Users access to any Developer Platform services or functionality made available to End Users via a Developer Platform service for any suspected violations of the Agreement. While we generally try to provide notice of such actions, we reserve the right to take action without notice.
+You represent and warrant that (i) your Customer Content and Internet Properties associated with your use of the Developer Platform are free from and do not disseminate any viruses, adware, spyware, worms, crypto-mining software or other malicious code; (ii) you will not use the Services to engage in any volumetric attacks or in any other activities to intentionally harm another party’s rights; and (iii) you will use the Services in accordance with all associated developer documentation and any applicable third-party terms.
+Cloudflare does not reference or use any Customer Content except as needed to provide the Services and affirms that you retain intellectual property rights in the source code to your Customer Content. You acknowledge that Cloudflare has the right to make, use, develop, acquire, license, market, promote, or distribute products, software, or technologies that perform the same or similar functions as, or otherwise compete with your products, software, or technologies; provided, for clarity, that Cloudflare will not do so using, referencing, or relying on your Customer Content or Confidential Information.
+The creation of Developer Platform accounts/projects using subdomains that include deceptive or offensive terms or names of other businesses, organizations, or individuals is prohibited. If Cloudflare determines that you are engaging in this activity it may suspend or terminate your account and/or project(s) immediately. The use of the Services for phishing schemes is prohibited.
+Cloudflare may change Cloudflare Workers/Pages subdomain names of projects hosted at workers.dev or pages.dev for any or no reason. Cloudflare will attempt to provide you with at least one week prior notice for such change, unless the change is due to your violation of the terms governing your use of Cloudflare Workers and Cloudflare Pages. For clarity, this right does not apply to Customer’s custom domains used for Workers/Pages.
+Unlike most Cloudflare products, the Developer Platform can be used to host content. Content stored on the Developer Platform (whether in conjunction with a Cloudflare storage offering or not) that we determine in our sole judgment to be illegal, harmful, or in violation of Section 4 of the Cloudflare Developer Platforms Service-Specific Terms may be blocked or removed, and use of the Developer Platform for storage of such illegal or harmful content may result in suspension or termination of Cloudflare Services. While we generally try to provide notice of such action, we reserve the right to take action without notice as appropriate. For these purposes, illegal or harmful content includes but is not limited to: (a) content containing, promoting, or facilitating child sexual exploitation and abuse or human trafficking; (b) content that infringes on another person’s intellectual property rights or is otherwise unlawful; (c) content that discloses sensitive personal information, incites or exploits violence, or is intended to defraud the public; and (d) content that seeks to distribute malware, facilitate phishing, or otherwise constitutes technical abuse.
+Subject to Section 8 above, you may be permitted to access the Customer Content you uploaded to the Developer Platform for up to thirty (30) days following the expiration or termination of your trial or subscription. You understand that Cloudflare has no obligation to retain the Customer Content you upload to the Developer Platform following the expiration or termination of your trial or subscription.
+Notwithstanding anything to the contrary in the Agreement, you may use Workers for Platforms to make available certain Workers functionality for use by your End Users on your Internet Properties, provided that such use by your End Users complies with the requirements and restrictions set forth in the Agreement.
+Cloudflare Email Service
+You may only use the Email Service (a) with domains or email addresses that you own or have the explicit right to use and (b) to send email messages sent in response to a specific customer interaction to facilitate an agreed-upon transaction or update such customer (“Transactional Emails”). You must successfully complete Cloudflare’s domain verification process, including the configuration of SPF and DKIM records, prior to using the Email Service. Cloudflare reserves the right to restrict email transmission to specific verified 'From' addresses or authorized Worker scripts. Cloudflare reserves the right to require additional verification of identity (e.g., via DNS records, verification emails, etc.) for any "From," "Source," or "Destination" email address before the Service is enabled.
+You must comply with all third-party mailbox provider guidelines and any applicable laws regarding commercial email, including but not limited to the CAN-SPAM Act. Without limiting the foregoing, you may not use the Email Service to send unsolicited messages.
+To maintain the deliverability of Cloudflare’s IP addresses for all customers, Cloudflare monitors reputation metrics. Cloudflare may establish thresholds for bounce rates, complaint rates, and other deliverability metrics. If your account exceeds these thresholds or your usage negatively impacts the reputation of Cloudflare’s IP ranges or our ability to deliver mail for other customers, we may place your account under "Review" status, throttle your message volume, or take other appropriate actions as permitted under the Agreement.
+Cloudflare may initially limit new accounts to a "Sandbox" environment with restricted volume and limited destination addresses until the account demonstrates a history of low bounces and complaints. Your Service may be assigned to different IP pool tiers based on your account status, volume, and reputation history.
+Cloudflare may use automated tools to scan the content of emails (including headers, body, and attachments) to detect malware, phishing, and spam. You acknowledge and consent to this scanning. Cloudflare reserves the right to reject or "drop" any message that we determine, in our sole discretion, contains malicious content or violates the Agreement.
+The Email Service is for routing and transmission. Cloudflare does not provide durable storage or "Inbox" services nor does it guarantee successful email inbox placement. We are not responsible for the loss of any data resulting from failed deliveries or the transient nature of the service.
+Cloudflare Workers AI; AI Gateway
+As between Cloudflare and you, images, text, and other types of data that you provide as inputs to the Service (“Inputs”) and outputs received from the Services based on your Input (“Outputs”) constitute Customer Content and you retain all applicable intellectual property or other proprietary rights in Inputs and Outputs to or from the Services. Unless otherwise agreed, Cloudflare does not use any Customer Content to train generative AI tools.
+Certain uses of Workers AI may enable the Services to take actions (e.g., interactions with other systems or services) on your behalf (“Actions”). You are solely responsible for all Outputs and Actions and acknowledge and agree that Outputs and Actions may not be accurate, error free, or operate as intended. You represent and warrant that you have all rights, licenses, and permissions necessary to perform such Actions or produce such Outputs.
+Machine learning models and search services made available by Cloudflare in connection with the Services constitute Third-Party Products (as defined in the Agreement) whether or not you have entered an agreement with the third-party provider. Your use thereof may be subject to additional terms between you and the model or search service provider (as applicable). Where you have not agreed other terms with the model or search service provider, by using such Third-Party Products, you agree to comply with all restrictions, including any acceptable use policies, in the standard terms of the model or search service provider. Cloudflare does not control and has no liability for Third-Party Products, including their security, operation, functionality, or interoperability with the Services. Accordingly, Cloudflare makes the machine learning models and search services made available on an “AS IS” and “AS AVAILABLE” basis and has no obligation to indemnify you for any claims arising from your use of machine learning models or search services made available to you through the Services. Please refer to the Workers AI developer documents and AI Gateway developer documents for additional information on applicable third-party terms. While we will generally try to provide notice, any suspected violation of applicable third-party terms may result in immediate suspension of Cloudflare Services.
+Certain AI Gateway features utilize Third-Party Products that operate on third-party infrastructure, as further described in the developer documents. By using such features, you (i) direct Cloudflare to send certain of your Customer Data to the relevant Third-Party Product provider in order to provide the Service and (ii) understand and agree that the Cloudflare Data Processing Addendum and Information Security Exhibit do not apply to your use of such Third-Party Products accessed via AI Gateway. Please refer to each Third-Party Product providers’ relevant policies for more information.
+Cloudflare may temporarily limit your storage and/or the number of requests you can make or receive using the Services if processing such requests would put an undue burden on the Cloudflare network, adversely impact the Service, or otherwise threaten the integrity of Cloudflare’s networks.
+You acknowledge that you are solely responsible for your Customer Content, including (i) the performance and functioning of Customer Content with the Services and any reference libraries, machine learning models, or other resources that Cloudflare may make available from time to time; and (ii) maintaining licenses and adhering to the license terms of any third-party software that may be incorporated into your Customer Content.
+As between you and Cloudflare, you will provide all support of any type requested by Cloudflare or your End Users related to your Customer Content and Internet Properties, and be responsible for any warranty, liability or obligation to any End User or any third party that arises in connection with their use of your Customer Content or Internet Properties. You acknowledge and agree that you are solely responsible for the acts of your End Users. Cloudflare may, but is not obligated to, limit or suspend your or your End Users access to any Services or functionality made available to End Users via the Services for any suspected violations of the Agreement. While we generally try to provide notice of such actions, we reserve the right to take action without notice.
+You represent and warrant that (i) your Customer Content and Internet Properties associated with your use of the Services are free from and do not disseminate any viruses, adware, spyware, worms, crypto-mining software or other malicious code; (ii) you will not use the Services to engage in any volumetric attacks or in any other activities to intentionally harm another party’s rights; and (iii) you will use the Services in accordance with all associated developer documentation and any applicable third-party terms.
+Unless otherwise agreed, Cloudflare does not reference or use any Customer Content except as needed to provide and improve the Services and affirms that, as between Cloudflare and you, you retain intellectual property rights in the source code to your Customer Content. You acknowledge that Cloudflare has the right to make, use, develop, acquire, license, market, promote, or distribute products, software, or technologies that perform the same or similar functions as, or otherwise compete with your products, software, or technologies; provided, for clarity, that Cloudflare will not do so using, referencing, or relying on your Customer Content or Confidential Information.
+Unlike most Cloudflare products, the Services can be used to host content. Content stored on the Services (whether in conjunction with a Cloudflare storage offering or not) that we determine in our sole judgment to be illegal, harmful, or in violation of the Agreement may be blocked or removed, and use of the Services for purposes of creating or storing such illegal or harmful content may result in suspension or termination of Cloudflare Services. While we generally try to provide notice of such action, we reserve the right to take action without notice as appropriate. For these purposes, illegal or harmful content includes but is not limited to: (a) content containing, promoting, or facilitating child sexual exploitation and abuse or human trafficking; (b) content that infringes on another person’s intellectual property rights or is otherwise unlawful; (c) content that discloses sensitive personal information, incites or exploits violence, or is intended to defraud the public; and (d) content that seeks to distribute malware, facilitate phishing, or otherwise constitutes technical abuse.
+Email Routing
+Cloudflare Email Routing is a Service that permits users to forward inbound emails to a specified email account inbox (the “Receiving Account”). By using Cloudflare Email Routing, you represent and warrant that you (i) lawfully own or control the Receiving Account and associated domain or are otherwise authorized to use the Service to forward emails to the Receiving Account and (ii) will comply with the restrictions set forth herein. Any breach of the foregoing representations and warranties may result in the immediate suspension or termination of your Service.
+You may not use Cloudflare Email Routing to directly or indirectly engage in or otherwise promote illegal or abusive activities, including without limitation: (i) sending any form of unsolicited or otherwise unauthorized email in violation of the CAN-SPAM Act or other anti-spam laws; (ii) subscribing email addresses to any mailing list without the verifiable consent of the email address owner; (iii) unauthorized attempts to gain access to an email account or third-party service; or (iv) transmission or distribution of any viruses, worms, time bombs, Trojan horses, and other malicious code, files, scripts, software agents and programs (“Malicious Code”).
+By using Cloudflare Email Routing, you acknowledge and agree that (i) Cloudflare is under no obligation to provide customer support, and does not have an SLA, for Cloudflare Email Routing; (ii) limitations imposed by third-party filtering services or policies of the Receiving Account may result in the failed or delayed delivery of legitimate email; and (iii) Cloudflare reserves the right to modify or discontinue Cloudflare Email Routing at any time.
+CLOUDFLARE EMAIL ROUTING IS PROVIDED ON AN “AS IS” AND “AS AVAILABLE” BASIS. CLOUDFLARE DOES NOT REPRESENT OR WARRANT THAT CLOUDFLARE EMAIL ROUTING WILL GUARANTEE THE DELIVERY OF ANY EMAILS OR PROVIDE PROTECTION FROM MALICIOUS CODE OR PHISHING ATTEMPTS.
+IN NO EVENT WILL CLOUDFLARE BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF OR RELATING TO YOUR ACCESS TO OR USE OF, OR YOUR INABILITY TO ACCESS OR USE, THE CLOUDFLARE EMAIL ROUTING SERVICE, WHETHER BASED ON WARRANTY, CONTRACT, TORT (INCLUDING NEGLIGENCE), STATUTE, OR ANY OTHER LEGAL THEORY, WHETHER OR NOT CLOUDFLARE HAS BEEN INFORMED OF THE POSSIBILITY OF SUCH DAMAGE.
+PlanetScale
+The "PlanetScale Database Services" (e.g., Postgres, Vitess (MySQL), and other PlanetScale database services) are managed database services provided by PlanetScale Inc. ("PlanetScale"). PlanetScale Database Services constitute Third-Party Products (as defined in the Subscription Terms). Cloudflare does not control and has no liability for PlanetScale Database Services, including their security, operation, functionality, or interoperability with the Cloudflare Services. Cloudflare makes no warranties with respect to PlanetScale Database Services.
+Your use of PlanetScale Database Services is subject to the PlanetScale Terms of Service, Acceptable Use Policy, Data Processing Addendum, and Service Level Agreement, and all other terms incorporated therein (collectively, the "PlanetScale Service Terms"). Cloudflare may not modify or waive the PlanetScale Service Terms on your behalf. Technical support for PlanetScale Database Services is provided by PlanetScale in accordance with PlanetScale's support policy. Customers who have separately purchased a PlanetScale Business or Enterprise plan receive support at their applicable plan level. Service credits for PlanetScale Database Services are determined and issued by PlanetScale in accordance with the PlanetScale Service Terms
+PlanetScale Database Services operate on PlanetScale's infrastructure. By using PlanetScale Database Services, you direct Cloudflare to send certain of your Customer Data to PlanetScale in order to provide the PlanetScale Database Services. The Cloudflare Data Processing Addendum and Information Security Exhibit do not apply to your use of PlanetScale Database Services.
+You may not use PlanetScale Database Services to transmit, store, or process: (a) protected health information subject to HIPAA unless you have separately executed a HIPAA Business Associate Agreement directly with PlanetScale; (b) payment card data subject to PCI DSS; or (c) special categories of personal data as defined under applicable data protection law (including Article 9 of Regulation (EU) 2016/679).
+GETTING STARTED
+Free plans
+Small business plans
+For enterprises
+Get a recommendation
+Request a demo
+Contact sales
+SOLUTIONS
+Connectivity cloud
+Application services
+SASE and workspace security
+Network services
+Developer platform
+SUPPORT
+Help center
+Customer support
+Community forum
+Developers Discord
+Lost account access?
+Cloudflare status
+COMPLIANCE
+Compliance resources
+Trust
+GDPR
+Responsible AI
+Transparency report
+Report abuse
+PUBLIC INTEREST
+Project Galileo
+Athenian Project
+Cloudflare for Campaigns
+Project Fairshot
+COMPANY
+About Cloudflare
+Network map
+Our team
+Logos & press kit
+Impact
+© 2026 Cloudflare, Inc.Privacy PolicyTerms of UseReport Security IssuesCookie PreferencesTrademark

@@ -1,0 +1,965 @@
+Skip to main content
+Licensing
+Azure
+Dynamics 365
+Microsoft 365
+Office 365
+Power Platform
+SQL Server
+System Center
+Windows
+Windows 365
+Windows Server
+Product licensing briefs
+Product licensing search
+Licensing Terms
+Overview
+Software Assurance Benefits
+Getting Software Assurance
+Resources
+Microsoft Customer Agreement
+Enterprise Agreement
+Microsoft Products and Services Agreement (MPSA)
+Open Value
+Select Plus
+Licensing program guides
+Software development companies
+Microsoft solution providers
+Services Provider License Agreement (SPLA)
+Microsoft Partner Network
+Find a Microsoft partner
+For SMBs
+For Consumers
+For Students
+For Enterprises
+For Government organizations
+For Educational institutions
+For Nonprofit organizations
+Tools and resources
+Product fulfillment
+Volume Licensing Service Center (VLSC)
+VLSC training and resources
+Business Center (for MPSA customers)
+Business Center training and resources
+Overview
+Software Assurance Benefits
+Getting Software Assurance
+Resources
+Contact a Volume Licensing Activation Center
+Access the Volume Licensing Service Center
+Find training and resources for the VLSC
+Contact Support for the Volume Licensing Service Center
+Find support for Microsoft products
+Get help with Windows
+Get help with Office
+Find answers on Microsoft forums
+Licensing News
+Microsoft Security
+Azure
+Dynamics 365
+Microsoft 365
+Microsoft Teams
+Windows 365
+Microsoft AI
+Azure Space
+Mixed reality
+Microsoft HoloLens
+Microsoft Viva
+Quantum computing
+Sustainability
+Education
+Automotive
+Financial services
+Government
+Healthcare
+Manufacturing
+Retail
+Find a partner
+Become a partner
+Partner Network
+Microsoft Marketplace
+Software companies
+Blog
+Microsoft Advertising
+Developer Center
+Documentation
+Events
+Licensing
+Microsoft Learn
+Microsoft Research
+View Sitemap
+Product Terms
+Program:
+Enrollment for Education Solutions (EES)
+Enterprise/Enterprise Subscription/Server and Cloud Enrollments (EA/EAS/SCE)
+Microsoft Customer Agreement
+Microsoft Online Subscription Agreement (MOSA)
+Microsoft Product and Services Agreement (MPSA)
+Open License (OL)
+Open Value / Open Value Subscription (OV/OVS)
+Open Value Subscription for Education Solutions (OVS-ES)
+Select/Select Plus (S/S+)
+Effective Date:
+Clear Filter
+en-US
+English
+Arabic
+Bulgarian
+Catalan
+Chinese (Simplified)
+Chinese (Traditional)
+Croatian
+Czech
+Danish
+Dutch
+Estonian
+Finnish
+French (Europe)
+German
+Greek
+Hungarian
+Italian
+Japanese
+Korean
+Latvian
+Lithuanian
+Norwegian (Bokmal)
+Polish
+Portuguese (Brazil)
+Portuguese (Portugal)
+Romanian
+Russian
+Serbian
+Slovak
+Slovenian
+Spanish (International)
+Swedish
+Thai
+Turkish
+Ukranian
+Search Terms
+Product Terms
+Introduction
+Summary of Changes
+Universal License Terms
+For Online Services
+For all Software
+Privacy & Security Terms
+Product Offerings
+Software
+Online Services
+Microsoft Azure
+Glossary
+Other Legal Terms
+CAL and ML Equivalency Licenses
+Program Agreement Supplemental Terms
+Azure Hardware Terms
+Microsoft Security portfolio Product Terms mapping
+Promotions
+Amazon Workspaces Deployments
+Notices
+Student Use Benefits and Academic Programs
+Professional Services
+Other Documents
+Data Protection Addendum
+Service Level Agreement
+Microsoft Enterprise AI Services Code of Conduct
+Licensing Resources
+Purchasing & Renewing Software Assurance
+Subscription License Suites
+Licensing Briefs
+Licensing Program Guides
+Product Terms
+Product Offerings
+Online Services
+Microsoft Azure
+Microsoft Azure
+Availability
+General Service Terms
+Service Specific Terms
+Related Resources
+Availability
+General Service Terms
+Service Specific Terms
+Related Resources
+Showing terms for the Microsoft Customer Agreement program. Not all terms apply to all products and programs. Get help selecting a program.
+Availability
+Use the chart below to see which Microsoft Azure products are available with which programs.
+Product
+MCA
+Program Attribute
+Azure Active Professional Direct Support*
+Azure Active Standard Support*
+Azure App Service Plan
+Azure Site Recovery (to Customer Owned Site)
+Azure SQL Edge (per Device)
+Microsoft Azure Services
+Microsoft Translator API
+*Also available through Microsoft Customer Agreement and Reduction Eligible when acquired under that agreement.
+Product Conditions:
+Provides additional information related to acquiring the Product, such as prerequisites for purchase, prior versions, and the applicable Product Pool.
+Microsoft Azure
+Terms of Service
+Universal License Terms for Online Services (For Azure Virtual Desktop per user access, Windows operating system is governed by the Universal License Terms for all Software and includes specific terms in Windows Desktop Operating System terms).
+Azure Kubernetes Service Edge Essentials is governed by the Universal License Terms for all Software.
+Product Pool
+Server
+Promotions
+None
+Product Conditions - Program Specific
+Student Use Benefit
+Refer to Student Use Benefits and Academic Programs
+Product Categories
+This table highlights which Azure products fall under the categories of Microsoft Azure User Plans, Microsoft Azure Support Plans, and Microsoft Azure Services:
+Product Category
+Product
+Microsoft Azure User Plans
+Microsoft Entra ID Plan 1, 2 & F2 (User SL), Microsoft Defender for Identity & F1 (User SL), Microsoft Defender for Identity Client Management License Add-on (User SL). . See Microsoft Entra terms and Microsoft Defender terms.
+Microsoft Azure Support Plans
+Azure Active Professional Direct Support, Azure Active Standard Support, Microsoft Azure StorSimple Premium & Standard Support, Microsoft Azure StorSimple Standard Support to Premium Support
+Microsoft Azure Services
+Azure SQL Edge (per Device), Microsoft Translator API, Microsoft Azure Services
+Microsoft Azure Services Plans
+If subscribed to by Customer as a Microsoft Azure Services Plan, individual Microsoft Azure Services may have different program availability or be subject to different terms. Other than Azure Stack Hub, Services purchased as a Microsoft Azure Services Plan are not eligible for the Azure Customer Solution clause in the General Service Terms for Azure.
+Subscription Term
+Azure is licensed on a subscription basis for a fixed term. Usage is metered, and charges are applied periodically based on usage. Some subscriptions require prepayment or an upfront commitment and others are billed after the services are used (“pay-as-you-go”). Pay-as-you-go subscriptions automatically renew after each billing period unless cancelled before the end of the billing period. For plans that require an upfront commitment (such as Azure reservations), the term of the subscription is the same as the commitment period. At the end of the term, such subscriptions will renew automatically on a pay-as-you go basis unless the commitment is expressly renewed or the subscription is cancelled before the end of the term.
+The table below highlights the subscription terms for the options to purchase Microsoft Azure Services that a customer is eligible for:
+Options
+Subscription Term
+Azure prepayment
+Subscription term is the same as the Azure prepayment commitment term.
+Consumption
+Subscription term is the same as the billing period.
+Microsoft Azure Services Plan
+Subscription term is the same as the billing period.
+Azure reservations
+Subscription term is the same as the Azure reservation commitment term.
+Azure Spot
+Subscription term is the same as the billing period.
+Azure compute savings plan
+Subscription term is the same as the Azure compute savings plan term.
+Purchasing Microsoft Azure Services
+Microsoft Azure Services may be purchased in one or a combination of the following ways:
+Azure prepayment: Customer will have access to its entire Azure prepayment throughout the term of its Agreement if Customer agrees to be invoiced for the full amount upfront (the “Fully Prepaid Option”). Alternatively, if Customer elects to be invoiced for its Azure prepayment on an annual basis, Customer will have access to an Allocated Annual prepayment each year of the Agreement (the “Annually Prepaid Option”). Under the Fully Prepaid Option, any unused Azure prepayment will be forfeited at the end of the Agreement, and under the Annually Prepaid Option, any unused Allocated Annual prepayment will be forfeited on the following Agreement anniversary date. Customer may contact Microsoft or Customer’s reseller about increasing its Azure prepayment or reducing its Allocated Annual prepayment for any future Agreement anniversary. Customer’s reseller (if any) must process reductions with Microsoft prior to the next anniversary.
+Consumption: Customer pays based on the amount of Microsoft Azure Services consumed during a billing period. Certain features of the Microsoft Azure Services may only be available for purchase on a consumption basis.
+Microsoft Azure Services Plan: Customer may be able to subscribe to a Microsoft Azure Service as a Microsoft Azure Services Plan.
+Azure reservations: Azure reservations are purchased for specified terms of up to three years with either a single upfront payment or equal monthly payments (when available). Azure reservations expire at the end of the specified term. Customer will not be refunded payment (paid or scheduled) for unused Azure reservations. Using Azure commitment tiers, Customers pay upfront monthly for connected containers and Azure usage. Overage will be invoiced when usage exceeds the commitment tier limit. For disconnected containers, Azure commitment tier payments are made upfront yearly, except for disconnected container proof of concept (POC) SKUs, which have a one-month prorated price. Customers can renew the POC license automatically up to two times, allowing for three months of total usage of a POC SKU.
+Azure compute savings plan: Azure compute savings plan is purchased for specified terms of up to three years with either a single upfront payment or equal monthly payments (when available). Azure compute savings plan expires at the end of the specified term. Customer will not be refunded payment (paid or scheduled) for unused Azure compute savings plan. Azure compute savings plans are noncancellable. Customer will owe the amount charged for the plan for the duration of the selected term, even if the Agreement is terminated. Notwithstanding the terms in Customer’s volume licensing agreement, fixed pricing does not apply to Azure compute savings plan.
+Azure Capacity Blocks: Azure Capacity Blocks allow Customers to purchase a fixed duration block of capacity for a specific Microsoft Azure resource in a specified region, with a scheduled start date in the future. Azure Capacity Blocks are offered for durations ranging from one day up to six months, as determined by Microsoft. Azure Capacity Blocks are paid for the full amount upfront at the time the purchase request is accepted. Except as expressly stated by Microsoft, Azure Capacity Blocks are noncancellable and nonrefundable, and Customers will not receive a refund or credit for any unused portion of an Azure Capacity Block. During the applicable Azure Capacity Block term, Microsoft will make the specified capacity available to Customer for use. Azure Capacity Blocks expire at the end of the specified term. Once the Azure Capacity Block term ends, Customer will be evicted from the applicable capacity, and Microsoft will stop Customer’s use of the applicable Microsoft Azure Services.
+Azure Future Capacity Reservations: Azure Future Capacity Reservations allow Customers to request capacity for specified Microsoft Azure resources in a specified region, with a scheduled start date and reservation term. Requests are subject to Microsoft approval and capacity availability. Microsoft may accept, decline, or propose modifications to a request and will use commercially reasonable efforts to respond within seven (7) calendar days after receipt of a complete request. For accepted requests, Microsoft will use commercially reasonable efforts to make the accepted capacity available on the agreed start date. If only a portion of the accepted capacity is available on the agreed start date, Microsoft may continue efforts to make the remaining capacity available for up to thirty (30) calendar days thereafter (the “Fulfillment Period”). Customer may not modify an accepted reservation during the 12-week period preceding the agreed start date or during the Fulfillment Period. Customer will not be charged for capacity Microsoft has not made available. Capacity made available by Microsoft will be billable according to the accepted commitment regardless of whether Customer deploys or consumes such capacity. If Microsoft is unable to make any portion of the accepted capacity available by the end of the Fulfillment Period, Customer may cancel the unfulfilled portion without further charges for that portion. Any additional cancellation rights resulting from a material shortfall are subject to Microsoft’s then-current applicable policy. Except as expressly provided above, no monetary service credits apply to Microsoft’s failure to make accepted capacity available. Azure Future Capacity Reservations do not provide a pricing discount or dedicated hardware. Customer is responsible for completing any required subscription, quota, deployment, and configuration requirements. Reserved capacity expires at the end of the applicable reservation term. Thereafter, Customer’s continued use of Microsoft Azure Services will be billed at applicable then-current Consumption Rates.
+Pricing
+As stated in the Microsoft Customer Agreement (MCA), Azure pricing is subject to change at any time. Customer can refer to the Azure portal for current pricing including adjustments for FX rates.
+Azure Spot: Customer can refer to the Azure portal for pricing adjustments. Customer's access to a given Azure Spot virtual machine is temporary and may be interrupted at any time. Customer may elect to be notified immediately prior to workload interruption.
+Payment and Fees
+This table highlights which Azure Product categories are eligible for the Payment and Fees options below. Please reference the Product Category table above for eligible products.
+Payment and Fees options
+Eligible Products*
+1. Using Azure prepayment
+Microsoft Azure Services
+2. Invoicing Azure prepayment
+Microsoft Azure Services
+3. Invoicing Azure prepayment overage
+Microsoft Azure Services
+4. Consumption Invoicing
+Microsoft Azure Services
+5. Azure Services Plan Invoice
+Microsoft Azure Support Plans, Microsoft Azure User Plans
+6. Azure reservations
+Microsoft Azure Services
+7. Azure compute savings plan
+Microsoft Azure Services
+8. Azure Capacity Blocks
+Microsoft Azure Services
+*Some Products may not be eligible for certain Payment and Fees scenarios. Please refer to the Azure Portal or Pricing Calculator (https://azure.microsoft.com/pricing/calculator/) for more information on availability.
+Using Azure prepayment: Each month, Microsoft will deduct from Customer’s Azure prepayment (or Allocated Annual prepayment, if applicable) the monetary value of Customer’s usage of eligible Microsoft Azure Services. Once Customer’s Azure prepayment (or Allocated Annual prepayment, if applicable) balance has been exhausted, any additional usage will be invoiced at Consumption Rates (as described below).
+Invoicing Azure prepayment: If Customer elects the Fully Prepaid Option, Azure prepayment will be invoiced immediately. If Customers elects the Annually Prepaid Option, the first Allocated Annual prepayment will be invoiced immediately, and future Allocated Annual prepayments will be invoiced on the anniversary of the Agreement effective date.
+Invoicing Azure prepayment overage: If Customer’s usage is higher than either its Azure prepayment under the Fully Prepaid Option or its Allocated Annual prepayment under the Annually Prepaid Option, such excess will be invoiced at Consumption Rates to Customer (or its reseller) at the end of each Agreement month.
+Consumption invoicing: If Customer provisions Microsoft Azure Services without a Azure prepayment, it (or its reseller) will be invoiced monthly at Consumption Rates. All usage of the Microsoft Azure Services after the expiration or termination of Customer’s subscription term will be invoiced to Customer (or its reseller) at then-current Consumption Rates on a monthly basis.
+Azure Services Plan invoice: The purchase of a Microsoft Azure Services Plan will be invoiced to Customer (or its reseller) either on an upfront or annual basis, according to the terms of Customer’s volume licensing agreement governing payment terms for the order of Online Services generally. Azure prepayment cannot be applied to the purchase of a Microsoft Azure Services Plan; provided, however, that if a Microsoft Azure Services Plan includes the purchase of an initial quantity of a service (“Initial Quantity”), Customer usage that exceeds the Initial Quantity will be billed at Consumption Rates, and Customer’s Azure prepayment can be applied to such usage.
+Azure reservations: The purchase of Azure reservations will be deducted automatically from any available Azure prepayment. If Customer has used all of its Azure prepayment or if the cost of Azure reservations exceeds the available Azure prepayment balance at the time of purchase, the excess will be invoiced as otherwise provided in this “Payment and Fees” section. Azure reservations Customer purchases via Azure.com will be charged against its credit card on file for the full upfront payment, or the charge will appear on its next invoice. Azure reserved instances for a virtual machine or Azure SQL Database services cover compute only (the base rate) and do not include the cost of the software (e.g., Windows Server or SQL Server), storage or back-up. Conversely, Azure reserved instances for software do not include the cost of compute.
+Azure compute savings plan: The purchase of Azure compute savings plan will be deducted automatically from any available Azure prepayment. If Customer has used all of its Azure prepayment or if the cost of Azure compute savings plan exceeds the available Azure prepayment balance at the time of purchase, the excess will be invoiced as otherwise provided in this “Payment and Fees” section. Azure compute savings plan Customer purchases via Azure.com will be charged against its credit card on file for the full upfront payment, or the charge will appear on its next invoice. Azure compute savings plan covers compute only (the base rate) and does not include the cost of the software (e.g., Windows Server or SQL Server), storage or back-up.
+Azure Capacity Blocks: Charges for Azure Capacity Blocks are invoiced in full at the time the purchase request is accepted. A purchase request is accepted when Microsoft confirms the order (including by sending an order confirmation or otherwise making the Azure Capacity Block available in the applicable purchasing experience). Unless otherwise stated by Microsoft, Azure prepayment may not be applied to the purchase of Azure Capacity Blocks. Azure Capacity Blocks are nonrefundable, and Customers will not receive a refund or credit for unused capacity or for any unused portion of a Azure Capacity Block, after it has been successfully created and paid for. Charges for Azure Capacity Blocks apply only to the applicable block term. At the end of the Azure Capacity Block term, Customer must release the applicable capacity. Upon expiration of an Azure Capacity Block, Customer will be evicted from the applicable capacity, and Microsoft will stop or suspend Customer’s use of the applicable Microsoft Azure Services.
+Azure Future Capacity Reservations: Charges begin when Microsoft makes the applicable capacity available and continue for the applicable reservation term. If accepted capacity is made available in portions, charges for each portion begin when that portion is made available. Customer will be charged for the full committed quantity of capacity made available, regardless of whether Customer deploys or consumes such capacity, and will not receive a refund or credit for unused capacity. Unless otherwise stated by Microsoft, Azure prepayment may not be applied to Azure Future Capacity Reservations. At the end of the applicable reservation term, charges for the Azure Future Capacity Reservation will end, and any continued use of Microsoft Azure Services will be billed at applicable then-current Consumption Rates.
+Five Year Reservations for Azure VMs
+As an exception to the general terms for Azure reservations, we offer five year Azure reservation terms for select VM families. The early termination fee for a five-year Azure reservation is 35%. Microsoft reserves the right during a five-year Azure reservation to move Customer to a newer version of the HB series for reasons including, but not limited to, unavailability of parts for maintenance or lack of support from the hardware vendor. In such cases, the new version and hardware configuration will provide at least the same level of performance.
+Azure Reservation Options
+The following options apply to Azure reservations Customer has purchased.
+Exchange: is an option that allows Customer to apply the monetary value of a remaining Azure reservation term to the purchase of one or more new Azure reservations of equal or greater monetary value for the same service.
+Cancel: is an option that allows Customer to receive a prorated refund based on a remaining Azure reservation term minus an early termination fee (currently 12 percent) and subject to a cancellation limit set by Microsoft (currently $50,000 per year).
+Windows Server Datacenter: Azure Edition
+Use Restriction
+Customer may use Windows Server Datacenter: Azure Edition only as an operating system for virtualization on Microsoft Azure and Azure Stack.
+Azure Hybrid Benefit
+Microsoft Azure Hybrid Benefit for Windows Server
+Customer may use the Microsoft Azure Hybrid Benefit in its own Microsoft Azure account. Customer may use Standard or Datacenter software. The following Windows Server licenses with an active subscription or Software Assurance are eligible for the Microsoft Azure Hybrid Benefit:
+Windows Server Standard/Datacenter core licenses
+Windows Server Standard/Datacenter processor licenses
+Each processor license is equivalent to 16 core licenses.
+License Allocation for VM Licensing
+Customer must allocate enough eligible core licenses to cover all Virtual Cores on the VM(s) that are running.
+The minimum number of core licenses required per VM is 8.
+License Allocation for Dedicated Host Licensing (Datacenter only)
+Customer must allocate enough Windows Server Datacenter core licenses to cover all Physical Cores available to Customer on a Dedicated Host or an Azure Local Cluster. Azure Hybrid Benefit for Azure Local is available only for the hyperconverged deployments with cloud connect management. Azure Hybrid Benefit for Azure Local is available for EA or CSP customers only. Azure Hybrid Benefit for Azure Local is not available with Microsoft 365 Local.
+Customer may run unlimited Virtual Machines on that host/cluster.
+Azure Migration Allowance
+Aside from the migration allowances below, once licenses are allocated to Azure, Customer may not use them anywhere else. After at least 90 days have passed, Customer may elect to stop using them for the Azure Hybrid Benefit.
+VM Licensing
+Windows Server Standard: When migrating workloads to Azure, Customer may also continue to use its licensed software on devices for a period of 180 days from when the licenses are allocated to Azure.
+Windows Server Datacenter: When migrating workloads to Azure, Customer may also continue to use its licensed software on devices indefinitely.
+Dedicated Host Licensing
+When migrating workloads to Azure, Customer may also continue to use its licensed software on devices for a period of 180 days from when the licenses are allocated to Azure.
+Microsoft Azure Hybrid Benefit for SQL Server
+Customer may use the Microsoft Azure Hybrid Benefit in its own Microsoft Azure account. The Qualified Licenses in the table below may be used for the Microsoft Azure Data Service in the specified ratios.
+Qualified License
+Microsoft Azure Data Service1
+Ratio of Qualified Licenses to Azure vCores
+SQL Server Enterprise (Core)
+SQL Managed Instance enabled by Azure Arc – General Purpose
+1 Core License:4 vCores
+SQL Managed Instance enabled by Azure Arc – Business Critical
+1 Core License:1 vCore
+Azure SQL Database (Elastic Pool and Single Database)/Azure SQL Managed Instance – General Purpose
+1 Core License:4 vCores
+Azure SQL Database (Elastic Pool and Single Database)/Azure SQL Managed Instance – Business Critical
+1 Core License:1 vCore
+Azure Data Factory SQL Server Integration Services (Enterprise)
+1 Core License:1 vCore
+Azure Data Factory SQL Server Integration Services (Standard)
+1 Core License:4 vCores
+SQL Server Enterprise Virtual Machines
+1 Core License2:1 vCPU
+SQL Server Standard Virtual Machines
+1 Core License:4 vCPUs
+SQL Server Standard (Core)
+SQL Managed Instance enabled by Azure Arc – General Purpose
+1 Core License:1 vCore
+SQL Managed Instance enabled by Azure Arc – Business Critical
+4 Core Licenses:1 vCore
+Azure SQL Database (Elastic Pool and Single Database)/Azure SQL Managed Instance – General Purpose
+1 Core License:1 vCore
+Azure SQL Database (Elastic Pool and Single Database)/Azure SQL Managed Instance – Business Critical
+4 Core Licenses:1 vCore
+Azure Data Factory SQL Server Integration Services (Standard)
+1 Core License: 1 vCore
+Azure Data Factory SQL Server Integration Services (Enterprise)
+4 Core Licenses:1 vCore
+SQL Server Standard Virtual Machines
+1 Core License2:1 vCPU
+SQL Server Enterprise Virtual Machines
+4 Core Licenses2:1 vCPU
+1Azure Hybrid Benefit is not available in the serverless compute tier of Azure SQL Database.
+2Subject to a minimum of four Core Licenses per Virtual Machine.
+Azure Migration Allowance
+Aside from the migration allowance below, once licenses are allocated to Azure, Customer may not use them anywhere else. After at least 90 days have passed, Customer may elect to stop using them for the Azure Hybrid Benefit.
+When migrating workloads to Azure, Customer may also continue to use its licensed software on devices for a period of 180 days from when the licenses are allocated to Azure.
+Fail-over Rights for SQL Server Standard/Enterprise Virtual Machines
+When allocating SQL Server Licenses for use under the Azure Hybrid Benefit for SQL Server, Customer is entitled to the respective fail-over rights for the Azure service in use (see Service Specific Terms below).
+SQL Server Enterprise Core Unlimited Virtualization Rights
+Customer may alternatively allocate enough SQL Server Enterprise core licenses to cover all Physical Cores available to Customer on an Azure Dedicated Host and run unlimited Virtual Machines on that host.
+Limited Hosting Rights for SQL Managed Instance enabled by Azure Arc
+When using the Azure Hybrid Benefit, paragraph 3 of the Service Specific terms for SQL Managed Instance enabled by Azure Arc does not apply. Customer is entitled only to run its SQL Managed Instance enabled by Azure Arc containers on Microsoft Azure, its own Servers, or Servers under the day-to-day management and control of Authorized Outsourcers, regardless of whether those Servers are dedicated to Customer or not.
+Azure Virtual Desktop
+Azure Virtual Desktop Conditions
+The Azure Virtual Desktop control plane may only be used to manage Azure Virtual Desktop VMs running on Azure. Windows Enterprise multi-session is limited for use on Azure Virtual Desktop VMs running on Azure only.
+Azure Virtual Desktop for Windows
+Users licensed with Microsoft 365 E3/E5/E7/G3/G5/F3/Business Premium/A3/A5/Student Use Benefit, Windows Enterprise E3/E5, Windows Education A3/A5, or Windows VDA E3/E5 may access Azure Virtual Desktop Windows virtual machines running in Customer's Microsoft Azure accounts. Azure Virtual Desktop virtual machines do not count against a user’s device activation count limit.
+Azure Virtual Desktop for Windows Server
+Users licensed with RDS User CALs with SA or RDS User Subscription Licenses or using devices licensed with RDS Device CALs with SA may access Azure Virtual Desktop Windows Server virtual machines running in Customer's Microsoft Azure accounts.
+Azure Virtual Desktop for Development and Test
+Users licensed with Visual Studio subscriptions and MSDN Platforms with active SA (“Authorized Users”) may access Azure Virtual Desktop Windows, and Windows Server virtual machines running in Customer's Microsoft Azure accounts for development and test purposes. Customer’s end users may also access Azure Virtual Desktop Windows, and Windows Server virtual machines initiated by Authorized Users to perform acceptance tests or provide feedback.
+Windows App
+The commercial use restriction for Windows App is waived for Customer to connect to Azure Virtual Desktop.
+Azure Virtual Desktop Hybrid enabled by Azure Arc
+Azure Virtual Desktop Hybrid Conditions
+Customer may use Azure Virtual Desktop Hybrid enabled by Azure Arc to manage Azure Virtual Desktop VMs running on infrastructure owned or operated by Customer or its Authorized Outsourcers. Azure Arc is a prerequisite for a Customer to use Azure Virtual Desktop Hybrid. Azure Virtual Desktop Hybrid may not be used to manage VMs running in Listed Provider environments. Windows Enterprise multi-session is not permitted for use with Azure Virtual Desktop Hybrid.
+Azure Virtual Desktop Hybrid for Windows
+Users licensed with Microsoft 365 E3/E5/E7/G3/G5/F3/Business Premium/A3/A5/Student Use Benefit, Windows Enterprise E3/E5, Windows Education A3/A5, or Windows VDA E3/E5 may access Azure Virtual Desktop Hybrid Windows VMs running on infrastructure owned or operated by Customer or its Authorized Outsourcers and enabled by Azure Arc. Azure Virtual Desktop Hybrid Windows VMs do not count against a user’s device activation count limit.
+Azure Virtual Desktop Hybrid for Windows Server
+Users licensed with RDS User CALs with active Software Assurance, RDS User Subscription Licenses, or devices licensed with RDS Device CALs with active Software Assurance may access Azure Virtual Desktop Hyrid Windows Server VMs running on infrastructure owned or operated by Customer or its Authorized Outsourcers and enabled by Azure Arc.
+Users covered by RDS SALs under the Service Provider License Agreement may access Azure Virtual Desktop Hybrid Windows Server VMs where such use is permitted under the applicable Service Provider License Agreement terms.
+Azure Virtual Desktop Hybrid for Headless Server Configuration
+For purposes of this section, a Headless Server Configuration means a physical device that:
+remains continuously connected to and managed through Azure Arc;
+is used solely to host or deliver Azure Virtual Desktop Hybrid workloads;
+is not used as a local end-user computing device; and
+is accessed by end users only through Azure Virtual Desktop Hybrid.
+Customer may use supported Windows Client or Windows Server operating systems with Azure Virtual Desktop Hybrid on a Headless Server Configuration. Local access is permitted only for administration, maintenance, or support purposes.
+Use of Windows Client and Windows Server operating systems under this section remains subject to all applicable Azure Virtual Desktop Hybrid, Windows, Windows Server, and Remote Desktop Services licensing requirements.
+Azure Dev/Test Pricing
+Customer may be eligible for Azure dev/test pricing for Azure Services accessed by (i) its Qualified Licensed Users solely for development and test purposes, and (ii) its users performing acceptance tests and providing feedback related to those development and test activities. “Qualified Licensed Users” means users allocated Visual Studio subscriptions or MSDN Platform subscriptions with active Software Assurance. See Azure.com (https://azure.microsoft.com/pricing/dev-test/) for eligibility criteria and applicable services.
+General Service Terms
+Restriction on U.S. Police Department Use of Azure Facial Recognition Services
+Customer may not use Azure Facial Recognition Services if Customer is, or is allowing use of such services by or for, a police department in the United States. Violation of any of the restrictions in this section may result in immediate suspension of Customer’s use of the service.
+Notices
+The Communication Services, Professional Services, Azure Media Services H.265/HEV Encoding, Adobe Flash Player, H.264/AVC Visual Standard, and VC-1 Video Standard in Notices apply. Any deployment services provided to Customer are subject to the Professional Services terms (refer to Professional Services).
+Service Level Agreement
+Refer to http://azure.microsoft.com/support/legal/sla/.
+Limitations
+Customer may not
+resell or redistribute the Microsoft Azure Services, or
+allow multiple users to directly or indirectly access any Microsoft Azure Service feature that is made available on a per user basis (e.g., Microsoft Entra ID). Specific reassignment terms applicable to a Microsoft Azure Service feature may be provided in supplemental documentation for that feature.
+Retirement of Services or Features
+Microsoft will provide Customer with 12 months’ notice before discontinuing a Microsoft Azure Service or removing any material feature or functionality of that Microsoft Azure Service, unless security, legal or system performance considerations require an expedited removal. This does not apply to Previews.
+Data Retention after Expiration or Termination
+The expiration or termination of Customer’s Online Service subscription will not change Customer’s obligation to pay for hosting of Customer Data during any Extended Term.
+Azure Customer Solution
+Use Rights and Conditions for Use
+Customer may create and maintain a Customer Solution. Despite anything to the contrary in Customer’s licensing agreement, Customer may permit third parties to access and use the Microsoft Azure Services solely in connection with the use of that Customer Solution.
+Customer is responsible for: (1) ensuring that third parties who access, use or distribute the Customer Solution comply with these terms, the terms and conditions of Customer's licensing agreement, and all applicable laws; and (2) obtaining any necessary licenses related to Standards in a Customer Solution. Notwithstanding anything to the contrary in Customer’s volume licensing agreement, Microsoft has no defense obligation or liability for any infringement claim for patents alleged to be infringed by the implementation of any Standards in a Customer Solution.
+Use of Software within Microsoft Azure
+For Microsoft software available within a Microsoft Azure Service, Microsoft grants Customer a limited license to use the software only within the Microsoft Azure Service.
+Data Center Availability
+Usage of data centers in certain regions may be restricted to Customers located in or near that region. For information on service availability by region, please refer to http://azure.microsoft.com/en-us/regions.
+Sharing
+The Microsoft Azure Services may provide the ability to share a Customer Solution and/or Customer Data with other Azure users and communities, or other third parties. If Customer chooses to engage in such sharing, Customer agrees that it is giving a license to all authorized users, including the rights to use, modify, and repost its Customer Solution and/or the Customer Data, and Customer is allowing Microsoft to make them available to such users in a manner and location of its choosing.
+Marketplace
+Microsoft Azure enables Customer to access or purchase products and services which are optimized for use with Azure through features such as the Microsoft Azure Marketplace and the Virtual Machine Gallery, subject to separate terms available at https://learn.microsoft.com/legal/marketplace/marketplace-terms.
+Bing Search Services
+By using the Bing Search Services, Customer agrees to be bound by the terms available at https://www.microsoft.com/en-us/bing/apis/legal and https://learn.microsoft.com/en-us/bing/search-apis/bing-web-search/use-display-requirements which may be updated from time to time. Customer must use results it obtains from the Bing Search Services only in Internet Search Experiences (as defined in the use and display requirements) and must not cache or copy results.
+Service Specific Terms
+API Terms for Security Applications and Compliance Applications
+“Compliance Application” means a software program or service built exclusively to ensure that an organization is complying with their security-related requirements.
+“Security Application” means a software program or service built exclusively to protect and defend the information and technology assets of an enterprise.
+“End User” refers to the end-user of the Security Application or Compliance Application.
+“Customer” refers to the registered owner of the Azure subscription where the Security Application or Compliance Application is registered with Microsoft Entra ID.
+The following terms and conditions apply to Microsoft Purview eDiscovery APIs in Microsoft Graph:
+The End User must have one of the following Microsoft 365 E5/E7 eligible licenses: Microsoft 365 E5/A5/G5/E7, Microsoft Purview Suite, or Microsoft 365 E5 eDiscovery & Audit.
+Microsoft will bill Customer for all commercial consumption of the data generated in the review set that exceeds the included monthly seeded allowance per End User tenant.
+These terms and conditions supersede any terms and conditions contained elsewhere, including the Microsoft APIs Terms of Use [https://docs.microsoft.com/en-us/legal/microsoft-apis/terms-of-use].
+Azure Databricks
+Any third-party models that Microsoft makes available in Azure Databricks are deemed Non-Microsoft Products.
+Microsoft Entra ID and Microsoft Entra ID Governance
+External User Allowance
+For each User SL (or equivalent Subscription License Suite) Customer assigns to a user, Customer may also permit up to five additional External Users to access the corresponding Microsoft Entra ID service level. This option is not available to new customers nor customers using (or who have used) the service under a Monthly Active User count.
+Customers may use Microsoft Entra ID External Identities or Microsoft Entra ID Governance for Guests (including any applicable Add-on) only for their External Users.
+For additional terms on Microsoft Entra ID Governance see the Microsoft Entra terms.
+For additional terms on Microsoft Defender for Identity see the Microsoft Defender terms.
+Windows Server and SQL Server management capabilities enabled by Azure Arc
+General Requirements
+Customer is authorized to apply certain Windows Server and SQL Server management capabilities enabled by Azure Arc only to Operating System Environments (OSEs) that:
+Are covered by an active Software Assurance (SA) plan, or
+Have active subscription licenses.
+SQL Managed Instance enabled by Azure Arc
+Use Rights
+SQL Managed Instance enabled by Azure Arc licenses are not assigned to any given Server and are therefore not subject to the License Assignment and Reassignment clause.
+Licenses are billed according to the terms of the license meter. Customer must connect to Azure at least once every 30 days via direct connected mode or indirect export mode to report usage data.
+Notwithstanding the Outsourcing Software Management clause, Customer may run SQL Managed Instance enabled by Azure Arc containers on Microsoft Azure, its own devices, or devices under the day-to-day management and control of third parties.
+Extended Security Updates enabled by Azure Arc
+General Requirements
+Customer is authorized to apply Extended Security Updates enabled by Azure Arc only to Operating System Environments (OSEs) that:
+Are covered by an active Software Assurance (SA) plan, or
+Have active subscription licenses, or
+Have been acquired as 'License-Included' services through a Service Provider License Agreement (SPLA) partner.
+In this context, "License-Included" refers to the scenario where Customer licenses Windows Server or SQL Server directly from a SPLA partner, rather than using their own licenses.
+Disaster Recovery and Dev/Test Environments
+Customer may apply Extended Security Updates enabled by Azure Arc to the following OSEs for no additional cost:
+Customer’s entitled Disaster Recovery OSEs associated with its underlying software licenses.
+Development, test, and related OSEs licensed with Microsoft Developer edition licenses or Visual Studio subscriptions.
+SQL Server Requirements
+For SQL Server Extended Security Updates Year 2 and subsequent versions, Customer is permitted to apply Extended Security Updates enabled by Azure Arc only if the Licensed Server is also covered with a SQL Server Extended Security Updates license for the preceding year.
+Use of Updated Software
+Customer may continue to use updated software after coverage expires. However, no future updates will be available if ESU subscription is terminated or cancelled.
+Support
+Extended Security Updates licenses (ESUs) do not include support unless the customer is covered by one of the following support plans: Pay Per Incident, Unified, and Premier Support for Partners. Support for Products with ESU coverage is limited to the following issues:
+Deployment, installation, and activation of ESU keys, license and updates
+Bugs/regressions introduced with the installation of a security update
+Troubleshooting services and assistance to resolve known and documented issues related to the underlying operating systems.
+Support for Products with ESU coverage does not include general technical support and troublesome assistance for the underlying products except as specified above. Issue resolution is not guaranteed.
+SQL Server enabled by Azure Arc
+Outsourcing
+Notwithstanding the Outsourcing Software Management clause, Customer may use SQL Server enabled by Azure Arc on its own devices, or devices under the day-to-day management and control of third parties, subject to the following exception:
+When using SQL Server enabled by Azure Arc with physical core licensing with unlimited virtualization under a pay-as-you-go subscription, Customer is only entitled to run SQL Server enabled by Azure Arc on its own devices or Servers under the day-to-day management and control of Authorized Outsourcers, regardless of whether those Servers are dedicated to Customer.
+Unlimited Virtualization
+When using SQL Server enabled by Azure Arc with physical core licensing under a pay-as-you-go subscription, an Enterprise edition license with Software Assurance, or an Enterprise edition subscription license, customers may run any number of instances of the software in any number of OSEs on the Licensed Server, subject to the Outsourcing terms set forth above. Without limiting Microsoft’s other remedies, if Customer fails to comply with these Outsourcing terms for any OSEs, Customer may be charged for consumption based on virtual core licensing for any period of non-compliance, and any physical core licensing will not apply to offset such charge.
+SQL Server – Fail-over Rights
+For each of its Primary Workloads, Customer is entitled to:
+One Fail-over OSE for any purpose, including high availability, on any Server (subject to the Outsourcing Software Management clause); and
+Two Fail-over OSEs specifically for disaster recovery purposes:
+One on any server (subject to the Outsourcing Software Management clause); and
+One on Microsoft Azure servers, subject to Ratio of Qualified Licenses to Azure vCores as stipulated in the Azure Hybrid Benefit terms for SQL Server.
+Customer may also run Primary Workloads and its disaster recovery Fail-over OSEs simultaneously for brief periods of disaster recovery testing every 90 days. Customer may perform the following maintenance-related operations for any permitted Fail-over OSE:
+Database consistency checks or Checkdb
+Log Back-ups
+Full Back-ups
+Monitoring resource usage data
+Fail-over OSEs permitted for disaster recovery must be asynchronous and manual. Fail-over OSEs may not serve SQL Server data to users or devices or otherwise run active SQL Server workloads. The number of licenses that otherwise would be required for a Fail-over OSE must not exceed the number of licenses required for the corresponding Primary Workload. These fail-over rights require SA for both the Licensed Server and CALs, if any, and do not apply when Customer deploys SQL Software under License Mobility through SA.
+Enablement of GitHub Advanced Security for Azure DevOps
+In addition to a Licensed User permitting access to Azure DevOps, a customer must activate GitHub Advanced Security for Azure DevOps for each repository where the service is required, allowing Unique Committers to utilize the service.
+Windows Server pay-as-you-go enabled by Azure Arc
+Use Rights and Conditions for Use
+For Servers subject to the Outsourcing Software Management clause, Customer may use the pay-as-you-go subscription option as long as it is (i) registered with Customer’s Azure subscription and (ii) connected to Customer’s Azure subscription over the Internet at least once every thirty (30) consecutive calendar days. Customer may not work around any mandatory registration or sign-up process for the pay-as-you-go subscription.
+License Restrictions
+Customer may use either Windows Server Standard or Windows Server Datacenter edition, subject to the respective license model terms. When using Datacenter edition with physical core licensing, unlimited virtualization does not apply.
+Azure Communication Gateway
+Azure Communications Gateway is only available for use by Telecommunication Service Providers. Notwithstanding anything to the contrary in Customer’s volume licensing agreement, Microsoft has no defense obligation or liability for any infringement claim for patents alleged to be infringed by the implementation of any Standards in Azure Communications Gateway. Customer is responsible for obtaining any required licenses directly from the holders of such rights.
+Azure Communication Services
+Customer Responsibility
+Azure Communication Services ("ACS") is a developer product and an input to customers' applications. Customer may only use Azure Communication Services for business purposes. Customers are solely liable for their applications or offerings that incorporate Azure Communication Services capabilities and services.
+Notices
+The H.264/AVC Visual Standard notice in Notices section applies.
+Recording and Transcription
+It is your responsibility to ensure that the users of your application are notified when recording or transcription are enabled in a call or meeting. Microsoft will indicate to you via the Azure Communication Services API that recording or transcription has commenced and you must communicate this fact, in real time, to your users within your application's user interface. If you have configured your policy to require explicit consent for recording or transcription, you are required to gather explicit consent from your users.
+Microphone
+It is your responsibility to ensure that the users of your application are notified when a microphone is being accessed by the Azure Communication Services SDK. Microsoft will indicate to you via the Azure Communication Services API that the microphone has been acquired and is ready to be used or is in use by the calling SDK. You as a developer are responsible for notifying your end users if the microphone is in use.
+Microsoft Teams Interoperability
+Interoperability between Azure Communication Services and Microsoft Teams enables your applications and users to participate in Teams calls, meetings, and chat. In addition to existing charges in Teams for PSTN connectivity, you will be charged consumption fees in Azure Communication Services.
+When Teams users join Teams meetings on the Teams clients then the call is covered by your Teams licenses. When a user makes a call using Azure Communication Services or when a Microsoft 365 or Microsoft Entra user makes a call with ACS calling SDK it will be charged based on Azure Communication Services fees.
+License Terms Precedence
+Some Azure Communication Services, including private previews and Previews, may be provided under a separate license, such as an open-source license. In the event of a conflict between these terms and any separate license, the separate license will prevail with respect to the Azure Communication Service that is the subject of such separate license. Each party reserves all rights (and no one receives any rights) not expressly granted by the foregoing licenses.
+End User Information
+Except in instances required by law or regulation, Microsoft does not retain information that identifies individual end users. Customer acknowledges that, should it delete or de-link end user identifying information in its possession, Microsoft shall have no responsibility to reconstitute the information.
+Defense of Claims
+You agree to defend, hold harmless, and indemnify Microsoft and its directors, officers, employees, affiliates, and agents from and against any and all demands, assertions, and legal proceedings brought by any third party (and all resulting judgments, settlements and expenses (including reasonable attorneys' fees and costs)) arising from a material breach of these terms by you or your subcontractors, agents, employees, or customers. This includes, without limitation, breach of the obligation to comply with applicable telemarketing laws and the U.S. Telephone Consumer Protection Act of 1991.
+Messaging Application
+ACS SMS and MMS services involve an integration between Microsoft and the underlying carrier, aggregator, or operator ("Operator"). Microsoft must share application details and/or campaign information with the Operator to ensure that the program meets regulatory guidelines and standards set by operators. The Operator is the final reviewer and approver of your service application. If the details you provide on your application change, it is your responsibility to resubmit your application with up-to-date information. By submitting an application, you agree that Microsoft may share the application details as necessary for provisioning the ACS messaging service.
+Messaging Policy
+Customer and its end users shall comply with the Azure Communication Services Messaging Policy. The Messaging Policy applies to SMS, MMS, and email communications. Microsoft reserves the right to suspend or remove access to Azure Communication Services for Customer or its end users that do not comply with the Messaging Policy. The Messaging Policy is available at https://docs.microsoft.com/azure/communication-services/concepts/telephony-sms/messaging-policy.
+Azure DevOps
+Use for Development and Testing
+Customer may only access and use Azure DevOps to develop and test Customer’s application(s). Only one Licensed User may access a virtual machine provided by Azure DevOps at any time.
+Authorized Developer
+Customer appoints Microsoft as its authorized developer with respect to Apple software included in Azure DevOps. Microsoft is responsible for complying with the terms for any such software included in Azure DevOps and will keep confidential any confidential information of Apple accessed as part of Azure DevOps.
+Third Party Repository Service Access
+If Customer grants Microsoft access to its third-party repository service account(s), Customer authorizes Microsoft to scan the account(s), including the contents of Customer’s public and private repositories.
+Azure DevTest Labs
+Secrets in DevTest Labs
+Azure DevTest Labs automatically creates a key vault when a user saves a secret for the first time. Customer may not use this key vault to store anything other than DevTest Lab related passwords, SSH keys, or personal access tokens.
+Microsoft Dev Box
+Permitted Usage
+Customer must use Microsoft Dev Box ("Dev Box") to design, develop, or test applications. Other use is permitted if Customer is also using Dev Box for one of the aforementioned purposes.
+Dev Box is not eligible for the Azure Customer Solution clause in the General Service Terms for Azure.
+License Prerequisites
+The Licensed User must be licensed with each of the following: Windows 10/11 Enterprise/Education, Intune, and Microsoft Entra ID P1/P2. In addition to being available independently, all these licenses are also included in Microsoft 365 F3/E3/G3/E5/E7/G5/A3/A5/Business Premium/Student Use Benefit.
+Network Egress
+Microsoft reserves the right to restrict network egress due to high bandwidth usage.
+Use as a Server
+You may not use the service to perform server functions to devices outside of the service or to third parties.
+Distributed Computing
+You may not use the service for sustained distributed computing or digital asset transaction validation workloads.
+Data Handling
+Windows 365, which includes Windows 365 Reserve, Windows 365 Flex, Windows 365 Business, Windows 365 for Agents, and Windows 365 Enterprise, integrates data (including Customer Data) between other Microsoft Products including Microsoft Entra ID, Microsoft Intune, Azure Virtual Desktop, and other Online Services as configured by Customer, if any (collectively for purposes of this provision the "Windows 365 Integrated Services"). Once data is transferred between the Windows 365 Integrated Services, that data is governed by the Product Terms applicable to the Product in which it resides.
+Windows App
+The commercial use restrictions set forth in the license terms for the Microsoft Windows App (https://learn.microsoft.com/legal/windows-app/windows-app-license-terms) is waived for Customer to connect to Windows 365 Reserve, Windows 365 Flex, Windows 365 Business, Windows 365 for Agents, or Windows 365 Enterprise provided Customer holds a valid subscription.
+Microsoft eDiscovery Graph API Standard
+Licensing Prerequisites
+License
+License Prerequisite
+Microsoft eDiscovery Graph API Standard
+Microsoft 365 E3
+Microsoft Fabric
+Power BI
+Customer's use of Power BI within Microsoft Fabric is subject to Power BI service specific terms and notices terms provided under the Power BI Platform section of these Online Services product terms.
+Healthcare Data Solutions in Fabric
+Access to Healthcare Data Solutions in Fabric requires a subscription to Microsoft Fabric. Healthcare Data Solutions in Fabric are subject to the Online Services terms governing Azure Services.
+Workload Hub
+Publisher workloads offered through the Workload Hub are deemed to be Non-Microsoft Products.
+Firmware Analysis
+Use
+Customer may use the service only for its internal use and may not sell, lease, or market the service to third parties. Firmware Analysis results (“Analysis Results”) may only be disclosed in accordance with the Disclosure section below. Customer’s use of the Analysis Results is subject to the Acceptable Use Policy.
+Maximum Uploads and Images
+Customer may load up to the maximum number of uploads and images in Customer’s workspace in accordance with the workspace tier licensed by Customer as described in the Firmware Analysis documentation at https://aka.ms/firmwareanalysislicensing.
+No Warranties
+Microsoft makes no express or implied warranties regarding the accuracy, completeness, or reliability of information provided in the Analysis Results. The Analysis Results are only intended for informational purposes and should not be relied upon as a definitive measure of vulnerability assessment or system security.
+Disclosure
+Subject to the restrictions in these Product Terms, Customer may disclose Analysis Results (a) to its contractors or vendors for use on Customer’s behalf and (b) to the firmware owner.
+If Customer wants to disclose Analysis Results publicly, Customer must first: (a) independently verify the results, and (b) follow industry best practices for Coordinated Vulnerability Disclosure (CVD) such as Microsoft's approach to CVD (https://www.microsoft.com/msrc/cvd) or as documented by CISA (https://www.cisa.gov/resources-tools/programs/coordinated-vulnerability-disclosure-program). After completion of (a) and (b) and as part of any public disclosure, Customer must (x) reference the Firmware Analysis service as the source of the Analysis Results, and (y) include the following disclaimer: these Analysis Results are not a definitive measure of vulnerability assessment or system security.
+Azure Health Bot Service
+Customer Obligations
+Customer is solely responsible for: (1) the accuracy and adequacy of information and Data furnished through use of the Azure Health Bot Service; (2) implementing a secure application-to-application authentication method between the Customer Health Bot Application and the Azure Health Bot Service; (3) obtaining appropriate consent from end users in connection with their use of the Customer Health Bot Application; and (4) displaying appropriate warnings, disclaimers, and acknowledgements to end users in connection with their use of the Customer Health Bot Application, including, as applicable, those set forth in the following form.
+Azure IoT Operations Standard
+Use Rights and Use Cases
+For each instance of Azure IoT Operations Standard in the below use cases, Customer may (1) allow a maximum of 5 users to access the operations experience portal; (2) configure its data flow endpoints to include a maximum of 50 concurrent endpoints; and (3) use the connector for OPC UA to enable connections to a maximum of 2 OPC UA servers. Use cases are as follows:
+Production Use. Customer may install and use Azure IoT Operations Standard. Customer may not use Azure IoT Operations Standard on Listed Provider clouds.
+Non-Production Use. Customer may install and use Azure IoT Operations Standard on Listed Provider and non-Listed Provider clouds.
+Trial Use. Customer may install and use Azure IoT Operations Standard on Listed Provider and non-Listed Provider clouds as described at https://aka.ms/AzureIoTOperations/pricing.
+Use Limitations
+For each use case of Azure IoT Operations Standard above, Customer may not (1) separate the Azure IoT Operations Standard components for use as a stand-alone product or with other products or services or (2) replace or substitute Azure IoT Operations Standard components with third party components.
+Included Microsoft Components
+Azure IoT Operations Standard may include other Microsoft components listed at https://aka.ms/AzureIoTOperations/Includedcomponents. Use of these components, as described in the associated documentation at https://aka.ms/AzureIoTOperationsDocs is governed by these license terms.
+Azure IoT Operations Standard connectors Use Rights and Use Cases
+The following terms apply to: Azure IoT Operations Standard connector for REST/HTTP, Azure IoT Operations Standard connector for SSE, Azure IoT Operations Standard connector for ONVIF, Azure IoT Operations Standard media connector, and Azure IoT Operations Standard connector for MQTT. For each instance, Customer may install and use the connector on Listed Provider and non-Listed Provider clouds only for Non-Production and Trial Use Cases.
+Azure IoT Operations Standard connector for OPC UA Use Rights and Use Cases
+For each instance of Azure IoT Operations Standard connector for OPC UA, Customer may install and use the commanding capability of the Azure IoT Operations Standard connector for OPC UA on Listed Provider and non-Listed Provider clouds only for Non-Production and Trial Use Cases.
+Schema Registry feature of Azure Device Registry in Azure IoT Operations Standard Use Rights and Use Case
+Customer may use the schema registry feature from Azure Device Registry within Azure IoT Operations Standard in Production, Non-Production and Trial Use Cases. Customer may use a maximum of 200 schemas per schema registry.
+Azure Kubernetes Service Edge Essentials
+Use Rights and Conditions for Use
+Customer may use Azure Kubernetes Service Edge Essentials (AKS EE) only on Windows and Windows Server to host, manage, and service validly licensed containers running validly licensed applications.
+One (1) SL for AKS EE permits Customer to use AKS EE on one (1) physical device or virtual machine.
+Pre-Release Features
+Microsoft may provide pre-release features in AKS EE which are for preview purposes only and may not be used in a production environment. Such pre-release features may not work correctly or the way a final commercial version of the features will. Microsoft may change the commercial versions of such features or may not release commercial versions.
+Feedback
+If Customer gives feedback about the pre-release features or AKS EE to Microsoft, Customer gives to Microsoft, without charge, the right to use, share and commercialize Customer feedback in any way and for any purpose. Customer will not give feedback that is subject to a license that requires Microsoft to license its software or documentation to third parties because Microsoft includes Customer feedback in them. These rights survive Customer’s volume licensing agreement.
+Azure Kubernetes Service on Azure Local and Azure Kubernetes Service Runtime on Windows Server
+Use Rights and Conditions for Use
+Customer may use Azure Kubernetes Service on Azure Local (AKS on Local) and Azure Kubernetes Service Runtime on Windows Server (AKS on WS) (collectively, AKS) only (i) on Azure Local (with respect to AKS on Local) or Windows Server (with respect to AKS on WS) running on servers dedicated to Customer’s use and (ii) to host, manage, and service validly licensed containers running validly licensed applications.
+Customer may use AKS as long as it is registered with Customer’s valid Azure subscription in order to enable additional AKS functionality and to meter and invoice Customer.
+Included Microsoft Applications
+AKS may include other Microsoft applications. These license terms apply to those included applications, if any, unless other license terms are provided with the other Microsoft applications.
+Third Party Software
+AKS may include third party components with separate legal notices or governed by other agreements, as may be described in the ThirdPartyNotices file(s) accompanying AKS or within AKS itself.
+License Restrictions
+Customer may not work around any mandatory registration or sign-up process for AKS.
+Customer Support
+Any support for AKS is provided “as is”, “with all faults”, and without warranty of any kind.
+Updates
+AKS may automatically download and install updates for you. You agree to receive these automatic updates without any additional notice. Updates may not include all existing software features, services, or peripheral devices.
+Azure Lab Services
+While Microsoft provides Azure Lab Services to Customer, as between Customer and Microsoft, Customer is the sole provider of related services to Customer’s end users and shall have sole and exclusive responsibility to end users, including any support obligations. Customer’s end users are not a party to any agreement with Microsoft regarding the services.
+Notification; Liability; Bar on Actions Against Microsoft
+Customer will notify Microsoft promptly of any incidents that could have an impact on Microsoft such as a data breach, password issues, end user complaint(s), loss of user data, or intellectual property or privacy claims.
+Customer acknowledges and agrees that Microsoft has no obligation or liability to Customer or any end user for the end user’s usage of the service.
+By using the service, an end user may not bring any action against Microsoft in relation to the services. If any end user does bring an action against Microsoft, the Indemnification provision in this section applies.
+Indemnification
+Customer agrees to hold harmless and indemnify Microsoft from and against any claim by an end user, third party, and/or regulatory authority in connection with the service provided to end users. Customer shall pay any resulting judgment, or settlement, and all costs, including reasonable attorney’s fees, and expenses related thereto.
+End User Terms
+In order to provide the services to end users, Customer and Customer’s end users must validly agree to a binding, written agreement that contain the substance of the following requirements:
+Statement of Relationship: Customer is the sole provider of the services. Customer is responsible for providing any support to end users. The services will be provided by Customer to Customer’s end users under your terms of use and privacy policy.
+Compliance; Acceptable Use: Customer is solely responsible for ensuring compliance with all applicable laws, including, but not limited GDPR, with respect to Customer’s provision and end users’ use of the service. In addition, for clarity and without limiting the Acceptable Use Policy, Customer and Customer’s end users may not use Azure Lab Services to facilitate or engage in cryptocurrency mining. Violation of this prohibition may result in suspension of the service, as set forth in the Acceptable Use Policy.
+Disclaimer of Warranties: Customer will disclaim any and all warranties in connection with the services, and Customer will disclaim the same with respect to Microsoft.
+Limitation of Liability and Exclusion of Damages: Customer will disclaim liability and exclude damages in a way that is consistent with the provisions of any applicable agreement(s) between Customer and Microsoft.
+Updates
+Customer is responsible for updating the virtual machines (VMs) in Customer’s portfolio. Notwithstanding the foregoing, Microsoft may, but is not obligated to, take any action it deems reasonable in its business judgment with respect to the VMs in your portfolio, including applying any updates or other changes generally applicable to the services.
+Azure Machine Learning service
+NVIDIA Components
+Azure Machine Learning service may include NVIDIA Corporation’s CUDA Toolkit, Tesla drivers, cuDNN, DIGITS, NCCL, and TensorRT (the “NVIDIA Components”), Customer agrees that its use of NVIDIA Components is governed by the NVIDIA Cloud End User License Agreement for Compute at https://go.microsoft.com/fwlink/?linkid=874330.
+Model Catalog/Registry
+Any third-party models that Microsoft makes available in the Model Catalog and/or Model Registry are deemed to be Non-Microsoft Products subject to the terms for Non-Microsoft Products in these Microsoft Product Terms. Customer’s use of any such third-party models is governed by the third-party license terms provided in connection with the model.
+Azure Maps
+Navigation restrictions
+Customer may not use Azure Maps, or any part thereof (1) to enable turn-by-turn navigation functionality in any Customer Solution or use within an automatic or autonomous vehicle control; or (2) with a vehicle’s dashboard, or a device connected to a vehicles dashboard, systems, or sensors, except that the device may be connected to the vehicle power source for charging purposes.
+Database restrictions
+Customer may not use Azure Maps or any part thereof to create a competing database or service, or a derived database populated wholly or partially with Customer’s content and/or content supplied or created by any third party.
+Customer will not use the content delivered by the Azure Maps in combination with any other third-party database, except that Customer may layer onto the content a type of content not already included within Azure Maps (such as Customer's proprietary content) or which Microsoft separately licenses to Customer.
+When using content licensed under or subject to an open-source license, Customer may not combine the use of Azure Maps, or any part thereof, in a way that potentially compromises copyright protection.
+Customer will not modify or create a derivative work based on Azure Maps, or any part thereof, unless expressly permitted to do so under these terms.
+API Results
+Microsoft may, in its sole discretion, limit the rate at which Azure Maps, or any portion thereof, may be called.
+Customer may not cache or store results delivered by the Azure Maps API for the purpose of scaling such Results (as defined below) to serve multiple users, or to circumvent any functionality in Azure Maps, including but not limited to (i) map data tiles, or (ii) information on the calculation of a path between two (2) or more points (“Route”) information (collectively the “Results”).
+Caching and storing Results and locations (latitude and longitude pair) or addresses that have been returned from a call to Azure Maps (“Geocode”/ ”Reverse Geocode”) are permitted where the purpose of caching is to reduce latency times of the Customer Solution. Results may not be stored for longer than: (i) the validity period indicated in returned headers; or (ii) 6 months, whichever is shorter. However, Customer may store Geocodes as long as Customer maintains an active Azure account.
+Customer may not display any Results, and/or Azure Maps Weather service results, solely as described in these Terms, on any third-party content or geographical map database.
+Map Content
+Use of content displaying the TomTom copyright notice must be in accordance with restrictions set forth in the TomTom Licensing Third Party Product Terms and EULA (https://tomtom.com/product-attributions/).
+Azure Maps may include content that is subject to the Open Data Commons Open Database License ("ODbL"), available at https://opendatacommons.org/licenses/odbl/ or a successor site. Customer’s use of such content is subject to the terms of the ODbL, including the License and Community Guidelines available at https://osmfoundation.org/wiki/Licence/Community_Guidelines, as well as these terms.
+Additional information on Customer’s use of Azure Maps or functionalities is described in product documentation.
+Imagery Content
+When using Azure Maps, Customer may not, nor may permit end users to, replace maps from Azure Maps with maps supplied by any other mapping platform. Notwithstanding the foregoing, Customer may overlay satellite/aerial imagery that Customer has the rights to use, provided that such imagery does not substantially replace the base satellite/aerial imagery provided by Azure Maps. Customer may not modify or create a derivative work based on any content using machine learning or artificial intelligence, unless expressly permitted to do so under these terms.
+User region parameter
+User region parameter in Azure Maps must be used in compliance with applicable laws, including those regarding mapping, of the country where maps, images and other content and third-party content that Customer is authorized to access via Azure Maps is made available.
+No warranty for accuracy
+Microsoft and its suppliers make no warranty that the maps, images, content or any content delivered by Azure Maps will be accurate or complete.
+Copyright
+Customers may not remove, obscure, mask or change any logo and/or copyright notice placed on or automatically generated by Azure Maps. Customer must display in a conspicuous manner within Customer Solution any Microsoft or third-party attribution provided by Microsoft. In addition, customers using the Azure Maps Render services must use the "Get Map Attribution” API to obtain the copyright attribution text and display it in their Customer Solution.
+Print Rights
+Customer may and allow end users to print, save, or use screen shots of Azure Maps, or any part thereof, of the type “Road Map” and "Satellite" (“Prints”). Prints may be used for commercial purposes. Acceptable commercial purposes for Prints include: (i) use in an advertisement or press article about Microsoft products or services; (ii) sending PDF Prints to customers; (iii) printing a browser page including Azure Maps, or any part thereof, to create a flyer or handout; (iv) use within documents or presentations; and (v) sending in an email.
+Prints must include the following copyright attribution statement: "Microsoft product screen shot(s) reprinted with permission from Microsoft Corporation.”
+Customer may not, nor may Customer permit end users to:
+Use Prints in a way that is disparaging, defamatory, or libelous to Microsoft, any of its products, or any other person or entity.
+Use Prints of an identifiable individual.
+Make more than 5,000 copies of any single Road Map Print or Satellite imagery.
+Access, download, transmit or save the ‘raw’ data (tiles) from Azure Maps under any circumstances.
+Use Prints to create production maps which are similar to or compete with commercial maps or atlases.
+Use Azure Maps to produce Prints similar to a local mapping authority.
+Directly or indirectly imply Microsoft sponsorship, affiliation, or endorsement of Customer’s product or service.
+Use Prints in a comparative advertisement.
+Alter a screen shot in any way except to resize the screen shot.
+Include Prints in Customer’s product user interface.
+Make prints that display the Zenrin copyright notice, © [Year] Zenrin. For example, maps isolated solely on Japan.
+Broadcast Media & Entertainment
+Customer may use the imagery provided in Azure Maps with television programming and the Road Maps in Azure Maps with television programming, media and entertainment use. Customer may only use Azure Maps to provide graphics, imagery, animations and/or video showing Azure Maps that are intended to be viewed by end users who are unable to interact with the final graphics, imagery and/or video. Customer may use Azure Maps solely in conjunction with and integrated into Customer Solution that use Azure Maps for broadcast use (“Broadcast Applications”) using only methods and means of access that are documented. The media incorporating the Road Maps content from Azure Maps may be stored, recorded, distributed, and redistributed both online and offline for television broadcast, media and entertainment use (including movies and similar scenarios), except for Road Maps of France, Australia, Czech Republic, Switzerland and Japan. The media incorporating the imagery content from Azure Maps may be: (i) recorded, distributed and redistributed online as part of television broadcasts and (ii) stored and distributed offline for television broadcast purposes only, except for Road Maps in type "Hybrid" of France, Australia, Czech Republic, Switzerland and Japan. Additional rights may only be obtained by written agreement with Microsoft.
+Customer must follow the content attribution requirements provided at: https://www.microsoft.com/legal/intellectualproperty/trademarks. To the extent applicable local law prohibits Customer from attributing content sources by displaying their logos with Azure Maps, Customer must prominently display the source of the content as a text string.
+In developing Broadcast Applications, and in using Azure Maps, Customer may not, nor may Customer permit end users to distribute or broadcast the road traffic data from Azure Maps.
+Azure Orbital
+Authorization Required
+Customers may not use the Azure Orbital service to receive signals from or transmit signals to a satellite space station without the authorization of its operator. By subscribing to the Azure Orbital service, you represent to Microsoft that your intended operations will occur only with the satellite space-station operator’s consent.
+Azure Private 5G Core
+Software License
+Subject to the following terms and conditions, Microsoft grants you a nonexclusive, limited, royalty-free, nontransferable right to use the Azure Private 5G Core software solely as part of an Azure Private MEC Solution. Customer agrees that it will only use Azure Private 5G Core after review by Microsoft and may be required to assent to additional terms and conditions, visit aka.ms/ap5gcvalidation.
+Azure Local
+Use Rights and Conditions for Use
+Customer may use the Azure Local software only (i) on devices dedicated to Customer’s internal use and (ii) as a host operating system to manage and service validly licensed virtual machines running validly licensed applications. Any server that is under the management or control of an entity other than Customer or one of its Affiliates is subject to the Outsourcing Software Management clause. Customer may use the Azure Local software as long as it is (i) registered with Customer’s valid Azure subscription in order to enable additional Azure Local functionality and to meter and invoice Customer and (ii) connected to Customer’s Azure subscription over the Internet at least once every thirty (30) consecutive calendar days.
+License Restrictions
+Customer may not (i) work around any mandatory registration or sign-up process for Azure Local or (ii) run any applications, operating system roles, and/or other workloads directly on the Azure Local software except for (A) utilities and operating system roles and (B) virtualized machines running Azure Local, both (A) and (B) as necessary to enable Azure Local to host, manage, and service validly licensed virtual machines running validly licensed applications.
+Disconnected Operations for Azure Local
+Use Rights and Conditions for Use
+Notwithstanding anything to the contrary in the Azure Local Product Terms:
+Customer may deploy disconnected operations only on Azure Local instances. Customer must at all times maintain an Azure resource representation to operate Azure Local in disconnected mode. Disconnected operations are intended for use with no online connectivity to an Azure billing endpoint.
+Customer will license all physical cores of Azure Local managed through disconnected operations for the duration of the one-year license period, including the physical cores required to run the local control plane. If Customer’s physical core usage under the management of disconnected operations exceeds their purchase plan during the license period, Customer must true-up their license accordingly, and billing will be adjusted based on the new total core count for the remainder of the license period. Microsoft reserves the right to audit the core counts and usage. Customer will renew their license period before the beginning of the next license period to continue the usage of disconnected operations for Azure Local. If Customer does not renew the license period prior to the end of the applicable license period, Customer will no longer have the rights to use Azure Local with disconnected operations.
+Azure Hybrid Benefit for Windows Server VM Licensing applies to Windows Server VMs running on Azure Local with disconnected operations.
+Compliance with Trade Laws
+Customer shall ensure that it, any of its directors or officers, or to the best of Customer’s knowledge, its employees or agents, Enrolled Affiliates, or Enrolled Affiliates’ directors, officers, employees, or agents are not sanctioned persons designated under applicable Trade Laws.
+Customer shall provide Microsoft with prompt written notice if Customer or any of its Enrolled Affiliates receive notice from any government agency of any investigation, inquiry, or proceeding for any actual or alleged noncompliance of or with any Trade Laws related to activities subject to this Agreement.
+Customer shall comply with global use restrictions in Microsoft’s product or service terms relevant to this agreement, as updated from time to time.
+Customer shall not make available Microsoft Items to any entity or individual designated on any export or sanctions restriction lists under Trade Laws, in each case, without specific government authorization required by Trade Laws.
+Azure Stack Hub
+Use of Azure Stack Hub
+Customer may use Azure Stack Hub only on the hardware on which it is preinstalled.
+Use of the Default Provider Subscription
+The subscription created for the system administrator during the Azure Stack Hub deployment process (the default provider subscription) may be used solely to deploy and manage the Azure Stack Hub infrastructure; it may not be used to run any workload that does not deploy or manage Azure Stack Hub infrastructure (e.g. it may not be used to run any application workloads).
+Azure Stack Hub Plan
+Customer may use Microsoft Azure Stack Hub on a Licensed Server, provided it acquires a number of SLs equal to the number of Physical Cores on that Server. Licenses are reduction eligible; however, ongoing use remains subject to the requirement to retain licenses equal to the Physical Cores on the Server.
+Azure SQL Edge
+IoT Device
+Any IoT Device that is under the management or control of an entity other than Customer or one of its Affiliates is subject to the Outsourcing Software Management clause.
+Use of Azure SQL Edge
+Customer may install and use any number of copies of the Azure SQL Edge software on an IoT Device dedicated to Customer’s use and to which a License is assigned. Notwithstanding anything to the contrary in Universal Terms for Online Services, Customer may reassign a License at any time to other IoT Devices dedicated to its use. If Customer installs any features or functionalities other than the Azure SQL Edge software (whether derived from Microsoft or third party software) on the IoT Device, then those other features or functionalities may be used only to support the IoT Program.
+Azure SQL Managed Instance
+SQL Server Fail-over Rights
+Azure SQL Managed Instances include the following Fail-over entitlements:
+One geo-secondary specifically for disaster recovery purposes.
+Customer will only be charged for compute, storage, and any associated services, as applicable.
+Customer may also run Primary Workload and its disaster recovery replica simultaneously for brief periods of disaster recovery testing every 90 days, and around the time of a disaster, for a brief period, to assist in the transfer between them. Customer may perform the following maintenance-related operations for any permitted replica:
+Database consistency checks or Checkdb
+Executing backups
+Monitoring resource usage data
+The number of vCores used may not exceed the vCore size of the corresponding Primary Workload, except for brief periods during upscaling, downscaling, and failover events. Replicas may not serve SQL Server data to users or devices or otherwise run active SQL Server workloads.
+Azure SQL Server Virtual Machines
+SQL Server Fail-over Rights
+SQL Server Virtual Machines include the following Fail-over entitlements:
+One Fail-over OSE for any purpose, including high availability; and
+One Fail-over OSE specifically for disaster recovery purposes.
+Customer will only be charged for compute, storage, and any associated services, as applicable.
+Customer may also run Primary Workload and its disaster recovery Fail-over OSE simultaneously for brief periods of disaster recovery testing every 90 days, and around the time of a disaster, for a brief period, to assist in the transfer between them. Customer may perform the following maintenance-related operations for any permitted Fail-over OSE:
+Database consistency checks or Checkdb
+Executing backups
+Monitoring resource usage data
+Fail-over OSEs permitted for disaster recovery must be asynchronous and manual. The number of vCores used may not exceed the vCore size of the corresponding Primary Workload. Fail-over OSEs may not serve SQL Server data to users or devices or otherwise run active SQL Server workloads.
+Azure SQL Database
+SQL Server Fail-over Rights
+Azure SQL Database include the following Fail-over entitlements:
+One geo-secondary specifically for disaster recovery purposes.
+Customer will only be charged for compute, storage, and any associated services, as applicable.
+Customer may also run Primary Workload and its disaster recovery replica simultaneously for brief periods of disaster recovery testing every 90 days, and around the time of a disaster, for a brief period, to assist in the transfer between them. Customer may perform the following maintenance-related operations for any permitted replica:
+Database consistency checks or Checkdb
+Monitoring resource usage data
+The number of vCores used may not exceed the vCore size of the corresponding Primary Workload, except for brief periods during upscaling, downscaling, and failover events. Replicas may not serve SQL Server data to users or devices or otherwise run active SQL Server workloads.
+Azure Virtual Desktop Per User Access
+Definitions
+“End User” means a third-party individual that acquires Azure Virtual Desktop Customer Solution from Customer for End User’s own internal use (without the right to resell or redistribute it).
+“Azure Virtual Desktop Customer Solution” means an application or any set of applications that adds primary and significant functionality to the Azure Virtual Desktop.
+Use Rights
+Azure Virtual Desktop per user access licenses are only available for Customer’s external commercial purposes to serve Azure Virtual Desktop Customer Solutions to third parties on Azure. Customer may not use the licenses acquired under this model for internal purposes. Customer may assign no more than one million user identities licensed under this model to its Azure Virtual Desktop session hosts.
+To access Azure Virtual Desktop for internal business purposes Customer may acquire select Windows Enterprise and Microsoft 365 licenses. Please see the relevant product sections for more details.
+End User Entitlements
+End Users may connect to up to five Azure Virtual Desktop session hosts at once.
+Hosting Entitlement
+The General Service Terms Azure Customer Solution clause does not apply. Notwithstanding the general restrictions in Customer’s agreement that preclude reselling, redistributing, or using the Products to offer commercial hosting services to third parties, Customer may, subject to the conditions set forth below:
+Combine Azure Virtual Desktop per user access licenses with applications owned or licensed by Customer or a third party to create an Azure Virtual Desktop Customer Solution solely for use on Microsoft Azure, and permit End Users to access and use Azure Virtual Desktop per user access licenses in connection with the use of that Azure Virtual Desktop Customer Solution on a rental, subscription or services basis (whether or not a fee for such use is paid).
+Additional Terms
+Indemnification. Customer agrees to defend Microsoft from and against any claim by an End User, third party, and/or regulatory authority arising from, or in connection with, the Azure Virtual Desktop Customer Solution provided to End Users. Customer will pay the amount of any adverse final judgment or approved settlement resulting from a claim covered by this section. The obligations under this section are not subject to the limitation of liability or exclusion of certain damages under Customer’s volume licensing agreement.
+Support. Microsoft is not obligated to provide support services to Customer or its End Users in connection with the Azure Virtual Desktop Customer Solution. Customer alone is responsible for providing technical support to End Users for all aspects and components of the Azure Virtual Desktop Customer Solution, either itself or by obtaining and continuously maintaining support for its End Users through Microsoft or a third party. Customer must inform End Users of this fact. Any support from Microsoft for questions or issues that arise as part of Customer’s support of the Azure Virtual Desktop Customer Solution must be obtained under a separate support services agreement.
+END USER AGREEMENT REQUIREMENTS
+Company must:
+Notify each End User before or at the time of purchase (in the appropriate language versions for the locations in which Company will deliver the Azure Virtual Desktop Customer Solution) that the Azure Virtual Desktop Customer Solution contains Microsoft technology that is subject to certain license terms and that the End User must agree to the license terms before using the Product.
+Include the following acknowledgment in the credit screen or about screen and documentation of any Azure Virtual Desktop Customer Solution: "© Copyright 2021 Microsoft Corporation. All rights reserved.”
+Present and execute license terms in a manner that forms a contract binding the End User under applicable law. Such license terms must contain the substance of the requirements contained in the following exemplar:
+TERMS AND CONDITIONS REGARDING USE OF MICROSOFT SOFTWARE & ONLINE SERVICES
+This document governs the use of software and online services (“Software Services”) that [insert Service Provider’s name] (“Service Provider”) provides to you on a rental, subscription or services basis, and that include Microsoft software and online services (“Microsoft Products”). Service Provider does not own the Microsoft Products and the use thereof is subject to certain rights and limitations of which Service Provider must inform you. Your right to use the Microsoft Products is subject to the terms of your agreement with Service Provider, and to your understanding of, compliance with, and consent to the following terms and conditions, which Service Provider does not have authority to vary, alter, or amend.
+OWNERSHIP OF MICROSOFT PRODUCTS. The Microsoft Products are licensed to Service Provider from an affiliate of the Microsoft Corporation (collectively “Microsoft”). Microsoft Products are protected by copyright and other intellectual property rights. Microsoft Products and related elements including but not limited to any images, photographs, animations, video, audio, music, text and “applets” incorporated into the Microsoft Products are owned by Microsoft or its suppliers. You may not remove, modify or obscure any copyright trademark or other proprietary rights notices that are contained in or on the Microsoft Products. The Microsoft Products are protected by copyright laws and international copyright treaties, as well as other intellectual property laws and treaties. Your possession, access, or use of the Microsoft Products does not transfer any ownership of the Microsoft Products or any intellectual property rights to you.
+USE OF SOFTWARE SERVICES. You may use the Software Services only in accordance with your agreement with Service Provider and these terms. These terms permanently and irrevocably supersede the terms of any Microsoft End User License Agreement that may be presented in electronic form during the installation and/or use of the Software Services.
+COPIES. You may not make any copies of the Products.
+LIMITATIONS ON REVERSE ENGINEERING, DECOMPILATION AND DISASSEMBLY. You may not reverse engineer, decompile, or disassemble the Products, except and only to the extent that applicable law, notwithstanding this limitation, expressly permits such activity.
+NO RENTAL. You may not rent, lease, lend, pledge, or directly or indirectly transfer or distribute the Products to any third party, and may not permit any third party to have access to and/or use the functionality of the Products except for the sole purpose of accessing the functionality of the Products in the form of Software Services in accordance with the terms of this agreement and any agreement between you and Service Provider.
+TERMINATION. Without prejudice to any other rights, Service Provider may terminate your rights to use the Products if you fail to comply with these terms and conditions. In the event of termination or cancellation of your agreement with Service Provider or Service Provider’s agreement with Microsoft under which the Products are licensed, you must stop using and/or accessing the Products, and destroy all copies of the Products and all of their component parts within thirty (30) days of the termination of your agreement with Service Provider.
+NO WARRANTIES, LIABILITIES OR REMEDIES BY MICROSOFT. Microsoft disclaims, to the extent permitted by applicable law, all warranties and liability for damages by Microsoft or its suppliers for any damages and remedies whether direct, indirect or consequential, arising from the Software Services. Any warranties and liabilities are provided solely by Service Provider and not by Microsoft, its affiliates or subsidiaries.
+PRODUCT SUPPORT. Any support for the Software Services is provided to you by Service Provider or a third party on Service Provider’s behalf and is not provided by Microsoft, its suppliers, affiliates or subsidiaries.
+NOT FAULT TOLERANT. The Products are not fault-tolerant and are not guaranteed to be error free or to operate uninterrupted. You must not use the Products in any application or situation where the Product(s) failure could lead to death or serious bodily injury of any person, or to severe physical or environmental damage (“High Risk Use”).
+EXPORT RESTRICTIONS. The Products are subject to U.S. export jurisdiction. You must comply with all applicable laws including the U.S. Export Administration Regulations, the International Traffic in Arms Regulations, as well as end-user, end-use and destination restrictions issued by U.S. and other governments. For additional information, see http://www.microsoft.com/exporting/.
+LIABILITY FOR BREACH. In addition to any liability you may have to the Service Provider, you agree that you will also be legally responsible directly to Microsoft for any breach of these terms and conditions.
+INFORMATION DISCLOSURE. You must permit Service Provider to disclose any information requested by Microsoft under the Service Provider’s Agreement. Microsoft will be an intended third-party beneficiary of your agreement with Service Provider, with the right to enforce provisions of your agreement with Service Provider and to verify your compliance.
+PRIVACY AND DATA PROTECTION. The Software Service will be provided by Service Provider you under its privacy policy.
+Azure VMware Solution
+Deployment and Usage Information
+Customer authorizes Microsoft to share with VMware its status as a customer of Azure VMware Solution and associated Azure VMware Solution deployment and usage information.
+Microsoft AI Services
+For purposes of this section, “Services” means collectively the Microsoft Azure AI Services.
+Product Documentation
+Microsoft may provide technical documentation regarding the appropriate operation applicable to the Services (including the applicable developer guides), which is made available online by Microsoft and updated from time to time. Customer acknowledges and agrees that it has reviewed this documentation and will use the Services in accordance with such documentation, as applicable. Some Services are intended to process Customer Data that includes Biometric Data (as may be further described in product documentation) which Customer may incorporate into its own systems used for personal identification or other purposes. Customer acknowledges and agrees that it is responsible for complying with the Biometric Data obligations contained in the Microsoft Products and Services DPA (https://aka.ms/DPA).
+Limited Access Services
+Certain Services (or versions thereof) require registration and are subject to limitations on access and use based on Microsoft’s eligibility and use criteria, as updated by Microsoft from time to time (“Limited Access Services”). The following Services are Limited Access Services:
+Azure Speech TTS custom voice
+Azure Speech custom TTS avatar
+Azure Vision Face
+Azure Vision celebrity recognition
+Azure Video Indexer Applied AI Service
+Foundry Models sold by Azure that are designated as Limited Access
+Foundry Models sold by Azure (Modified Content Filtering/Abuse Monitoring/Guardrails for High-Risk Content)
+Microsoft Discovery
+NOTE: In addition to the services listed here, (i) Microsoft Azure AI Services Previews may be designated, in applicable preview terms, as subject to Limited Access Services terms; and (ii) certain versions of Microsoft Azure AI Services, such as versions in containers, may be designated, in product documentation or otherwise, as subject to Limited Access Services terms.
+Customer may only use Limited Access Services (including when used in a Customer Solution) in accordance with the applicable Product Terms, product documentation, and these Limited Access Services terms; solely for the permitted uses specified in its registration form; and in accordance with any commitments and/or representations made in its Limited Access Services registration form. Customer will provide current, complete, and accurate information in all registration forms and other materials provided to Microsoft pursuant to these Limited Access Service terms. Microsoft may require Customer from time to time to re-verify that all information submitted to Microsoft regarding Customer and Customer’s use of the Limited Access Services remains accurate, complete, and up to date, and that Customer is using the Limited Access Services in accordance with the information submitted and these terms. Customer must respond to requests for re-verification from Microsoft within ten (10) business days of receiving a request (requests may be provided via self-certification Azure tools). If Microsoft needs additional information to assure compliance with these terms or eligibility for access to Limited Access Services, Customer will reasonably cooperate with Microsoft to provide such information within thirty (30) business days of request.
+Microsoft may re-assess Customer’s eligibility to access and use Limited Access Services from time to time. If Microsoft determines that Customer no longer meets Microsoft’s eligibility and use criteria for a Limited Access Service (or that Customer does not meet eligibility and use criteria for a Service that has become a Limited Access Service), Microsoft will provide Customer with 12 months’ notice before discontinuing Customer’s access to and use of that Limited Access Service, unless security, legal, or system performance considerations require an expedited discontinuation of access. This does not apply to Previews and does not affect any other rights and remedies available to Microsoft with respect to Customer’s use of Services.
+In addition to Microsoft’s right to discontinue access to and use of a Limited Access Service when Customer no longer meets Microsoft’s eligibility and use criteria (or Customer does not meet eligibility and use criteria for a Service that has become a Limited Access Service), Microsoft may limit, suspend or terminate Customer’s access to a Limited Access Services for non-compliance with any of the terms in this section (including without limitation Customer’s use of a Limited Access Service in a manner that is inconsistent with the Customer’s Limited Access Service registration form or with requirements in applicable product documentation), without advance notice but only to the extent reasonably necessary under the circumstances.
+Grounding with Bing Search
+When Customer uses Grounding with Bing Search and/or Grounding with Bing Custom Search (including use as part of Web Search Tools or Web Knowledge Source), Customer’s use will be of a First-Party Consumption Service governed by the terms at https://www.microsoft.com/bing/apis/grounding-legal-enterprise.
+Microsoft Foundry Models
+Foundry Models sold by Azure: Foundry Models sold by Azure are subject to the Universal License Terms for Online Services (including the terms for Microsoft Generative AI Services) and Azure service terms as supplemented or modified below:
+Limited Access: Microsoft reserves the right to designate specific Foundry Models sold by Azure (or versions of models) as Limited Access Services, in which case the Limited Access Services terms for Microsoft Azure AI Services will apply to access to and use of such designated model.
+Data Use and Access for Abuse Monitoring: Except for the Limited exception below, as part of providing the Foundry Models sold by Azure, Microsoft will temporarily store Input and Output Content, to monitor for and prevent abusive or harmful uses or outputs of the service. Authorized Microsoft employees may review such data that has triggered our automated systems to investigate and verify potential abuse. For customers who have deployed Foundry Models sold by Azure in the EU Data Boundary, the authorized Microsoft employees will be located in the European Economic Area. See the product documentation https://learn.microsoft.com/azure/ai-services/openai/ for more information.
+Limited exception. The Data Use and Access for Abuse Monitoring terms will not apply if and to the extent Customer is approved for and complies with all requirements to use Foundry Models sold by Azurewith Modified Abuse Monitoring.
+Use of Output Content for fine-tuning. Notwithstanding the restrictions on Use of Content for Training in the Universal License Terms for Microsoft Generative AI Services, and unless otherwise provided in the Model-Specific Terms for Foundry Models sold by Azure, Customers may use Foundry Models sold by Azure to create synthetic data for use solely to fine-tune the following model types and use them as described below:
+Foundry Models sold by Azure, using the fine-tuning capabilities of and for deployment in Microsoft Foundry Models,
+Azure AI custom models, using the fine-tuning capabilities of and for use in that Microsoft Azure AI service,
+Fine-tunable models available in the Microsoft Foundry model catalog, using Azure fine-tuning capabilities of and for deployment via serverless API (Model-as-a-Service),
+Models that are (i) designed to modify Input or Output Content for Customer's use case and (ii) are deployed in one or more applications that interact with a Microsoft Generative AI Service.
+Model-Specific Terms. Certain Foundry Models sold by Azure are subject to additional model-specific terms, provided here.
+Models from Microsoft other than Foundry Models sold by Azure (First-Party Consumption Services). Microsoft may make models available in a Model Catalog, Model Registry, or otherwise as First-Party Consumption Services subject to the Azure availability clause and subject to the license terms provided with the models.
+Third-party models. Any third-party models that Microsoft makes available through Microsoft Foundry Models (including in a Model Catalog, Model Registry, or otherwise), but which are not Foundry Models sold by Azure or First-Party Consumption Services, are Non-Microsoft Products and subject to the terms for Non-Microsoft Products. Notwithstanding the foregoing, such models will be deemed Microsoft AI Services for purposes of the Microsoft Enterprise AI Services Code of Conduct.
+Foundry Tools and Content Safety
+Limit on Customer use of service output
+Customer will not use and will not allow third parties to use Foundry Tools or data from Foundry Tools to create, train, or improve (directly or indirectly) a similar or competing product or service.
+Text-to-Speech (TTS) Services
+Customer Data submitted to TTS Services: Customer represents and warrants that Customer has all necessary right, title, and interest to use all Customer’s Data submitted to TTS Services.
+TTS Service output use rights: For Customers of the paid tier TTS Service only, Customer may use the audio output of prebuilt neural voices generated using the TTS Service, including for commercial purposes.
+Customized TTS Services and use of Synthetic Voices
+Permissions: Customer represents, warrants and certifies that (i) it has explicit written permission from the voice owner(s) contained within its audio files (“Voice Talent”) to use their personal data, including his/her voice likeness to create voice model(s) (“Synthetic Voice(s)”), (ii) Customer’s agreement(s) contemplate the duration of use of the Synthetic Voice and any content limitations and (iii) Customer has shared Microsoft’s disclosure guidance for voice talent (https://aka.ms/disclosure-voice-talent) with Voice Talent directly or through Voice Talent’s authorized representative that describes how synthetic voices are developed and operate in conjunction with TTS services. Microsoft reserves the right to require Customer to provide audio files containing acknowledgements by Voice Talent(s). Customer acknowledges and agrees that Microsoft may use this to perform speaker verification against Customer’s audio training files; however, Microsoft’s retention of audio files does not create or imply an obligation that Microsoft will perform speaker verification.
+Permitted uses: In addition to compliance with the Acceptable Use Policy, the Microsoft Enterprise AI Services Code of Conduct (https://aka.ms/AI-CoC) sets the minimum requirements that all implementations of TTS Services must adhere to in good faith. Customer shall have the exclusive right to use the Synthetic Voice(s)s created by Customer and made available through use of the Services. Notwithstanding the foregoing or anything to the contrary in the DPA, Customer acknowledges and agrees that Microsoft may retain a copy of each Synthetic Voice created by Customer and may, but is not obligated to, use the Synthetic Voice(s) to investigate and respond to any alleged violations of the service terms. Customer agrees and grants Microsoft a limited nonexclusive irrevocable worldwide license to retain acknowledgment audio voice consent file(s)s and a copy of the Synthetic Voice(s) for the limited purposes above. Customer is required to secure and maintain all rights necessary for Microsoft to retain and use the acknowledgment audio files and Synthetic Voice(s) as described in this section without violating the rights of Voice Talent(s) or any other third party or otherwise obligating Microsoft to Customer, Voice Talent or any other third party. This paragraph will survive termination or expiration of Customer’s agreement.
+Translation Attribution
+When displaying automatic translations performed by Azure AI Service, Customer will provide reasonably prominent notice that the text has been automatically translated by the subject Service.
+Integrated Services
+When Foundry Tools or Azure Machine Learning services are accessed and used through Microsoft Foundry, the product terms applicable to those services apply in addition to applicable Microsoft Foundry terms.
+Content Safety
+Sample Content
+If Customer chooses to provide Microsoft with examples of Customer content (“Sample Content”) to help Microsoft tailor the service to Customer’s requirements as described in the service documentation, Customer agrees (a) that Microsoft will review and use it in accordance with that documentation, and (b) that Customer will abide by any requirements in that documentation, including the requirement not to include personal, confidential, or commercially sensitive information in Sample Content.
+Services in Containers
+Features of Foundry Tools and Content Safety that are available in containers are licensed to Customer under this agreement as Online Services, and the containers are also subject to the terms for Use of Software with the Online Service. Customer may install and use any number of containers on Customer’s hardware devices that are dedicated to Customer’s exclusive use, subject to the conditions specified below for connected and disconnected containers, respectively. For containers installed on dedicated hardware that is under the management or control of an entity other than Customer or one of its Affiliates, the Outsourcing Software Management clause of the Universal License Terms for All Software.
+Microsoft may offer required and/or optional updates or supplements to the services in containers. If an update is required, Customer will update the container in accordance with the Microsoft notice requirements; failure to perform these updates may affect the container's functionality and/or the container may stop operating.
+The containers include material that is confidential and proprietary to Microsoft. Customer agrees to keep that material confidential and to promptly notify Microsoft if Customer becomes aware of any possible misappropriation or misuse.
+Connected Containers: Connected containers are designed to connect to a billing endpoint. Customer must configure any connected containers it uses to communicate with the billing endpoint so that the billing endpoint meters all use of the container(s). In addition to the rights to install and use containers on dedicated hardware, Customer may also install and use any number of connected containers in Customer's Microsoft Azure Service accounts; all rights to install and use connected containers are subject to Customer’s enabling and maintaining metering for all such containers.
+Disconnected Containers: Disconnected containers are intended for use with no online connectivity to an Azure billing endpoint. Disconnected containers are subject to the terms for Limited Access Services. Disconnected containers have limited capacity workloads and usage is measured in units. As specified in the terms for Purchasing Microsoft Azure Services, Customer must pay upfront for a commitment tier at the number of units necessary to meet Customer’s actual service usage for each license period. Customer has the rights specified above to install and use disconnected containers on dedicated hardware provided that the aggregate service usage in all Customer’s disconnected containers does not exceed the usage for which Customer has paid for the applicable license period. Disconnected container units expire at the end of the license period, and Customer must activate (or reactivate, as applicable) disconnected container units before the beginning of the next license period. If Customer fails to reactive a disconnected container prior to the expiration of the applicable license period, the disconnected container will stop operating after the license expires.
+Defender for Cloud – Use on Devices Managed by Third-Parties
+Notwithstanding the Outsourcing Software Management clause, Customer may use Defender for Cloud with workloads running on Microsoft Azure, its own devices, or devices under the day-to-day management and control of third parties.
+Express Route Global Reach
+Express Route Global Reach is an Azure Service offering data transport capabilities to Express Route users in certain locations. Express Route Global Reach is provided by the Microsoft Affiliate authorized in a given country to administer it. Pricing for Express Route Global Reach may include applicable taxes and fees. Express Route Global Reach terms may vary from country to country. All included taxes, fees and country-specific terms of use are disclosed in the terms of use available at https://aka.ms/CommunicationServicesTerms.
+Microsoft Genomics
+No Medical Use
+Microsoft Genomics is not a medical device and outputs generated from its use are not intended to be statements of fact, nor are they to be used as a substitute for medical judgment, advice, diagnosis or treatment of any disease or condition.
+Visual Studio App Center
+Use for Development and Testing
+Customer may only access and use Visual Studio App Center to develop and test Customer’s application(s). Only one Licensed User may access a virtual machine provided by Visual Studio App Center at any time.
+Authorized Developer
+Customer appoints Microsoft as its authorized developer with respect to Apple software included in Visual Studio App Center. Microsoft is responsible for complying with the terms for any such software included in Visual Studio App Center and will keep confidential any confidential information of Apple accessed as part of Visual Studio App Center.
+Third Party Repository Service Access
+If Customer grants Microsoft access to its third-party repository service account(s), Customer authorizes Microsoft to scan the account(s), including the contents of Customer’s public and private repositories.
+Azure IoT Operations Essentials
+Use Rights and Use Cases
+For each instance of Azure IoT Operations Essentials in the below use cases, Customer may (1) only deploy on a single Kubernetes node, (2) allow a maximum of 2 users to access the operations experience portal; (3) configure its data flow endpoints to include a maximum of 50 concurrent endpoints; and (4) use a maximum of 2 data flow graphs. Use cases are as follows:
+Production Use. Customer may install and use Azure IoT Operations Essentials. Customer may not use Azure IoT Operations on Listed Provider clouds.
+Non-Production Use. Customer may install and use Azure IoT Operations Essentials on Listed Provider and non-Listed Provider clouds.
+Trial Use. Customer may install and use Azure IoT Operations Essentials on Listed Provider and non-Listed Provider clouds as described at https://aka.ms/AzureIoTOperations/pricing.
+Use Limitations
+Customer may not use OPC UA connector with Azure IoT Operations Essentials.
+For each use case of Azure IoT Operations Essentials above, Customer may not (1) separate the Azure IoT Operations Essentials components for use as a stand-alone product or with other products or services or (2) replace or substitute Azure IoT Operations Essentials components with third party components.
+Included Microsoft Components
+Azure IoT Operations Essentials may include other Microsoft components listed at https://aka.ms/AzureIoTOperations/Includedcomponents. Use of these components, as described in the associated documentation at https://aka.ms/AzureIoTOperationsDocs is governed by these license terms.
+Azure IoT Operations Essentials connectors Use Rights and Use Cases
+The following terms apply to: Azure IoT Operations Essentials connector for REST/HTTP, Azure IoT Operations Essentials connector for SSE, Azure IoT Operations Essentials connector for ONVIF, Azure IoT Operations Essentials media connector, and Azure IoT Operations Essentials connector for MQTT. For each instance, Customer may install and use the connector on Listed Provider and non-Listed Provider clouds only for Non-Production and Trial Use Cases.
+Schema Registry feature of Azure Device Registry in Azure IoT Operations Essentials Use Rights and Use Case
+Customer may use the schema registry feature from Azure Device Registry within Azure IoT Operations Essentials in Production, Non-Production and Trial Use Cases. Customer may use a maximum of 200 schemas per schema registry.
+Related Resources
+Please note these resources are provided for reference purposes only and are not considered to be part of the Product Terms.
+To see more versions and languages click here.
+Webpages
+Azure SQL | Product Website
+Azure Hybrid Benefit | Product Website
+SQL Server on Virtual Machines | Product Website
+Azure SQL Database | Product Website
+Azure SQL Managed Instance | Product Website
+Windows Server on Azure | Product Website
+Microsoft Azure | Licensing Website
+Microsoft Azure | Product Website
+Contact Azure Sales | Product Website
+Azure Reserved VM Instances (RIs) | Product Website
+Azure pricing FAQ
+Azure pricing calculator | Product Website
+Improving how customers buy and manage Azure Services | Licensing Website
+Azure pricing | Product Website
+Azure products | Product Website
+Azure Virtual Machine licensing FAQ
+License Mobility through Software Assurance on Azure | Product Website
+Get started with Azure in Open Licensing | Product Website
+Azure classic subscription administrators | Microsoft Learn
+Azure EA portal administration | Microsoft Learn
+Use Microsoft Azure in Visual Studio subscriptions | Docs Website
+Microsoft Azure - Offers and Licensing | Microsoft Partner Network
+Azure Virtual Desktop | Product Website
+Azure Virtual Desktop pricing | Product Website
+Entra ID documentation | Docs Website
+Microsoft Purview Information Protection | Product Website
+Azure free account FAQ
+Licensing Guides
+Azure Customer Solution | Licensing guidance
+Microsoft Azure purchasing models | Licensing guidance
+Licensing Briefs
+Azure Customer Solution | Licensing guidance
+Microsoft Azure purchasing models | Licensing guidance
+Whitepaper
+The Ultimate Guide to Windows Server on Azure | White Paper
+FAQs
+Azure pricing FAQ
+Azure Virtual Machine licensing FAQ
+Microsoft commerce experience FAQ
+Azure free account FAQ
+Azure Reservations Exchange and Refunds
+Others
+Microsoft Sentinel pricing
+Microsoft Defender for Cloud pricing
+For more licensing resources click here.
+Surface Laptop Ultra
+Surface Pro
+Surface Laptop
+Surface RTX Spark Dev Box
+Explore Copilot
+Explore Microsoft products
+Windows 11 apps
+Account profile
+Download Center
+Microsoft Store support
+Returns
+Order tracking
+Certified Refurbished
+Why buy from Microsoft Store
+Flexible Payments
+Microsoft in education
+Devices for education
+Microsoft Teams for Education
+Microsoft 365 Education
+How to buy for your school
+Educator training and development
+Deals for students and parents
+AI for education
+Microsoft AI
+Microsoft Security
+Dynamics 365
+Microsoft 365
+Microsoft Power Platform
+Microsoft Teams
+Microsoft Copilot
+Small Business
+Azure
+Microsoft Developer
+Microsoft Learn
+Support for AI marketplace apps
+Microsoft Tech Community
+Microsoft Marketplace
+Software companies
+Visual Studio
+Careers
+About Microsoft
+Company news
+Privacy at Microsoft
+Investors
+Diversity and inclusion
+Accessibility
+Sustainability
+English (United States)
+Your Privacy Choices
+Consumer Health Privacy
+Contact us
+Privacy
+Manage cookies
+Terms of use
+Trademarks
+About our ads
+Please select program from list.;
+OK
+Back To Top
