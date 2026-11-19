@@ -1,0 +1,75 @@
+{
+  "id": "groq",
+  "updated": "2026-11-18",
+  "fields": {
+    "status": {
+      "value": "live",
+      "source": "https://groqstatus.com/",
+      "checked": "2026-11-18",
+      "quote": "We’re fully operational",
+      "note": "Groq's December 24, 2025 newsroom post describes a non-exclusive technology licensing agreement with Nvidia, not an acquisition, and says \"Groq will continue to operate as an independent company\"."
+    },
+    "retention": {
+      "value": "Not retained by default; up to 30 days when logged for reliability or abuse monitoring",
+      "source": "https://console.groq.com/docs/your-data",
+      "checked": "2026-11-18",
+      "quote": "By default, Groq does not retain customer data for inference requests.",
+      "note": "The same page says inputs and outputs may be temporarily logged for troubleshooting or abuse investigation and kept up to 30 days, batch files are kept up to 30 days, and fine-tuning data until deleted."
+    },
+    "zdr": {
+      "value": "on request",
+      "source": "https://console.groq.com/docs/your-data",
+      "checked": "2026-11-18",
+      "quote": "All customers may enable Zero Data Retention (ZDR) in Data Controls settings.",
+      "note": "A self-serve console setting with no request to Groq; inference data is already not retained by default, and ZDR removes the reliability and abuse-monitoring logging."
+    },
+    "zdr_how": {
+      "value": "An organization admin enables it in Data Controls settings in the console, globally or per feature",
+      "source": "https://console.groq.com/docs/your-data",
+      "checked": "2026-11-18",
+      "quote": "Organization admins can decide to enable ZDR globally or on a per-feature basis at any time on the Data Controls page in Data Controls settings."
+    },
+    "training": {
+      "value": "opt-in",
+      "source": "https://console.groq.com/docs/legal/services-agreement",
+      "checked": "2026-11-18",
+      "quote": "For clarity, Groq is not permitted to use Inputs or Outputs for training or fine-tuning any AI Model Services or other models, unless explicitly granted permission or instructed by Customer.",
+      "note": "A contractual prohibition unless the customer gives permission; the pages read describe no opt-in setting."
+    },
+    "soc2": {
+      "value": "Type II",
+      "source": "https://trust.groq.com/",
+      "checked": "2026-11-18",
+      "quote": "Groq has completed its latest SOC 2 Type II examination, and the report is now available in the Resources section.",
+      "note": "The report itself is behind an access request."
+    },
+    "attestations": {
+      "value": ["HIPAA BAA"],
+      "source": "https://console.groq.com/docs/legal/customer-business-associate-addendum",
+      "checked": "2026-11-18",
+      "quote": "This Business Associate Addendum (“BAA”) is entered into between the Groq Contracting Party (“Business Associate” or “Groq”) and the customer agreeing to the terms below (“Customer”) for use of the applicable GroqCloud Services and supplements, amends, and is incorporated into the Groq Services Agreement (the “Agreement”) between the parties.",
+      "note": "The trust centre also lists GDPR and HIPAA under Compliance, as labels without a sentence."
+    },
+    "subprocessors": {
+      "value": ["Stytch", "Google Cloud Platform", "Stripe", "CloudFlare", "Intercom", "Oracle Netsuite", "MailChimp", "Lago", "Anrok", "Hubspot", "Salesforce", "Tavily", "FoundryLabs (e2b)", "DataGrail", "PostHog", "Wiz", "Exa", "SupportNinja"],
+      "source": "https://trust.groq.com/subprocessors",
+      "checked": "2026-11-18",
+      "quote": "Stytch • Identity intermediary",
+      "note": "The page is a list of 18 rows, not prose; the quote is its first row and the value is every name listed."
+    },
+    "regions": {
+      "value": ["North America", "Europe", "Middle East", "Asia Pacific"],
+      "source": "https://groq.com/newsroom/groq-closes-usd350-million-series-a-building-the-world-s-leading-ai-inference-cloud",
+      "checked": "2026-11-18",
+      "quote": "Groq today operates 13 data centers across North America, Europe, the Middle East, and Asia Pacific.",
+      "note": "The data page says any retained customer data is kept in Google Cloud Platform buckets located in the United States."
+    },
+    "funding": {
+      "value": "$350M Series A at a $3.5B valuation (August 2026)",
+      "source": "https://groq.com/newsroom/groq-closes-usd350-million-series-a-building-the-world-s-leading-ai-inference-cloud",
+      "checked": "2026-11-18",
+      "quote": "San Francisco, CA, August 17, 2026 — Groq LLC (“Groq”) today announced a $350 million Series A fundraise and the round was led by Disruptive, with planned participation from NVIDIA.",
+      "note": "The same release says the round is subject to customary closing conditions and, with $650 million raised in June 2026, brings recent funding to $1 billion."
+    }
+  }
+}
