@@ -2,6 +2,7 @@
 
     python3 scripts/registry/review.py list
     python3 scripts/registry/review.py accept 2026-11-19 0 --field retention
+    python3 scripts/registry/review.py accept 2026-11-19 0 --no-field
     python3 scripts/registry/review.py reject 2026-11-19 0
 
 accept moves the entry to the top of data/changelog.json. reject drops it.
@@ -57,7 +58,9 @@ def main():
     accept = commands.add_parser("accept")
     accept.add_argument("date")
     accept.add_argument("number", type=int)
-    accept.add_argument("--field", help="the registry field the change is about, if any")
+    about = accept.add_mutually_exclusive_group(required=True)
+    about.add_argument("--field", help="the registry field the change is about")
+    about.add_argument("--no-field", action="store_true", help="the change is about no registry field")
     reject = commands.add_parser("reject")
     reject.add_argument("date")
     reject.add_argument("number", type=int)
