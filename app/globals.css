@@ -925,6 +925,10 @@ th[aria-sort="none"] .sort-mark {
   line-height: 1.5;
 }
 
+.prose :not(pre) > code {
+  overflow-wrap: anywhere;
+}
+
 .prose pre code {
   background: none;
   padding: 0;
