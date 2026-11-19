@@ -39,6 +39,12 @@ export default function RegistryPage() {
       ) : (
         <>
           <RegistryTable rows={rows} />
+          {rows.some((row) => Object.values(row.fields).some((field) => field?.note)) && (
+            <p className="aside footnote">
+              † The value comes with a note that qualifies it. On a wide screen, point at the mark or focus it to
+              read the note; each provider&rsquo;s page shows it in full.
+            </p>
+          )}
           {researched.length < rows.length && (
             <p className="aside footnote">
               A dash means the provider&rsquo;s record has not been researched yet.

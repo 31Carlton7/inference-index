@@ -1025,6 +1025,65 @@ td.wraps {
   text-wrap: pretty;
 }
 
+/* A note qualifies the value beside it. The mark shows the note on hover and
+   on keyboard focus. The table scrolls sideways, which would clip a note
+   positioned inside it, so where anchors are supported the note is fixed to
+   the viewport and anchored to its mark. */
+
+.field-note {
+  position: relative;
+  white-space: nowrap;
+}
+
+.field-note-mark {
+  border: 0;
+  background: none;
+  padding: 0 0.3125rem;
+  font: inherit;
+  color: var(--ink-soft);
+  cursor: help;
+}
+
+.field-note-text {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  width: max-content;
+  max-width: min(20rem, 80vw);
+  border: 1px solid var(--rule-firm);
+  border-radius: 4px;
+  background: var(--paper-raised);
+  padding: 0.5rem 0.625rem;
+  color: var(--ink);
+  white-space: normal;
+  text-wrap: pretty;
+}
+
+.field-note:hover .field-note-text,
+.field-note:focus-within .field-note-text {
+  display: block;
+}
+
+@supports (anchor-scope: --field-note) {
+  .field-note {
+    anchor-scope: --field-note;
+  }
+
+  .field-note-mark {
+    anchor-name: --field-note;
+  }
+
+  .field-note-text {
+    position: fixed;
+    inset: auto;
+    position-anchor: --field-note;
+    position-area: bottom span-right;
+    position-try-fallbacks: flip-block, flip-inline, flip-block flip-inline;
+  }
+}
+
 .filters select {
   max-width: 12rem;
   text-overflow: ellipsis;
@@ -1140,5 +1199,33 @@ td.wraps {
 
   .registry .not-stated {
     white-space: normal;
+  }
+
+  /* No hover on a phone, so the note is plain text under its value. */
+
+  .registry .field-note {
+    grid-column: 2;
+    margin-top: -0.5rem;
+    white-space: normal;
+  }
+
+  .registry .field-note-mark {
+    display: none;
+  }
+
+  .registry .field-note-text {
+    display: block;
+    position: static;
+    width: auto;
+    max-width: none;
+    border: 0;
+    background: none;
+    padding: 0;
+    font-size: var(--text-xs);
+    color: var(--ink-soft);
+  }
+
+  .registry .field-note-text::before {
+    content: "† ";
   }
 }
