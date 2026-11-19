@@ -31,14 +31,14 @@ Every fact in the registry is a field. A field is either stated, with its eviden
       "id": "example",
       "name": "Example AI",
       "homepage": "https://example.com",
-      "urls": { "docs": "", "pricing": "", "privacy": "", "terms": "", "trust": "", "status": "", "subprocessors": "" },
+      "urls": { "docs": "", "pricing": "", "privacy": "", "data_policy": "", "terms": "", "trust": "", "status": "", "subprocessors": "" },
       "added": "2026-11-18"
     }
   ]
 }
 ```
 
-A url the provider does not have is `null`.
+A url the provider does not have is `null`. `data_policy` is the page, outside the privacy policy, where the provider says how the API handles prompts and outputs (a docs page, a trust centre FAQ or a DPA).
 
 ## data/registry/<provider-id>.json
 
@@ -122,7 +122,7 @@ There is one entry for each provider and model whose `input` or `output` in `dat
 
 ## data/snapshots/<provider-id>/<page>/<date>.txt
 
-The text of each policy page as fetched on that date. `<page>` is a key of `urls`.
+The text of each policy page as fetched on that date. `<page>` is one of the `urls` keys `privacy`, `data_policy`, `terms`, `trust` or `subprocessors`. A file is written the first time a page is read and again only when its text has changed, so the latest file is the current text. `data/snapshots/last-run.json` lists what the last run found for every page. Changes wait in `data/changelog-drafts/<date>.json` until they have been read; only then do they reach `data/changelog.json`.
 
 `data/snapshots/last-run.json` is the snapshot job's own log of its latest run. The site does not read it.
 

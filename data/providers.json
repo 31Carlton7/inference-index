@@ -8,10 +8,11 @@
         "docs": "https://docs.together.ai/intro",
         "pricing": "https://www.together.ai/pricing",
         "privacy": "https://www.together.ai/privacy",
+        "data_policy": "https://docs.together.ai/docs/privacy-and-security",
         "terms": "https://www.together.ai/terms-of-service",
         "trust": "https://trust.together.ai/",
         "status": "https://status.together.ai/",
-        "subprocessors": null
+        "subprocessors": "https://trust.together.ai/subprocessors"
       },
       "added": "2026-11-18"
     },
@@ -23,10 +24,11 @@
         "docs": "https://docs.fireworks.ai/",
         "pricing": "https://fireworks.ai/pricing",
         "privacy": "https://fireworks.ai/privacy-policy",
+        "data_policy": "https://docs.fireworks.ai/guides/security_compliance/data_handling",
         "terms": "https://fireworks.ai/terms-of-service",
         "trust": "https://trust.fireworks.ai/",
         "status": "https://status.fireworks.ai/",
-        "subprocessors": null
+        "subprocessors": "https://trust.fireworks.ai/subprocessors"
       },
       "added": "2026-11-18"
     },
@@ -38,10 +40,11 @@
         "docs": "https://console.groq.com/docs/overview",
         "pricing": "https://console.groq.com/docs/models",
         "privacy": "https://groq.com/privacy-policy",
+        "data_policy": "https://console.groq.com/docs/your-data",
         "terms": "https://console.groq.com/docs/legal/services-agreement",
         "trust": "https://trust.groq.com/",
         "status": "https://groqstatus.com/",
-        "subprocessors": null
+        "subprocessors": "https://trust.groq.com/subprocessors"
       },
       "added": "2026-11-18"
     },
@@ -53,6 +56,7 @@
         "docs": "https://docs.deepinfra.com/",
         "pricing": "https://deepinfra.com/pricing",
         "privacy": "https://deepinfra.com/privacy",
+        "data_policy": "https://docs.deepinfra.com/account/data-privacy",
         "terms": "https://deepinfra.com/terms",
         "trust": "https://trust.deepinfra.com/",
         "status": "https://status.deepinfra.com/",
@@ -68,6 +72,7 @@
         "docs": "https://inference-docs.cerebras.ai/",
         "pricing": "https://www.cerebras.ai/pricing",
         "privacy": "https://www.cerebras.ai/privacy-policy",
+        "data_policy": null,
         "terms": "https://www.cerebras.ai/terms-of-service",
         "trust": "https://trust.cerebras.ai/",
         "status": "https://status.cerebras.ai/",
@@ -83,6 +88,7 @@
         "docs": "https://docs.aws.amazon.com/bedrock/",
         "pricing": "https://aws.amazon.com/bedrock/pricing/",
         "privacy": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html",
+        "data_policy": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html",
         "terms": "https://aws.amazon.com/service-terms/",
         "trust": "https://aws.amazon.com/compliance/services-in-scope/",
         "status": "https://health.aws.amazon.com/health/status",
@@ -98,6 +104,7 @@
         "docs": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models",
         "pricing": "https://cloud.google.com/model-garden/pricing",
         "privacy": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/zero-data-retention",
+        "data_policy": null,
         "terms": "https://cloud.google.com/terms/service-terms",
         "trust": "https://cloud.google.com/security/compliance/services-in-scope",
         "status": "https://status.cloud.google.com/",
@@ -112,7 +119,8 @@
       "urls": {
         "docs": "https://learn.microsoft.com/en-us/azure/foundry/",
         "pricing": "https://azure.microsoft.com/en-us/pricing/details/ai-foundry-models/llama/",
-        "privacy": "https://learn.microsoft.com/en-us/azure/foundry-classic/how-to/concept-data-privacy",
+        "privacy": "https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy",
+        "data_policy": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/abuse-monitoring",
         "terms": "https://www.microsoft.com/licensing/terms/productoffering/MicrosoftAzure/MCA",
         "trust": "https://servicetrust.microsoft.com/",
         "status": "https://azure.status.microsoft/en-us/status",
@@ -128,10 +136,11 @@
         "docs": "https://docs.novita.ai/guides/introduction",
         "pricing": "https://novita.ai/pricing",
         "privacy": "https://novita.ai/legal/privacy-policy",
+        "data_policy": "https://trust.novita.ai/faq",
         "terms": "https://novita.ai/legal/terms-of-service",
         "trust": "https://trust.novita.ai/",
         "status": "https://status.novita.ai/",
-        "subprocessors": null
+        "subprocessors": "https://trust.novita.ai/subprocessors"
       },
       "added": "2026-11-18"
     },
@@ -143,10 +152,11 @@
         "docs": "https://docs.sambanova.ai/docs/en/get-started/overview",
         "pricing": "https://cloud.sambanova.ai/plans/pricing",
         "privacy": "https://sambanova.ai/privacy-policy",
+        "data_policy": null,
         "terms": "https://sambanova.ai/cloud-end-user-license-agreement",
         "trust": "https://trust.sambanova.ai/",
         "status": "https://status.sambanova.ai/",
-        "subprocessors": null
+        "subprocessors": "https://sambanova.ai/data-processing-agreement-sambanova"
       },
       "added": "2026-11-18"
     },
@@ -158,6 +168,7 @@
         "docs": "https://docs.tokenfactory.nebius.com/quickstart",
         "pricing": "https://tokenfactory.nebius.com/organization/prices",
         "privacy": "https://docs.nebius.com/legal/privacy",
+        "data_policy": "https://docs.tokenfactory.nebius.com/legal/legal-quick-guide",
         "terms": "https://docs.tokenfactory.nebius.com/legal/terms-of-service",
         "trust": "https://nebius.com/trust-center",
         "status": "https://status.nebius.com/",
@@ -173,10 +184,11 @@
         "docs": "https://docs.baseten.co/overview",
         "pricing": "https://www.baseten.co/pricing/",
         "privacy": "https://www.baseten.co/privacy-policy/",
+        "data_policy": "https://docs.baseten.co/security",
         "terms": "https://www.baseten.co/terms-and-conditions/",
         "trust": "https://trust.baseten.co/",
         "status": "https://status.baseten.co/",
-        "subprocessors": null
+        "subprocessors": "https://trust.baseten.co/subprocessors"
       },
       "added": "2026-11-18"
     },
@@ -188,10 +200,11 @@
         "docs": "https://www.hyperbolic.ai/docs/overview/overview",
         "pricing": "https://app.hyperbolic.ai/models",
         "privacy": "https://www.hyperbolic.ai/privacy",
+        "data_policy": "https://www.hyperbolic.ai/privacy/faq",
         "terms": "https://www.hyperbolic.ai/terms",
         "trust": "https://trust.hyperbolic.ai/",
         "status": "https://status.hyperbolic.ai/",
-        "subprocessors": null
+        "subprocessors": "https://trust.hyperbolic.ai/subprocessors"
       },
       "added": "2026-11-18"
     },
@@ -203,10 +216,11 @@
         "docs": "https://developers.cloudflare.com/workers-ai/",
         "pricing": "https://developers.cloudflare.com/workers-ai/platform/pricing/",
         "privacy": "https://developers.cloudflare.com/workers-ai/platform/data-usage/",
+        "data_policy": null,
         "terms": "https://www.cloudflare.com/service-specific-terms-developer-platform/",
         "trust": "https://www.cloudflare.com/trust-hub/compliance-resources/",
         "status": "https://www.cloudflarestatus.com/",
-        "subprocessors": "https://www.cloudflare.com/gdpr/subprocessors/"
+        "subprocessors": "https://www.cloudflare.com/gdpr/subprocessors/cloudflare-services/"
       },
       "added": "2026-11-18"
     },
@@ -218,6 +232,7 @@
         "docs": "https://docs.parasail.io/parasail-docs",
         "pricing": "https://www.parasail.io/pricing",
         "privacy": "https://www.parasail.io/legal/privacy-policy",
+        "data_policy": null,
         "terms": "https://www.parasail.io/legal/terms-of-service",
         "trust": "https://www.parasail.io/trust",
         "status": "https://status.parasail.io/",
