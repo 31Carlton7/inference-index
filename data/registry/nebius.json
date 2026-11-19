@@ -1,0 +1,99 @@
+{
+  "id": "nebius",
+  "updated": "2026-11-18",
+  "fields": {
+    "status": {
+      "value": "live",
+      "source": "https://dev.nebius.com/token-factory",
+      "checked": "2026-11-18",
+      "quote": "Token Factory: inference API for open models"
+    },
+    "retention": {
+      "value": "kept by default for Speculative Decoding; period not stated",
+      "source": "https://docs.tokenfactory.nebius.com/legal/legal-quick-guide",
+      "checked": "2026-11-18",
+      "quote": "Unless you enable Zero Data Retention, we keep your inputs and outputs to speed up inference using the Speculative Decoding technique described in Section 3.",
+      "note": "No number of days is given in the guide or the Terms of Service; the retained inputs and outputs are stored in Finland (EU)."
+    },
+    "zdr": {
+      "value": "on request",
+      "source": "https://docs.tokenfactory.nebius.com/legal/legal-quick-guide",
+      "checked": "2026-11-18",
+      "quote": "For maximum privacy and control, you can enable Zero Data Retention in your account settings.",
+      "note": "Self-serve opt-out rather than a request to sales: it is off by default and the customer turns it on for the whole organization; the Terms of Service name the onboarding form or an email to support as the opt-out route."
+    },
+    "zdr_how": {
+      "value": "Activate Zero Data Retention on the account profile page; it applies to the whole organization",
+      "source": "https://docs.tokenfactory.nebius.com/legal/legal-quick-guide",
+      "checked": "2026-11-18",
+      "quote": "How to enable it: activate Zero Data Retention on your account profile page.",
+      "note": "The guide says enabling it may reduce inference speed because Speculative Decoding is switched off."
+    },
+    "training": {
+      "value": "opt-out",
+      "source": "https://docs.tokenfactory.nebius.com/legal/terms-of-service",
+      "checked": "2026-11-18",
+      "quote": "As part of providing the Service, the Company collects and processes both Input and Output data for the purpose of training smaller Models used exclusively for Speculative Decoding.",
+      "note": "The Legal Quick Guide says the opposite in plain words (Your content is not used to train any models in either mode) and also says the Terms of Service prevail; opting out is done by enabling Zero Data Retention."
+    },
+    "soc2": {
+      "value": "Type II",
+      "source": "https://docs.tokenfactory.nebius.com/legal/legal-quick-guide",
+      "checked": "2026-11-18",
+      "quote": "We are a certified company holding ISO 27001, ISO 27701 and SOC 2 Type II certifications.",
+      "note": "The report itself is available through the Trust Center, with certain reports shared under NDA."
+    },
+    "attestations": {
+      "value": [
+        "ISO 27001",
+        "ISO 27701"
+      ],
+      "source": "https://docs.tokenfactory.nebius.com/legal/legal-quick-guide",
+      "checked": "2026-11-18",
+      "quote": "We are a certified company holding ISO 27001, ISO 27701 and SOC 2 Type II certifications.",
+      "note": "The Nebius Trust Center also lists SOC 3, HIPAA, ISO 22301, ISO 27018, ISO 27032, ISO 27799 and ISO 42001 for Nebius as a whole, without naming Token Factory."
+    },
+    "subprocessors": {
+      "value": [
+        "Nebius Inc.",
+        "Nebius B.V.",
+        "Nebius Israel Ltd.",
+        "RunPod Inc.",
+        "BoostRun, LLC",
+        "Shadeform, Inc.",
+        "Axe Compute Inc.",
+        "Microsoft Corporation (Sentinel)",
+        "Functional Software, Inc. (Sentry)",
+        "Hubspot, Inc.",
+        "Atlassian Pty Ltd. (Jira)",
+        "Slack Technologies, LLC"
+      ],
+      "source": "https://docs.nebius.com/legal/sub-processors_tofa",
+      "checked": "2026-11-18",
+      "quote": "This page identifies the sub-processors engaged by Nebius to process Customer Personal Data on behalf of Customers in connection with Nebius Token Factory under the applicable Data Processing Agreement.",
+      "note": "The first seven provide cloud infrastructure for model processing, the last five monitoring, communications and support; other Nebius Group entities are listed for engineering and support. List effective September 23, 2026."
+    },
+    "regions": {
+      "value": [
+        "Global (no region commitment on public endpoints)",
+        "Customer-selected region on dedicated endpoints"
+      ],
+      "source": "https://docs.tokenfactory.nebius.com/legal/legal-quick-guide",
+      "checked": "2026-11-18",
+      "quote": "The processing location is decided dynamically, is not tied to any single data center, and can change at any time without prior notice.",
+      "note": "The sub-processor list gives infrastructure processing locations of the United States, France, Iceland, Finland, the United Kingdom, Israel and Canada."
+    },
+    "funding": {
+      "value": null,
+      "not_stated": true,
+      "checked": "2026-11-18",
+      "searched": [
+        "https://dev.nebius.com/token-factory",
+        "https://docs.tokenfactory.nebius.com/legal/legal-quick-guide",
+        "https://docs.tokenfactory.nebius.com/legal/terms-of-service",
+        "https://nebius.com/trust-center"
+      ],
+      "note": "The Legal Quick Guide says the contracting entity's publicly listed parent company is Nebius Group N.V. (NASDAQ: NBIS)."
+    }
+  }
+}
