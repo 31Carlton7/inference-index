@@ -109,13 +109,15 @@ The text of each policy page as fetched on that date. `<page>` is a key of `urls
 ```json
 {
   "probe_models": [
-    { "id": "llama-3.3-70b", "name": "Llama 3.3 70B Instruct", "weights": "https://huggingface.co/...", "providers": { "example": "meta-llama/llama-3.3-70b-instruct" } }
+    { "id": "llama-3.3-70b", "name": "Llama 3.3 70B Instruct", "weights": "https://huggingface.co/...", "providers": { "example": "meta-llama/llama-3.3-70b-instruct" }, "quantization": { "example": "fp8" } }
   ],
   "basket": { "version": 1, "models": ["llama-3.3-70b"], "weights": { "input": 0.75, "output": 0.25 }, "note": "" }
 }
 ```
 
-`providers` maps a provider id to the model name that provider's API expects.
+`providers` maps a provider id to the model name that provider's API expects on its pay-per-token endpoint. A provider that does not serve the model is absent.
+
+`quantization` (optional) maps a provider id to the precision that provider says it serves the model at, in the provider's own words. A provider missing from it has not stated one on the pages that were read; it does not mean full precision.
 
 ## data/prices/daily/<date>.json
 

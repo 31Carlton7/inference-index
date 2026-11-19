@@ -1,0 +1,84 @@
+{
+  "probe_models": [
+    {
+      "id": "gpt-oss-120b",
+      "name": "gpt-oss-120b",
+      "weights": "https://huggingface.co/openai/gpt-oss-120b",
+      "providers": {
+        "together": "openai/gpt-oss-120b",
+        "fireworks": "accounts/fireworks/models/gpt-oss-120b",
+        "groq": "openai/gpt-oss-120b",
+        "deepinfra": "openai/gpt-oss-120b",
+        "cerebras": "gpt-oss-120b",
+        "amazon-bedrock": "openai.gpt-oss-120b-1:0",
+        "google-vertex-ai": "openai/gpt-oss-120b-maas",
+        "azure-ai-foundry": "gpt-oss-120b",
+        "novita": "openai/gpt-oss-120b",
+        "sambanova": "gpt-oss-120b",
+        "nebius": "openai/gpt-oss-120b",
+        "baseten": "openai/gpt-oss-120b",
+        "cloudflare-workers-ai": "@cf/openai/gpt-oss-120b",
+        "parasail": "parasail-gpt-oss-120b"
+      },
+      "quantization": {
+        "together": "MXFP4",
+        "deepinfra": "bfloat16",
+        "cerebras": "FP16/8 (weights only)",
+        "nebius": "fp4",
+        "parasail": "FP4"
+      }
+    },
+    {
+      "id": "glm-5.3",
+      "name": "GLM-5.3",
+      "weights": "https://huggingface.co/zai-org/GLM-5.3",
+      "providers": {
+        "together": "zai-org/GLM-5.3",
+        "fireworks": "accounts/fireworks/models/glm-5p3",
+        "deepinfra": "zai-org/GLM-5.3",
+        "novita": "zai-org/glm-5.3",
+        "sambanova": "GLM-5.3",
+        "nebius": "zai-org/GLM-5.3",
+        "baseten": "zai-org/GLM-5.3",
+        "hyperbolic": "glm-5.3",
+        "cloudflare-workers-ai": "@cf/zai-org/glm-5.3",
+        "parasail": "parasail-glm-53"
+      },
+      "quantization": {
+        "together": "FP4",
+        "deepinfra": "fp4",
+        "nebius": "fp4",
+        "hyperbolic": "bf16",
+        "parasail": "FP4"
+      }
+    },
+    {
+      "id": "deepseek-v4.1-flash-1017",
+      "name": "DeepSeek V4.1 Flash 1017",
+      "weights": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "providers": {
+        "together": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "fireworks": "accounts/fireworks/models/deepseek-v4p1-flash-1017",
+        "deepinfra": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "google-vertex-ai": "deepseek-ai/deepseek-v4.1-flash-1017-maas",
+        "novita": "deepseek/deepseek-v4.1-flash-1017",
+        "nebius": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "baseten": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "cloudflare-workers-ai": "@cf/deepseek-ai/deepseek-v4.1-flash-1017",
+        "parasail": "parasail-deepseek-v41-flash-1017"
+      },
+      "quantization": {
+        "together": "FP8",
+        "deepinfra": "fp8",
+        "nebius": "fp4",
+        "parasail": "FP8"
+      }
+    }
+  ],
+  "basket": {
+    "version": 1,
+    "models": ["gpt-oss-120b", "glm-5.3", "deepseek-v4.1-flash-1017"],
+    "weights": { "input": 0.75, "output": 0.25 },
+    "note": "Standard pay-per-token tier, uncached input, list price in USD per million tokens. Three input tokens for every output token."
+  }
+}
