@@ -3,6 +3,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
+import { previousDay, recordPriceChanges } from "./changelog.mjs";
 import { rebuildIndex } from "./index.mjs";
 import { isAllowed, parseRobots } from "./robots.mjs";
 import { SOURCES } from "./sources.mjs";
@@ -104,6 +105,16 @@ async function main() {
   const index = await rebuildIndex(pricesDir, basket);
   const today = index.series.find((day) => day.date === date);
   console.log(today ? `index ${date}: ${today.value} over ${today.providers} providers` : `index ${date}: not computed, a basket model has too few providers`);
+
+  const changes = await recordPriceChanges(path.join(repoRoot, "data"), date);
+  if (changes === null) {
+    console.log(`changelog: no daily file for ${previousDay(date)}, nothing compared`);
+  } else {
+    for (const { provider, model, before, after } of changes) {
+      console.log(`changelog: ${provider} ${model} ${before.input}/${before.output} -> ${after.input}/${after.output}`);
+    }
+    console.log(`changelog: price changes since ${previousDay(date)}: ${changes.length}`);
+  }
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) await main();

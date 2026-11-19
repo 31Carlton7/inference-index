@@ -64,6 +64,14 @@ Why a plain mean across models: the result stays in dollars per million tokens a
 
 Known gap: Google's pricing page lists "DeepSeek-V4.1-Flash" without naming the 1017 snapshot, so Vertex AI has no DeepSeek row.
 
+## Price changes
+
+After each run the day's file is compared with the file for the UTC day before. A provider and model whose input or output price is a different number gets one entry in `data/changelog.json` with both prices and the page the new one was read from. The numbers are compared exactly as stored, so any difference counts.
+
+- Both days need a row. A price that could not be read on either day, a provider that started serving a model or one that dropped it is a gap, not a change.
+- Only the day before counts. If that day has no file, nothing is compared with an older one.
+- Running again on the same day does not add a second entry. If the later run reads a different price the entry is replaced, and if it reads the day before's price the entry is removed.
+
 ## Changes
 
 The basket, the weights and the formula are fixed for a version. Changing any of them, including swapping a model or changing the three-provider minimum, bumps `basket.version` in `data/models.json` with a note saying what changed and when. Daily files record the version they were read under, and the index series only includes days from the current version, so two versions are never drawn as one line. The commit that bumps the version also copies the old series to `data/prices/index-v<N>.json`.

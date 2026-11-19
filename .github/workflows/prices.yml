@@ -23,17 +23,29 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node --test scripts/prices/prices.test.mjs
-      - run: node scripts/prices/scrape.mjs
-      - name: Commit prices
+      - run: node --test scripts/prices/*.test.mjs
+      # The changelog is also written by the registry review. If main moved while this ran, the
+      # scrape is redone on the new main instead of rebasing one JSON edit over another.
+      - name: Scrape and commit
         run: |
-          git add data/prices
-          if git diff --cached --quiet; then
-            echo "no price changes"
-            exit 0
-          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Prices for $(date -u +%F)"
-          git pull --rebase origin main
-          git push origin HEAD:main
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            node scripts/prices/scrape.mjs
+            git add data/prices
+            if [ -f data/changelog.json ]; then
+              git add data/changelog.json
+            fi
+            if git diff --cached --quiet; then
+              echo "no price changes"
+              exit 0
+            fi
+            git commit -m "Prices for $(date -u +%F)"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "push rejected on attempt $attempt"
+          done
+          exit 1

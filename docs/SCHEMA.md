@@ -102,6 +102,22 @@ Newest first. Written when a registry field or a policy page changes.
 
 `kind` is `policy`, `price`, `provider added`, `provider removed` or `status`. `before` and `after` are the text or number as it was, with no characterisation.
 
+A `price` entry is written by the daily price run and has a `model` key. Its `before` and `after` are the two prices in USD per million tokens, as stored in the daily files:
+
+```json
+{
+  "date": "2026-11-18",
+  "provider": "example",
+  "kind": "price",
+  "model": "llama-3.3-70b",
+  "before": { "input": 0.59, "output": 0.79 },
+  "after": { "input": 0.5, "output": 0.79 },
+  "source": "https://example.com/pricing"
+}
+```
+
+There is one entry for each provider and model whose `input` or `output` in `data/prices/daily/<date>.json` is not the same number as in the file for the UTC day before, with no rounding and no tolerance. The row has to be in both files: a row that appears, disappears or is under `missing` on either day is not a change. If there is no file for the day before, nothing is compared, so no entry spans a skipped day. A second run on the same day replaces that day's `price` entries, and drops one whose price reads the same as the day before again. The run leaves every other entry as it is and in the same order.
+
 `field`, `snapshot_before` and `snapshot_after` may be `null` or left out when the change has none (a price change has no registry field; a provider added has no earlier snapshot). `before` is `null` when there was nothing before, and `after` is `null` when there is nothing after.
 
 ## data/snapshots/<provider-id>/<page>/<date>.txt

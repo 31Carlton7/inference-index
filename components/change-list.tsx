@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { formatDate, shortUrl } from "@/lib/format";
+import { formatDate, formatUsd, shortUrl } from "@/lib/format";
 import { mainFileUrl } from "@/lib/links";
 import { REGISTRY_FIELDS, type ChangelogEntry } from "@/lib/schema";
 
@@ -7,7 +7,8 @@ function fieldLabel(key: string): string {
   return REGISTRY_FIELDS.find((entry) => entry.key === key)?.label ?? key;
 }
 
-function Side({ side, text, snapshot }: { side: "before" | "after"; text: string | number | null; snapshot?: string | null }) {
+function Side({ side, text, snapshot }: { side: "before" | "after"; text: ChangelogEntry["before"]; snapshot?: string | null }) {
+  if (typeof text === "object" && text !== null) text = `${formatUsd(text.input)} input, ${formatUsd(text.output)} output`;
   return (
     <div className={side}>
       <span className="side">{side === "before" ? "Before" : "After"}</span>
@@ -36,6 +37,7 @@ export function ChangeList({ entries, providerNames }: { entries: ChangelogEntry
             <span className="kind">
               {entry.kind}
               {entry.field && <> · {fieldLabel(entry.field)}</>}
+              {entry.model && <> · {entry.model}</>}
             </span>
             <a className="aside" href={entry.source}>
               {shortUrl(entry.source)}

@@ -42,13 +42,16 @@ export const registryRecord = z.object({
   fields: z.record(z.string(), field),
 });
 
+const pricePair = z.object({ input: z.number().nonnegative(), output: z.number().nonnegative() });
+
 export const changelogEntry = z.object({
   date,
   provider: providerId,
   kind: z.enum(["policy", "price", "provider added", "provider removed", "status"]),
   field: z.string().min(1).nullable().optional(),
-  before: z.union([z.string(), z.number()]).nullable(),
-  after: z.union([z.string(), z.number()]).nullable(),
+  model: z.string().min(1).optional(),
+  before: z.union([z.string(), z.number(), pricePair]).nullable(),
+  after: z.union([z.string(), z.number(), pricePair]).nullable(),
   source: url,
   snapshot_before: repoPath.nullable().optional(),
   snapshot_after: repoPath.nullable().optional(),
