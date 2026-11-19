@@ -74,6 +74,8 @@ A url the provider does not have is `null`.
 | `regions` | Where inference runs | array |
 | `funding` | Latest disclosed round or total raised | string |
 
+The values listed for `status`, `zdr`, `training` and `soc2` are the standard vocabulary. Use one of them whenever the page's statement fits. When it fits none of them (for example a cloud that says a service is in scope of its SOC 2 report without naming the type), the value is a short phrase in the page's own terms. `npm run validate` lists such values as warnings so they stay rare.
+
 New keys may be added. Pages render any key they do not know with its raw value.
 
 ## data/changelog.json
@@ -100,9 +102,13 @@ Newest first. Written when a registry field or a policy page changes.
 
 `kind` is `policy`, `price`, `provider added`, `provider removed` or `status`. `before` and `after` are the text or number as it was, with no characterisation.
 
+`field`, `snapshot_before` and `snapshot_after` may be `null` or left out when the change has none (a price change has no registry field; a provider added has no earlier snapshot). `before` is `null` when there was nothing before, and `after` is `null` when there is nothing after.
+
 ## data/snapshots/<provider-id>/<page>/<date>.txt
 
 The text of each policy page as fetched on that date. `<page>` is a key of `urls`.
+
+`data/snapshots/last-run.json` is the snapshot job's own log of its latest run. The site does not read it.
 
 ## data/models.json
 
@@ -187,8 +193,55 @@ One line per request, written before anything is computed from it.
 
 ### data/probes/status.json
 
-Per provider and model, the last 96 runs as `[ts, status]` pairs, and any incident. An incident exists only when a failure was confirmed by a second run from a second region; it lists both run ids.
+Per provider and model, the last 96 runs as `[ts, status]` pairs, oldest first, and any incident.
 
-### data/fidelity/<date>.json
+```json
+{
+  "generated": "2026-11-18T12:01:00Z",
+  "interval_minutes": 15,
+  "rows": [
+    {
+      "provider": "example",
+      "model": "llama-3.3-70b",
+      "runs": [["2026-11-18T11:45:02Z", "ok"], ["2026-11-18T12:00:03Z", "error"]],
+      "incidents": [
+        { "start": "2026-11-18T12:00:03Z", "end": null, "kind": "error", "run": "2026-11-18T12:00:03Z-example-llama-3.3-70b-iad", "confirmed_by": "2026-11-18T12:00:41Z-example-llama-3.3-70b-sfo" }
+      ]
+    }
+  ]
+}
+```
 
-Experimental. Per provider and model: the score, the prompts version, the reference run and the run ids compared.
+- `interval_minutes`: the probe schedule. The status page draws one slot per interval and leaves a slot empty when no run landed in it, so a missed run shows as a gap. Do not pad `runs`.
+- An incident exists only when a failure was confirmed by a second run from a second region. `run` is the first failed run's id and `confirmed_by` is the confirming run's id; both must be in the runs files. `kind` is `error` or `timeout`. `end` is the first successful run after it, or `null` while it has not recovered.
+- A row with no incidents has `"incidents": []`.
+
+### data/fidelity/<date>.json and data/fidelity/latest.json
+
+Experimental. One file per fidelity run, plus `latest.json`, a copy of the newest one. The site reads only `latest.json`, because it cannot list a directory on the `data` branch.
+
+```json
+{
+  "date": "2026-11-18",
+  "prompts_version": 1,
+  "rows": [
+    { "provider": "example", "model": "llama-3.3-70b", "score": 0.97, "reference_run": "2026-11-18-reference-llama-3.3-70b", "runs": ["2026-11-18T13:00:02Z-example-llama-3.3-70b-fidelity-01"], "runs_file": "data/fidelity/runs/2026-11-18/example.jsonl" }
+  ]
+}
+```
+
+- `score`: 0 to 1, where 1 means every output matched the reference under the scoring in `docs/method-fidelity.md`.
+- `reference_run`: the id of the full-precision reference run the outputs were compared against.
+- `runs`: the ids of the provider runs that were scored. `runs_file`: the file on the `data` branch that holds them, which the score links to.
+
+## Method notes
+
+The method page renders these files under its own headings when they exist, so a method change and its write-up land in one commit:
+
+- `docs/method-probes.md`: probe models, prompts and request settings.
+- `docs/method-fidelity.md`: fidelity prompts, reference runs and scoring.
+- `docs/method-prices.md`: the basket and the index formula.
+
+## Checking
+
+`npm run validate` checks every file under `data/` against this document and runs in CI. On a checkout of the `data` branch it checks the probe and fidelity files too.
