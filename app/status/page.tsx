@@ -72,7 +72,7 @@ export default async function StatusPage() {
           <div className="section-head">
             <h2>{modelNames.get(model) ?? model}</h2>
             <span className="aside">
-              One mark per {status.file.interval_minutes} minutes
+              One slot per scheduled run, every {status.file.interval_minutes} minutes
               {windowDays && <> · uptime over {windowDays} days</>}
             </span>
           </div>
