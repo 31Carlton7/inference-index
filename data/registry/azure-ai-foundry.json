@@ -1,0 +1,91 @@
+{
+  "id": "azure-ai-foundry",
+  "updated": "2026-11-18",
+  "fields": {
+    "status": {
+      "value": "live",
+      "source": "https://learn.microsoft.com/en-us/azure/foundry/what-is-foundry",
+      "checked": "2026-11-18",
+      "quote": "Microsoft Foundry unifies agents, models, and tools under a single management grouping with built-in enterprise-readiness capabilities including tracing, monitoring, evaluations, and customizable enterprise setup configurations.",
+      "note": "The product formerly called Azure AI Foundry is now named Microsoft Foundry in Microsoft's documentation."
+    },
+    "retention": {
+      "value": "no period stated; flagged prompts and completions can be stored for human abuse review",
+      "source": "https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy",
+      "checked": "2026-11-18",
+      "quote": "Models sold by Azure store and process data to provide the service and to monitor for uses that violate the applicable product terms.",
+      "note": "Covers Models sold by Azure (Azure OpenAI plus DeepSeek, Meta, Mistral and others); neither this page nor the abuse monitoring page gives a number of days, and the classic-portal page says of serverless partner models that they are stateless and don't store any prompts or outputs."
+    },
+    "zdr": {
+      "value": "on request",
+      "source": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/abuse-monitoring",
+      "checked": "2026-11-18",
+      "quote": "To address these concerns, Microsoft allows customers who meet additional Limited Access eligibility criteria to apply to modify abuse monitoring by completing this form.",
+      "note": "Limited to customers who meet eligibility criteria; a change dated 17 November 2026 says modified abuse monitoring will stop being available for models released on or after November 1, 2026, from a date to be announced."
+    },
+    "zdr_how": {
+      "value": "Apply for modified abuse monitoring through the Limited Access form; once approved, prompts and completions are not stored for human review",
+      "source": "https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy",
+      "checked": "2026-11-18",
+      "quote": "If the customer has been approved for modified abuse monitoring (learn more at Abuse Monitoring)), the data storage and human review process described above is not performed.",
+      "note": "Automated review may still run, and optional stateful features such as the Responses API store data as the customer configures them."
+    },
+    "training": {
+      "value": "no",
+      "source": "https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy",
+      "checked": "2026-11-18",
+      "quote": "Additionally, prompts and completions are not used to train, retrain, or improve the base models.",
+      "note": "Stated for Models sold by Azure; the classic-portal page says the same for serverless partner models and that prompts and outputs are not shared with the model provider, while Claude models are operated by Anthropic under Anthropic's terms."
+    },
+    "soc2": {
+      "value": "Type II",
+      "source": "https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-soc-2",
+      "checked": "2026-11-18",
+      "quote": "Microsoft Azure, Dynamics 365, and other Microsoft cloud services undergo rigorous independent third-party SOC 2 Type 2 audits conducted by a reputable certified public accountant (CPA) firm.",
+      "note": "This is Azure's report; the page defers the list of services in scope to the report itself, and no web page read names Foundry models as in scope, though the data privacy page calls Foundry an Azure service and points to Azure compliance offerings."
+    },
+    "attestations": {
+      "value": null,
+      "not_stated": true,
+      "checked": "2026-11-18",
+      "searched": [
+        "https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy",
+        "https://learn.microsoft.com/en-us/azure/foundry-classic/how-to/concept-data-privacy",
+        "https://learn.microsoft.com/en-us/azure/compliance/offerings/cloud-services-in-audit-scope",
+        "https://learn.microsoft.com/en-us/azure/azure-government/compliance/azure-services-in-fedramp-auditscope",
+        "https://servicetrust.microsoft.com/"
+      ],
+      "note": "Azure's per-service audit scope is published in PDF appendices; the FedRAMP scope page lists Azure OpenAI and Foundry Tools but not the Foundry model catalog."
+    },
+    "subprocessors": {
+      "value": null,
+      "not_stated": true,
+      "checked": "2026-11-18",
+      "searched": [
+        "https://www.microsoft.com/en-us/trust-center/privacy/data-access",
+        "https://servicetrust.microsoft.com/ViewPage/DocumentPreview?documentId=37bec9fa-5bbd-450f-8178-1418411358ba"
+      ],
+      "note": "Microsoft publishes the Online Services Subprocessors List as a PDF download on the Service Trust Portal (dated 2026-11-04); the names are not on a web page."
+    },
+    "regions": {
+      "value": [
+        "Global (any Azure region where the model is deployed)",
+        "Data Zone: US, EU, Asia Pacific",
+        "Azure geographies: Americas, Europe, Asia Pacific, Middle East and Africa"
+      ],
+      "source": "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure-region-availability",
+      "checked": "2026-11-18",
+      "quote": "For all deployment types, data stored at rest remains in the designated Azure geography (Americas, Europe, Asia Pacific, and Middle East and Africa).",
+      "note": "Where inference runs depends on the deployment type (global, data zone or regional) and availability differs by model; Claude models can also be hosted on Anthropic's infrastructure outside Azure."
+    },
+    "funding": {
+      "value": null,
+      "not_stated": true,
+      "checked": "2026-11-18",
+      "searched": [
+        "https://learn.microsoft.com/en-us/azure/foundry/what-is-foundry",
+        "https://learn.microsoft.com/en-us/azure/foundry/"
+      ]
+    }
+  }
+}
