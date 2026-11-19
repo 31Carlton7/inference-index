@@ -124,22 +124,40 @@ The text of each policy page as fetched on that date. `<page>` is a key of `urls
 ```json
 {
   "date": "2026-11-18",
+  "basket_version": 1,
   "rows": [
     { "provider": "example", "model": "llama-3.3-70b", "input": 0.59, "output": 0.79, "source": "https://example.com/pricing", "checked": "2026-11-18" }
+  ],
+  "missing": [
+    { "provider": "other", "model": "llama-3.3-70b", "reason": "https://other.example/pricing returned 403" }
   ]
 }
 ```
 
-A provider whose price could not be read that day has no row. It is not carried forward.
+`date` is the UTC date of the run. A row is the standard pay-per-token list price for uncached input and for output, read that day from the provider's own page or API at `source`.
+
+A provider whose price could not be read that day has no row. It is not carried forward. It is listed in `missing` with the reason the read failed, so a gap can be shown as a gap. Only provider and model pairs in `data/models.json` are expected, so a provider that does not serve a model is in neither list.
+
+A second run on the same day replaces the file.
 
 ## data/prices/index.json
 
 ```json
 {
   "basket_version": 1,
-  "series": [ { "date": "2026-11-18", "value": 0.64, "providers": 12, "rows": "data/prices/daily/2026-11-18.json" } ]
+  "series": [
+    {
+      "date": "2026-11-18",
+      "value": 0.64,
+      "providers": 12,
+      "models": { "llama-3.3-70b": { "median": 0.64, "providers": 12 } },
+      "rows": "data/prices/daily/2026-11-18.json"
+    }
+  ]
 }
 ```
+
+Recomputed from the daily files on every run. `value` is USD per million tokens. `providers` is the number of distinct providers with at least one row that day. `models` gives, per basket model, the median blended price and how many providers it was taken over. A day with fewer than three providers for any basket model has no entry. The formula is in [method-prices.md](method-prices.md).
 
 ## Probe data (branch `data`)
 
