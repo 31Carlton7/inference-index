@@ -152,11 +152,11 @@
         "docs": "https://docs.sambanova.ai/docs/en/get-started/overview",
         "pricing": "https://cloud.sambanova.ai/plans/pricing",
         "privacy": "https://sambanova.ai/privacy-policy",
-        "data_policy": null,
+        "data_policy": "https://sambanova.ai/data-processing-agreement-sambanova",
         "terms": "https://sambanova.ai/cloud-end-user-license-agreement",
         "trust": "https://trust.sambanova.ai/",
         "status": "https://status.sambanova.ai/",
-        "subprocessors": "https://sambanova.ai/data-processing-agreement-sambanova"
+        "subprocessors": "https://trust.sambanova.ai/subprocessors"
       },
       "added": "2026-11-18"
     },
