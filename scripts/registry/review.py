@@ -5,7 +5,12 @@
     python3 scripts/registry/review.py accept 2026-11-19 0 --no-field
     python3 scripts/registry/review.py reject 2026-11-19 0
 
-accept moves the entry to the top of data/changelog.json. reject drops it.
+accept moves the entry into data/changelog.json, above everything dated the
+same day or earlier. reject drops it.
+
+The price job writes to the same file. Pull main before accepting, and if the
+push is rejected, reset to the new main and accept again rather than rebasing
+one edit of the file over another.
 Entry numbers are the ones `list` prints, and they shift after each accept
 or reject.
 """
@@ -74,7 +79,12 @@ def main():
         draft = take_draft(args.date, args.number)
         draft["field"] = args.field
         del draft["page"]
-        write_entries(CHANGELOG, [draft] + read_entries(CHANGELOG))
+        published = read_entries(CHANGELOG)
+        position = 0
+        while position < len(published) and published[position]["date"] > draft["date"]:
+            position += 1
+        published.insert(position, draft)
+        write_entries(CHANGELOG, published)
 
 
 if __name__ == "__main__":
