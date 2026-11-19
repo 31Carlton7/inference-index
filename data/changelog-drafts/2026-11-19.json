@@ -1,0 +1,124 @@
+{
+  "entries": [
+    {
+      "date": "2026-11-19",
+      "provider": "together",
+      "kind": "policy",
+      "field": null,
+      "page": "privacy",
+      "before": "Evaluations\nMeasure model quality",
+      "after": "",
+      "source": "https://www.together.ai/privacy",
+      "snapshot_before": "data/snapshots/together/privacy/2026-11-18.txt",
+      "snapshot_after": "data/snapshots/together/privacy/2026-11-19.txt"
+    },
+    {
+      "date": "2026-11-19",
+      "provider": "together",
+      "kind": "policy",
+      "field": null,
+      "page": "privacy",
+      "before": "Evaluations\nMeasure model quality",
+      "after": "",
+      "source": "https://www.together.ai/privacy",
+      "snapshot_before": "data/snapshots/together/privacy/2026-11-18.txt",
+      "snapshot_after": "data/snapshots/together/privacy/2026-11-19.txt"
+    },
+    {
+      "date": "2026-11-19",
+      "provider": "together",
+      "kind": "policy",
+      "field": null,
+      "page": "privacy",
+      "before": "Evaluations",
+      "after": "",
+      "source": "https://www.together.ai/privacy",
+      "snapshot_before": "data/snapshots/together/privacy/2026-11-18.txt",
+      "snapshot_after": "data/snapshots/together/privacy/2026-11-19.txt"
+    },
+    {
+      "date": "2026-11-19",
+      "provider": "together",
+      "kind": "policy",
+      "field": null,
+      "page": "terms",
+      "before": "Evaluations\nMeasure model quality",
+      "after": "",
+      "source": "https://www.together.ai/terms-of-service",
+      "snapshot_before": "data/snapshots/together/terms/2026-11-18.txt",
+      "snapshot_after": "data/snapshots/together/terms/2026-11-19.txt"
+    },
+    {
+      "date": "2026-11-19",
+      "provider": "together",
+      "kind": "policy",
+      "field": null,
+      "page": "terms",
+      "before": "Evaluations\nMeasure model quality",
+      "after": "",
+      "source": "https://www.together.ai/terms-of-service",
+      "snapshot_before": "data/snapshots/together/terms/2026-11-18.txt",
+      "snapshot_after": "data/snapshots/together/terms/2026-11-19.txt"
+    },
+    {
+      "date": "2026-11-19",
+      "provider": "together",
+      "kind": "policy",
+      "field": null,
+      "page": "terms",
+      "before": "Evaluations",
+      "after": "",
+      "source": "https://www.together.ai/terms-of-service",
+      "snapshot_before": "data/snapshots/together/terms/2026-11-18.txt",
+      "snapshot_after": "data/snapshots/together/terms/2026-11-19.txt"
+    },
+    {
+      "date": "2026-11-19",
+      "provider": "amazon-bedrock",
+      "kind": "policy",
+      "field": null,
+      "page": "terms",
+      "before": "Last Updated: November 17, 2026",
+      "after": "Last Updated: November 19, 2026",
+      "source": "https://aws.amazon.com/service-terms/",
+      "snapshot_before": "data/snapshots/amazon-bedrock/terms/2026-11-18.txt",
+      "snapshot_after": "data/snapshots/amazon-bedrock/terms/2026-11-19.txt"
+    },
+    {
+      "date": "2026-11-19",
+      "provider": "amazon-bedrock",
+      "kind": "policy",
+      "field": null,
+      "page": "terms",
+      "before": "1.24. Certain Services may incorporate generative AI features, powered by Amazon Bedrock, that enable you to use prompts to generate output, including: Amazon Bio Discovery, Amazon CloudWatch, Amazon CodeCatalyst, Amazon Connect Customer, Amazon Connect Decisions, Amazon Connect Health, Amazon Connect Talent, AWS Database Migration Service, Amazon DataZone, Amazon Lex, Amazon OpenSearch Service, Amazon Personalize, Amazon Q, AWS Entity Resolution, AWS Transform, AWS AppFabric, AWS HealthScribe, AWS Resilience Hub, AWS App Studio, Kiro, Amazon SageMaker Data Agent, the model customization agent in SageMaker AI, AWS Quick, AWS DevOps Agent, AWS Continuum (including features previously named AWS Security Agent), AWS FinOps Agent (Preview), Amazon WorkSpaces, AWS Deadline Cloud, and Amazon GuardDuty.",
+      "after": "1.24. Certain Services may incorporate generative AI features, powered by Amazon Bedrock, that enable you to use prompts to generate output, including: Amazon Bio Discovery, Amazon CloudWatch, Amazon CodeCatalyst, Amazon Connect Customer, Amazon Connect Decisions, Amazon Connect Health, Amazon Connect Talent, AWS Database Migration Service, Amazon DataZone, Amazon Lex, Amazon OpenSearch Service, Amazon Personalize, Amazon Q, AWS Entity Resolution, AWS Training, AWS Transform, AWS AppFabric, AWS HealthScribe, AWS Resilience Hub, AWS App Studio, Kiro, Amazon SageMaker Data Agent, the model customization agent in SageMaker AI, AWS Quick, AWS DevOps Agent, AWS Continuum (including features previously named AWS Security Agent), AWS FinOps Agent (Preview), Amazon WorkSpaces, AWS Deadline Cloud, and Amazon GuardDuty.",
+      "source": "https://aws.amazon.com/service-terms/",
+      "snapshot_before": "data/snapshots/amazon-bedrock/terms/2026-11-18.txt",
+      "snapshot_after": "data/snapshots/amazon-bedrock/terms/2026-11-19.txt"
+    },
+    {
+      "date": "2026-11-19",
+      "provider": "amazon-bedrock",
+      "kind": "policy",
+      "field": null,
+      "page": "terms",
+      "before": "50.3. You agree and instruct that for Amazon CodeGuru Profiler, Amazon Comprehend, AWS Continuum (excluding Continuum for penetration testing, previously named AWS Security Agent), Amazon Lex, Amazon Polly, Amazon Rekognition, Amazon Textract, Amazon Transcribe, Amazon Translate, AWS Transform, AWS FinOps Agent (Preview), Kiro Free Tier, Kiro individual subscribers (as described here), and AWS IoT SiteWise Scenario Discovery: (a) we may use and store AI Content that is processed by each of the foregoing AI Services to develop and improve the applicable AI Service and its underlying technologies; (b) we may use and store AI Content that is not personal data to develop and improve AWS and affiliate machine-learning and artificial-intelligence technologies; and (c) solely in connection with the development and improvement described in clauses (a) and (b), we may store such AI Content in an AWS region outside of the AWS region where you are using such AI Service. This Section does not apply to Amazon Comprehend Medical, Amazon Transcribe Medical, AWS HealthScribe, Amazon Comprehend Detect PII or any AI Service that is not listed in the first sentence of this Section 50.3. You may instruct AWS not to use and store AI Content processed by an AI Service to develop and improve that Service or technologies of AWS or its affiliates by configuring an AI services opt-out policy using AWS Organizations. For access to AI Services via AWS Builder ID or a third-party authentication provider, you may instruct AWS to refrain from using and storing AI Content processed by an AI Service to develop and improve that Service or technologies of AWS or its affiliates by using the opt-out mechanism indicated in the applicable service documentation.",
+      "after": "50.3. You agree and instruct that for Amazon CodeGuru Profiler, Amazon Comprehend, AWS Continuum (excluding Continuum for penetration testing, previously named AWS Security Agent), Amazon Lex, Amazon Polly (except for Voice Cloning Content, as defined in Section 50.18.1), Amazon Rekognition, Amazon Textract, Amazon Transcribe, Amazon Translate, AWS Transform, AWS FinOps Agent (Preview), Kiro Free Tier, Kiro individual subscribers (as described here), and AWS IoT SiteWise Scenario Discovery: (a) we may use and store AI Content that is processed by each of the foregoing AI Services to develop and improve the applicable AI Service and its underlying technologies; (b) we may use and store AI Content that is not personal data to develop and improve AWS and affiliate machine-learning and artificial-intelligence technologies; and (c) solely in connection with the development and improvement described in clauses (a) and (b), we may store such AI Content in an AWS region outside of the AWS region where you are using such AI Service. This Section does not apply to Amazon Comprehend Medical, Amazon Transcribe Medical, AWS HealthScribe, Amazon Comprehend Detect PII or any AI Service that is not listed in the first sentence of this Section 50.3. You may instruct AWS not to use and store AI Content processed by an AI Service to develop and improve that Service or technologies of AWS or its affiliates by configuring an AI services opt-out policy using AWS Organizations. For access to AI Services via AWS Builder ID or a third-party authentication provider, you may instruct AWS to refrain from using and storing AI Content processed by an AI Service to develop and improve that Service or technologies of AWS or its affiliates by using the opt-out mechanism indicated in the applicable service documentation.",
+      "source": "https://aws.amazon.com/service-terms/",
+      "snapshot_before": "data/snapshots/amazon-bedrock/terms/2026-11-18.txt",
+      "snapshot_after": "data/snapshots/amazon-bedrock/terms/2026-11-19.txt"
+    },
+    {
+      "date": "2026-11-19",
+      "provider": "amazon-bedrock",
+      "kind": "policy",
+      "field": null,
+      "page": "terms",
+      "before": "",
+      "after": "50.18. Amazon Polly Voice Cloning. The following terms also apply to your use of the voice cloning feature of Amazon Polly (\"Amazon Polly Voice Cloning\"):\n50.18.1. \"Voice Cloning Content\" means (a) audio recordings you submit to Amazon Polly Voice Cloning to create a cloned voice and (b) voice embeddings and other data derived from those recordings to create or represent that cloned voice.\n50.18.2. As the owner and controller of your Voice Cloning Content, you agree that if you use Amazon Polly Voice Cloning, you instruct us, as your processor, to: (1) generate voice embeddings and other voice artifacts on your behalf; (2) store your Voice Cloning Content in a secure AWS environment; (3) store, use, and delete your Voice Cloning Content only at your direction or as necessary to maintain or provide Amazon Polly Voice Cloning or comply with the law or a binding order of a governmental body; and (4) not use your Voice Cloning Content for any other purpose (unless you instruct otherwise in writing) or transfer it to any third party.\n50.18.3. Your use of Amazon Polly Voice Cloning is subject to additional Biometric Notice and Consent Service Terms.",
+      "source": "https://aws.amazon.com/service-terms/",
+      "snapshot_before": "data/snapshots/amazon-bedrock/terms/2026-11-18.txt",
+      "snapshot_after": "data/snapshots/amazon-bedrock/terms/2026-11-19.txt"
+    }
+  ]
+}

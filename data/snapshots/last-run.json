@@ -5,8 +5,7 @@
       "provider": "together",
       "page": "privacy",
       "url": "https://www.together.ai/privacy",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "changed"
     },
     {
       "provider": "together",
@@ -19,8 +18,7 @@
       "provider": "together",
       "page": "terms",
       "url": "https://www.together.ai/terms-of-service",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "changed"
     },
     {
       "provider": "together",
@@ -38,7 +36,8 @@
       "provider": "fireworks",
       "page": "privacy",
       "url": "https://fireworks.ai/privacy-policy",
-      "result": "changed"
+      "result": "unchanged",
+      "latest": "2026-11-18"
     },
     {
       "provider": "fireworks",
@@ -172,8 +171,7 @@
       "provider": "amazon-bedrock",
       "page": "terms",
       "url": "https://aws.amazon.com/service-terms/",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "changed"
     },
     {
       "provider": "amazon-bedrock",
@@ -314,7 +312,7 @@
       "provider": "sambanova",
       "page": "subprocessors",
       "url": "https://trust.sambanova.ai/subprocessors",
-      "result": "baseline"
+      "result": "already taken today"
     },
     {
       "provider": "nebius",
