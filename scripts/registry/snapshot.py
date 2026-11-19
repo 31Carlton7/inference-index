@@ -45,7 +45,8 @@ VOLATILE_LINE_PREFIXES = ("This is the Trace Id:",)
 # DeepInfra's site footer rotates a list of model names under these headings.
 ROTATING_LIST_HEADINGS = ("Latest Models", "Featured Models")
 
-HIDDEN_TAGS = {"script", "style", "noscript", "svg", "template", "head"}
+# Next.js sometimes streams <title> into the body instead of the head.
+HIDDEN_TAGS = {"script", "style", "noscript", "svg", "template", "head", "title"}
 BLOCK_TAGS = {
     "p", "div", "br", "li", "ul", "ol", "tr", "table", "section", "article",
     "header", "footer", "nav", "main", "aside", "h1", "h2", "h3", "h4", "h5",
