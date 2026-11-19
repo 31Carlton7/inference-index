@@ -120,7 +120,7 @@ def rendered_text(url):
     try:
         rendered = subprocess.run(
             [chrome, "--headless=new", "--disable-gpu", "--no-sandbox",
-             "--virtual-time-budget=20000", "--dump-dom", url],
+             "--window-size=1280,2000", "--virtual-time-budget=20000", "--dump-dom", url],
             capture_output=True, timeout=120,
         )
     except subprocess.TimeoutExpired:
