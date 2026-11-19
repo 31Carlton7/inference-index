@@ -10,7 +10,7 @@ export function PriceTable({ rows, rowLabel, rowHref, firstColumn }: {
 }) {
   return (
     <div className="table-wrap">
-      <table>
+      <table className="aligned">
         <thead>
           <tr>
             <th scope="col">{firstColumn}</th>

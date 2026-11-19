@@ -5,7 +5,8 @@ import { dataRoot, usingFixtures } from "./data";
 import { RAW_DATA_BRANCH } from "./links";
 import { fidelityFile, probeStatusFile, probeSummaryFile } from "./schema";
 
-export const PROBE_REVALIDATE_SECONDS = 600;
+// Matches `revalidate` on the pages that draw probe data, which Next needs as a literal.
+const PROBE_REVALIDATE_SECONDS = 600;
 
 // "missing" is the normal state before a job has written its first file.
 // "unreadable" means a file is there but is not what docs/SCHEMA.md describes;

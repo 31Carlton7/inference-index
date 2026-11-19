@@ -27,3 +27,14 @@ scripts/    probe, price and registry jobs
 posts/      post templates and the log of what was posted
 docs/       schema and method notes
 ```
+
+## Development
+
+```
+npm install
+npm run dev            # the site, reading data/
+npm run dev:fixtures   # the site, reading made-up data generated into test/fixtures/data
+npm run validate       # check every file under data/ against docs/SCHEMA.md
+```
+
+Fixture data is gitignored and ignored on Vercel, so it cannot reach the deployed site.

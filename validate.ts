@@ -1,5 +1,5 @@
 // Checks every file under data/ against docs/SCHEMA.md. Exits 1 on any problem.
-// Usage: npm run validate [data-dir]
+// Usage: npm run validate -- [data-dir]
 
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";

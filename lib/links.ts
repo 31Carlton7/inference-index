@@ -12,14 +12,10 @@ export function dataBranchFileUrl(repoPath: string): string {
 
 export const RUNS_DIR_URL = `${REPO_URL}/tree/data/data/probes/runs`;
 
-// One file holds a provider's raw runs for one UTC day.
-export function runsFileUrl(provider: string, timestamp: string): string {
-  return dataBranchFileUrl(`data/probes/runs/${timestamp.slice(0, 10)}/${provider}.jsonl`);
-}
-
-// A run id starts with the run's timestamp: 2026-11-18T12:00:03Z-example-...
-export function runUrl(provider: string, runId: string): string {
-  return runsFileUrl(provider, runId);
+// One file holds a provider's raw runs for one UTC day. Takes a run's timestamp
+// or its id, which starts with that timestamp: 2026-11-18T12:00:03Z-example-...
+export function runsFileUrl(provider: string, timestampOrRunId: string): string {
+  return dataBranchFileUrl(`data/probes/runs/${timestampOrRunId.slice(0, 10)}/${provider}.jsonl`);
 }
 
 export function siteUrl(): string {

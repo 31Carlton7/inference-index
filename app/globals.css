@@ -1012,3 +1012,17 @@ td.wraps {
   max-width: 22rem;
   text-wrap: pretty;
 }
+
+.filters select {
+  max-width: 12rem;
+  text-overflow: ellipsis;
+}
+
+/* Stacked tables of the same kind keep their columns aligned with each other. */
+.aligned th:first-child {
+  width: 34%;
+}
+
+.aligned th:not(:first-child) {
+  width: 22%;
+}

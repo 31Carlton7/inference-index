@@ -1,5 +1,5 @@
 import { formatTimestamp } from "@/lib/format";
-import { runUrl } from "@/lib/links";
+import { runsFileUrl } from "@/lib/links";
 import type { Incident } from "@/lib/schema";
 
 export type ListedIncident = Incident & { provider: string; providerName: string; modelName: string };
@@ -22,8 +22,8 @@ export function IncidentList({ incidents }: { incidents: ListedIncident[] }) {
             "and had not recovered at the last run"
           )}
           <p className="runs">
-            First failed run <a href={runUrl(incident.provider, incident.run)}>{incident.run}</a>, confirmed from a
-            second region by <a href={runUrl(incident.provider, incident.confirmed_by)}>{incident.confirmed_by}</a>
+            First failed run <a href={runsFileUrl(incident.provider, incident.run)}>{incident.run}</a>, confirmed from a
+            second region by <a href={runsFileUrl(incident.provider, incident.confirmed_by)}>{incident.confirmed_by}</a>
           </p>
         </li>
       ))}
