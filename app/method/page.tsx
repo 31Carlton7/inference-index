@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { MethodDoc } from "@/components/method-doc";
-import { getModels } from "@/lib/data";
+import { getModels, getProviders } from "@/lib/data";
 import { REPO_URL, RUNS_DIR_URL, mainFileUrl } from "@/lib/links";
 import { REGISTRY_FIELDS } from "@/lib/schema";
 
@@ -63,6 +63,11 @@ export default function MethodPage() {
 
         <section>
           <h2 id="fields">Registry fields</h2>
+          <p>
+            The {getProviders().length} providers are the project&rsquo;s own judgment of the most-used hosts of
+            open-weight models, because no public usage ranking across providers exists, and aggregators and routers
+            are left out.
+          </p>
           <p>Every fact in the registry is a field. A stated field carries four things:</p>
           <ul>
             <li>the value;</li>
