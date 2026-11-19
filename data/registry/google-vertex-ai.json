@@ -1,0 +1,112 @@
+{
+  "id": "google-vertex-ai",
+  "updated": "2026-11-18",
+  "fields": {
+    "status": {
+      "value": "live",
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models",
+      "checked": "2026-11-18",
+      "quote": "The Gemini Enterprise Agent Platform provides access to broad classes of large language models (LLMs) and generative AI models, including Google first-party models, partner models, and open-weights models.",
+      "note": "Vertex AI has been renamed Gemini Enterprise Agent Platform; Google's pages refer to it as formerly Vertex AI."
+    },
+    "retention": {
+      "value": "prompt logging off by default for partner and open models; up to 30 days for models designated Advanced AI",
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/security-controls",
+      "checked": "2026-11-18",
+      "quote": "Prompt logging for Partner and Open Models (MaaS) is turned off by default and adheres to the Agent Platform Zero Data Retention policy.",
+      "note": "The zero data retention page lists exceptions: all prompts and responses are logged for up to 30 days for Advanced AI models (Claude Mythos and Fable, OpenAI flagship models), and the Interactions API stores data unless store = false; the 90-day abuse-monitoring prompt log is described for Google's own models only."
+    },
+    "zdr": {
+      "value": "default",
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/security-controls",
+      "checked": "2026-11-18",
+      "quote": "Prompt logging for Partner and Open Models (MaaS) is turned off by default and adheres to the Agent Platform Zero Data Retention policy.",
+      "note": "Not the default for every model: the zero data retention page says customers must take specific actions in listed areas, and for OpenAI flagship partner models ZDR is off by default and granted per project on request."
+    },
+    "zdr_how": {
+      "value": "Leave request-response logging off and set store = false on the Interactions API; for OpenAI flagship models, request per-project approval through the Google Cloud account team",
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/zero-data-retention",
+      "checked": "2026-11-18",
+      "quote": "To achieve zero data retention, customers must take specific actions within each of these areas:",
+      "note": "The areas listed also include abuse-monitoring prompt logging, Grounding with Google Search and Maps, agent products and, for Google's own models only, Live API session resumption and implicit caching."
+    },
+    "training": {
+      "value": "no",
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/zero-data-retention",
+      "checked": "2026-11-18",
+      "quote": "As outlined in \"Training Restriction\" in the Service Terms section of the Service Specific Terms, Google won't use your data to train or fine-tune any AI/ML models without your prior permission or instruction.",
+      "note": "The page says this applies to all managed models on the platform, including GA and pre-GA models; the open models page adds that prompts and responses are not shared with third parties."
+    },
+    "soc2": {
+      "value": "in scope of Google's SOC 2 report (type not stated)",
+      "source": "https://cloud.google.com/security/compliance/services-in-scope",
+      "checked": "2026-11-18",
+      "quote": "The following Services fall within the scope of one or more of: Google's ISO 27001 Certification, ISO 27017 Certification, ISO 27018 Certification, PCI DSS Certification, SOC 1 Report, SOC 2 Report and SOC 3 Report and Penetration Testing Report.",
+      "note": "The table row Generative AI on Gemini Enterprise Agent Platform (formerly Generative AI on Vertex AI) is marked done under SOC 1, 2, 3 Reports; the page does not say Type I or Type II."
+    },
+    "attestations": {
+      "value": [
+        "ISO 27001",
+        "ISO 27017",
+        "ISO 27018",
+        "SOC 1",
+        "SOC 3",
+        "PCI DSS"
+      ],
+      "source": "https://cloud.google.com/security/compliance/services-in-scope",
+      "checked": "2026-11-18",
+      "quote": "The following Services fall within the scope of one or more of: Google's ISO 27001 Certification, ISO 27017 Certification, ISO 27018 Certification, PCI DSS Certification, SOC 1 Report, SOC 2 Report and SOC 3 Report and Penetration Testing Report.",
+      "note": "The row Generative AI on Gemini Enterprise Agent Platform is marked done in all four columns; the open models page says the certifications for Generative AI on the platform continue to apply when open models are used as a managed API."
+    },
+    "subprocessors": {
+      "value": [
+        "Accenture International Limited",
+        "Cognizant Worldwide Limited",
+        "Deloitte Consulting LLP",
+        "EPAM Systems, Inc.",
+        "GlobalLogic Technologies Private Limited",
+        "GlobalLogic Inc.",
+        "Infosys Limited",
+        "Innodata Inc",
+        "International Business Machines Corporation",
+        "Nemesys Insights, LLC",
+        "NTT DATA Americas, Inc.",
+        "PricewaterhouseCoopers Advisory Services LLC",
+        "Quantiphi Inc (USA)",
+        "Tata Consultancy Services Limited",
+        "Teleperformance Global Business Private Limited",
+        "TELUS International Services Limited",
+        "Uber Technologies",
+        "Virtusa SuperholdCo Inc"
+      ],
+      "source": "https://cloud.google.com/terms/subprocessors",
+      "checked": "2026-11-18",
+      "quote": "Google and its affiliates engage the third-party entities in the table below to perform limited activities in connection with the Google Cloud Platform Services.",
+      "note": "These are the third-party rows listed for all Google Cloud Platform services or for Generative AI Services (technical support, data labeling, security risk detection); the page also lists Google affiliates, and no model publisher appears as a subprocessor."
+    },
+    "regions": {
+      "value": [
+        "Global",
+        "United States multi-region (us)",
+        "European Union multi-region (eu)",
+        "United States",
+        "Americas",
+        "Europe",
+        "Asia Pacific"
+      ],
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/locations",
+      "checked": "2026-11-18",
+      "quote": "Open model endpoints for Agent Platform are available in the following regions:",
+      "note": "Availability differs by model and region; the Data residency page marks only the US multi-region as an ML processing boundary for open models (Gemma, gpt-oss, Llama) and none for DeepSeek or GLM."
+    },
+    "funding": {
+      "value": null,
+      "not_stated": true,
+      "checked": "2026-11-18",
+      "searched": [
+        "https://cloud.google.com/products/gemini-enterprise-agent-platform",
+        "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models"
+      ]
+    }
+  }
+}
