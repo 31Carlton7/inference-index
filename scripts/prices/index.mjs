@@ -1,7 +1,7 @@
 import { readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
-export const MIN_PROVIDERS_PER_MODEL = 3;
+const MIN_PROVIDERS_PER_MODEL = 3;
 
 function median(numbers) {
   const sorted = numbers.toSorted((a, b) => a - b);
@@ -13,7 +13,6 @@ function round(number, places) {
   return Number(number.toFixed(places));
 }
 
-// Returns null when any basket model has fewer than MIN_PROVIDERS_PER_MODEL rows that day.
 export function indexForDay(rows, basket) {
   const models = {};
   for (const model of basket.models) {

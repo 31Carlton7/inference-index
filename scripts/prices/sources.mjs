@@ -3,8 +3,8 @@
 // standard pay-per-token tier, or throws. It never guesses: an unexpected layout is an error.
 
 function usd(text) {
-  const cleaned = text.replaceAll("\\", "").replaceAll("*", "").trim();
-  if (!/^\$\s?\d+(\.\d+)?$/.test(cleaned)) throw new Error(`not a dollar amount: "${text.trim().slice(0, 40)}"`);
+  const cleaned = text.replaceAll("\\", "").trim();
+  if (!/^\$\d+(\.\d+)?$/.test(cleaned)) throw new Error(`not a dollar amount: "${text.trim().slice(0, 40)}"`);
   return Number(cleaned.slice(1));
 }
 
@@ -41,16 +41,23 @@ function markdownTables(markdown) {
   return tables;
 }
 
-function column(table, pattern) {
-  return table.header.findIndex((heading) => pattern.test(heading));
+// From every table that has all of `headings`, the cells under them for rows whose first-heading cell is `wanted`.
+function cellsUnder(markdown, headings, wanted) {
+  const matches = [];
+  for (const table of markdownTables(markdown)) {
+    const columns = headings.map((heading) => table.header.indexOf(heading));
+    if (columns.includes(-1)) continue;
+    for (const row of table.rows) {
+      if (wanted(row[columns[0]])) matches.push(columns.map((c) => row[c]));
+    }
+  }
+  return matches;
 }
 
 function textLines(html) {
   return html
     .replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/g, " ")
     .replace(/<[^>]+>/g, "\n")
-    .replaceAll("&amp;", "&")
-    .replaceAll("&nbsp;", " ")
     .split("\n")
     .map((line) => line.trim())
     .filter((line) => line !== "");
@@ -95,17 +102,9 @@ export const SOURCES = {
   together: {
     pages: ["https://docs.together.ai/docs/serverless/models.md"],
     price([markdown], apiName) {
-      const matches = [];
-      for (const table of markdownTables(markdown)) {
-        const idColumn = column(table, /^API model string$/);
-        const inputColumn = column(table, /^Input pricing \(per 1M tokens\)$/);
-        const outputColumn = column(table, /^Output pricing \(per 1M tokens\)$/);
-        if (idColumn === -1 || inputColumn === -1 || outputColumn === -1) continue;
-        for (const row of table.rows) {
-          if (row[idColumn] === apiName) matches.push({ input: usd(row[inputColumn]), output: usd(row[outputColumn]) });
-        }
-      }
-      return only(matches, `row for "${apiName}"`);
+      const headings = ["API model string", "Input pricing (per 1M tokens)", "Output pricing (per 1M tokens)"];
+      const [, input, output] = only(cellsUnder(markdown, headings, (cell) => cell === apiName), `row for "${apiName}"`);
+      return { input: usd(input), output: usd(output) };
     },
   },
 
@@ -116,14 +115,9 @@ export const SOURCES = {
         throw new Error("price order note is gone from the page");
       }
       const slug = apiName.split("/").at(-1);
-      const cell = `[${FIREWORKS_LABELS[modelId]}](https://app.fireworks.ai/models/fireworks/${slug})`;
-      const matches = [];
-      for (const table of markdownTables(markdown)) {
-        const standardColumn = column(table, /^Standard$/);
-        if (column(table, /^Model$/) !== 0 || standardColumn === -1) continue;
-        matches.push(...table.rows.filter((row) => row[0] === cell).map((row) => row[standardColumn]));
-      }
-      const parts = only(matches, `row for "${FIREWORKS_LABELS[modelId]}"`).split(" / ");
+      const link = `[${FIREWORKS_LABELS[modelId]}](https://app.fireworks.ai/models/fireworks/${slug})`;
+      const matches = cellsUnder(markdown, ["Model", "Standard"], (cell) => cell === link);
+      const parts = only(matches, `row for "${FIREWORKS_LABELS[modelId]}"`)[1].split(" / ");
       if (parts.length !== 3) throw new Error("Standard cell is not input / cached / output");
       return { input: usd(parts[0]), output: usd(parts[2]) };
     },
@@ -132,15 +126,8 @@ export const SOURCES = {
   groq: {
     pages: ["https://console.groq.com/docs/models.md"],
     price([markdown], apiName) {
-      const matches = [];
-      for (const table of markdownTables(markdown)) {
-        const priceColumn = column(table, /^PRICE PER 1M TOKENS$/);
-        if (column(table, /^MODEL ID$/) !== 0 || priceColumn === -1) continue;
-        for (const row of table.rows) {
-          if (row[0].endsWith(`(/docs/model/${apiName})${apiName}`)) matches.push(row[priceColumn]);
-        }
-      }
-      const priced = /^(\$[\d.]+) input(\$[\d.]+) output$/.exec(only(matches, `row for "${apiName}"`));
+      const matches = cellsUnder(markdown, ["MODEL ID", "PRICE PER 1M TOKENS"], (cell) => cell.endsWith(`(/docs/model/${apiName})${apiName}`));
+      const priced = /^(\$[\d.]+) input(\$[\d.]+) output$/.exec(only(matches, `row for "${apiName}"`)[1]);
       if (!priced) throw new Error("price cell is not '$x input$y output'");
       return { input: usd(priced[1]), output: usd(priced[2]) };
     },
@@ -271,29 +258,17 @@ export const SOURCES = {
   hyperbolic: {
     pages: ["https://www.hyperbolic.ai/docs/inference/overview.md"],
     price([markdown], apiName) {
-      const matches = [];
-      for (const table of markdownTables(markdown)) {
-        const inputColumn = column(table, /^Input$/);
-        const outputColumn = column(table, /^Output$/);
-        if (column(table, /^Model ID$/) !== 0 || inputColumn === -1 || outputColumn === -1) continue;
-        for (const row of table.rows) {
-          if (row[0] === `\`${apiName}\``) matches.push({ input: usd(row[inputColumn]), output: usd(row[outputColumn]) });
-        }
-      }
-      return only(matches, `row for "${apiName}"`);
+      const matches = cellsUnder(markdown, ["Model ID", "Input", "Output"], (cell) => cell === `\`${apiName}\``);
+      const [, input, output] = only(matches, `row for "${apiName}"`);
+      return { input: usd(input), output: usd(output) };
     },
   },
 
   "cloudflare-workers-ai": {
     pages: ["https://developers.cloudflare.com/workers-ai/platform/pricing/index.md"],
     price([markdown], apiName) {
-      const matches = [];
-      for (const table of markdownTables(markdown)) {
-        const priceColumn = column(table, /^Price in Tokens$/);
-        if (column(table, /^Model$/) !== 0 || priceColumn === -1) continue;
-        matches.push(...table.rows.filter((row) => row[0] === apiName).map((row) => row[priceColumn]));
-      }
-      const cell = only(matches, `row for "${apiName}"`);
+      const matches = cellsUnder(markdown, ["Model", "Price in Tokens"], (cell) => cell === apiName);
+      const cell = only(matches, `row for "${apiName}"`)[1];
       const input = /(\$[\d.]+) per M input tokens/.exec(cell);
       const output = /(\$[\d.]+) per M output tokens/.exec(cell);
       if (!input || !output) throw new Error("price cell has no input or output token price");
@@ -304,17 +279,9 @@ export const SOURCES = {
   parasail: {
     pages: ["https://docs.parasail.io/parasail-docs/products/overview/models.md"],
     price([markdown], apiName) {
-      const matches = [];
-      for (const table of markdownTables(markdown)) {
-        const idColumn = column(table, /^Model ID$/);
-        const inputColumn = column(table, /^Input \(\$\/1M\)$/);
-        const outputColumn = column(table, /^Output \(\$\/1M\)$/);
-        if (idColumn === -1 || inputColumn === -1 || outputColumn === -1) continue;
-        for (const row of table.rows) {
-          if (row[idColumn] === `\`${apiName}\``) matches.push({ input: usd(row[inputColumn]), output: usd(row[outputColumn]) });
-        }
-      }
-      return only(matches, `row for "${apiName}"`);
+      const matches = cellsUnder(markdown, ["Model ID", "Input ($/1M)", "Output ($/1M)"], (cell) => cell === `\`${apiName}\``);
+      const [, input, output] = only(matches, `row for "${apiName}"`);
+      return { input: usd(input), output: usd(output) };
     },
   },
 };
