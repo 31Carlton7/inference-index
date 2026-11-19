@@ -65,16 +65,16 @@ A url the provider does not have is `null`. `data_policy` is the page, outside t
 |---|---|---|
 | `status` | Is the provider operating? | `live`, `acquired` or `shut down` |
 | `retention` | How long are prompts and outputs kept by default? | string, as the page states it |
-| `zdr` | Is zero data retention available? | `default`, `on request`, `enterprise only`, `no` |
+| `zdr` | Is zero data retention available? | `default`, `self-serve`, `on request`, `enterprise only`, `no` |
 | `zdr_how` | How is it turned on? | string |
 | `training` | Are customer prompts or outputs used to train models? | `no`, `opt-out`, `opt-in`, `yes` |
-| `soc2` | SOC 2 report | `Type II`, `Type I`, `in progress`, `no` |
+| `soc2` | SOC 2 report | `Type II`, `Type I`, `type not stated`, `in progress`, `no` |
 | `attestations` | Other attestations | array, for example `["ISO 27001", "HIPAA BAA"]` |
 | `subprocessors` | Who processes customer data on the provider's behalf | array of names |
 | `regions` | Where inference runs | array |
 | `funding` | Latest disclosed round or total raised | string |
 
-The values listed for `status`, `zdr`, `training` and `soc2` are the standard vocabulary. Use one of them whenever the page's statement fits. When it fits none of them (for example a cloud that says a service is in scope of its SOC 2 report without naming the type), the value is a short phrase in the page's own terms. `npm run validate` lists such values as warnings so they stay rare.
+The values listed for `status`, `zdr`, `training` and `soc2` are the standard vocabulary. Use one of them whenever the page's statement fits. For `zdr`, `self-serve` is a setting any customer can switch on themselves, with no request to the provider. For `soc2`, `type not stated` is a page that names SOC 2 without saying Type I or Type II. When the statement fits none of them, the value is a short phrase in the page's own terms. `npm run validate` lists such values as warnings so they stay rare.
 
 New keys may be added. Pages render any key they do not know with its raw value.
 

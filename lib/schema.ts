@@ -261,10 +261,10 @@ export const PROVIDER_URL_KEYS = ["docs", "pricing", "privacy", "terms", "trust"
 export const REGISTRY_FIELDS = [
   { key: "status", label: "Status", question: "Is the provider operating?", values: ["live", "acquired", "shut down"] },
   { key: "retention", label: "Retention", question: "How long are prompts and outputs kept by default?" },
-  { key: "zdr", label: "Zero data retention", question: "Is zero data retention available?", values: ["default", "on request", "enterprise only", "no"] },
+  { key: "zdr", label: "Zero data retention", question: "Is zero data retention available?", values: ["default", "self-serve", "on request", "enterprise only", "no"] },
   { key: "zdr_how", label: "How ZDR is enabled", question: "How is zero data retention turned on?" },
   { key: "training", label: "Training on customer data", question: "Are customer prompts or outputs used to train models?", values: ["no", "opt-out", "opt-in", "yes"] },
-  { key: "soc2", label: "SOC 2", question: "Does the provider hold a SOC 2 report?", values: ["Type II", "Type I", "in progress", "no"] },
+  { key: "soc2", label: "SOC 2", question: "Does the provider hold a SOC 2 report?", values: ["Type II", "Type I", "type not stated", "in progress", "no"] },
   { key: "attestations", label: "Other attestations", question: "Which other attestations does it hold?" },
   { key: "subprocessors", label: "Subprocessors", question: "Who processes customer data on the provider's behalf?" },
   { key: "regions", label: "Regions", question: "Where does inference run?" },
