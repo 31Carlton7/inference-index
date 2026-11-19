@@ -1,0 +1,74 @@
+{
+  "id": "hyperbolic",
+  "updated": "2026-11-18",
+  "fields": {
+    "status": {
+      "value": "live",
+      "source": "https://status.hyperbolic.ai/",
+      "checked": "2026-11-18",
+      "quote": "All systems Operational",
+      "note": "The status page fills in with JavaScript, so it was read in a browser; Hyperbolic's blog lists no acquisition of the company, and its latest company news is the October 2026 Series A1."
+    },
+    "retention": {
+      "value": "Not stored or retained after the request is completed",
+      "source": "https://www.hyperbolic.ai/privacy/faq",
+      "checked": "2026-11-18",
+      "quote": "This data is used solely for the purpose of processing your request and is never stored or retained after the task is completed.",
+      "note": "The privacy policy says that if you rate an output, the related conversation is stored as feedback; Hyperbolic's Flux post says some models are routed to third-party providers, whose retention the pages read do not describe."
+    },
+    "zdr": {
+      "value": "default",
+      "source": "https://www.hyperbolic.ai/privacy/faq",
+      "checked": "2026-11-18",
+      "quote": "Once the inference process is complete, the data is immediately discarded.",
+      "note": "The pages read do not use the term zero data retention; the value reflects the FAQ's statement that inputs are discarded for every request."
+    },
+    "zdr_how": {
+      "value": "Nothing to turn on",
+      "source": "https://www.hyperbolic.ai/privacy/faq",
+      "checked": "2026-11-18",
+      "quote": "Input data is collected solely for the purpose of completing the specific AI inference task and is not stored, retained, or used beyond this process."
+    },
+    "training": {
+      "value": "no",
+      "source": "https://www.hyperbolic.ai/terms",
+      "checked": "2026-11-18",
+      "quote": "For the avoidance of doubt, Hyperbolic does not use any of your User Content, including Inputs or Outputs, to train any generative artificial intelligence models.",
+      "note": "The terms add that third-party AI tools made available through the service may use or train on inputs and outputs under their own terms."
+    },
+    "soc2": {
+      "value": "Type I",
+      "source": "https://www.hyperbolic.ai/docs/general/security-compliance",
+      "checked": "2026-11-18",
+      "quote": "Hyperbolic has completed a SOC 2 Type I audit and a SOC 2 Type II engagement is underway.",
+      "note": "Type II is in progress; the docs say reports are available under NDA."
+    },
+    "attestations": {
+      "value": null,
+      "not_stated": true,
+      "checked": "2026-11-18",
+      "searched": ["https://www.hyperbolic.ai/docs/general/security-compliance", "https://trust.hyperbolic.ai/", "https://www.hyperbolic.ai/privacy", "https://www.hyperbolic.ai/privacy/faq", "https://www.hyperbolic.ai/terms"],
+      "note": "The security page says \"Hyperbolic is not currently HIPAA-certified.\" and offers data processing agreements on request; the trust centre lists only SOC 2."
+    },
+    "subprocessors": {
+      "value": ["Amazon Web Services", "GitHub", "GitLab", "Google Workspace", "Pylon", "Supabase", "Vanta", "Vercel"],
+      "source": "https://trust.hyperbolic.ai/subprocessors",
+      "checked": "2026-11-18",
+      "quote": "Amazon Web Services • Cloud provider",
+      "note": "The page is a list of 8 names with no sentences; it does not name the third-party model providers that Hyperbolic's Flux post says some requests are routed to."
+    },
+    "regions": {
+      "value": ["us-west-2 (API edge)"],
+      "source": "https://www.hyperbolic.ai/blog/flux-inference-api",
+      "checked": "2026-11-18",
+      "quote": "The current edge is in us-west-2.",
+      "note": "This is where the inference API edge runs; the pages read do not name the data centres that serve Hyperbolic-hosted models, and externally routed models run at third-party providers."
+    },
+    "funding": {
+      "value": "$30M Series A1 (October 2026)",
+      "source": "https://www.hyperbolic.ai/blog/a1-funding",
+      "checked": "2026-11-18",
+      "quote": "We’re announcing $30 million in Series A1 funding led by Walden Catalyst, the venture capital firm founded by Intel CEO Lip-Bu Tan and former Samsung Electronics Corporate President and CSO Young Sohn."
+    }
+  }
+}
