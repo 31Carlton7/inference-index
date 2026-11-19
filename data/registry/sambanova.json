@@ -1,0 +1,74 @@
+{
+  "id": "sambanova",
+  "updated": "2026-11-18",
+  "fields": {
+    "status": {
+      "value": "live",
+      "source": "https://status.sambanova.ai/",
+      "checked": "2026-11-18",
+      "quote": "All Systems Operational",
+      "note": "SambaNova's press page (https://sambanova.ai/press) lists no acquisition of the company; its July 2026 release announces a new financing round."
+    },
+    "retention": {
+      "value": "No more than 30 days, for security, fraud and abuse monitoring",
+      "source": "https://sambanova.ai/data-processing-agreement-sambanova",
+      "checked": "2026-11-18",
+      "quote": "Prompts, inputs and completions submitted to or generated through the Services are processed transiently to generate the response and are retained for no more than 30 days solely for security, fraud and abuse monitoring and then deleted, except to the extent Customer elects to store such content within the Services.",
+      "note": "The SambaCloud product page (https://sambanova.ai/products/sambacloud) says \"SambaCloud never sees or collects any of your data or user prompts, ensuring full data privacy.\", which does not match the 30 days in the DPA."
+    },
+    "zdr": {
+      "value": null,
+      "not_stated": true,
+      "checked": "2026-11-18",
+      "searched": ["https://sambanova.ai/legal-agreements", "https://sambanova.ai/cloud-end-user-license-agreement", "https://sambanova.ai/data-processing-agreement-sambanova", "https://sambanova.ai/privacy-policy", "https://sambanova.ai/products/sambacloud", "https://trust.sambanova.ai/", "https://docs.sambanova.ai/docs/en/get-started/overview", "https://docs.sambanova.ai/docs/_llms/v2-3-2.txt"],
+      "note": "No page read offers zero data retention by name or says how to get a shorter period than the DPA's 30 days; the product page's \"never sees or collects\" sentence is marketing copy that the DPA contradicts."
+    },
+    "zdr_how": {
+      "value": null,
+      "not_stated": true,
+      "checked": "2026-11-18",
+      "searched": ["https://sambanova.ai/legal-agreements", "https://sambanova.ai/cloud-end-user-license-agreement", "https://sambanova.ai/data-processing-agreement-sambanova", "https://sambanova.ai/privacy-policy", "https://sambanova.ai/products/sambacloud", "https://trust.sambanova.ai/", "https://docs.sambanova.ai/docs/en/get-started/overview", "https://docs.sambanova.ai/docs/_llms/v2-3-2.txt"]
+    },
+    "training": {
+      "value": "no",
+      "source": "https://sambanova.ai/data-processing-agreement-sambanova",
+      "checked": "2026-11-18",
+      "quote": "SambaNova shall not Process Customer Personal Data for its own advertising, independent marketing, or unrelated commercial purposes and shall not use Customer Personal Data to train or fine-tune any machine-learning or artificial-intelligence model.",
+      "note": "The DPA counts the content of API requests and responses as Customer Personal Data; the SambaCloud terms separately limit use of Customer Content to providing the service."
+    },
+    "soc2": {
+      "value": "Type II",
+      "source": "https://trust.sambanova.ai/",
+      "checked": "2026-11-18",
+      "quote": "We hold SOC 2 Type 2 and ISO 27001 certifications, reflecting our commitment to robust security controls, rigorous risk management, and continuous improvement.",
+      "note": "The report itself is behind a request-access gate on the trust centre."
+    },
+    "attestations": {
+      "value": ["ISO 27001"],
+      "source": "https://trust.sambanova.ai/",
+      "checked": "2026-11-18",
+      "quote": "We hold SOC 2 Type 2 and ISO 27001 certifications, reflecting our commitment to robust security controls, rigorous risk management, and continuous improvement.",
+      "note": "The trust centre lists the standard as ISO 27001:2022."
+    },
+    "subprocessors": {
+      "value": ["Amazon Web Services, Inc.", "Google LLC", "Microsoft Corporation", "SoftBank Group Corp.", "Vantage, LLC", "Colovore", "Equinix", "GitHub, Inc.", "Oracle Corporation", "Stripe, Inc.", "Metronome Technologies, Inc.", "Okta, Inc.", "Salesforce.com, Inc.", "Atlassian Corporation", "Bandwidth IG", "Mara Holdings", "Jamf", "KnowBe4", "SumoLogic", "Vanta", "Infercom", "Argyll", "Southern Cross", "Zendesk"],
+      "source": "https://sambanova.ai/data-processing-agreement-sambanova",
+      "checked": "2026-11-18",
+      "quote": "The following entities are authorized to Process Customer Personal Data as Subprocessors as of the effective date of this DPA.",
+      "note": "This is Annex III of the DPA; the live list at https://trust.sambanova.ai/subprocessors has 23 entries, omits Microsoft, Oracle and Bandwidth IG, and adds Google Workspace and Emergys."
+    },
+    "regions": {
+      "value": null,
+      "not_stated": true,
+      "checked": "2026-11-18",
+      "searched": ["https://sambanova.ai/products/sambacloud", "https://docs.sambanova.ai/docs/en/get-started/overview", "https://docs.sambanova.ai/docs/en/get-started/api-keys-urls.md", "https://docs.sambanova.ai/docs/_llms/v2-3-2.txt", "https://sambanova.ai/cloud-end-user-license-agreement", "https://sambanova.ai/data-processing-agreement-sambanova", "https://trust.sambanova.ai/subprocessors"],
+      "note": "No page says where SambaCloud inference runs; the subprocessor lists place data centre providers in the USA, Japan, Germany, the United Kingdom and Australia without tying them to SambaCloud."
+    },
+    "funding": {
+      "value": "$1B Series F, first close, at an $11B post-money valuation (July 2026)",
+      "source": "https://sambanova.ai/press/sambanova-completes-first-close-of-1b-financing-at-11b-valuation",
+      "checked": "2026-11-18",
+      "quote": "RAISE, Paris — July 8, 2026 — SambaNova today announced it has completed the first close of $1 billion in strategic financing as part of a Series F round, valuing the company at $11 billion post money."
+    }
+  }
+}
