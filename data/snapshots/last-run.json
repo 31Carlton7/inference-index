@@ -26,13 +26,13 @@
       "provider": "together",
       "page": "trust",
       "url": "https://trust.together.ai/",
-      "result": "changed"
+      "result": "baseline"
     },
     {
       "provider": "together",
       "page": "subprocessors",
       "url": "https://trust.together.ai/subprocessors",
-      "result": "changed"
+      "result": "baseline"
     },
     {
       "provider": "fireworks",
@@ -59,13 +59,13 @@
       "provider": "fireworks",
       "page": "trust",
       "url": "https://trust.fireworks.ai/",
-      "result": "changed"
+      "result": "baseline"
     },
     {
       "provider": "fireworks",
       "page": "subprocessors",
       "url": "https://trust.fireworks.ai/subprocessors",
-      "result": "changed"
+      "result": "baseline"
     },
     {
       "provider": "groq",
@@ -92,13 +92,13 @@
       "provider": "groq",
       "page": "trust",
       "url": "https://trust.groq.com/",
-      "result": "changed"
+      "result": "baseline"
     },
     {
       "provider": "groq",
       "page": "subprocessors",
       "url": "https://trust.groq.com/subprocessors",
-      "result": "changed"
+      "result": "baseline"
     },
     {
       "provider": "deepinfra",
@@ -153,7 +153,7 @@
       "provider": "cerebras",
       "page": "trust",
       "url": "https://trust.cerebras.ai/",
-      "result": "changed"
+      "result": "baseline"
     },
     {
       "provider": "amazon-bedrock",
@@ -243,7 +243,7 @@
       "provider": "azure-ai-foundry",
       "page": "trust",
       "url": "https://servicetrust.microsoft.com/",
-      "result": "changed"
+      "result": "baseline"
     },
     {
       "provider": "azure-ai-foundry",
@@ -263,7 +263,7 @@
       "provider": "novita",
       "page": "data_policy",
       "url": "https://trust.novita.ai/faq",
-      "result": "changed"
+      "result": "baseline"
     },
     {
       "provider": "novita",
@@ -276,13 +276,13 @@
       "provider": "novita",
       "page": "trust",
       "url": "https://trust.novita.ai/",
-      "result": "changed"
+      "result": "baseline"
     },
     {
       "provider": "novita",
       "page": "subprocessors",
       "url": "https://trust.novita.ai/subprocessors",
-      "result": "changed"
+      "result": "baseline"
     },
     {
       "provider": "sambanova",
@@ -302,7 +302,7 @@
       "provider": "sambanova",
       "page": "trust",
       "url": "https://trust.sambanova.ai/",
-      "result": "changed"
+      "result": "baseline"
     },
     {
       "provider": "sambanova",
@@ -371,13 +371,13 @@
       "provider": "baseten",
       "page": "trust",
       "url": "https://trust.baseten.co/",
-      "result": "changed"
+      "result": "baseline"
     },
     {
       "provider": "baseten",
       "page": "subprocessors",
       "url": "https://trust.baseten.co/subprocessors",
-      "result": "changed"
+      "result": "baseline"
     },
     {
       "provider": "hyperbolic",
@@ -404,13 +404,13 @@
       "provider": "hyperbolic",
       "page": "trust",
       "url": "https://trust.hyperbolic.ai/",
-      "result": "changed"
+      "result": "baseline"
     },
     {
       "provider": "hyperbolic",
       "page": "subprocessors",
       "url": "https://trust.hyperbolic.ai/subprocessors",
-      "result": "changed"
+      "result": "baseline"
     },
     {
       "provider": "cloudflare-workers-ai",

@@ -1,0 +1,115 @@
+Skip to navigationSkip to main content
+Opens in new tab
+|
+Fireworks's Trust Center
+Subscribe to updatesRequest access
+Fireworks
+Open-source AI models at blazing speed, optimized for your use case, scaled globally with the Fireworks Inference Cloud.
+security@fireworks.ai
+Privacy PolicyOpens in new tab
+Overview
+Resources
+Controls
+Subprocessors
+FAQ
+Updates
+Compliance
+SOC 2 Type 2
+HIPAA
+GDPR
+ISO 27001:2022
+ISO 27701
+ISO/IEC 42001:2023
+Resources
+View all
+Policies & Plans
+Fireworks - Information Security, Privacy & AI Management System Policy
+Third-party Reports and Certifications
+ISO Statement of Applicability (Consolidated)
+SOC 2 Type 2 Report 2025
+Penetration Test 2025
+HIPAA Control Assessment Report
+View 3 more
+Fireworks AI Resources
+Fireworks - Privacy Notice
+Opens in new tab
+Fireworks Product Documentation
+Opens in new tab
+Fireworks - Data Processing Addendum
+Opens in new tab
+Fireworks - Terms of Services
+Opens in new tab
+View 4 more
+Vulnerability Disclosure Program (VDP)
+Fireworks - Vulnerability Disclosure Program
+Opens in new tab
+Whitepapers
+Fireworks Model Security and Safety Assurance Whitepaper
+Fireworks on Foundry - Data, Privacy, and Security Whitepaper
+Fireworks - Zero Data Retention & Data Handling Whitepaper
+Controls
+View all
+Infrastructure security
+Access control procedures established
+Remote access MFA enforced
+Remote access encrypted enforced
+View 1 more Infrastructure security control
+Organizational security
+Asset disposal procedures utilized
+Production inventory maintained
+Anti-malware technology utilized
+View 6 more Organizational security controls
+Product security
+Data encryption utilized
+Control self-assessments conducted
+Vulnerability and system monitoring procedures established
+Internal security procedures
+Continuity and Disaster Recovery plans established
+Development lifecycle established
+Whistleblower policy established
+View 18 more Internal security procedures controls
+Data and privacy
+Data retention procedures established
+Customer data deleted upon leaving
+Data classification policy established
+Subprocessors
+View all
+Amazon Web Services • Cloud infrastructure and service provider
+United States, Japan, Singapore, Australia, Germany, United Kingdom
+AWS Trust CenterOpens in new tab
+Google Cloud Platform • Cloud infrastructure and service provider
+United States, Japan, Australia, Sweden, United Kingdom, Germany, Netherlands, Switzerland, France
+Google Cloud Trust CenterOpens in new tab
+Oracle Cloud Infrastructure • Cloud infrastructure and service provider
+United States, Japan, United Kingdom, Germany, Australia
+Oracle Cloud ComplianceOpens in new tab
+CloudFlare • Content delivery network provider
+Processing is performed at the data center ⁠that is closest to the End User
+CloudFlare Trust HubOpens in new tab
+CloudFlare Data Center LocationsOpens in new tab
+FAQ
+View all
+Is Fireworks willing to sign a BAA?
+I found a security bug. How can I let you know?
+Does Fireworks use my Content (inputs, outputs, prompts, etc.) to train models?
+Updates
+View all
+General
+Subprocessor Addition
+Published March 23, 2026
+Fireworks AI uses Anthropic PBC as a Sub-processor to power select AI services. We have entered into a zero data retention agreement with Anthropic, under which no User Content or Output is retained by Anthropic following the completion of a request.
+Read moreRead more about Subprocessor Addition
+General
+FAQ Updates
+Published February 19, 2026
+Added various FAQ
+Compliance
+HIPAA Report of Compliance
+Published January 29, 2026
+Added most recent HIPAA Report of Compliance.
+General
+Subprocessor clarifications
+Published November 18, 2025
+Added clarifying information regarding our Subprocessor use and locations.
+Opens in new tab
+Subscribe to updatesA single program that keeps information secure, respects privacy, and guides responsible AI, designed for a fast-moving team and trusted by customers and auditors.Fireworks AI Privacy NoticeFireworks AI Product DocumentationFireworks AI - Data Processing AddendumFireworks AI Terms of ServiceFireworks AI Vulnerability Disclosure Program (VDP)Vanta connects to a company's core systems to continuously monitor these controls.

@@ -1,0 +1,64 @@
+Skip to navigationSkip to main content
+Opens in new tab
+|
+Trust Center
+Subscribe to updatesRequest access
+SambaNova Systems
+At SambaNova Systems, we are committed to maintaining a strong security and compliance posture across our products and operations. We take a proactive approach to identifying and managing information security risks, ensuring the resilience of our systems, and building trust with our clients and stakeholders.
+We hold SOC 2 Type 2 and ISO 27001 certifications, reflecting our commitment to robust security controls, rigorous risk management, and continuous improvement. We apply a risk-based approach to vendor evaluation and work to ensure that our overall security standards are maintained.
+security@sambanovasystems.com
+Privacy PolicyOpens in new tab
+Overview
+Resources
+Controls
+Subprocessors
+Disclaimer
+At SambaNova Systems, we prioritize Trust, which is underscored by the highest standards for security, compliance, and reliability. We take a proactive approach to identifying and managing information security risks, ensuring the resilience of our systems and operations, and enhancing trust and confidence among our clients and stakeholders.
+With our SOC 2 Type 2 and ISO 27001 certifications, our clients can have peace of mind knowing that their sensitive information is protected by robust security controls, rigorous risk management processes, and ongoing monitoring and improvement initiatives. This achievement reaffirms our commitment to maintaining the highest levels of security, integrity, and trustworthiness in everything we do.
+Compliance
+SOC 2
+ISO 27001:2022
+Resources
+View all
+SOC 2 Type 2
+SambaNova2026-ISO 27001.2022 Certificate
+Controls
+View all
+Infrastructure security
+Production application access restricted
+Firewall access restricted
+Production network access restricted
+View 5 more Infrastructure security controls
+Organizational security
+Anti-malware technology utilized
+Code of Conduct acknowledged by employees and enforced
+Confidentiality Agreement acknowledged by employees
+View 4 more Organizational security controls
+Product security
+Development lifecycle established
+Secure development life cycle
+Internal security procedures
+Continuity and Disaster Recovery plans established
+Incident response policies established
+Incident management procedures followed
+View 4 more Internal security procedures controls
+Data and privacy
+Data retention procedures established
+Data classification policy established
+Encryption key access restricted
+View 1 more Data and privacy control
+Subprocessors
+View all
+Amazon Web Services • Cloud provider
+GitHub • Version control
+Google Cloud Platform • Cloud provider
+Mara Holdings • Data Center
+Santa Clara, California
+Disclaimer
+View all
+General
+Published May 12, 2026
+The information on this page is provided for informational purposes only and does not constitute a warranty, guarantee, or contractual commitment of any kind. Specific security representations, obligations, and service level commitments are governed solely by the terms of your written agreement with SambaNova.
+Read moreRead more about
+Opens in new tab
+Subscribe to updatesSOC 2 Type 2Certificate-SambaNova2026-ISO 27001.2022 - Issued April 2026Vanta connects to a company's core systems to continuously monitor these controls.
