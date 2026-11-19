@@ -1,0 +1,8 @@
+{
+  "fixture": true,
+  "note": "made-up values for building the chart; not data",
+  "basket_version": 1,
+  "series": [
+    { "date": "2026-11-18", "value": 0.64, "providers": 12, "rows": null }
+  ]
+}
