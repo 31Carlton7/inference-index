@@ -1,0 +1,151 @@
+Skip to navigationSkip to main content
+Opens in new tab
+|
+Fireworks's Trust Center
+Fireworks
+Open-source AI models at blazing speed, optimized for your use case, scaled globally with the Fireworks Inference Cloud.
+security@fireworks.ai
+Privacy PolicyOpens in new tab
+Request access
+Subscribe to updates
+Subprocessors
+Subprocessors
+Amazon Web Services • Cloud infrastructure and service provider
+United States, Japan, Singapore, Australia, Germany, United Kingdom
+AWS Trust CenterOpens in new tab
+Google Cloud Platform • Cloud infrastructure and service provider
+United States, Japan, Australia, Sweden, United Kingdom, Germany, Netherlands, Switzerland, France
+Google Cloud Trust CenterOpens in new tab
+Oracle Cloud Infrastructure • Cloud infrastructure and service provider
+United States, Japan, United Kingdom, Germany, Australia
+Oracle Cloud ComplianceOpens in new tab
+CloudFlare • Content delivery network provider
+Processing is performed at the data center ⁠that is closest to the End User
+CloudFlare Trust HubOpens in new tab
+CloudFlare Data Center LocationsOpens in new tab
+Vercel • Frontend hosting
+United States
+Vercel Trust CenterOpens in new tab
+Pylon • Customer support platform
+United States
+Pylon Trust CenterOpens in new tab
+Linear • Internal support collaboration
+United States
+Linear Trust CenterOpens in new tab
+Discord Inc. • Communication services
+United States
+Discord SecurityOpens in new tab
+Slack • Collaboration
+United States
+Slack Trust CenterOpens in new tab
+Lambda Labs • Infrastructure provider
+United States
+Lambda Labs Trust CenterOpens in new tab
+1-10 of 21 results
+Show10
+results per page
+PreviousNext
+All subprocessors
+Amazon Web Services
+[AWS Trust Center](https://aws.amazon.com/compliance/programs/)
+Cloud infrastructure and service provider
+United States, Japan, Singapore, Australia, Germany, United Kingdom
+aws.amazon.com
+Google Cloud Platform
+[Google Cloud Trust Center](https://cloud.google.com/trust-center)
+Cloud infrastructure and service provider
+United States, Japan, Australia, Sweden, United Kingdom, Germany, Netherlands, Switzerland, France
+cloud.google.com
+Oracle Cloud Infrastructure
+[Oracle Cloud Compliance](https://www.oracle.com/corporate/cloud-compliance/)
+Cloud infrastructure and service provider
+United States, Japan, United Kingdom, Germany, Australia
+https://www.oracle.com/cloud/
+CloudFlare
+[CloudFlare Trust Hub](https://www.cloudflare.com/en-gb/trust-hub/)
+[CloudFlare Data Center Locations](https://www.cloudflare.com/network/)
+Content delivery network provider
+Processing is performed at the data center ⁠that is closest to the End User
+https://www.cloudflare.com/
+Vercel
+[Vercel Trust Center](https://security.vercel.com/)
+Frontend hosting
+United States
+vercel.com
+Pylon
+[Pylon Trust Center](https://trust.usepylon.com/)
+Customer support platform
+United States
+https://usepylon.com
+Linear
+[Linear Trust Center](https://trustcenter.linear.app/)
+Internal support collaboration
+United States
+linear.app
+Discord Inc.
+[Discord Security](https://support.discord.com/hc/en-us/categories/115000168351-Safety-Privacy-and-Policy)
+Communication services
+United States
+https://discord.com
+Slack
+[Slack Trust Center](https://slack.com/trust)
+Collaboration
+United States
+slack.com
+Lambda Labs
+[Lambda Labs Trust Center](https://trust.lambda.ai/)
+Infrastructure provider
+United States
+https://lambdalabs.com/
+Crusoe
+[Crusoe Trust Center](https://trust.crusoe.ai/)
+Infrastructure Provider
+United States, Iceland
+https://www.crusoe.ai/
+Vultr
+[Vultr Compliance](https://www.vultr.com/legal/compliance/)
+Infrastructure Provider
+United States
+https://www.vultr.com/
+CoreWeave
+[CoreWeave Security & Compliance](https://docs.coreweave.com/policies/terms-of-service/security-and-compliance#about-coreweave-security)
+Infrastructure Provider
+United States
+https://www.coreweave.com/
+DigitalOcean
+[DigitalOcean Security](https://www.digitalocean.com/security)
+Infrastructure Provider
+United States
+digitalocean.com
+Fluidstack
+Infrastructure Provider
+United States
+https://www.fluidstack.io/
+TensorWave
+[TensorWave Trust Center](https://security.tensorwave.com/)
+Infrastructure Provider
+United States
+https://tensorwave.com/
+IREN
+Infrastructure Provider
+Canada
+https://iren.com/
+GMI
+Infrastructure Provider
+Taiwan
+https://www.gmicloud.ai/en
+Era4
+Infrastructure Provider
+United Kingdom
+http://era4.com/
+Alibaba Cloud
+Cloud Infrastructure Provider
+European Union, United Kingdom, EEA, Malaysia, Singapore
+alibabacloud.com
+Exa
+[Exa Trust Center](https://trust.exa.ai/)
+Web search provider (Fireworks Nexus)
+United States
+exa.ai
+Opens in new tab
+Subscribe to updates

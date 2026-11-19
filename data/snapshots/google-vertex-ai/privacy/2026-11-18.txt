@@ -517,7 +517,6 @@ How Gemini for Google Cloud uses your data
 Learn how Gemini for Google Cloud conforms to Google's privacy commitment with generative AI technologies.
 Send feedback
 Except as otherwise noted, the content of this page is licensed under the Creative Commons Attribution 4.0 License, and code samples are licensed under the Apache 2.0 License. For details, see the Google Developers Site Policies. Java is a registered trademark of Oracle and/or its affiliates.
-Last updated 2026-11-18 UTC.
 Products and pricing
 See all products
 Google Cloud pricing

@@ -1,362 +1,413 @@
 {
-  "date": "2026-11-19",
+  "date": "2026-11-18",
   "pages": [
     {
       "provider": "together",
       "page": "privacy",
       "url": "https://www.together.ai/privacy",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
+    },
+    {
+      "provider": "together",
+      "page": "data_policy",
+      "url": "https://docs.together.ai/docs/privacy-and-security",
+      "result": "baseline"
     },
     {
       "provider": "together",
       "page": "terms",
       "url": "https://www.together.ai/terms-of-service",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "together",
       "page": "trust",
       "url": "https://trust.together.ai/",
-      "result": "unreadable",
-      "reason": "only 1 characters of text"
+      "result": "baseline"
+    },
+    {
+      "provider": "together",
+      "page": "subprocessors",
+      "url": "https://trust.together.ai/subprocessors",
+      "result": "baseline"
     },
     {
       "provider": "fireworks",
       "page": "privacy",
       "url": "https://fireworks.ai/privacy-policy",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
+    },
+    {
+      "provider": "fireworks",
+      "page": "data_policy",
+      "url": "https://docs.fireworks.ai/guides/security_compliance/data_handling",
+      "result": "baseline"
     },
     {
       "provider": "fireworks",
       "page": "terms",
       "url": "https://fireworks.ai/terms-of-service",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "fireworks",
       "page": "trust",
       "url": "https://trust.fireworks.ai/",
-      "result": "unreadable",
-      "reason": "only 1 characters of text"
+      "result": "baseline"
+    },
+    {
+      "provider": "fireworks",
+      "page": "subprocessors",
+      "url": "https://trust.fireworks.ai/subprocessors",
+      "result": "baseline"
     },
     {
       "provider": "groq",
       "page": "privacy",
       "url": "https://groq.com/privacy-policy",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
+    },
+    {
+      "provider": "groq",
+      "page": "data_policy",
+      "url": "https://console.groq.com/docs/your-data",
+      "result": "baseline"
     },
     {
       "provider": "groq",
       "page": "terms",
       "url": "https://console.groq.com/docs/legal/services-agreement",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "groq",
       "page": "trust",
       "url": "https://trust.groq.com/",
-      "result": "unreadable",
-      "reason": "only 1 characters of text"
+      "result": "baseline"
+    },
+    {
+      "provider": "groq",
+      "page": "subprocessors",
+      "url": "https://trust.groq.com/subprocessors",
+      "result": "baseline"
     },
     {
       "provider": "deepinfra",
       "page": "privacy",
       "url": "https://deepinfra.com/privacy",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
+    },
+    {
+      "provider": "deepinfra",
+      "page": "data_policy",
+      "url": "https://docs.deepinfra.com/account/data-privacy",
+      "result": "baseline"
     },
     {
       "provider": "deepinfra",
       "page": "terms",
       "url": "https://deepinfra.com/terms",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "deepinfra",
       "page": "trust",
       "url": "https://trust.deepinfra.com/",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "deepinfra",
       "page": "subprocessors",
       "url": "https://trust.deepinfra.com/subprocessors",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "cerebras",
       "page": "privacy",
       "url": "https://www.cerebras.ai/privacy-policy",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "cerebras",
       "page": "terms",
       "url": "https://www.cerebras.ai/terms-of-service",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "cerebras",
       "page": "trust",
       "url": "https://trust.cerebras.ai/",
-      "result": "unreadable",
-      "reason": "only 1 characters of text"
+      "result": "baseline"
     },
     {
       "provider": "amazon-bedrock",
       "page": "privacy",
       "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
+    },
+    {
+      "provider": "amazon-bedrock",
+      "page": "data_policy",
+      "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html",
+      "result": "baseline"
     },
     {
       "provider": "amazon-bedrock",
       "page": "terms",
       "url": "https://aws.amazon.com/service-terms/",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "amazon-bedrock",
       "page": "trust",
       "url": "https://aws.amazon.com/compliance/services-in-scope/",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "amazon-bedrock",
       "page": "subprocessors",
       "url": "https://aws.amazon.com/compliance/sub-processors/",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "google-vertex-ai",
       "page": "privacy",
       "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/zero-data-retention",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "google-vertex-ai",
       "page": "terms",
       "url": "https://cloud.google.com/terms/service-terms",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "google-vertex-ai",
       "page": "trust",
       "url": "https://cloud.google.com/security/compliance/services-in-scope",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "google-vertex-ai",
       "page": "subprocessors",
       "url": "https://cloud.google.com/terms/subprocessors",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "azure-ai-foundry",
       "page": "privacy",
-      "url": "https://learn.microsoft.com/en-us/azure/foundry-classic/how-to/concept-data-privacy",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "url": "https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy",
+      "result": "baseline"
+    },
+    {
+      "provider": "azure-ai-foundry",
+      "page": "data_policy",
+      "url": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/abuse-monitoring",
+      "result": "baseline"
     },
     {
       "provider": "azure-ai-foundry",
       "page": "terms",
       "url": "https://www.microsoft.com/licensing/terms/productoffering/MicrosoftAzure/MCA",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "azure-ai-foundry",
       "page": "trust",
       "url": "https://servicetrust.microsoft.com/",
-      "result": "unreadable",
-      "reason": "only 1 characters of text"
+      "result": "baseline"
     },
     {
       "provider": "azure-ai-foundry",
       "page": "subprocessors",
       "url": "https://www.microsoft.com/en-us/trust-center/privacy/data-access",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "novita",
       "page": "privacy",
       "url": "https://novita.ai/legal/privacy-policy",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
+    },
+    {
+      "provider": "novita",
+      "page": "data_policy",
+      "url": "https://trust.novita.ai/faq",
+      "result": "baseline"
     },
     {
       "provider": "novita",
       "page": "terms",
       "url": "https://novita.ai/legal/terms-of-service",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "novita",
       "page": "trust",
       "url": "https://trust.novita.ai/",
-      "result": "unreadable",
-      "reason": "only 1 characters of text"
+      "result": "baseline"
+    },
+    {
+      "provider": "novita",
+      "page": "subprocessors",
+      "url": "https://trust.novita.ai/subprocessors",
+      "result": "baseline"
     },
     {
       "provider": "sambanova",
       "page": "privacy",
       "url": "https://sambanova.ai/privacy-policy",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "sambanova",
       "page": "terms",
       "url": "https://sambanova.ai/cloud-end-user-license-agreement",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "sambanova",
       "page": "trust",
       "url": "https://trust.sambanova.ai/",
-      "result": "unreadable",
-      "reason": "only 1 characters of text"
+      "result": "baseline"
+    },
+    {
+      "provider": "sambanova",
+      "page": "subprocessors",
+      "url": "https://sambanova.ai/data-processing-agreement-sambanova",
+      "result": "baseline"
     },
     {
       "provider": "nebius",
       "page": "privacy",
       "url": "https://docs.nebius.com/legal/privacy",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
+    },
+    {
+      "provider": "nebius",
+      "page": "data_policy",
+      "url": "https://docs.tokenfactory.nebius.com/legal/legal-quick-guide",
+      "result": "baseline"
     },
     {
       "provider": "nebius",
       "page": "terms",
       "url": "https://docs.tokenfactory.nebius.com/legal/terms-of-service",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "nebius",
       "page": "trust",
       "url": "https://nebius.com/trust-center",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "nebius",
       "page": "subprocessors",
       "url": "https://docs.nebius.com/legal/sub-processors_tofa",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "baseten",
       "page": "privacy",
       "url": "https://www.baseten.co/privacy-policy/",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
+    },
+    {
+      "provider": "baseten",
+      "page": "data_policy",
+      "url": "https://docs.baseten.co/security",
+      "result": "baseline"
     },
     {
       "provider": "baseten",
       "page": "terms",
       "url": "https://www.baseten.co/terms-and-conditions/",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "baseten",
       "page": "trust",
       "url": "https://trust.baseten.co/",
-      "result": "unreadable",
-      "reason": "only 1 characters of text"
+      "result": "baseline"
+    },
+    {
+      "provider": "baseten",
+      "page": "subprocessors",
+      "url": "https://trust.baseten.co/subprocessors",
+      "result": "baseline"
     },
     {
       "provider": "hyperbolic",
       "page": "privacy",
       "url": "https://www.hyperbolic.ai/privacy",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
+    },
+    {
+      "provider": "hyperbolic",
+      "page": "data_policy",
+      "url": "https://www.hyperbolic.ai/privacy/faq",
+      "result": "baseline"
     },
     {
       "provider": "hyperbolic",
       "page": "terms",
       "url": "https://www.hyperbolic.ai/terms",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "hyperbolic",
       "page": "trust",
       "url": "https://trust.hyperbolic.ai/",
-      "result": "unreadable",
-      "reason": "only 1 characters of text"
+      "result": "baseline"
+    },
+    {
+      "provider": "hyperbolic",
+      "page": "subprocessors",
+      "url": "https://trust.hyperbolic.ai/subprocessors",
+      "result": "baseline"
     },
     {
       "provider": "cloudflare-workers-ai",
       "page": "privacy",
       "url": "https://developers.cloudflare.com/workers-ai/platform/data-usage/",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "cloudflare-workers-ai",
       "page": "terms",
       "url": "https://www.cloudflare.com/service-specific-terms-developer-platform/",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "cloudflare-workers-ai",
       "page": "trust",
       "url": "https://www.cloudflare.com/trust-hub/compliance-resources/",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "cloudflare-workers-ai",
       "page": "subprocessors",
-      "url": "https://www.cloudflare.com/gdpr/subprocessors/",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "url": "https://www.cloudflare.com/gdpr/subprocessors/cloudflare-services/",
+      "result": "baseline"
     },
     {
       "provider": "parasail",
       "page": "privacy",
       "url": "https://www.parasail.io/legal/privacy-policy",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "parasail",
       "page": "terms",
       "url": "https://www.parasail.io/legal/terms-of-service",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     },
     {
       "provider": "parasail",
       "page": "trust",
       "url": "https://www.parasail.io/trust",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "baseline"
     }
   ]
 }

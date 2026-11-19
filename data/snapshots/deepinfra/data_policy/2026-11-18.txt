@@ -1,0 +1,132 @@
+Documentation Index
+Fetch the complete documentation index at: /llms.txt
+Use this file to discover all available pages before exploring further.
+Skip to main content
+DeepInfra home page
+Search...
+⌘K
+Support
+Dashboard
+Dashboard
+Search...
+Navigation
+Account & Security
+Data Privacy
+Documentation
+API Reference
+Models
+Discord
+Getting Started
+What is DeepInfra
+Quickstart
+Models
+Chat Completions
+Chat Completions
+Streaming
+Tool Calling
+Structured Outputs
+Vision & OCR
+Prompt Caching
+Prompt Cache Retention
+Reasoning Models
+Log Probabilities
+More APIs
+Text Completions
+Responses API
+Embeddings
+Reranking
+Image Generation
+Text to Video
+Speech Recognition
+Realtime transcription
+Text to Speech
+DeepInfra Native API
+Batch API
+Introduction to Batch API
+Batch Objects
+Batch Endpoints
+Files API
+Deploy Private Models
+Deploy Private Models
+Custom LLMs
+LoRA Adapters
+LoRA for Image Generation
+GPU Instances
+GPU Instances
+Sandboxes
+Sandboxes
+Hosted Agents
+Introduction to Hosted Agents
+OpenClaw
+Hermes-Agent
+Integrations
+NVIDIA OpenShell
+Anthropic SDK & Claude Code
+LangChain
+LlamaIndex
+AI SDK (Vercel)
+CrewAI
+Microsoft Agent Framework
+Pi
+Hermes Agent
+AutoGen
+Clef (decision models)
+API Features
+Webhooks
+Request Compression
+HTTP/2
+Account & Security
+Signing In
+Authentication
+Rate Limits
+Okta SSO
+Data Privacy
+Subprocessors
+Tutorials
+Stable Diffusion
+Whisper Speech Recognition
+On this page
+Back to top
+Summary
+Data privacy
+Google models
+Anthropic models
+Bulk inference APIs
+No training
+No sharing
+Logs
+Personal information
+Account & Security
+Data Privacy
+Copy pageCopy page
+How DeepInfra handles your data during inference — what’s stored, what’s not.
+Copy pageCopy page
+This page explains how DeepInfra handles data when you use our inference APIs.
+Summary
+Input data is not stored to disk during inference — it exists only in memory while the request is being processed
+Output data is not stored — it is sent to you and then deleted from memory
+We do not train on your data (except Google/Anthropic model exceptions below)
+We do not share your data with third parties (except Google/Anthropic model exceptions below)
+Data privacy
+When using DeepInfra inference APIs, we do not store the data you submit to our APIs on disk. We only hold it in memory during the inference process. Once inference is complete, the data is deleted from memory.
+The same applies to outputs — once sent back to you, they are deleted.
+Exception: Outputs of image generation models are stored for a short period of time to allow easy access (e.g., for the model demo page).
+Google models
+If you opt to use a Google model, Google will store the output as outlined in their Privacy Notice.
+Anthropic models
+If you opt to use an Anthropic model, Anthropic will store the output as outlined in their Trust Center.
+Bulk inference APIs
+When using our bulk inference APIs (submitting multiple requests in a single call), we may need to store data for a longer period, potentially on disk in encrypted form. Once inference is complete and results are returned to you, the data is deleted from disk and memory after a short retention period.
+No training
+We do not use data you submit to our APIs for training models, except when using Google or Anthropic models, where the receiving company’s training policy applies.
+No sharing
+We do not share data you submit to our APIs with any third party, except when using Google or Anthropic models, where we are required to transfer data to those endpoints to fulfill the request.
+Logs
+We do not log the content of your requests. We log only metadata useful for debugging: request ID, cost, sampling parameters.
+When using the Google model, Google logs prompts and responses for a limited period solely to detect violations of their Prohibited Use Policy.
+Personal information
+Personal information and data provided when using certain models through our API may be shared with the relevant model API endpoints, as specified at the time of use.
+Okta SSO
+Subprocessors
+xgithublinkedin
+Powered byThis documentation is built and hosted on Mintlify, a developer documentation platform

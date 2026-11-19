@@ -1,0 +1,51 @@
+GPUs
+GPU instancesManaged Kubernetes
+InferenceResources
+About HyperbolicCareersBlog
+Partner With UsDocs
+Log In
+Schedule a CallSchedule a Call
+Get StartedGet Started
+Products
+GPUsH100, H200, B200 on demand or reservedManaged KubernetesGPU clusters with a hosted control planeInferenceLeading models through one API
+Resources
+AboutCareersBlogPartner With UsDocs
+Get StartedGet Started
+Log InLog In
+Schedule a Call →
+Privacy FAQ
+As a company that embraces open source, we are deeply committed to empowering our builders and creating tools that support both the community and the future of the internet we believe in.
+We prioritize honesty and transparency in how we handle, use, and retain data, ensuring that our users have a clear understanding of the development of our inference services, GPU marketplace, and upcoming products. To further clarify our approach, we’ve crafted the following privacy policy to explain our practices and how your data is used in a transparent manner.
+What data is collected when using our inference service?
+When you use our AI inference services, we temporarily compile input data entered into the input bar and API to deliver the requested AI-generated output. This data is used solely for the purpose of processing your request and is never stored or retained after the task is completed.
+Could you clarify what you mean by the data being used solely for processing the request?
+All input data submitted through our services is processed by our inference nodes. It then temporarily collects your input to facilitate the AI inference, but the data is not stored or used for any other purposes. Once the inference process is complete, the data is immediately discarded.
+Do you use my data to train models?
+We do not use, retain, or train our models on any user-submitted data. Our system is designed to ensure that any data passing through our Gateway is handled securely and privately, without being incorporated into any training datasets or models.
+Who controls my data?
+Input data is collected solely for the purpose of completing the specific AI inference task and is not stored, retained, or used beyond this process.
+Is my data secure?
+The temporary input data collected during the inference task is managed by secure systems and is automatically discarded after use.
+How do you communicate data policy updates?
+As we continue to improve our services, we may update this AI Privacy Statement to reflect changes in our data handling practices. Anytime our ToS or policies are changed we will send a timely notification to our Discord community, and/or via email to help users stay informed about how we protect your privacy.
+For any questions or concerns regarding this FAQ, please contact us at support@hyperbolic.ai.
+socials
+X
+LinkedIn
+YouTube
+GitHub
+Contact
+pages
+GPUs
+Managed Kubernetes
+Serverless Inference
+Partner With Us
+resources
+Docs
+About Us
+Careers
+Media Kit
+newsletter
+Email Address
+Privacy PolicyPrivacy FAQTerms of UseTrust CenterCookie Settings
+© Hyperbolic 2026
