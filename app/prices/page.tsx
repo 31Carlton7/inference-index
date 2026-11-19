@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Empty } from "@/components/empty";
 import { PriceIndexChart } from "@/components/price-index-chart";
-import { PriceTable } from "@/components/price-table";
+import { MissingPrices, PriceTable } from "@/components/price-table";
 import { getLatestDailyPrices, getModelNames, getModels, getPriceIndex, getProviderNames } from "@/lib/data";
 import { formatDate, formatUsd } from "@/lib/format";
 import { mainFileUrl } from "@/lib/links";
@@ -21,7 +21,8 @@ export default function PricesPage() {
   const modelNames = getModelNames();
 
   const series = [...(index?.series ?? [])].sort((a, b) => a.date.localeCompare(b.date));
-  const pricedModels = [...new Set(daily?.rows.map((row) => row.model) ?? [])];
+  const pricedModels = [...new Set([...(daily?.rows ?? []), ...(daily?.missing ?? [])].map((row) => row.model))];
+  const indexForDay = series.find((point) => point.date === daily?.date);
   const basketModels = basket ? basket.models.filter((model) => pricedModels.includes(model)) : [];
   const models = [...basketModels, ...pricedModels.filter((model) => !basketModels.includes(model))];
 
@@ -31,7 +32,8 @@ export default function PricesPage() {
         <h1>Token price index</h1>
         <p className="lede">
           What providers charge for the same open models, read from their own pricing pages once a day, in US dollars
-          per million tokens. A provider whose price could not be read on a day has no row for that day.{" "}
+          per million tokens. A provider whose price could not be read on a day has no row for that day and is listed under the table
+          with the reason.{" "}
           <Link href="/method#prices">How the index is computed</Link>.
         </p>
         {index && series.length > 0 && (
@@ -89,23 +91,47 @@ export default function PricesPage() {
           <h2>Daily prices</h2>
           {daily && <span className="aside">As read on <time dateTime={daily.date}>{formatDate(daily.date)}</time></span>}
         </div>
-        {!daily || daily.rows.length === 0 ? (
+        {!daily || models.length === 0 ? (
           <Empty title="No prices yet">Price tables appear here once the first daily read is published.</Empty>
         ) : (
-          models.map((model) => (
-            <div className="subsection" key={model}>
-              <h3>
-                {modelNames.get(model) ?? model}
-                {basket && !basket.models.includes(model) && <span className="tag">Not in the basket</span>}
-              </h3>
-              <PriceTable
-                rows={daily.rows.filter((row) => row.model === model).sort((a, b) => a.input - b.input)}
-                firstColumn="Provider"
-                rowLabel={(row) => providerNames.get(row.provider) ?? row.provider}
-                rowHref={(row) => `/providers/${row.provider}`}
-              />
-            </div>
-          ))
+          models.map((model) => {
+            const rows = daily.rows.filter((row) => row.model === model).sort((a, b) => a.input - b.input);
+            const missing = daily.missing.filter((gap) => gap.model === model);
+            const median = indexForDay?.models[model];
+            return (
+              <div className="subsection" key={model}>
+                <div className="section-head">
+                  <h3>
+                    {modelNames.get(model) ?? model}
+                    {basket && !basket.models.includes(model) && <span className="tag">Not in the basket</span>}
+                  </h3>
+                  {median && indexForDay && (
+                    <span className="aside">
+                      Median blended price{" "}
+                      <a className="num" href={mainFileUrl(indexForDay.rows)}>{formatUsd(median.median)}</a> over{" "}
+                      {median.providers} providers
+                    </span>
+                  )}
+                </div>
+                {rows.length > 0 && (
+                  <PriceTable
+                    rows={rows}
+                    firstColumn="Provider"
+                    rowLabel={(row) => providerNames.get(row.provider) ?? row.provider}
+                    rowHref={(row) => `/providers/${row.provider}`}
+                  />
+                )}
+                {missing.length > 0 && (
+                  <MissingPrices
+                    date={daily.date}
+                    missing={missing}
+                    label={(gap) => providerNames.get(gap.provider) ?? gap.provider}
+                    href={(gap) => `/providers/${gap.provider}`}
+                  />
+                )}
+              </div>
+            );
+          })
         )}
       </section>
     </>

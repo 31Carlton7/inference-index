@@ -19,6 +19,7 @@ const CONTENTS = [
   ["probes", "Probes"],
   ["fidelity", "Fidelity"],
   ["prices", "Price index"],
+  ["existing", "What already exists"],
   ["limits", "What this project will not do"],
   ["corrections", "Corrections"],
 ];
@@ -203,6 +204,29 @@ export default function MethodPage() {
             file="method-prices.md"
             pending="The basket and the index formula will be published here with the first daily index."
           />
+        </section>
+
+        <section>
+          <h2 id="existing">What already exists</h2>
+          <p>
+            Much of this is already public elsewhere. Performance benchmarks measure speed, time to first token and
+            error rates across providers on a regular schedule, and one scores each endpoint against a reference.
+            Several price lists publish current prices, and at least one keeps a daily history. A large router
+            publishes a training flag and a retention tier for more than a hundred providers, and an archive of terms
+            of service keeps dated copies of some providers&rsquo; policy documents.
+          </p>
+          <p>What this record adds is narrower:</p>
+          <ul>
+            <li>the sentence each value was taken from, quoted word for word beside it;</li>
+            <li>the date each page was checked, field by field;</li>
+            <li>dated diffs that tie a change in a policy page to the field it changed.</li>
+          </ul>
+          <p>
+            The probes and the price index mostly repeat measurements others already make. They are here so that each
+            number can be traced to a raw run or a pricing page in one place, not because nobody else has them. The
+            sources that were compared, and what each one covers, are in the{" "}
+            <a href={mainFileUrl("docs/overlap-check.md")}>overlap check</a>.
+          </p>
         </section>
 
         <section>

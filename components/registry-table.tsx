@@ -23,6 +23,9 @@ const COLUMNS = [
 
 const FILTERED_COLUMNS = ["zdr", "training", "soc2"] as const;
 const NOT_STATED = "not stated";
+// One filter option for every stated value that is in the page's own words
+// rather than the schema's vocabulary, so each phrasing is not its own option.
+const OTHER_WORDING = "other wording";
 
 type SortKey = "name" | "updated" | (typeof COLUMNS)[number]["key"];
 type Sort = { key: SortKey; descending: boolean };
@@ -32,24 +35,26 @@ function allowedValues(fieldKey: string): readonly string[] {
   return known && "values" in known ? known.values : [];
 }
 
-function filterValue(field: Field | undefined): string | null {
+function filterValue(fieldKey: string, field: Field | undefined): string | null {
   if (!field) return null;
-  return field.value === null ? NOT_STATED : formatFieldValue(field.value);
+  if (field.value === null) return NOT_STATED;
+  const text = formatFieldValue(field.value);
+  return allowedValues(fieldKey).includes(text) ? text : OTHER_WORDING;
 }
 
-// The schema's vocabulary first, then any other wording found in the records.
 function filterOptions(rows: RegistryRow[], fieldKey: string): string[] {
-  const found = rows.map((row) => filterValue(row.fields[fieldKey])).filter((value) => value !== null);
-  return [...new Set([...allowedValues(fieldKey), ...found.sort(), NOT_STATED])];
+  const hasOtherWording = rows.some((row) => filterValue(fieldKey, row.fields[fieldKey]) === OTHER_WORDING);
+  return [...allowedValues(fieldKey), ...(hasOtherWording ? [OTHER_WORDING] : []), NOT_STATED];
 }
 
-// Stated values first in the schema's order, then "not stated", then unchecked.
+// The schema's vocabulary in its own order, then other wording by its text,
+// then "not stated", then unchecked.
 function fieldRank(fieldKey: string, field: Field | undefined): [number, string] {
-  if (!field) return [2, ""];
-  if (field.value === null) return [1, ""];
+  if (!field) return [3, ""];
+  if (field.value === null) return [2, ""];
   const text = formatFieldValue(field.value);
   const position = allowedValues(fieldKey).indexOf(text);
-  return [0, position === -1 ? text : String(position).padStart(3, "0")];
+  return position === -1 ? [1, text] : [0, String(position)];
 }
 
 function compareRows(a: RegistryRow, b: RegistryRow, key: SortKey): number {
@@ -68,7 +73,7 @@ export function RegistryTable({ rows }: { rows: RegistryRow[] }) {
   const isFiltering = query !== "" || Object.values(chosen).some(Boolean);
   const visible = rows
     .filter((row) => row.name.toLowerCase().includes(query.trim().toLowerCase()))
-    .filter((row) => FILTERED_COLUMNS.every((key) => !chosen[key] || filterValue(row.fields[key]) === chosen[key]))
+    .filter((row) => FILTERED_COLUMNS.every((key) => !chosen[key] || filterValue(key, row.fields[key]) === chosen[key]))
     .sort((a, b) => {
       const order = compareRows(a, b, sort.key) || a.name.localeCompare(b.name);
       return sort.descending ? -order : order;
@@ -110,6 +115,18 @@ export function RegistryTable({ rows }: { rows: RegistryRow[] }) {
             </select>
           </label>
         ))}
+        <label className="phone-sort">
+          Sort by
+          <select value={sort.key} onChange={(event) => setSort({ key: event.target.value as SortKey, descending: false })}>
+            <option value="name">Provider</option>
+            {COLUMNS.map((column) => (
+              <option key={column.key} value={column.key}>
+                {column.label}
+              </option>
+            ))}
+            <option value="updated">Record updated</option>
+          </select>
+        </label>
         {isFiltering && (
           <button
             type="button"
@@ -127,7 +144,7 @@ export function RegistryTable({ rows }: { rows: RegistryRow[] }) {
         </span>
       </div>
       <div className="table-wrap">
-        <table>
+        <table className="registry">
           <thead>
             <tr>
               {header("name", "Provider")}
@@ -142,11 +159,11 @@ export function RegistryTable({ rows }: { rows: RegistryRow[] }) {
                   <Link href={`/providers/${row.id}`}>{row.name}</Link>
                 </th>
                 {COLUMNS.map((column) => (
-                  <td key={column.key} className="wraps">
+                  <td key={column.key} className="wraps" data-label={column.label}>
                     <FieldValue field={row.fields[column.key]} providerId={row.id} fieldKey={column.key} />
                   </td>
                 ))}
-                <td>{row.updated ? <time dateTime={row.updated}>{formatDate(row.updated)}</time> : <span className="unchecked">not checked yet</span>}</td>
+                <td data-label="Record updated">{row.updated ? <time dateTime={row.updated}>{formatDate(row.updated)}</time> : <span className="unchecked">not checked yet</span>}</td>
               </tr>
             ))}
             {visible.length === 0 && (

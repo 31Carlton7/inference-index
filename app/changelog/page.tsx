@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ChangeList } from "@/components/change-list";
 import { Empty } from "@/components/empty";
-import { getChangelog, getProviderNames } from "@/lib/data";
+import { getChangelog, getModelNames, getProviderNames } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Changelog",
@@ -28,7 +28,7 @@ export default function ChangelogPage() {
           Entries appear here from the first day a tracked page differs from its previous snapshot.
         </Empty>
       ) : (
-        <ChangeList entries={entries} providerNames={getProviderNames()} />
+        <ChangeList entries={entries} providerNames={getProviderNames()} modelNames={getModelNames()} />
       )}
     </>
   );

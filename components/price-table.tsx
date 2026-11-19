@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { formatDate, formatUsd } from "@/lib/format";
-import type { PriceRow } from "@/lib/schema";
+import type { MissingPrice, PriceRow } from "@/lib/schema";
 
 export function PriceTable({ rows, rowLabel, rowHref, firstColumn }: {
   rows: PriceRow[];
@@ -36,6 +36,27 @@ export function PriceTable({ rows, rowLabel, rowHref, firstColumn }: {
           ))}
         </tbody>
       </table>
+    </div>
+  );
+}
+
+// A price that could not be read is a gap with its reason, never yesterday's number.
+export function MissingPrices({ date, missing, label, href }: {
+  date: string;
+  missing: MissingPrice[];
+  label: (gap: MissingPrice) => string;
+  href?: (gap: MissingPrice) => string;
+}) {
+  return (
+    <div className="missing footnote">
+      <p>Could not be read on {formatDate(date)}, so there is no row and no price is carried forward:</p>
+      <ul>
+        {missing.map((gap) => (
+          <li key={`${gap.provider}-${gap.model}`}>
+            {href ? <Link href={href(gap)}>{label(gap)}</Link> : label(gap)}: {gap.reason}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

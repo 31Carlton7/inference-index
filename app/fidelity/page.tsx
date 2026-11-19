@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Empty, Unreadable } from "@/components/empty";
-import { FidelityTable } from "@/components/probe-tables";
+import { FidelityReading, FidelityTable } from "@/components/probe-tables";
 import { getModelNames, getProviderNames } from "@/lib/data";
 import { formatDate } from "@/lib/format";
 import { getFidelity } from "@/lib/probes";
@@ -26,19 +26,20 @@ export default async function FidelityPage() {
       </h1>
       <p className="lede">
         Fixed prompts at temperature 0, compared against a reference run of the model&rsquo;s published weights. The
-        score is experimental: the method is still being tested, and a low score here is not a finding about a
-        provider. <Link href="/method#fidelity">How the score is computed</Link>.
+        score is experimental: the method is still being tested. Each row is one measurement on one day, shown beside
+        how much the reference varies against itself, and a low score here is not a finding about a provider. <Link href="/method#fidelity">How the score is computed</Link>.
       </p>
       {fidelity.state === "ok" && (
         <p className="dateline">
-          Run on {formatDate(fidelity.file.date)} · prompts version {fidelity.file.prompts_version}
+          Run on {formatDate(fidelity.file.date)} · prompts version {fidelity.file.prompts_version} · scoring version{" "}
+          {fidelity.file.scoring_version}
         </p>
       )}
     </header>
   );
 
   if (fidelity.state === "unreadable") return <>{head}<Unreadable file="data/fidelity/latest.json" /></>;
-  if (fidelity.state === "missing" || fidelity.file.rows.length === 0) {
+  if (fidelity.state === "missing" || (fidelity.file.rows.length === 0 && fidelity.file.unscored.length === 0)) {
     return (
       <>
         {head}
@@ -47,7 +48,8 @@ export default async function FidelityPage() {
     );
   }
 
-  const models = [...new Set(fidelity.file.rows.map((row) => row.model))];
+  const { rows, unscored } = fidelity.file;
+  const models = [...new Set([...rows, ...unscored].map((row) => row.model))];
 
   return (
     <>
@@ -59,18 +61,31 @@ export default async function FidelityPage() {
               {modelNames.get(model) ?? model} <span className="tag">Experimental</span>
             </h2>
           </div>
-          <FidelityTable
-            fidelity={fidelity.file}
-            rows={fidelity.file.rows.filter((row) => row.model === model)}
-            firstColumn="Provider"
-            rowLabel={(row) => providerNames.get(row.provider) ?? row.provider}
-            rowHref={(row) => `/providers/${row.provider}`}
-          />
+          {rows.some((row) => row.model === model) && (
+            <FidelityTable
+              fidelity={fidelity.file}
+              rows={rows.filter((row) => row.model === model)}
+              firstColumn="Provider"
+              rowLabel={(row) => providerNames.get(row.provider) ?? row.provider}
+              rowHref={(row) => `/providers/${row.provider}`}
+            />
+          )}
+          {unscored.some((row) => row.model === model) && (
+            <p className="aside footnote">
+              Not scored on this run:{" "}
+              {unscored
+                .filter((row) => row.model === model)
+                .map((row) => `${providerNames.get(row.provider) ?? row.provider} (${row.reason})`)
+                .join("; ")}
+              .
+            </p>
+          )}
         </section>
       ))}
+      <FidelityReading />
       <p className="aside footnote">
-        Rows are in the order they were published, not ranked. Each score links to the file of runs it was computed
-        from.
+        Rows are in the order they were published, not ranked. Each score links to the provider&rsquo;s raw responses
+        for the run, and each noise floor to the reference&rsquo;s.
       </p>
     </>
   );

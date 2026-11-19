@@ -4,8 +4,8 @@ import { notFound } from "next/navigation";
 import { ChangeList } from "@/components/change-list";
 import { Empty, Unreadable } from "@/components/empty";
 import { IncidentList } from "@/components/incident-list";
-import { PriceTable } from "@/components/price-table";
-import { FidelityTable, SpeedTable } from "@/components/probe-tables";
+import { MissingPrices, PriceTable } from "@/components/price-table";
+import { FidelityReading, FidelityTable, SpeedTable } from "@/components/probe-tables";
 import { RunStrip, RunStripLegend } from "@/components/run-strip";
 import { getChangelog, getLatestDailyPrices, getModelNames, getProvider, getProviders, getRegistryRecord } from "@/lib/data";
 import { formatDate, formatFieldValue, shortUrl } from "@/lib/format";
@@ -79,6 +79,7 @@ export default async function ProviderPage({ params }: Params) {
   const modelLabel = (row: { model: string }) => modelNames.get(row.model) ?? row.model;
   const daily = getLatestDailyPrices();
   const prices = daily?.rows.filter((row) => row.provider === provider.id) ?? [];
+  const missingPrices = daily?.missing.filter((gap) => gap.provider === provider.id) ?? [];
   const changes = getChangelog().filter((entry) => entry.provider === provider.id);
   const [summary, status, fidelity] = await Promise.all([getProbeSummary(), getProbeStatus(), getFidelity()]);
   const drawnAt = Date.now();
@@ -142,18 +143,23 @@ export default async function ProviderPage({ params }: Params) {
       <section>
         <div className="section-head">
           <h2>Prices</h2>
-          {prices.length > 0 && daily && (
+          {(prices.length > 0 || missingPrices.length > 0) && daily && (
             <span className="aside">
               As read on <time dateTime={daily.date}>{formatDate(daily.date)}</time>
             </span>
           )}
         </div>
-        {prices.length === 0 ? (
+        {prices.length === 0 && missingPrices.length === 0 ? (
           <Empty title="No prices yet">
             {daily ? "No price for this provider was read on the latest day." : "The first daily price read has not been published."}
           </Empty>
         ) : (
-          <PriceTable rows={prices} firstColumn="Model" rowLabel={modelLabel} />
+          <>
+            {prices.length > 0 && <PriceTable rows={prices} firstColumn="Model" rowLabel={modelLabel} />}
+            {daily && missingPrices.length > 0 && (
+              <MissingPrices date={daily.date} missing={missingPrices} label={modelLabel} />
+            )}
+          </>
         )}
       </section>
 
@@ -207,6 +213,11 @@ export default async function ProviderPage({ params }: Params) {
             Fidelity <span className="tag">Experimental</span>
           </h2>
           <span className="aside">
+            {fidelity.state === "ok" && fidelityRows.length > 0 && (
+              <>
+                Run on <time dateTime={fidelity.file.date}>{formatDate(fidelity.file.date)}</time>.{" "}
+              </>
+            )}
             Not a finding about the provider. <Link href="/method#fidelity">How the score is computed</Link>
           </span>
         </div>
@@ -215,7 +226,10 @@ export default async function ProviderPage({ params }: Params) {
         ) : fidelity.state === "missing" || fidelityRows.length === 0 ? (
           <Empty title="No fidelity runs yet" />
         ) : (
-          <FidelityTable fidelity={fidelity.file} rows={fidelityRows} firstColumn="Model" rowLabel={modelLabel} />
+          <>
+            <FidelityTable fidelity={fidelity.file} rows={fidelityRows} firstColumn="Model" rowLabel={modelLabel} />
+            <FidelityReading />
+          </>
         )}
       </section>
 
@@ -226,7 +240,7 @@ export default async function ProviderPage({ params }: Params) {
         {changes.length === 0 ? (
           <Empty title="No changes recorded yet" />
         ) : (
-          <ChangeList entries={changes} />
+          <ChangeList entries={changes} modelNames={modelNames} />
         )}
       </section>
     </>
