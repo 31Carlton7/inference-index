@@ -14,6 +14,7 @@ import datetime
 import difflib
 import json
 import pathlib
+import shutil
 import subprocess
 import urllib.error
 import urllib.request
@@ -30,10 +31,18 @@ USER_AGENT = (
 # not the policy.
 MIN_POLICY_CHARS = 400
 
+CHROME_PATHS = [
+    "google-chrome",
+    "chromium",
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+]
+
 CHALLENGE_TITLES = ["Just a moment", "Attention Required", "Access Denied"]
 
-# Lines that differ on every request and say nothing about the policy.
+# Lines that differ between two fetches of an unchanged policy.
 VOLATILE_LINE_PREFIXES = ("This is the Trace Id:",)
+# DeepInfra's site footer rotates a list of model names under these headings.
+ROTATING_LIST_HEADINGS = ("Latest Models", "Featured Models")
 
 HIDDEN_TAGS = {"script", "style", "noscript", "svg", "template", "head"}
 BLOCK_TAGS = {
@@ -66,12 +75,26 @@ class VisibleText(HTMLParser):
             self.pieces.append(text)
 
 
+def is_volatile(line):
+    if line.startswith(VOLATILE_LINE_PREFIXES):
+        return True
+    # Trust centres: "Updated 29 minutes ago".
+    if line.startswith("Updated ") and line.endswith(" ago"):
+        return True
+    # Google's docs restamp every page daily: "Last updated 2026-11-18 UTC."
+    return line.startswith("Last updated ") and line.endswith(" UTC.")
+
+
 def tidy_lines(text):
     lines = []
+    follows_rotating_heading = False
     for line in text.splitlines():
         line = " ".join(line.split())
-        if line and not line.startswith(VOLATILE_LINE_PREFIXES):
+        if not line:
+            continue
+        if not follows_rotating_heading and not is_volatile(line):
             lines.append(line)
+        follows_rotating_heading = line in ROTATING_LIST_HEADINGS
     return "\n".join(lines) + "\n"
 
 
@@ -87,6 +110,22 @@ def pdf_to_text(pdf_bytes):
         input=pdf_bytes, capture_output=True, check=True,
     )
     return tidy_lines(converted.stdout.decode("utf-8", "replace"))
+
+
+def rendered_text(url):
+    """Text of a page that only has content after its scripts run, or None."""
+    chrome = next((shutil.which(path) for path in CHROME_PATHS if shutil.which(path)), None)
+    if chrome is None:
+        return None
+    try:
+        rendered = subprocess.run(
+            [chrome, "--headless=new", "--disable-gpu", "--no-sandbox",
+             "--virtual-time-budget=20000", "--dump-dom", url],
+            capture_output=True, timeout=120,
+        )
+    except subprocess.TimeoutExpired:
+        return None
+    return html_to_text(rendered.stdout.decode("utf-8", "replace"))
 
 
 def fetch_policy_text(url):
@@ -113,6 +152,8 @@ def fetch_policy_text(url):
             if f"<title>{title}" in html:
                 return None, "bot challenge"
         text = html_to_text(html)
+        if len(text) < MIN_POLICY_CHARS:
+            text = rendered_text(url) or text
 
     if len(text) < MIN_POLICY_CHARS:
         return None, f"only {len(text)} characters of text"
