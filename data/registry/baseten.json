@@ -1,0 +1,74 @@
+{
+  "id": "baseten",
+  "updated": "2026-11-18",
+  "fields": {
+    "status": {
+      "value": "live",
+      "source": "https://status.baseten.co/",
+      "checked": "2026-11-18",
+      "quote": "All Systems Operational",
+      "note": "Baseten's blog and sitemap list no acquisition of Baseten; the latest company announcement there is its Series F."
+    },
+    "retention": {
+      "value": "Not stored (Model APIs)",
+      "source": "https://docs.baseten.co/security",
+      "checked": "2026-11-18",
+      "quote": "Baseten doesn't store model inputs or outputs.",
+      "note": "This is the Model APIs line; on dedicated deployments synchronous requests are also not stored by default, but async inference stores a request's input while it is queued, for up to 72 hours, and does not store outputs."
+    },
+    "zdr": {
+      "value": "default",
+      "source": "https://www.baseten.co/security-practices/",
+      "checked": "2026-11-18",
+      "quote": "Baseten's Model APIs product adheres to a Zero Data Retention posture for all model inputs or outputs.",
+      "note": "The same page gives Dedicated Inference the same posture, except for the elective async inference feature."
+    },
+    "zdr_how": {
+      "value": "Nothing to turn on; a customer can ask in writing for logging or retention to be enabled",
+      "source": "https://www.baseten.co/security-practices/",
+      "checked": "2026-11-18",
+      "quote": "Customers may elect to enable logging, traffic recording, retention, abuse monitoring, or other changes to the applicable ZDR configuration for their workloads by written notice, and Baseten will promptly implement requested changes whenever technically supported for the applicable Service."
+    },
+    "training": {
+      "value": "no",
+      "source": "https://www.baseten.co/terms-and-conditions/",
+      "checked": "2026-11-18",
+      "quote": "Baseten will not use Customer Content, including Customer Models, Model Outputs, or inference logs, to train, fine-tune, or otherwise develop machine learning or artificial intelligence models."
+    },
+    "soc2": {
+      "value": "Type II",
+      "source": "https://www.baseten.co/security-practices/",
+      "checked": "2026-11-18",
+      "quote": "Baseten undergoes periodic SOC 2 Type II examinations conducted by an independent third-party auditor.",
+      "note": "The report is available under NDA through the trust centre, which lists a SOC 2 Type 2 report and a SOC 3 report dated 5.31.26."
+    },
+    "attestations": {
+      "value": ["HIPAA BAA", "ISO 27001", "PCI DSS SAQ D"],
+      "source": "https://www.baseten.co/security-practices/",
+      "checked": "2026-11-18",
+      "quote": "HIPAA: Baseten offers HIPAA-eligible deployment configurations and enters into Business Associate Agreements (BAAs) with qualifying customers.",
+      "note": "ISO 27001:2022 and PCI DSS - SAQ D are listed under Compliance on https://trust.baseten.co/ with gated documents and no sentence; that page also lists FedRAMP 20x package documents, GDPR and CCPA."
+    },
+    "subprocessors": {
+      "value": ["Amazon Web Services", "Google Cloud", "WorkOS", "Pylon", "Slack", "Orb", "Hugging Face", "ClickHouse", "Cloudflare", "OVH Cloud", "PostHog", "SigNoz"],
+      "source": "https://trust.baseten.co/subprocessors",
+      "checked": "2026-11-18",
+      "quote": "Amazon Web Services • Cloud Infrastructure and Compute",
+      "note": "The page is a list with no sentences; ClickHouse, Cloudflare, OVH Cloud, PostHog and SigNoz are marked as Baseten Sandboxes only, and other cloud compute providers (the trust centre updates name Buzz HPC and Datasection) are in a separate Compute Providers PDF that was not read."
+    },
+    "regions": {
+      "value": ["Not fixed: the regions serving a model can change"],
+      "source": "https://docs.baseten.co/inference/model-apis/overview",
+      "checked": "2026-11-18",
+      "quote": "Model APIs use a shared endpoint, and the regions serving a model can change.",
+      "note": "Baseten can restrict Model APIs to regions through a compliance policy on request; dedicated deployments can be pinned to the regions us (United States) or eu (European Union)."
+    },
+    "funding": {
+      "value": "$1.5B Series F at a $13B valuation (June 2026)",
+      "source": "https://www.baseten.co/blog/announcing-our-series-f",
+      "checked": "2026-11-18",
+      "quote": "Baseten raised a $1.5B Series F and achieved a $13B valuation",
+      "note": "The post says it was originally published June 22, 2026."
+    }
+  }
+}
