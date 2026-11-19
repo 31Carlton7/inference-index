@@ -1,0 +1,229 @@
+{
+  "providers": [
+    {
+      "id": "together",
+      "name": "Together AI",
+      "homepage": "https://www.together.ai/",
+      "urls": {
+        "docs": "https://docs.together.ai/intro",
+        "pricing": "https://www.together.ai/pricing",
+        "privacy": "https://www.together.ai/privacy",
+        "terms": "https://www.together.ai/terms-of-service",
+        "trust": "https://trust.together.ai/",
+        "status": "https://status.together.ai/",
+        "subprocessors": null
+      },
+      "added": "2026-11-18"
+    },
+    {
+      "id": "fireworks",
+      "name": "Fireworks AI",
+      "homepage": "https://fireworks.ai/",
+      "urls": {
+        "docs": "https://docs.fireworks.ai/",
+        "pricing": "https://fireworks.ai/pricing",
+        "privacy": "https://fireworks.ai/privacy-policy",
+        "terms": "https://fireworks.ai/terms-of-service",
+        "trust": "https://trust.fireworks.ai/",
+        "status": "https://status.fireworks.ai/",
+        "subprocessors": null
+      },
+      "added": "2026-11-18"
+    },
+    {
+      "id": "groq",
+      "name": "Groq",
+      "homepage": "https://groq.com/",
+      "urls": {
+        "docs": "https://console.groq.com/docs/overview",
+        "pricing": "https://console.groq.com/docs/models",
+        "privacy": "https://groq.com/privacy-policy",
+        "terms": "https://console.groq.com/docs/legal/services-agreement",
+        "trust": "https://trust.groq.com/",
+        "status": "https://groqstatus.com/",
+        "subprocessors": null
+      },
+      "added": "2026-11-18"
+    },
+    {
+      "id": "deepinfra",
+      "name": "DeepInfra",
+      "homepage": "https://deepinfra.com/",
+      "urls": {
+        "docs": "https://docs.deepinfra.com/",
+        "pricing": "https://deepinfra.com/pricing",
+        "privacy": "https://deepinfra.com/privacy",
+        "terms": "https://deepinfra.com/terms",
+        "trust": "https://trust.deepinfra.com/",
+        "status": "https://status.deepinfra.com/",
+        "subprocessors": "https://trust.deepinfra.com/subprocessors"
+      },
+      "added": "2026-11-18"
+    },
+    {
+      "id": "cerebras",
+      "name": "Cerebras",
+      "homepage": "https://www.cerebras.ai/",
+      "urls": {
+        "docs": "https://inference-docs.cerebras.ai/",
+        "pricing": "https://www.cerebras.ai/pricing",
+        "privacy": "https://www.cerebras.ai/privacy-policy",
+        "terms": "https://www.cerebras.ai/terms-of-service",
+        "trust": "https://trust.cerebras.ai/",
+        "status": "https://status.cerebras.ai/",
+        "subprocessors": null
+      },
+      "added": "2026-11-18"
+    },
+    {
+      "id": "amazon-bedrock",
+      "name": "Amazon Bedrock",
+      "homepage": "https://aws.amazon.com/bedrock/",
+      "urls": {
+        "docs": "https://docs.aws.amazon.com/bedrock/",
+        "pricing": "https://aws.amazon.com/bedrock/pricing/",
+        "privacy": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html",
+        "terms": "https://aws.amazon.com/service-terms/",
+        "trust": "https://aws.amazon.com/compliance/services-in-scope/",
+        "status": "https://health.aws.amazon.com/health/status",
+        "subprocessors": "https://aws.amazon.com/compliance/sub-processors/"
+      },
+      "added": "2026-11-18"
+    },
+    {
+      "id": "google-vertex-ai",
+      "name": "Google Vertex AI",
+      "homepage": "https://cloud.google.com/products/gemini-enterprise-agent-platform",
+      "urls": {
+        "docs": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models",
+        "pricing": "https://cloud.google.com/model-garden/pricing",
+        "privacy": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/zero-data-retention",
+        "terms": "https://cloud.google.com/terms/service-terms",
+        "trust": "https://cloud.google.com/security/compliance/services-in-scope",
+        "status": "https://status.cloud.google.com/",
+        "subprocessors": "https://cloud.google.com/terms/subprocessors"
+      },
+      "added": "2026-11-18"
+    },
+    {
+      "id": "azure-ai-foundry",
+      "name": "Microsoft Foundry (Azure)",
+      "homepage": "https://azure.microsoft.com/en-us/products/ai-foundry",
+      "urls": {
+        "docs": "https://learn.microsoft.com/en-us/azure/foundry/",
+        "pricing": "https://azure.microsoft.com/en-us/pricing/details/ai-foundry-models/llama/",
+        "privacy": "https://learn.microsoft.com/en-us/azure/foundry-classic/how-to/concept-data-privacy",
+        "terms": "https://www.microsoft.com/licensing/terms/productoffering/MicrosoftAzure/MCA",
+        "trust": "https://servicetrust.microsoft.com/",
+        "status": "https://azure.status.microsoft/en-us/status",
+        "subprocessors": "https://www.microsoft.com/en-us/trust-center/privacy/data-access"
+      },
+      "added": "2026-11-18"
+    },
+    {
+      "id": "novita",
+      "name": "Novita AI",
+      "homepage": "https://novita.ai/",
+      "urls": {
+        "docs": "https://docs.novita.ai/guides/introduction",
+        "pricing": "https://novita.ai/pricing",
+        "privacy": "https://novita.ai/legal/privacy-policy",
+        "terms": "https://novita.ai/legal/terms-of-service",
+        "trust": "https://trust.novita.ai/",
+        "status": "https://status.novita.ai/",
+        "subprocessors": null
+      },
+      "added": "2026-11-18"
+    },
+    {
+      "id": "sambanova",
+      "name": "SambaNova",
+      "homepage": "https://sambanova.ai/",
+      "urls": {
+        "docs": "https://docs.sambanova.ai/docs/en/get-started/overview",
+        "pricing": "https://cloud.sambanova.ai/plans/pricing",
+        "privacy": "https://sambanova.ai/privacy-policy",
+        "terms": "https://sambanova.ai/cloud-end-user-license-agreement",
+        "trust": "https://trust.sambanova.ai/",
+        "status": "https://status.sambanova.ai/",
+        "subprocessors": null
+      },
+      "added": "2026-11-18"
+    },
+    {
+      "id": "nebius",
+      "name": "Nebius Token Factory",
+      "homepage": "https://dev.nebius.com/token-factory",
+      "urls": {
+        "docs": "https://docs.tokenfactory.nebius.com/quickstart",
+        "pricing": "https://tokenfactory.nebius.com/organization/prices",
+        "privacy": "https://docs.nebius.com/legal/privacy",
+        "terms": "https://docs.tokenfactory.nebius.com/legal/terms-of-service",
+        "trust": "https://nebius.com/trust-center",
+        "status": "https://status.nebius.com/",
+        "subprocessors": "https://docs.nebius.com/legal/sub-processors_tofa"
+      },
+      "added": "2026-11-18"
+    },
+    {
+      "id": "baseten",
+      "name": "Baseten",
+      "homepage": "https://www.baseten.co/",
+      "urls": {
+        "docs": "https://docs.baseten.co/overview",
+        "pricing": "https://www.baseten.co/pricing/",
+        "privacy": "https://www.baseten.co/privacy-policy/",
+        "terms": "https://www.baseten.co/terms-and-conditions/",
+        "trust": "https://trust.baseten.co/",
+        "status": "https://status.baseten.co/",
+        "subprocessors": null
+      },
+      "added": "2026-11-18"
+    },
+    {
+      "id": "hyperbolic",
+      "name": "Hyperbolic",
+      "homepage": "https://www.hyperbolic.ai/",
+      "urls": {
+        "docs": "https://www.hyperbolic.ai/docs/overview/overview",
+        "pricing": "https://app.hyperbolic.ai/models",
+        "privacy": "https://www.hyperbolic.ai/privacy",
+        "terms": "https://www.hyperbolic.ai/terms",
+        "trust": "https://trust.hyperbolic.ai/",
+        "status": "https://status.hyperbolic.ai/",
+        "subprocessors": null
+      },
+      "added": "2026-11-18"
+    },
+    {
+      "id": "cloudflare-workers-ai",
+      "name": "Cloudflare Workers AI",
+      "homepage": "https://developers.cloudflare.com/workers-ai/",
+      "urls": {
+        "docs": "https://developers.cloudflare.com/workers-ai/",
+        "pricing": "https://developers.cloudflare.com/workers-ai/platform/pricing/",
+        "privacy": "https://developers.cloudflare.com/workers-ai/platform/data-usage/",
+        "terms": "https://www.cloudflare.com/service-specific-terms-developer-platform/",
+        "trust": "https://www.cloudflare.com/trust-hub/compliance-resources/",
+        "status": "https://www.cloudflarestatus.com/",
+        "subprocessors": "https://www.cloudflare.com/gdpr/subprocessors/"
+      },
+      "added": "2026-11-18"
+    },
+    {
+      "id": "parasail",
+      "name": "Parasail",
+      "homepage": "https://www.parasail.io/",
+      "urls": {
+        "docs": "https://docs.parasail.io/parasail-docs",
+        "pricing": "https://www.parasail.io/pricing",
+        "privacy": "https://www.parasail.io/legal/privacy-policy",
+        "terms": "https://www.parasail.io/legal/terms-of-service",
+        "trust": "https://www.parasail.io/trust",
+        "status": "https://status.parasail.io/",
+        "subprocessors": null
+      },
+      "added": "2026-11-18"
+    }
+  ]
+}
