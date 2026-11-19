@@ -1,0 +1,74 @@
+{
+  "id": "fireworks",
+  "updated": "2026-11-18",
+  "fields": {
+    "status": {
+      "value": "live",
+      "source": "https://fireworks.ai/news/fireworks-expands-european-capacity-nvidia-rubin-blackwell",
+      "checked": "2026-11-18",
+      "quote": "Fireworks, the platform for specialized intelligence, today announced an expanded collaboration with NVIDIA.",
+      "note": "Press release dated November 3, 2026; the newsroom lists no acquisition of Fireworks."
+    },
+    "retention": {
+      "value": "Not stored for open models; Responses API up to 30 days when store=True",
+      "source": "https://docs.fireworks.ai/guides/security_compliance/data_handling",
+      "checked": "2026-11-18",
+      "quote": "Fireworks does not log or store prompt or generation data for open models, without explicit user opt-in.",
+      "note": "The same page says Responses API conversations (store=True is the default) are kept for up to 30 days, the Batch API stores datasets, and prompt caching can hold prompt data in volatile memory for several minutes."
+    },
+    "zdr": {
+      "value": "default",
+      "source": "https://docs.fireworks.ai/guides/security_compliance/data_handling",
+      "checked": "2026-11-18",
+      "quote": "Zero Data Retention does not apply to certain services that require data storage, including Batch API and Responses API.",
+      "note": "Default for inference on open models only; the Responses API stores by default and the Batch API always stores."
+    },
+    "zdr_how": {
+      "value": "On by default for open models; on the Responses API set store=False; Enterprise admins can enforce an account-wide Zero Data Retention policy",
+      "source": "https://docs.fireworks.ai/guides/security_compliance/data_handling",
+      "checked": "2026-11-18",
+      "quote": "Opt-out option: You can disable data storage by setting store=False in your API requests to prevent any conversation data from being retained.",
+      "note": "The Enterprise policy, set under Settings → Governances → Zero Data Retention, rejects requests and jobs that would store content."
+    },
+    "training": {
+      "value": "opt-in",
+      "source": "https://fireworks.ai/privacy-policy",
+      "checked": "2026-11-18",
+      "quote": "No AI Training on Your Data: We do not use your prompts, training data, or API inputs to train or improve our AI models without your explicit opt-in.",
+      "note": "The Terms of Service (last updated July 10, 2026) put it without the opt-in: \"We will not use your Content to train our own models or to improve the Service.\""
+    },
+    "soc2": {
+      "value": "Type II",
+      "source": "https://docs.fireworks.ai/guides/security_compliance/data_security",
+      "checked": "2026-11-18",
+      "quote": "SOC 2 Type II (certified)"
+    },
+    "attestations": {
+      "value": ["ISO 27001", "ISO 27701", "ISO 42001", "HIPAA"],
+      "source": "https://docs.fireworks.ai/guides/security_compliance/data_security",
+      "checked": "2026-11-18",
+      "quote": "Fireworks has achieved all three ISO certifications covering security, privacy, and AI management:",
+      "note": "The three are listed in the table under that sentence; the same page says \"Fireworks is HIPAA compliant\" and does not mention a BAA."
+    },
+    "subprocessors": {
+      "value": ["Amazon Web Services", "Google Cloud Platform", "Oracle Cloud Infrastructure", "CloudFlare", "Vercel", "Pylon", "Linear", "Discord Inc.", "Slack", "Lambda Labs", "Crusoe", "Vultr", "CoreWeave", "DigitalOcean", "Fluidstack", "TensorWave", "IREN", "GMI", "Era4", "Alibaba Cloud", "Exa"],
+      "source": "https://trust.fireworks.ai/subprocessors",
+      "checked": "2026-11-18",
+      "quote": "Amazon Web Services • Cloud infrastructure and service provider",
+      "note": "The page is a list of 21 rows, not prose; the quote is its first row and the value is every name listed."
+    },
+    "regions": {
+      "value": ["US", "Canada", "Europe", "APAC"],
+      "source": "https://docs.fireworks.ai/deployments/regions",
+      "checked": "2026-11-18",
+      "quote": "Supported multi-regions: GLOBAL, US, CANADA, EUROPE, APAC.",
+      "note": "These are deployment regions; serverless on api.fireworks.ai has no regional restriction by default, and US-only serverless is offered for some models on us.api.fireworks.ai."
+    },
+    "funding": {
+      "value": "$1.505B Series D at a $17.5B valuation (July 2026)",
+      "source": "https://fireworks.ai/blog/fireworks-series-d-funding",
+      "checked": "2026-11-18",
+      "quote": "Today, Fireworks announced a $1.505 billion Series D at a $17.5 billion valuation, led by Atreides Management, Index Ventures, and TCV, with participation from Evantic Capital, Lightspeed Venture Partners, Nvidia, 20VC, Bessemer Venture Partners, Menlo Ventures, and others."
+    }
+  }
+}
