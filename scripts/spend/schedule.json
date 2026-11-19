@@ -1,0 +1,42 @@
+{
+  "cap_usd_per_month": 50,
+  "days_per_month": 31,
+  "template_overhead_tokens": 20,
+  "probe": {
+    "runs_per_day": 96
+  },
+  "fidelity": {
+    "runs_per_day": 1,
+    "prompts": 20,
+    "prompt_tokens": 25,
+    "max_output_tokens": 48,
+    "reference_runs": 3
+  },
+  "reference_prices": {
+    "deepseek-api": {
+      "input": 0.3,
+      "output": 1.2,
+      "source": "https://api-docs.deepseek.com/quick_start/pricing",
+      "note": "deepseek-flash, cache miss, peak rate"
+    }
+  },
+  "fixed_charges": {
+    "cloudflare-workers-ai": {
+      "monthly_fee": 5,
+      "free_usd_per_day": 0.11,
+      "source": "https://developers.cloudflare.com/workers-ai/platform/pricing/",
+      "note": "GLM-5.3 and DeepSeek V4.1 Flash 1017 need a paid billing method, which is the Workers Paid plan at a $5 monthly minimum. 10,000 neurons a day are free, $0.011 per 1,000 after that."
+    },
+    "together": {
+      "one_time": 15,
+      "source": "https://docs.together.ai/docs/billing-credits",
+      "note": "Prepaid. The first credit purchase is at least $15, later ones at least $5. The balance does not expire."
+    },
+    "hyperbolic": {
+      "one_time": 5,
+      "source": "https://www.hyperbolic.ai/docs/inference/overview.md",
+      "note": "A one-time deposit of $5 or more. A free-tier account gets a $1 credit for verifying a phone number."
+    }
+  },
+  "chars_per_token": 4
+}
