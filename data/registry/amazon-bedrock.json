@@ -1,0 +1,100 @@
+{
+  "id": "amazon-bedrock",
+  "updated": "2026-11-18",
+  "fields": {
+    "status": {
+      "value": "live",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html",
+      "checked": "2026-11-18",
+      "quote": "Amazon Bedrock is a fully managed service that provides secure, enterprise-grade access to high-performing foundation models from leading AI companies, enabling you to build and scale generative AI applications."
+    },
+    "retention": {
+      "value": "up to 30 days for certain models; otherwise the model's default",
+      "source": "https://aws.amazon.com/service-terms/",
+      "checked": "2026-11-18",
+      "quote": "For certain models identified on the Bedrock abuse detection page, as part of providing the Service, Amazon Bedrock stores Service inputs and outputs for up to 30 days (unless otherwise required by law) solely to detect activity that violates our, or third-party model providers’, terms of service or use policies.",
+      "note": "The abuse detection page names only OpenAI models other than the gpt-oss ones (classifier-flagged traffic) and Claude Fable 5, 5.1 and 5.2 (all traffic) as retained; it names no open-weight model."
+    },
+    "zdr": {
+      "value": "default",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html",
+      "checked": "2026-11-18",
+      "quote": "If a model's allowed_modes includes none, we won't persist anything.",
+      "note": "Zero retention applies per model: models that require retention for abuse detection are excepted, and ZDR on those is by request through the AWS account team."
+    },
+    "zdr_how": {
+      "value": "Set data_retention_mode to none for the account (per Region) or project; for models that require retention, ask the AWS account manager",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html",
+      "checked": "2026-11-18",
+      "quote": "If you require guaranteed zero retention, set data_retention_mode to none.",
+      "note": "With mode none, requests to a model that requires retention are blocked; the same page says to contact your AWS account manager about ZDR eligibility for those models."
+    },
+    "training": {
+      "value": "no",
+      "source": "https://aws.amazon.com/bedrock/faqs/",
+      "checked": "2026-11-18",
+      "quote": "No, AWS and the third-party model providers will not use any inputs to or outputs from Amazon Bedrock to train Amazon Nova, Amazon Titan, or any third-party models."
+    },
+    "soc2": {
+      "value": "in scope of the AWS SOC 2 report (type not stated)",
+      "source": "https://aws.amazon.com/bedrock/faqs/",
+      "checked": "2026-11-18",
+      "quote": "Amazon Bedrock is included in the scope of the SOC 1, 2, 3 reports, allowing customers to gain insights into our security controls.",
+      "note": "Neither the Bedrock FAQ nor the AWS SOC FAQ says Type I or Type II for the SOC 2 report; the SOC FAQ says each report covers the previous 12 months."
+    },
+    "attestations": {
+      "value": [
+        "SOC 1",
+        "SOC 3",
+        "FedRAMP Moderate",
+        "HIPAA eligible",
+        "ISO 9001",
+        "ISO 27001",
+        "ISO 27017",
+        "ISO 27018",
+        "ISO 27701",
+        "ISO 22301",
+        "ISO 20000",
+        "CSA STAR Level 2"
+      ],
+      "source": "https://aws.amazon.com/bedrock/faqs/",
+      "checked": "2026-11-18",
+      "quote": "Amazon Bedrock is in scope for common compliance standards such as Fedramp Moderate, Service and Organization Control (SOC), International Organization for Standardization (ISO), Health Insurance Portability and Accountability Act (HIPAA) eligibility, and customers can use Bedrock in compliance with the General Data Protection Regulation (GDPR). Amazon Bedrock is included in the scope of the SOC 1, 2, 3 reports, allowing customers to gain insights into our security controls. We demonstrate compliance through extensive third-party audits of our AWS controls. Amazon Bedrock is one of the AWS services under ISO Compliance for the ISO 9001, ISO 27001, ISO 27017, ISO 27018, ISO 27701, ISO 22301, and ISO 20000 standards. Amazon Bedrock is CSA Security Trust Assurance and Risk (STAR) Level 2 certified, which validates the use of best practices and the security posture of AWS cloud offerings."
+    },
+    "subprocessors": {
+      "value": [
+        "AWS infrastructure entities for the AWS Region the customer selects"
+      ],
+      "source": "https://aws.amazon.com/compliance/sub-processors/",
+      "checked": "2026-11-18",
+      "quote": "Sub-processors relevant to an individual customer will depend on the AWS Region the customer selects and the particular AWS services that the customer uses.",
+      "note": "The page lists third-party service providers only for messaging, geolocation and domain registration services, none for Amazon Bedrock; the Bedrock FAQ says inputs and outputs are not shared with any model providers."
+    },
+    "regions": {
+      "value": [
+        "US",
+        "Canada",
+        "EU",
+        "Asia Pacific",
+        "Japan",
+        "Australia",
+        "India",
+        "AWS GovCloud (US)"
+      ],
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/models-region-compatibility.html",
+      "checked": "2026-11-18",
+      "quote": "Geographic (Geo): Bedrock routes your request to a Region within a defined geography (US, Canada, EU, Asia Pacific, Japan, Australia, or India), keeping data within that geography.",
+      "note": "Availability differs by model and AWS Region; the same page lists per-model Regions, including AWS GovCloud (US), and in-Region and global routing options."
+    },
+    "funding": {
+      "value": null,
+      "not_stated": true,
+      "checked": "2026-11-18",
+      "searched": [
+        "https://aws.amazon.com/bedrock/",
+        "https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html",
+        "https://aws.amazon.com/bedrock/faqs/"
+      ]
+    }
+  }
+}
