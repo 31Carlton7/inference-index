@@ -81,7 +81,7 @@ Tests: `node --test scripts/posts/*.test.mjs`. Fixtures are under `scripts/posts
 
 ## Queue
 
-A draft is `queue/<date>-<template>-<provider-or-slug>.json`:
+A draft is `queue/<date>-<template>-<provider-or-slug>.json`. Rendering the same event again rewrites its file. A different post that would land on the same name gets `-2`, `-3` and so on, so no draft is overwritten by another:
 
 ```json
 {

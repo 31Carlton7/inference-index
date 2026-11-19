@@ -409,7 +409,11 @@ export function render(input, options) {
       config.approved_templates.includes(built.template) &&
       (built.template !== 'weekly-chart' || image !== null),
   };
-  const path = join(opts.queue, `${built.date}-${built.template}-${built.slug}.json`);
+  const base = `${built.date}-${built.template}-${built.slug}`;
+  let path = join(opts.queue, `${base}.json`);
+  for (let n = 2; existsSync(path) && JSON.parse(readFileSync(path, 'utf8')).text !== draft.text; n += 1) {
+    path = join(opts.queue, `${base}-${n}.json`);
+  }
   mkdirSync(opts.queue, { recursive: true });
   writeFileSync(path, `${JSON.stringify(draft, null, 2)}\n`);
   return { path, draft };

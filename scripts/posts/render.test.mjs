@@ -215,6 +215,16 @@ test('policy diff renders the template example', () => {
   assert.equal(draft.link, `${REAL_SITE}/changelog`);
 });
 
+test('a second change to the same field on the same day gets its own draft file', () => {
+  const opts = setup();
+  const first = render({ entry: POLICY }, opts);
+  const again = render({ entry: POLICY }, opts);
+  const second = render({ entry: { ...POLICY, after: 'We retain inputs for 7 days.' } }, opts);
+  assert.equal(again.path, first.path);
+  assert.equal(second.path, join(opts.queue, '2026-11-18-policy-diff-example-retention-2.json'));
+  assert.equal(JSON.parse(readFileSync(first.path, 'utf8')).text, first.draft.text);
+});
+
 for (const key of ['before', 'after', 'snapshot_before', 'snapshot_after']) {
   test(`policy diff refuses an entry with no ${key}`, () => {
     refuses({ entry: { ...POLICY, [key]: undefined } }, setup(), new RegExp(`no ${key}`));
