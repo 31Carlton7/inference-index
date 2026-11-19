@@ -1,0 +1,100 @@
+{
+  "id": "cerebras",
+  "updated": "2026-11-18",
+  "fields": {
+    "status": {
+      "value": "live",
+      "source": "https://status.cerebras.ai/",
+      "checked": "2026-11-18",
+      "quote": "All Systems Operational",
+      "note": "Cerebras Systems has been listed on Nasdaq as CBRS since its May 2026 IPO; its newsroom lists no acquisition of the company."
+    },
+    "retention": {
+      "value": "Not retained",
+      "source": "https://www.cerebras.ai/privacy-policy",
+      "checked": "2026-11-18",
+      "quote": "We do not retain inputs and outputs associated with our training, inference and chatbot Services.",
+      "note": "Privacy policy effective August 27, 2024; it adds that logs are deleted when no longer necessary to provide services, and the batch docs say batch results are retained for 7 days after completion."
+    },
+    "zdr": {
+      "value": "default",
+      "source": "https://www.cerebras.ai/privacy-policy",
+      "checked": "2026-11-18",
+      "quote": "We do not retain inputs and outputs associated with our training, inference and chatbot Services.",
+      "note": "The policy does not use the term zero data retention; the prompt caching docs call caching \"fully ZDR-compliant\"."
+    },
+    "zdr_how": {
+      "value": null,
+      "not_stated": true,
+      "checked": "2026-11-18",
+      "searched": [
+        "https://www.cerebras.ai/privacy-policy",
+        "https://www.cerebras.ai/terms-of-service",
+        "https://www.cerebras.ai/policies",
+        "https://inference-docs.cerebras.ai/llms.txt",
+        "https://inference-docs.cerebras.ai/capabilities/prompt-caching",
+        "https://inference-docs.cerebras.ai/capabilities/batch",
+        "https://inference-docs.cerebras.ai/dedicated/overview",
+        "https://inference-docs.cerebras.ai/console/usage-monitoring",
+        "https://trust.cerebras.ai/"
+      ]
+    },
+    "training": {
+      "value": "no",
+      "source": "https://www.cerebras.ai/terms-of-service",
+      "checked": "2026-11-18",
+      "quote": "For clarity, the foregoing does not grant Cerebras the right to use Service Content for the purpose of training or fine-tuning models.",
+      "note": "Terms of Use effective August 27, 2024."
+    },
+    "soc2": {
+      "value": "listed, type not stated",
+      "source": "https://trust.cerebras.ai/",
+      "checked": "2026-11-18",
+      "quote": "SOC 2",
+      "note": "The trust centre lists SOC 2 as a label under Compliance with no sentence and no report type; documents are behind an access request."
+    },
+    "attestations": {
+      "value": null,
+      "not_stated": true,
+      "checked": "2026-11-18",
+      "searched": [
+        "https://trust.cerebras.ai/",
+        "https://www.cerebras.ai/",
+        "https://www.cerebras.ai/pricing",
+        "https://www.cerebras.ai/company",
+        "https://www.cerebras.ai/policies",
+        "https://www.cerebras.ai/privacy-policy",
+        "https://www.cerebras.ai/terms-of-service",
+        "https://www.cerebras.ai/blog/ai-inference-cybersecurity"
+      ],
+      "note": "The trust centre lists CCPA and GDPR beside SOC 2 under Compliance, which are laws rather than attestations."
+    },
+    "subprocessors": {
+      "value": null,
+      "not_stated": true,
+      "checked": "2026-11-18",
+      "searched": [
+        "https://trust.cerebras.ai/",
+        "https://trust.cerebras.ai/subprocessors",
+        "https://www.cerebras.ai/privacy-policy",
+        "https://www.cerebras.ai/terms-of-service",
+        "https://www.cerebras.ai/policies",
+        "https://www.cerebras.ai/other-terms-and-policies"
+      ]
+    },
+    "regions": {
+      "value": ["Santa Clara, CA", "Stockton, CA", "Dallas, TX", "Minneapolis, MN", "Oklahoma City, OK", "Montreal, Canada", "Midwest / Eastern US", "Europe"],
+      "source": "https://www.cerebras.ai/press-release/cerebras-announces-six-new-ai-datacenters-across-north-america-and-europe-to-deliver-industry-s",
+      "checked": "2026-11-18",
+      "quote": "March 11, 2025 — Sunnyvale, CA — Cerebras Systems, the pioneer in accelerating generative AI, today announced the launch of six new AI inference datacenters powered by Cerebras Wafer-Scale Engines.",
+      "note": "The value is the data centre list in that March 2025 release, where only the first three were marked online and the rest carried 2025 target quarters; no current first-party list was found."
+    },
+    "funding": {
+      "value": "IPO of 30,000,000 Class A shares at $185.00 per share (May 2026)",
+      "source": "https://www.cerebras.ai/press-release/cerebras-systems-announces-pricing-of-initial-public-offering",
+      "checked": "2026-11-18",
+      "quote": "SUNNYVALE, Calif., May 13, 2026 (GLOBE NEWSWIRE) -- Cerebras Systems Inc. (“Cerebras”) today announced the pricing of its initial public offering of an aggregate of 30,000,000 shares of its Class A common stock, at a public offering price of $185.00 per share.",
+      "note": "Public company (Nasdaq: CBRS); this is its IPO, not a private round."
+    }
+  }
+}
