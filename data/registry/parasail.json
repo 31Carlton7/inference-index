@@ -1,0 +1,74 @@
+{
+  "id": "parasail",
+  "updated": "2026-11-18",
+  "fields": {
+    "status": {
+      "value": "live",
+      "source": "https://status.parasail.io/",
+      "checked": "2026-11-18",
+      "quote": "All systems Operational",
+      "note": "The status page fills in with JavaScript, so it was read in a browser; Parasail's blog and announcements list no acquisition of the company."
+    },
+    "retention": {
+      "value": "Only for the time it takes to generate and deliver the output (serverless and dedicated)",
+      "source": "https://www.parasail.io/legal/terms-of-service",
+      "checked": "2026-11-18",
+      "quote": "We will not inspect your Content without your permission, and will only retain your Content for as long as is necessary to provide the Service to you (i.e., for the time it takes to generate Output and deliver that Output to you).",
+      "note": "The batch service is different: the terms say \"As general rule, we will store your Customer Inputs for 30 days, though the specific timeframe may vary.\" and that batch outputs are also stored."
+    },
+    "zdr": {
+      "value": "default",
+      "source": "https://www.parasail.io/legal/privacy-policy",
+      "checked": "2026-11-18",
+      "quote": "We do not store or log any personal data you send as Input to the “serverless” and “dedicated” versions of the Service, and we will not inspect such data without your permission, and will only retain such data for as long as is necessary to provide the Service to you (i.e., for the time it takes to generate Output and deliver that Output to you).",
+      "note": "The pages read do not use the term zero data retention; the value reflects this no-storage default for serverless and dedicated, which does not cover the batch service."
+    },
+    "zdr_how": {
+      "value": "Nothing to turn on for serverless and dedicated",
+      "source": "https://docs.parasail.io/parasail-docs/security-and-account-management/overview",
+      "checked": "2026-11-18",
+      "quote": "Parasail doesn't store or log personal data you send as Input, won't inspect it without your permission, and retains it only as long as necessary to generate and deliver Output."
+    },
+    "training": {
+      "value": "no",
+      "source": "https://www.parasail.io/legal/terms-of-service",
+      "checked": "2026-11-18",
+      "quote": "We will not use your Content to train our own models or to improve the Platform.",
+      "note": "The docs add \"For optional model-training use, Parasail requires explicit customer agreement.\""
+    },
+    "soc2": {
+      "value": "Type II",
+      "source": "https://www.parasail.io/trust",
+      "checked": "2026-11-18",
+      "quote": "Parasail has completed a SOC 2 Type II examination of the Parasail Platform.",
+      "note": "The page says the examination covers the Security Trust Services Criteria and the report is shared under NDA."
+    },
+    "attestations": {
+      "value": null,
+      "not_stated": true,
+      "checked": "2026-11-18",
+      "searched": ["https://www.parasail.io/trust", "https://docs.parasail.io/parasail-docs/security-and-account-management/overview", "https://www.parasail.io/legal/privacy-policy", "https://www.parasail.io/legal/terms-of-service", "https://www.parasail.io/"]
+    },
+    "subprocessors": {
+      "value": null,
+      "not_stated": true,
+      "checked": "2026-11-18",
+      "searched": ["https://www.parasail.io/trust", "https://www.parasail.io/legal/privacy-policy", "https://www.parasail.io/legal/terms-of-service", "https://docs.parasail.io/parasail-docs/security-and-account-management/overview", "https://www.parasail.io/sitemap.xml"],
+      "note": "No subprocessor list is published; the privacy policy names only Stripe, as a payment processor, and the terms say Parasail may swap the provider of dedicated hardware without naming providers."
+    },
+    "regions": {
+      "value": null,
+      "not_stated": true,
+      "checked": "2026-11-18",
+      "searched": ["https://www.parasail.io/", "https://www.parasail.io/trust", "https://docs.parasail.io/parasail-docs/llms.txt", "https://docs.parasail.io/parasail-docs/products/overview-1.md", "https://www.parasail.io/blog/building-sub-second-llm-inference-for-global-ai-traffic", "https://www.parasail.io/legal/privacy-policy"],
+      "note": "Parasail's engineering blog describes GPU replicas distributed across regions and providers without naming the regions; the privacy policy says personal data may be stored in the United States, the European Union or elsewhere."
+    },
+    "funding": {
+      "value": null,
+      "not_stated": true,
+      "checked": "2026-11-18",
+      "searched": ["https://www.parasail.io/about-us", "https://www.parasail.io/blog", "https://www.parasail.io/blog/category/announcements", "https://www.parasail.io/sitemap.xml", "https://www.parasail.io/"],
+      "note": "The about page says Parasail is backed by venture firms and operators but gives no round or amount."
+    }
+  }
+}
