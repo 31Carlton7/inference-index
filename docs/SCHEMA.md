@@ -100,7 +100,7 @@ Newest first. Written when a registry field or a policy page changes.
 }
 ```
 
-`kind` is `policy`, `price`, `provider added`, `provider removed` or `status`. `before` and `after` are the text or number as it was, with no characterisation.
+`kind` is `policy`, `price`, `provider added`, `provider removed` or `status`. `before` and `after` are the text or number as it was, with no characterisation. For a `policy` entry they are the sentence or sentences that changed, cut down from the draft before it is accepted, not the whole paragraph or page. Either is an empty string when text was added or removed. `field` is `null` when the change is not about a registry field.
 
 A `price` entry is written by the daily price run and has a `model` key. Its `before` and `after` are the two prices in USD per million tokens, as stored in the daily files:
 
