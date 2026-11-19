@@ -64,13 +64,26 @@ Why a plain mean across models: the result stays in dollars per million tokens a
 
 Known gap: Google's pricing page lists "DeepSeek-V4.1-Flash" without naming the 1017 snapshot, so Vertex AI has no DeepSeek row.
 
+## More than one run on a day
+
+The job is scheduled once a day, but it can run twice on one UTC day: a manual run, a scheduled run GitHub starts hours late, or the fallback that starts it when the schedule has not fired.
+
+- There is one price per provider and model per UTC day. The first successful read of the day stands.
+- A later run on the same day only adds rows for pairs that have no row yet. It does not replace a row, even if it reads a different price, and a read that fails later does not remove a row read earlier.
+- After a later run, `missing` lists only the pairs no run has read that day, with the reason from the latest run.
+- This is not carrying a price forward. Only reads made on that UTC day are used, and the next day's file starts empty.
+- Each row has `read_at`, the time its provider's page was read, so the run a row came from can be seen. Rows written before this rule have none.
+- The index and the price changes are computed again from the day's file after every run.
+
+Before this rule a second run replaced the file. On Nov 19, 2026 a run at 15:46 UTC was served a Novita pricing table with more columns than the one the 03:15 UTC run had read. It could not read it, and the three Novita rows read at 03:15 were lost. They were restored from the earlier commit as they were read.
+
 ## Price changes
 
 After each run the day's file is compared with the file for the UTC day before. A provider and model whose input or output price is a different number gets one entry in `data/changelog.json` with both prices and the page the new one was read from. The numbers are compared exactly as stored, so any difference counts.
 
 - Both days need a row. A price that could not be read on either day, a provider that started serving a model or one that dropped it is a gap, not a change.
 - Only the day before counts. If that day has no file, nothing is compared with an older one.
-- Running again on the same day does not add a second entry. If the later run reads a different price the entry is replaced, and if it reads the day before's price the entry is removed.
+- Running again on the same day does not add a second entry for a row and does not change one: the later run keeps the row, so its entry stays the same. A pair the later run reads for the first time that day gets its entry then.
 
 ## Changes
 

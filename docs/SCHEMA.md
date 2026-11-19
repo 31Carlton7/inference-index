@@ -123,7 +123,7 @@ A `price` entry is written by the daily price run and has a `model` key. Its `be
 }
 ```
 
-There is one entry for each provider and model whose `input` or `output` in `data/prices/daily/<date>.json` is not the same number as in the file for the UTC day before, with no rounding and no tolerance. The row has to be in both files: a row that appears, disappears or is under `missing` on either day is not a change. If there is no file for the day before, nothing is compared, so no entry spans a skipped day. A second run on the same day replaces that day's `price` entries, and drops one whose price reads the same as the day before again. The run leaves every other entry as it is and in the same order.
+There is one entry for each provider and model whose `input` or `output` in `data/prices/daily/<date>.json` is not the same number as in the file for the UTC day before, with no rounding and no tolerance. The row has to be in both files: a row that appears, disappears or is under `missing` on either day is not a change. If there is no file for the day before, nothing is compared, so no entry spans a skipped day. A second run on the same day writes that day's `price` entries again from the day's file. A later run keeps the rows already in the file, so an entry already written stays as it is, and the only new entries are for pairs the later run read for the first time that day. The run leaves every other entry as it is and in the same order.
 
 `field`, `snapshot_before` and `snapshot_after` may be `null` or left out when the change has none (a price change has no registry field; a provider added has no earlier snapshot). `before` is `null` when there was nothing before, and `after` is `null` when there is nothing after.
 
@@ -155,7 +155,7 @@ The text of each policy page as fetched on that date. `<page>` is one of the `ur
   "date": "2026-11-18",
   "basket_version": 1,
   "rows": [
-    { "provider": "example", "model": "llama-3.3-70b", "input": 0.59, "output": 0.79, "source": "https://example.com/pricing", "checked": "2026-11-18" }
+    { "provider": "example", "model": "llama-3.3-70b", "input": 0.59, "output": 0.79, "source": "https://example.com/pricing", "checked": "2026-11-18", "read_at": "2026-11-18T06:17:42.118Z" }
   ],
   "missing": [
     { "provider": "other", "model": "llama-3.3-70b", "reason": "https://other.example/pricing returned 403" }
@@ -163,11 +163,11 @@ The text of each policy page as fetched on that date. `<page>` is one of the `ur
 }
 ```
 
-`date` is the UTC date of the run. A row is the standard pay-per-token list price for uncached input and for output, read that day from the provider's own page or API at `source`.
+`date` is the UTC date of the run. A row is the standard pay-per-token list price for uncached input and for output, read that day from the provider's own page or API at `source`. `read_at` (optional) is when that provider's page was read, so rows from different runs on one day can be told apart. Rows written before `read_at` was added on Nov 19, 2026 have none.
 
 A provider whose price could not be read that day has no row. It is not carried forward. It is listed in `missing` with the reason the read failed, so a gap can be shown as a gap. Only provider and model pairs in `data/models.json` are expected, so a provider that does not serve a model is in neither list.
 
-A second run on the same day replaces the file.
+There is one price per provider and model per UTC day, and the first successful read of the day stands. A later run on the same day only adds rows for pairs that have no row yet. It never replaces a row, even if it reads a different price, and never turns a row into a `missing` entry. After a later run, `missing` lists only the pairs no run has read that day, with the reason from the latest run. Only reads from that UTC day are used: a new day's file starts empty.
 
 ## data/prices/index.json
 

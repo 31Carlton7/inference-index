@@ -54,6 +54,28 @@ export function checkedPrice({ input, output }) {
   return { input: Number(input.toFixed(6)), output: Number(output.toFixed(6)) };
 }
 
+// The first read of a provider and model on a UTC day stands. A later run that day only adds rows
+// for pairs that have none, and `missing` is left with the pairs this run could not read either.
+function mergeSameDay(earlierRows, rows, missing) {
+  const isIn = (dayRows, { provider, model }) => dayRows.some((row) => row.provider === provider && row.model === model);
+  const dayRows = [...earlierRows, ...rows.filter((row) => !isIn(earlierRows, row))];
+  return { rows: dayRows, missing: missing.filter((gap) => !isIn(dayRows, gap)) };
+}
+
+export async function writeDaily(pricesDir, { date, basket_version, rows, missing }) {
+  const dailyPath = path.join(pricesDir, "daily", `${date}.json`);
+  let earlierRows = [];
+  try {
+    earlierRows = JSON.parse(await readFile(dailyPath, "utf8")).rows;
+  } catch (error) {
+    if (error.code !== "ENOENT") throw error;
+  }
+  const daily = { date, basket_version, ...mergeSameDay(earlierRows, rows, missing) };
+  await mkdir(path.dirname(dailyPath), { recursive: true });
+  await writeFile(dailyPath, JSON.stringify(daily, null, 2) + "\n");
+  return daily;
+}
+
 async function main() {
   const { probe_models: probeModels, basket } = JSON.parse(await readFile(path.join(repoRoot, "data/models.json"), "utf8"));
   const { providers } = JSON.parse(await readFile(path.join(repoRoot, "data/providers.json"), "utf8"));
@@ -76,12 +98,13 @@ async function main() {
         pageError = error.message;
       }
     }
+    const readAt = new Date().toISOString();
     let read = 0;
     for (const model of served) {
       try {
         if (pageError) throw new Error(pageError);
         const price = checkedPrice(source.price(bodies, model.providers[provider], model.id));
-        rows.push({ provider, model: model.id, ...price, source: source.pages[0], checked: date });
+        rows.push({ provider, model: model.id, ...price, source: source.pages[0], checked: date, read_at: readAt });
         read += 1;
       } catch (error) {
         missing.push({ provider, model: model.id, reason: error.message });
@@ -98,9 +121,8 @@ async function main() {
     process.exit(1);
   }
 
-  await mkdir(path.join(pricesDir, "daily"), { recursive: true });
-  const daily = { date, basket_version: basket.version, rows, missing };
-  await writeFile(path.join(pricesDir, "daily", `${date}.json`), JSON.stringify(daily, null, 2) + "\n");
+  const daily = await writeDaily(pricesDir, { date, basket_version: basket.version, rows, missing });
+  console.log(`${date}: ${daily.rows.length} rows and ${daily.missing.length} missing after this run`);
 
   const index = await rebuildIndex(pricesDir, basket);
   const today = index.series.find((day) => day.date === date);

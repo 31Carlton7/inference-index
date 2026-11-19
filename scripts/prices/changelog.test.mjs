@@ -125,6 +125,19 @@ test("a second run on the same day adds nothing", async () => {
   assert.equal(JSON.parse(afterFirstRun).entries.length, 1);
 });
 
+test("a rerun that adds a row for a pair missing earlier that day adds its entry and keeps the first", async () => {
+  const dayBefore = daily("2026-11-17", [row("a", "small", 0.15, 0.6), row("b", "small", 0.2, 0.6)]);
+  const firstRun = daily("2026-11-18", [row("a", "small", 0.1, 0.6)], [{ provider: "b", model: "small", reason: "returned 503" }]);
+  const dir = await dataDir([dayBefore, firstRun]);
+  await recordPriceChanges(dir, "2026-11-18");
+  await writeDaily(dir, daily("2026-11-18", [row("a", "small", 0.1, 0.6), row("b", "small", 0.25, 0.6)]));
+  await recordPriceChanges(dir, "2026-11-18");
+  assert.deepEqual(JSON.parse(await readChangelog(dir)).entries, [
+    change("2026-11-18", "a", "small", [0.15, 0.6], [0.1, 0.6]),
+    change("2026-11-18", "b", "small", [0.2, 0.6], [0.25, 0.6]),
+  ]);
+});
+
 test("a rerun that reads a different price replaces the day's entry", async () => {
   const dir = await dataDir([daily("2026-11-17", [row("a", "small", 0.15, 0.6)]), daily("2026-11-18", [row("a", "small", 0.1, 0.6)])]);
   await recordPriceChanges(dir, "2026-11-18");

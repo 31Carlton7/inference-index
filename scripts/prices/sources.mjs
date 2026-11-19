@@ -98,6 +98,26 @@ const AZURE_METERS = {
   "gpt-oss-120b": { input: "gpt-oss-120B Inp glbl Tokens", output: "gpt-oss-120B Outp glbl Tokens" },
 };
 
+function cellTexts(html, tag) {
+  const cell = new RegExp(`<${tag}\\b[^>]*>([\\s\\S]*?)</${tag}>`, "g");
+  return [...html.matchAll(cell)].map((match) => match[1].replace(/<[^>]+>/g, "").trim());
+}
+
+// novita.ai/pricing has been served with both of these tables. A layout is known by its whole
+// header row, and each reader takes one row's cells keyed by heading.
+const NOVITA_LAYOUTS = {
+  "Model Name | Context | Input | Output | Actions": (cells) => {
+    const input = /^(\$[\d.]+) \/Mt/.exec(cells["Input"]);
+    const output = /^(\$[\d.]+) \/Mt$/.exec(cells["Output"]);
+    if (!input || !output) throw new Error("Input or Output cell is not '$x /Mt'");
+    return { input: usd(input[1]), output: usd(output[1]) };
+  },
+  "Model | Tier | Context | Input(/Mt) | Cache Write(/Mt) | Cache Read(/Mt) | Output(/Mt) | Actions": (cells) => {
+    if (cells["Tier"] !== "-") throw new Error(`price depends on a tier: "${cells["Tier"]}"`);
+    return { input: usd(cells["Input(/Mt)"]), output: usd(cells["Output(/Mt)"]) };
+  },
+};
+
 export const SOURCES = {
   together: {
     pages: ["https://docs.together.ai/docs/serverless/models.md"],
@@ -215,13 +235,18 @@ export const SOURCES = {
     price([html], apiName) {
       const link = `href="/models/model-detail/${apiName.replace("/", "-")}?from=pricing"`;
       const priced = new Set();
-      for (const [tableRow] of html.matchAll(/<tr\b[\s\S]*?<\/tr>/g)) {
-        if (!tableRow.includes(link)) continue;
-        const cells = [...tableRow.matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/g)].map((cell) => cell[1].replace(/<[^>]+>/g, "").trim());
-        const input = /^(\$[\d.]+) \/Mt/.exec(cells[2] ?? "");
-        const output = /^(\$[\d.]+) \/Mt$/.exec(cells[3] ?? "");
-        if (cells.length !== 5 || !input || !output) throw new Error("row is not name, context, input, output, actions");
-        priced.add(`${usd(input[1])} ${usd(output[1])}`);
+      for (const [table] of html.matchAll(/<table\b[\s\S]*?<\/table>/g)) {
+        if (!table.includes(link)) continue;
+        const header = cellTexts(table, "th");
+        const readRow = NOVITA_LAYOUTS[header.join(" | ")];
+        if (!readRow) throw new Error(`unknown table layout, header row is: ${header.join(" | ").slice(0, 200)}`);
+        for (const [tableRow] of table.matchAll(/<tr\b[\s\S]*?<\/tr>/g)) {
+          if (!tableRow.includes(link)) continue;
+          const cells = cellTexts(tableRow, "td");
+          if (cells.length !== header.length) throw new Error(`row has ${cells.length} cells under ${header.length} headings`);
+          const { input, output } = readRow(Object.fromEntries(header.map((heading, column) => [heading, cells[column]])));
+          priced.add(`${input} ${output}`);
+        }
       }
       const [input, output] = only([...priced], `price for "${apiName}"`).split(" ").map(Number);
       return { input, output };

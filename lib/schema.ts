@@ -84,6 +84,7 @@ export const priceRow = z.object({
   output: z.number().nonnegative(),
   source: url,
   checked: date,
+  read_at: timestamp.optional(),
 });
 
 export const missingPrice = z.object({
