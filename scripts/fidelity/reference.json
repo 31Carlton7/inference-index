@@ -1,0 +1,19 @@
+{
+  "gpt-oss-120b": {
+    "source": "together",
+    "provider": "together",
+    "why": "No first-party API serves gpt-oss-120b. The published checkpoint is itself MXFP4 on the MoE weights, and Together states MXFP4."
+  },
+  "glm-5.3": {
+    "source": "hyperbolic",
+    "provider": "hyperbolic",
+    "why": "Hyperbolic states bf16, the precision of the published weights. Z.ai's own API does not say which weights or precision it serves."
+  },
+  "deepseek-v4.1-flash-1017": {
+    "source": "deepseek-api",
+    "url": "https://api.deepseek.com/chat/completions",
+    "key_env": "DEEPSEEK_API_KEY",
+    "api_model": "deepseek-flash",
+    "why": "No listed provider states full precision. DeepSeek's own API names DeepSeek-V4.1-Flash-1017 as the model behind deepseek-flash; it does not state a precision."
+  }
+}

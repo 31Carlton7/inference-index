@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "settings": {
+    "temperature": 0,
+    "top_p": 1,
+    "seed": 20261118,
+    "max_tokens": 48,
+    "logprobs": true,
+    "top_logprobs": 5
+  },
+  "model_settings": {
+    "gpt-oss-120b": { "reasoning_effort": "low" }
+  },
+  "prompts": [
+    { "id": "fixed-01", "kind": "fixed", "text": "Count from 1 to 20, separated by single spaces. Output only the numbers." },
+    { "id": "fixed-02", "kind": "fixed", "text": "Write the English alphabet in lowercase with no spaces. Output only the letters." },
+    { "id": "fixed-03", "kind": "fixed", "text": "Repeat this string exactly and output nothing else: q7-Zeta/41_blue.kestrel" },
+    { "id": "fixed-04", "kind": "fixed", "text": "List the days of the week starting with Monday, separated by commas. Output only the list." },
+    { "id": "fixed-05", "kind": "fixed", "text": "Write the first 12 prime numbers separated by commas. Output only the numbers." },
+    { "id": "fixed-06", "kind": "fixed", "text": "Spell the word 'thermodynamics' backwards. Output only the reversed word." },
+    { "id": "exact-01", "kind": "exact", "text": "What is 4817 + 2956? Output only the number." },
+    { "id": "exact-02", "kind": "exact", "text": "What is 37 * 43? Output only the number." },
+    { "id": "exact-03", "kind": "exact", "text": "Sort these words alphabetically and output them separated by spaces: pear, fig, quince, apple, mango, lime" },
+    { "id": "exact-04", "kind": "exact", "text": "Convert 255 to binary. Output only the binary digits." },
+    { "id": "exact-05", "kind": "exact", "text": "Output a JSON object with keys \"a\", \"b\" and \"c\" whose values are 1, 2 and 3. Output only the JSON on one line." },
+    { "id": "exact-06", "kind": "exact", "text": "How many letters are in the word 'inference'? Output only the number." },
+    { "id": "open-01", "kind": "open", "text": "Write one sentence about a lighthouse at night." },
+    { "id": "open-02", "kind": "open", "text": "Name a color, an animal and a city, separated by commas." },
+    { "id": "open-03", "kind": "open", "text": "Invent a name for a bakery and give it a one-line slogan." },
+    { "id": "open-04", "kind": "open", "text": "Describe the taste of a lemon in ten words or fewer." },
+    { "id": "open-05", "kind": "open", "text": "Give one unusual use for a paperclip in a single sentence." },
+    { "id": "open-06", "kind": "open", "text": "Write the first line of a poem about rain." },
+    { "id": "open-07", "kind": "open", "text": "Suggest a title for a novel about a clockmaker." },
+    { "id": "open-08", "kind": "open", "text": "Pick a number between 1 and 1000 and say why in a few words." }
+  ]
+}

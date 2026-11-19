@@ -1,0 +1,65 @@
+name: fidelity
+
+on:
+  schedule:
+    - cron: "41 11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fidelity
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/checkout@v4
+        with:
+          ref: data
+          path: data-branch
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node --test scripts/fidelity/fidelity.test.mjs
+      # With no keys set this prints one line and writes nothing.
+      - run: node scripts/fidelity/run.mjs --out data-branch/data
+        env:
+          TOGETHER_API_KEY: ${{ secrets.TOGETHER_API_KEY }}
+          FIREWORKS_API_KEY: ${{ secrets.FIREWORKS_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          DEEPINFRA_API_KEY: ${{ secrets.DEEPINFRA_API_KEY }}
+          CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
+          AMAZON_BEDROCK_API_KEY: ${{ secrets.AMAZON_BEDROCK_API_KEY }}
+          AMAZON_BEDROCK_REGION: ${{ secrets.AMAZON_BEDROCK_REGION }}
+          GOOGLE_VERTEX_AI_API_KEY: ${{ secrets.GOOGLE_VERTEX_AI_API_KEY }}
+          AZURE_AI_FOUNDRY_API_KEY: ${{ secrets.AZURE_AI_FOUNDRY_API_KEY }}
+          AZURE_AI_FOUNDRY_RESOURCE: ${{ secrets.AZURE_AI_FOUNDRY_RESOURCE }}
+          NOVITA_API_KEY: ${{ secrets.NOVITA_API_KEY }}
+          SAMBANOVA_API_KEY: ${{ secrets.SAMBANOVA_API_KEY }}
+          NEBIUS_API_KEY: ${{ secrets.NEBIUS_API_KEY }}
+          BASETEN_API_KEY: ${{ secrets.BASETEN_API_KEY }}
+          HYPERBOLIC_API_KEY: ${{ secrets.HYPERBOLIC_API_KEY }}
+          CLOUDFLARE_WORKERS_AI_API_KEY: ${{ secrets.CLOUDFLARE_WORKERS_AI_API_KEY }}
+          CLOUDFLARE_WORKERS_AI_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_WORKERS_AI_ACCOUNT_ID }}
+          PARASAIL_API_KEY: ${{ secrets.PARASAIL_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+      - name: Commit fidelity run
+        working-directory: data-branch
+        run: |
+          git add data/fidelity
+          if git diff --cached --quiet; then
+            echo "no fidelity output"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Fidelity run for $(date -u +%F)"
+          git pull --rebase origin data
+          git push origin HEAD:data

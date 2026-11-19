@@ -236,21 +236,74 @@ Per provider and model, the last 96 runs as `[ts, status]` pairs, oldest first, 
 
 ### data/fidelity/<date>.json and data/fidelity/latest.json
 
-Experimental. One file per fidelity run, plus `latest.json`, a copy of the newest one. The site reads only `latest.json`, because it cannot list a directory on the `data` branch.
+Experimental. One file per fidelity run, plus `latest.json`, a copy of the newest one. The site reads only `latest.json`, because it cannot list a directory on the `data` branch. A second run on the same day replaces the file.
 
 ```json
 {
   "date": "2026-11-18",
   "prompts_version": 1,
+  "scoring_version": 1,
+  "experimental": true,
+  "references": [
+    { "id": "2026-11-18-reference-llama-3.3-70b", "model": "llama-3.3-70b", "source": "reference-example", "runs": ["2026-11-18T13:00:02Z-reference-example-llama-3.3-70b-fidelity-01", "2026-11-18T13:01:10Z-reference-example-llama-3.3-70b-fidelity-02", "2026-11-18T13:02:21Z-reference-example-llama-3.3-70b-fidelity-03"], "runs_file": "data/fidelity/runs/2026-11-18/reference.jsonl" }
+  ],
   "rows": [
-    { "provider": "example", "model": "llama-3.3-70b", "score": 0.97, "reference_run": "2026-11-18-reference-llama-3.3-70b", "runs": ["2026-11-18T13:00:02Z-example-llama-3.3-70b-fidelity-01"], "runs_file": "data/fidelity/runs/2026-11-18/example.jsonl" }
+    {
+      "provider": "example",
+      "model": "llama-3.3-70b",
+      "score": 0.97,
+      "reference_run": "2026-11-18-reference-llama-3.3-70b",
+      "runs": ["2026-11-18T13:05:02Z-example-llama-3.3-70b-fidelity-01"],
+      "runs_file": "data/fidelity/runs/2026-11-18/example.jsonl",
+      "experimental": true,
+      "state": "unconfirmed",
+      "vs_noise_floor": "within",
+      "noise_floor": { "reference_runs": 3, "pairs": 3, "mean": 0.98, "min": 0.96 },
+      "prompts_scored": 20,
+      "exact_matches": 17,
+      "logprob_gap": null,
+      "stated_quantization": "fp8",
+      "reference_source": "reference-example",
+      "previous": null
+    }
+  ],
+  "unscored": [
+    { "provider": "other", "model": "llama-3.3-70b", "reason": "no reference run" }
   ]
 }
 ```
 
-- `score`: 0 to 1, where 1 means every output matched the reference under the scoring in `docs/method-fidelity.md`.
-- `reference_run`: the id of the full-precision reference run the outputs were compared against.
+- `prompts_version`, `scoring_version`: the prompt set and the scoring formula the file was made under. Both are described in `docs/method-fidelity.md`.
+- `experimental`: always `true`, on the file and on every row. Pages show the label wherever a score appears.
+- `references`: one entry per model that had reference runs that day. `id` is what rows point at with `reference_run`. `source` names where the reference ran, `runs` are the ids of the reference runs and `runs_file` holds them.
+- `score`: 0 to 1, where 1 means every output matched the reference under the scoring in `docs/method-fidelity.md`. It only means something beside `noise_floor`.
+- `reference_run`: the id of the full-precision reference the outputs were compared against.
 - `runs`: the ids of the provider runs that were scored. `runs_file`: the file on the `data` branch that holds them, which the score links to.
+- `noise_floor`: how the reference scored against itself. `reference_runs` is how many reference runs there were, `pairs` how many pairs of them were scored, `mean` and `min` the mean and lowest pair score. `null` when fewer than three reference runs could be scored.
+- `vs_noise_floor`: `within` when `score` is at or above `noise_floor.min`, `diverges` when it is below, `no noise floor` when `noise_floor` is `null`. `diverges` is worded on the site as "diverges from the reference" and nothing stronger.
+- `state`: `unconfirmed` or `repeated`. `repeated` means the run in `previous` had the same `vs_noise_floor`. A row with no earlier run, or one that disagrees with it, is `unconfirmed`.
+- `previous`: `{ "date", "score", "vs_noise_floor", "reference_source" }` of the last run on an earlier date under the same prompts version, scoring version and reference source, or `null`.
+- `prompts_scored`: how many prompts could be compared. `exact_matches`: how many of them matched the reference exactly.
+- `logprob_gap`: mean absolute difference in token log probability before the first differing token, or `null` when either side returned no logprobs. Not part of `score`.
+- `stated_quantization`: the provider's own statement from `data/models.json`, or `null` when it has not stated one. Shown beside the score.
+- `unscored`: provider and model pairs that were run or expected but have no score, with the reason: `is the reference for this model`, `no reference run`, or `no prompt could be compared with the reference`.
+
+### data/fidelity/runs/<date>/<provider-id>.jsonl
+
+One line per request, appended as soon as the response arrives and before anything is scored. Reference runs go to `reference.jsonl` in the same directory.
+
+```json
+{ "run": "2026-11-18T13:05:02Z-example-llama-3.3-70b-fidelity-01", "role": "provider", "provider": "example", "model": "llama-3.3-70b", "prompt": "fixed-01", "ts": "2026-11-18T13:05:03.412Z", "request": { "model": "meta-llama/llama-3.3-70b-instruct", "messages": [{ "role": "user", "content": "..." }], "stream": false, "temperature": 0, "top_p": 1, "seed": 20261118, "max_tokens": 48 }, "http_status": 200, "response": { "choices": [] }, "error": null }
+```
+
+- `run`: the run id. All lines of one pass over the prompt set share it.
+- `role`: `provider` or `reference`. For a reference line, `provider` is the reference's `source`.
+- `prompt`: a prompt id from `scripts/fidelity/prompts.v<N>.json`.
+- `request`: the body that was accepted. Settings a provider rejected are absent from it.
+- `response`: the provider's response body exactly as returned, or the raw text when it was not JSON. `null` when the request never completed.
+- `error`: `null`, `HTTP <status>`, or the network error.
+
+No request header is stored.
 
 ## Method notes
 
