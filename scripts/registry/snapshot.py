@@ -13,6 +13,7 @@ import argparse
 import datetime
 import difflib
 import json
+import os
 import pathlib
 import shutil
 import subprocess
@@ -122,6 +123,8 @@ def rendered_text(url):
             [chrome, "--headless=new", "--disable-gpu", "--no-sandbox",
              "--window-size=1280,2000", "--virtual-time-budget=20000", "--dump-dom", url],
             capture_output=True, timeout=120,
+            # Trust centres print dates in the browser's time zone.
+            env={**os.environ, "TZ": "UTC"},
         )
     except subprocess.TimeoutExpired:
         return None
