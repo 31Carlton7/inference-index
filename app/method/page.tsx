@@ -103,6 +103,7 @@ export default function MethodPage() {
             Values are recorded as the page states them. Nothing is inferred: a provider that holds one attestation
             is not assumed to hold another, and a term on one plan is not extended to the rest.
           </p>
+          <MethodDoc file="method-registry.md" pending="The registry's reading rules will be published here." />
         </section>
 
         <section>
