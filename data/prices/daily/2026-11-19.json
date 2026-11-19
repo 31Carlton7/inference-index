@@ -115,30 +115,6 @@
       "checked": "2026-11-19"
     },
     {
-      "provider": "novita",
-      "model": "gpt-oss-120b",
-      "input": 0.05,
-      "output": 0.25,
-      "source": "https://novita.ai/pricing",
-      "checked": "2026-11-19"
-    },
-    {
-      "provider": "novita",
-      "model": "glm-5.3",
-      "input": 1.4,
-      "output": 4.4,
-      "source": "https://novita.ai/pricing",
-      "checked": "2026-11-19"
-    },
-    {
-      "provider": "novita",
-      "model": "deepseek-v4.1-flash-1017",
-      "input": 0.3,
-      "output": 1.2,
-      "source": "https://novita.ai/pricing",
-      "checked": "2026-11-19"
-    },
-    {
       "provider": "sambanova",
       "model": "gpt-oss-120b",
       "input": 0.22,
@@ -264,6 +240,21 @@
       "provider": "google-vertex-ai",
       "model": "deepseek-v4.1-flash-1017",
       "reason": "expected one row for \"DeepSeek-V4.1-Flash-1017\", found 0"
+    },
+    {
+      "provider": "novita",
+      "model": "gpt-oss-120b",
+      "reason": "row is not name, context, input, output, actions"
+    },
+    {
+      "provider": "novita",
+      "model": "glm-5.3",
+      "reason": "row is not name, context, input, output, actions"
+    },
+    {
+      "provider": "novita",
+      "model": "deepseek-v4.1-flash-1017",
+      "reason": "row is not name, context, input, output, actions"
     }
   ]
 }
