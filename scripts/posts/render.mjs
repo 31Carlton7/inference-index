@@ -13,6 +13,7 @@ const DEFAULTS = {
   queue: join(ROOT, 'posts/queue'),
 };
 const GONE = ['acquired', 'shut down'];
+const FAILED = ['error', 'timeout'];
 const TIMESTAMP = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?Z$/;
 const DAY_MS = 86_400_000;
 const FRIDAY = 5;
@@ -64,8 +65,12 @@ function usd(amount) {
   return `$${amount.toFixed(4).replace(/0{1,2}$/, '')}`;
 }
 
+function indexUsd(amount) {
+  return `$${amount.toFixed(amount < 1 ? 3 : 2).replace(/(\.\d\d)0$/, '$1')}`;
+}
+
 function signedUsd(amount) {
-  const text = usd(Math.abs(amount));
+  const text = indexUsd(Math.abs(amount));
   if (Number(text.slice(1)) === 0) return text;
   return `${amount > 0 ? '+' : '-'}${text}`;
 }
@@ -225,19 +230,42 @@ function observed(run) {
   return run.http_status ? `HTTP ${run.http_status}` : 'error, no HTTP status';
 }
 
-function outage(incident, opts) {
-  need(incident, ['id', 'provider', 'model'], 'incident');
-  const runs = incident.runs ?? [];
-  if (runs.length !== 2 || runs.some((run) => !run.id) || runs[0].id === runs[1].id) throw new Refusal('incident does not list two run ids');
-  if (runs.some((run) => !run.region) || runs[0].region === runs[1].region) throw new Refusal('the two runs are not from two regions');
-  for (const run of runs) {
-    if (!TIMESTAMP.test(run.ts ?? '')) throw new Refusal(`run ${run.id} has no UTC timestamp`);
-    if (!['error', 'timeout'].includes(run.status)) throw new Refusal(`run ${run.id} has status ${run.status}, not error or timeout`);
-  }
-  const [first, second] = runs.toSorted((a, b) => a.ts.localeCompare(b.ts));
-  const names = { provider_name: providerName(opts, incident.provider), model_name: modelName(opts, incident.model) };
-  const source = { type: 'incident', incident, files: ['data/probes/status.json'] };
-  const slug = `${incident.provider}-${incident.model}`;
+function runsFile(provider, timestampOrRunId) {
+  return `probes/runs/${timestampOrRunId.slice(0, 10)}/${provider}.jsonl`;
+}
+
+function runLines(opts, file) {
+  const path = join(opts.probeData, file);
+  if (!existsSync(path)) return [];
+  return readFileSync(path, 'utf8').split('\n').filter(Boolean).map((line) => JSON.parse(line));
+}
+
+function outage({ provider, model, incident }, opts) {
+  need({ provider, model }, ['provider', 'model'], 'incident');
+  need(incident, ['start', 'run', 'confirmed_by'], 'incident');
+  if (incident.run === incident.confirmed_by) throw new Refusal('run and confirmed_by are the same run');
+
+  const runFiles = [incident.run, incident.confirmed_by].map((id) => runsFile(provider, id));
+  const [first, second] = [incident.run, incident.confirmed_by].map((id, i) => {
+    const run = runLines(opts, runFiles[i]).find((line) => line.id === id);
+    if (!run) throw new Refusal(`run ${id} is not in data/${runFiles[i]}`);
+    if (run.provider !== provider || run.model !== model) throw new Refusal(`run ${id} is not a ${provider} ${model} run`);
+    if (!TIMESTAMP.test(run.ts ?? '')) throw new Refusal(`run ${id} has no UTC timestamp`);
+    if (!FAILED.includes(run.status)) throw new Refusal(`run ${id} has status ${run.status}, not ${FAILED.join(' or ')}`);
+    return run;
+  });
+  if (!first.region || !second.region || first.region === second.region) throw new Refusal('the two runs are not from two regions');
+
+  const names = { provider_name: providerName(opts, provider), model_name: modelName(opts, model) };
+  const source = {
+    type: 'incident',
+    provider,
+    model,
+    incident,
+    runs: [first, second],
+    files: [...new Set(['probes/status.json', ...runFiles])].map((file) => `data/${file}`),
+  };
+  const slug = `${provider}-${model}`;
 
   if (!opts.recovered) {
     return {
@@ -257,22 +285,25 @@ function outage(incident, opts) {
     };
   }
 
-  const recovered = incident.recovered_run;
-  if (!recovered?.id || recovered.status !== 'ok') throw new Refusal('incident has no ok run after it');
-  if (!TIMESTAMP.test(recovered.ts ?? '') || recovered.ts <= second.ts) throw new Refusal(`run ${recovered.id} is not later than the confirming run`);
-  need(recovered, ['region'], `run ${recovered.id}`);
+  const { end } = incident;
+  if (!end) throw new Refusal('incident has no end: no ok run after it yet');
+  if (!TIMESTAMP.test(end) || end <= second.ts) throw new Refusal(`end ${end} is not later than the confirming run`);
   const logged = JSON.parse(readFileSync(opts.log, 'utf8')).posts;
-  if (!logged.some((post) => post.template === 'outage' && !post.variant && post.source?.incident?.id === incident.id)) {
-    throw new Refusal(`no outage post for incident ${incident.id} is in posts/log.json`);
+  if (!logged.some((post) => post.template === 'outage' && !post.variant && post.source?.incident?.run === incident.run)) {
+    throw new Refusal(`no outage post for incident ${incident.run} is in posts/log.json`);
   }
+
+  const endFile = runsFile(provider, end);
+  const okRun = runLines(opts, endFile).find((line) => line.ts === end && line.model === model && line.status === 'ok');
+  if (okRun && !source.files.includes(`data/${endFile}`)) source.files.push(`data/${endFile}`);
 
   return {
     template: 'outage',
-    variant: 'recovered',
-    date: recovered.ts.slice(0, 10),
+    variant: okRun?.region ? 'recovered' : 'recovered-no-region',
+    date: end.slice(0, 10),
     slug: `${slug}-recovered`,
-    values: { ...names, region: recovered.region, time: stamp(recovered.ts), confirmed_time: stamp(second.ts) },
-    source,
+    values: { ...names, region: okRun?.region, time: stamp(end), confirmed_time: stamp(second.ts) },
+    source: { ...source, recovered_run: okRun ?? null },
   };
 }
 
@@ -302,7 +333,7 @@ function weeklyChart(input, opts) {
     image: input.image ?? null,
     values: {
       date: shortDate(date),
-      value: usd(point.value),
+      value: indexUsd(point.value),
       prior_date: shortDate(priorDate),
       change: prior && signedUsd(point.value - prior.value),
       change_percent: prior && percentChange(prior.value, point.value),
@@ -321,7 +352,7 @@ function weeklyChart(input, opts) {
 
 function build(input, opts) {
   if (input.weekly) return weeklyChart(input, opts);
-  if (input.incident) return outage(input.incident, opts);
+  if (input.incident) return outage(input, opts);
   const builder = BUILDERS[input.entry.kind];
   if (!builder) throw new Refusal(`no template for changelog kind ${input.entry.kind}`);
   return builder(input.entry, opts);
@@ -366,9 +397,10 @@ const USAGE = `usage: render.mjs --data <dir> <selector> [options]
 
 selectors (exactly one):
   --changelog-index <n>   entry n of data/changelog.json (0 is the newest)
-  --incident <id>         an incident in data/probes/status.json
+  --incident <provider>/<model>/<start>
+                          an incident in data/probes/status.json
   --weekly                the weekly chart post
-  --stdin                 a changelog entry or an incident as JSON on stdin
+  --stdin                 a changelog entry, or {"provider", "model", "incident"}, as JSON on stdin
 
 options:
   --model <id>            price entries: which model, when more than one changed
@@ -417,14 +449,16 @@ function selectInput(args, opts) {
   if (args.weekly) return { weekly: true, date: args.date, image: args.image };
   if (args.stdin) {
     const parsed = JSON.parse(readFileSync(0, 'utf8'));
+    if (parsed.incident) return { provider: parsed.provider, model: parsed.model, incident: parsed.incident };
     if (parsed.kind) return { entry: parsed };
-    if (parsed.runs) return { incident: parsed };
-    throw new Refusal('stdin is neither a changelog entry (kind) nor an incident (runs)');
+    throw new Refusal('stdin is neither a changelog entry (kind) nor an incident with its provider and model (incident)');
   }
   if (args.incident) {
-    const incident = (read(opts.probeData, 'probes/status.json').incidents ?? []).find((item) => item.id === args.incident);
+    const [provider, model, start] = args.incident.split('/');
+    const row = read(opts.probeData, 'probes/status.json').rows.find((item) => item.provider === provider && item.model === model);
+    const incident = row?.incidents.find((item) => item.start === start);
     if (!incident) throw new Refusal(`no incident ${args.incident} in data/probes/status.json`);
-    return { incident };
+    return { provider, model, incident };
   }
   const entry = read(opts.data, 'changelog.json').entries[Number(args['changelog-index'])];
   if (!entry) throw new Refusal(`data/changelog.json has no entry ${args['changelog-index']}`);

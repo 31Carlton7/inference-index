@@ -1,14 +1,14 @@
 {
-  "incidents": [
+  "generated": "2026-11-18T12:31:00Z",
+  "interval_minutes": 15,
+  "rows": [
     {
-      "id": "2026-11-18T12:00:03Z-example-llama-3.3-70b",
       "provider": "example",
       "model": "llama-3.3-70b",
-      "runs": [
-        { "id": "2026-11-18T12:00:03Z-example-llama-3.3-70b-iad", "ts": "2026-11-18T12:00:03Z", "region": "iad", "status": "error", "http_status": 503 },
-        { "id": "2026-11-18T12:02:10Z-example-llama-3.3-70b-fra", "ts": "2026-11-18T12:02:10Z", "region": "fra", "status": "error", "http_status": 503 }
-      ],
-      "recovered_run": { "id": "2026-11-18T12:30:02Z-example-llama-3.3-70b-iad", "ts": "2026-11-18T12:30:02Z", "region": "iad", "status": "ok", "http_status": 200 }
+      "runs": [["2026-11-18T11:45:02Z", "ok"], ["2026-11-18T12:00:03Z", "error"], ["2026-11-18T12:15:02Z", "error"], ["2026-11-18T12:30:02Z", "ok"]],
+      "incidents": [
+        { "start": "2026-11-18T12:00:03Z", "end": "2026-11-18T12:30:02Z", "kind": "error", "run": "2026-11-18T12:00:03Z-example-llama-3.3-70b-iad", "confirmed_by": "2026-11-18T12:02:10Z-example-llama-3.3-70b-fra" }
+      ]
     }
   ]
 }

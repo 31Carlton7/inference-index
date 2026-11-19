@@ -29,9 +29,9 @@ Probes, last {window_days} days: {probe_ok} of {probe_runs} runs ok across {prob
 | slot | filled from | format |
 |---|---|---|
 | `date` | the Friday being posted; `data/prices/index.json` `series[].date` | `Nov 20` |
-| `value` | `series[].value` for that date | `$0.64`; up to four decimals when needed |
+| `value` | `series[].value` for that date | `$0.64`; three decimals below $1 when the third is not 0 (`$0.979`), two from $1 up, the same as the `/prices` page |
 | `prior_date` | the date 7 days earlier | `Nov 13` |
-| `change` | computed: `value` minus `series[].value` for `prior_date` | signed, `-$0.03`, `+$0.03`; `$0.00` when it rounds to zero |
+| `change` | computed: `value` minus `series[].value` for `prior_date` | signed, `-$0.03`, `+$0.03`, same decimals as `value`; `$0.00` when it rounds to zero |
 | `change_percent` | computed from the same two numbers: (value - prior) / prior | one decimal with a sign, `-4.5%` |
 | `days_of_data` | count of `series` points dated on or before `date` | whole number |
 | `basket_version` | `data/prices/index.json` `basket_version` | whole number |
@@ -44,7 +44,7 @@ The "Probes" line is optional. It is left out until `data/probes/summary.json` e
 
 ## Link
 
-`{site}/prices`, the price index page. Route assumed: there is no `app/` folder on main yet.
+`{site}/prices`, the price index page. The route is live, served by `app/prices/page.tsx`.
 
 ## Fires when
 

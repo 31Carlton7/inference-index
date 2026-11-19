@@ -28,7 +28,7 @@ The model is the entry's `model` if it has one (assumed field, to confirm with @
 
 ## Link
 
-`{site}/prices`, the price index page with the daily rows. Route assumed: there is no `app/` folder on main yet.
+`{site}/prices`, the price index page with the daily rows. The route is live, served by `app/prices/page.tsx`.
 
 ## Fires when
 

@@ -20,61 +20,70 @@ The errors were confirmed at {confirmed_time} UTC.
 {site}/status
 ```
 
+Variant `recovered-no-region`, used in place of `recovered` when the ok run is not in the runs files:
+
+```text recovered-no-region
+Our probes got an ok response from {provider_name} on {model_name}.
+ok, {time} UTC
+The errors were confirmed at {confirmed_time} UTC.
+{site}/status
+```
+
 ## Slots
 
-`docs/SCHEMA.md` says an incident in `data/probes/status.json` lists both run ids but does not give its fields. This template needs the shape below. It is assumed, to confirm with @probe.
+An incident is one item of `rows[].incidents` in `data/probes/status.json`, as `docs/SCHEMA.md` gives it. Its provider and model are on the row.
 
 ```json
 {
-  "incidents": [
+  "rows": [
     {
-      "id": "2026-11-18T12:00:03Z-example-llama-3.3-70b",
       "provider": "example",
       "model": "llama-3.3-70b",
-      "runs": [
-        { "id": "2026-11-18T12:00:03Z-example-llama-3.3-70b-iad", "ts": "2026-11-18T12:00:03Z", "region": "iad", "status": "error", "http_status": 503 },
-        { "id": "2026-11-18T12:02:10Z-example-llama-3.3-70b-fra", "ts": "2026-11-18T12:02:10Z", "region": "fra", "status": "error", "http_status": 503 }
-      ],
-      "recovered_run": null
+      "runs": [["2026-11-18T11:45:02Z", "ok"], ["2026-11-18T12:00:03Z", "error"]],
+      "incidents": [
+        { "start": "2026-11-18T12:00:03Z", "end": null, "kind": "error", "run": "2026-11-18T12:00:03Z-example-llama-3.3-70b-iad", "confirmed_by": "2026-11-18T12:02:10Z-example-llama-3.3-70b-fra" }
+      ]
     }
   ]
 }
 ```
 
-`runs` holds the two run lines as written to `data/probes/runs/<date>/<provider-id>.jsonl`, at least these five keys. `recovered_run` is `null` until the first `ok` run after the incident, then that run line (`id`, `ts`, `region`, `status`).
+`run` and `confirmed_by` are run ids. Each is looked up in `data/probes/runs/<date>/<provider-id>.jsonl`, where `<date>` is the first ten characters of the id. The region, status, HTTP code and time in the post come from those two run lines, never from the id string. "First run" below is the line with the id in `run`, "confirming run" the line with the id in `confirmed_by`.
 
 | slot | filled from | format |
 |---|---|---|
-| `provider_name` | `data/providers.json` `providers[].name`, matched on the incident's `provider` | as written |
-| `model_name` | `data/models.json` `probe_models[].name` for the incident's `model` | as written |
-| `region_1`, `region_2` | `data/probes/status.json` `incidents[].runs[].region`, earlier run first | as written, `iad` |
-| `observed_1`, `observed_2` | `incidents[].runs[].status` and `http_status` | `HTTP 503`; `timeout` when `status` is `timeout`; `error, no HTTP status` when there is no code |
-| `time_1`, `time_2` | `incidents[].runs[].ts` | `Nov 18 12:00`, UTC |
-| `region` (recovered) | `incidents[].recovered_run.region` | as written |
-| `time` (recovered) | `incidents[].recovered_run.ts` | `Nov 18 12:30`, UTC |
-| `confirmed_time` (recovered) | `ts` of the later of the two failed runs | `Nov 18 12:02`, UTC |
+| `provider_name` | `data/providers.json` `providers[].name`, matched on the row's `provider` | as written |
+| `model_name` | `data/models.json` `probe_models[].name` for the row's `model` | as written |
+| `region_1`, `region_2` | `region` of the first run and of the confirming run | as written, `iad` |
+| `observed_1`, `observed_2` | `status` and `http_status` of the same two run lines | `HTTP 503`; `timeout` when `status` is `timeout`; `error, no HTTP status` when there is no code |
+| `time_1`, `time_2` | `ts` of the same two run lines | `Nov 18 12:00`, UTC |
+| `region` (recovered) | `region` of the `ok` run line for the same model whose `ts` equals the incident's `end` | as written |
+| `time` (recovered) | the incident's `end` | `Nov 18 12:30`, UTC |
+| `confirmed_time` (recovered) | `ts` of the confirming run | `Nov 18 12:02`, UTC |
 
 ## Link
 
-`{site}/status`, the status page with the run history. Route assumed: there is no `app/` folder on main yet.
+`{site}/status`, the status page with the run history. The route is live, served by `app/status/page.tsx`.
 
 ## Fires when
 
-- `data/probes/status.json` has an incident, and
-- it lists two runs with two different run ids, and
-- the two runs are from two different regions, and
-- both runs have `status` `error` or `timeout`.
+- A row of `data/probes/status.json` has an incident, and
+- the incident has a `run` and a `confirmed_by`, two different run ids, and
+- both run lines are in the runs files, for the row's provider and model, and
+- both run lines have `status` `error` or `timeout`, and
+- the two run lines are from two different regions.
 
-Variant `recovered` fires when the incident's `recovered_run` is an `ok` run later than both failed runs, and the outage post for the same incident is in `posts/log.json`.
+Variant `recovered` fires when the incident's `end` is set and later than the confirming run, and the outage post for the same incident (same `run` id) is in `posts/log.json`. When no `ok` run line with `ts` equal to `end` is in the runs files, variant `recovered-no-region` is used: the same post without the region.
 
 ## Does not fire when
 
-- The incident has one run, or two runs with the same id, or a run with no id.
+- The incident has no `run` or no `confirmed_by`, or the two are the same id.
+- Either run id is not in the runs files, or its line is for another provider or model.
 - Both runs are from the same region, or a run has no region.
 - Either run has `status` `ok`.
 - A single failed run exists with no incident. No provider is called degraded on one run.
 - The filled post is over 280 characters.
-- Variant `recovered`: there is no `recovered_run`, it is not `ok`, it is not later than the confirming run, or no outage post for the incident was logged.
+- Variant `recovered`: `end` is `null`, it is not later than the confirming run, or no outage post for the incident was logged.
 
 ## Example
 
@@ -92,6 +101,15 @@ Variant `recovered`, made-up values:
 ```text recovered
 Our probes got an ok response from Example AI on Llama 3.3 70B Instruct.
 iad: ok, Nov 18 12:30 UTC
+The errors were confirmed at Nov 18 12:02 UTC.
+{site}/status
+```
+
+Variant `recovered-no-region`, made-up values:
+
+```text recovered-no-region
+Our probes got an ok response from Example AI on Llama 3.3 70B Instruct.
+ok, Nov 18 12:30 UTC
 The errors were confirmed at Nov 18 12:02 UTC.
 {site}/status
 ```

@@ -25,7 +25,7 @@ The "Registry fields stated" line is optional. It is left out when the provider 
 
 ## Link
 
-`{site}/providers/{provider_id}`, the provider page. Route assumed: there is no `app/` folder on main yet.
+`{site}/providers/{provider_id}`, the provider page. The route is live, served by `app/providers/[id]/page.tsx`.
 
 ## Fires when
 

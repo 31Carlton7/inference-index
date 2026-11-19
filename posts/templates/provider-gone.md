@@ -20,7 +20,7 @@ One post when a provider's registry status changes to `acquired` or `shut down`.
 
 ## Link
 
-`{site}/providers/{provider_id}`, the provider page, where the status field shows its source and quote. Route assumed: there is no `app/` folder on main yet.
+`{site}/providers/{provider_id}`, the provider page, where the status field shows its source and quote. The route is live, served by `app/providers/[id]/page.tsx`.
 
 ## Fires when
 

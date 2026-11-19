@@ -7,7 +7,7 @@
 Node 22 or later and one package, `@resvg/resvg-js`, which turns the SVG the script writes into a PNG:
 
 ```
-npm install --save-dev @resvg/resvg-js
+npm install
 ```
 
 It ships prebuilt binaries, so nothing else has to be installed. Text is drawn with a system font: Helvetica Neue on macOS, Liberation Sans or DejaVu Sans on Linux. A Linux runner with no fonts needs `apt-get install fonts-liberation`.

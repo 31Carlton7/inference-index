@@ -2,7 +2,7 @@
 
 What the project account posts, where each post comes from, and the record of what went out.
 
-Nothing here posts to X. There is no project account yet and no template is approved. The renderer in `scripts/posts/` only writes draft files. It has no code that talks to X or to any network.
+Nothing here posts to X. The site is live at `https://inference-index.vercel.app` and `site_url` in `config.json` points at it. There is no project account yet and no template is approved. The renderer in `scripts/posts/` only writes draft files. It has no code that talks to X or to any network.
 
 ```
 templates/    the six post templates
@@ -24,7 +24,7 @@ log.json      every post that went out and the data it came from
 | file | fires on |
 |---|---|
 | `templates/price-change.md` | a `price` entry in `data/changelog.json` |
-| `templates/outage.md` | an incident in `data/probes/status.json` (two failed runs, two regions) |
+| `templates/outage.md` | an incident in a row of `data/probes/status.json` (two failed runs, two regions) |
 | `templates/policy-diff.md` | a `policy` entry in `data/changelog.json` |
 | `templates/new-provider.md` | a `provider added` entry |
 | `templates/provider-gone.md` | a `status` entry to `acquired` or `shut down`, or a `provider removed` entry |
@@ -39,13 +39,15 @@ The post text lives only in the template file. The renderer reads the fenced `te
 - A line whose slot is marked optional and has no value is left out. A required slot with no value makes the renderer refuse.
 - A second block written as `text <name>` is a variant of the same template, for example `text recovered` in `outage.md`.
 
+The links are the site's real routes: `/prices`, `/status`, `/changelog` and `/providers/{id}`.
+
 ## The approval rule
 
 Every template starts as `not approved`. Only Carlton approves one. Approving means two edits in one commit: the template's Status line becomes `approved`, and its name is added to `approved_templates` in `config.json`. Changing the text of an approved template sets it back to `not approved`.
 
 A draft is `"sendable": true` only when all of these hold:
 
-- `site_url` in `config.json` is set. While it is `null` the draft keeps the literal `{site}`.
+- `site_url` in `config.json` is set. It is. If it were `null` the draft would keep the literal `{site}`.
 - The template's Status is `approved` and its name is in `approved_templates`.
 - For `weekly-chart`, the draft has its chart image.
 
@@ -56,17 +58,26 @@ A draft that is not sendable stays in the queue.
 ```
 node scripts/posts/render.mjs --data data --changelog-index 0
 node scripts/posts/render.mjs --data data --changelog-index 0 --model llama-3.3-70b
-node scripts/posts/render.mjs --data data --probe-data ../data-branch/data --incident <incident id>
-node scripts/posts/render.mjs --data data --probe-data ../data-branch/data --incident <incident id> --recovered
+node scripts/posts/render.mjs --data data --probe-data ../data-branch/data --incident example/llama-3.3-70b/2026-11-18T12:00:03Z
+node scripts/posts/render.mjs --data data --probe-data ../data-branch/data --incident example/llama-3.3-70b/2026-11-18T12:00:03Z --recovered
 node scripts/posts/render.mjs --data data --weekly --date 2026-11-20 --image posts/queue/weekly/2026-11-20.png
 node scripts/posts/render.mjs --data data --stdin < entry.json
+node scripts/posts/render.mjs --data data --weekly --date 2026-11-20 --queue /tmp/posts-queue
 ```
 
-`--stdin` takes one changelog entry or one incident as JSON. Probe files live on the `data` branch, so `--probe-data` points at a checkout of it; without it the renderer looks under `--data`.
+`--incident` takes `<provider>/<model>/<start>`: the `provider` and `model` of a row in `data/probes/status.json` and the `start` of one of its incidents. The two run lines are then read from `data/probes/runs/<date>/<provider>.jsonl` by the ids in `run` and `confirmed_by`.
 
-The renderer refuses, with exit code 1, a one-line reason and no file written, when a guard in the template's "Does not fire when" list applies: a required field is missing, an incident does not have two run ids from two regions, a policy entry lacks its before or after text, a price row is missing on either day, or the post is over 280 characters after the truncation rule.
+`--stdin` takes one changelog entry as JSON, or one incident with its provider and model:
 
-Tests: `node --test scripts/posts/render.test.mjs`. Fixtures are under `scripts/posts/fixtures/` and are all made up.
+```json
+{ "provider": "example", "model": "llama-3.3-70b", "incident": { "start": "2026-11-18T12:00:03Z", "end": null, "kind": "error", "run": "2026-11-18T12:00:03Z-example-llama-3.3-70b-iad", "confirmed_by": "2026-11-18T12:02:10Z-example-llama-3.3-70b-fra" } }
+```
+
+Probe files live on the `data` branch, so `--probe-data` points at a checkout of it; without it the renderer looks under `--data`. `--queue` writes the draft somewhere other than `posts/queue`.
+
+The renderer refuses, with exit code 1, a one-line reason and no file written, when a guard in the template's "Does not fire when" list applies: a required field is missing, an incident does not have two run ids that are both in the runs files, both failed and from two regions, a policy entry lacks its before or after text, a price row is missing on either day, or the post is over 280 characters after the truncation rule.
+
+Tests: `node --test scripts/posts/*.test.mjs`. Fixtures are under `scripts/posts/fixtures/` and are all made up.
 
 ## Queue
 
@@ -78,7 +89,7 @@ A draft is `queue/<date>-<template>-<provider-or-slug>.json`:
   "variant": null,
   "text": "...",
   "chars": 169,
-  "link": "{site}/changelog",
+  "link": "https://inference-index.vercel.app/changelog",
   "image": null,
   "source": {
     "type": "changelog",
@@ -91,7 +102,7 @@ A draft is `queue/<date>-<template>-<provider-or-slug>.json`:
 }
 ```
 
-`source` is the exact data the text was rendered from: the changelog entry, the incident, or the index points, plus the paths of the files read. `type` is `changelog`, `incident` or `index`. A price draft also carries the two daily rows under `rows`; a provider-gone draft carries the registry status field under `status_field`.
+`source` is the exact data the text was rendered from: the changelog entry, the incident, or the index points, plus the paths of the files read. An incident draft carries `provider`, `model`, the `incident` as it is in `status.json`, and the two run lines under `runs` (first run, then confirming run); the recovered variant adds the ok run line under `recovered_run`, or `null` when it was not found. `type` is `changelog`, `incident` or `index`. A price draft also carries the two daily rows under `rows`; a provider-gone draft carries the registry status field under `status_field`.
 
 ## Log
 

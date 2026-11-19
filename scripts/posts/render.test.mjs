@@ -26,15 +26,20 @@ const LAYOUT = {
   'snapshots/example/privacy/2026-11-17.txt': 'snapshot-privacy-2026-11-17.txt',
   'snapshots/example/privacy/2026-11-18.txt': 'snapshot-privacy-2026-11-18.txt',
   'probes/status.json': 'status-incidents.json',
+  'probes/runs/2026-11-18/example.jsonl': 'runs-2026-11-18-example.jsonl',
   'probes/summary.json': 'summary-week.json',
 };
 
 const fixture = (name) => JSON.parse(readFileSync(join(FIXTURES, name), 'utf8'));
 const ENTRIES = fixture('changelog-entries.json').entries;
 const [POLICY, PRICE, ADDED, STATUS, REMOVED] = ENTRIES;
-const INCIDENT = fixture('status-incidents.json').incidents[0];
+const ROW = fixture('status-incidents.json').rows[0];
+const OUTAGE = { provider: ROW.provider, model: ROW.model, incident: ROW.incidents[0] };
+const INCIDENT_SELECTOR = `${ROW.provider}/${ROW.model}/${OUTAGE.incident.start}`;
+const RUNS_FILE = 'probes/runs/2026-11-18/example.jsonl';
+const REAL_SITE = 'https://inference-index.vercel.app';
 
-function setup({ without = [], replace = {}, config = { site_url: null, approved_templates: [] }, log = { posts: [] } } = {}) {
+function setup({ without = [], replace = {}, config = { site_url: REAL_SITE, approved_templates: [] }, log = { posts: [] } } = {}) {
   const root = mkdtempSync(join(tmpdir(), 'posts-'));
   const data = join(root, 'data');
   for (const [file, name] of Object.entries({ ...LAYOUT, ...replace })) {
@@ -54,13 +59,19 @@ function editData(opts, file, edit) {
   writeFileSync(path, JSON.stringify(json));
 }
 
+function editRuns(opts, edit) {
+  const path = join(opts.data, RUNS_FILE);
+  const lines = readFileSync(path, 'utf8').split('\n').filter(Boolean).map((line) => JSON.parse(line));
+  writeFileSync(path, edit(lines).map((line) => JSON.stringify(line)).join('\n'));
+}
+
 function refuses(input, opts, message) {
   assert.throws(() => render(input, opts), (error) => error instanceof Refusal && message.test(error.message));
   assert.throws(() => readdirSync(opts.queue), { code: 'ENOENT' });
 }
 
-const example = (name, variant = 'default') => readTemplate(TEMPLATES, name).examples[variant];
-const LOGGED_OUTAGE = { posts: [{ template: 'outage', source: { incident: { id: INCIDENT.id } } }] };
+const example = (name, variant = 'default') => readTemplate(TEMPLATES, name).examples[variant].replaceAll('{site}', REAL_SITE);
+const LOGGED_OUTAGE = { posts: [{ template: 'outage', variant: null, source: { incident: OUTAGE.incident } }] };
 
 test('price change renders the template example from the two daily rows', () => {
   const opts = setup();
@@ -102,54 +113,93 @@ test('price change refuses when several models changed and none is named', () =>
   assert.match(draft.text, /other-model price.*\nInput: \$0\.20 to \$0\.10 \(-50\.0%\)/);
 });
 
-test('outage renders the template example', () => {
+test('outage renders the template example from the two run lines', () => {
   const opts = setup();
-  const { path, draft } = render({ incident: INCIDENT }, opts);
+  const { path, draft } = render(OUTAGE, opts);
   assert.equal(draft.text, example('outage'));
   assert.equal(path, join(opts.queue, '2026-11-18-outage-example-llama-3.3-70b.json'));
-  assert.deepEqual(draft.source.incident, INCIDENT);
+  assert.deepEqual(draft.source.incident, OUTAGE.incident);
+  assert.deepEqual([draft.source.provider, draft.source.model], ['example', 'llama-3.3-70b']);
+  assert.deepEqual(draft.source.runs.map((run) => [run.id, run.region, run.http_status]), [
+    [OUTAGE.incident.run, 'iad', 503],
+    [OUTAGE.incident.confirmed_by, 'fra', 503],
+  ]);
+  assert.deepEqual(draft.source.files, ['data/probes/status.json', 'data/probes/runs/2026-11-18/example.jsonl']);
+});
+
+test('outage takes the region from the run line, not from the run id', () => {
+  const opts = setup();
+  editRuns(opts, (lines) => lines.map((line) => (line.id === OUTAGE.incident.confirmed_by ? { ...line, region: 'sfo' } : line)));
+  assert.match(render(OUTAGE, opts).draft.text, /\nsfo: HTTP 503, Nov 18 12:02 UTC\n/);
 });
 
 test('outage reports a timeout and a missing HTTP status as observed', () => {
-  const runs = [{ ...INCIDENT.runs[0], status: 'timeout', http_status: null }, { ...INCIDENT.runs[1], http_status: null }];
-  const { draft } = render({ incident: { ...INCIDENT, runs } }, setup());
-  assert.match(draft.text, /iad: timeout, Nov 18 12:00 UTC\nfra: error, no HTTP status, Nov 18 12:02 UTC/);
+  const opts = setup();
+  editRuns(opts, (lines) => lines.map((line) => ({ ...line, http_status: null, status: line.id === OUTAGE.incident.run ? 'timeout' : line.status })));
+  assert.match(render(OUTAGE, opts).draft.text, /iad: timeout, Nov 18 12:00 UTC\nfra: error, no HTTP status, Nov 18 12:02 UTC/);
 });
 
-test('outage refuses an incident with one run', () => {
-  refuses({ incident: { ...INCIDENT, runs: [INCIDENT.runs[0]] } }, setup(), /two run ids/);
+test('outage refuses an incident with no confirming run or no provider', () => {
+  refuses({ ...OUTAGE, incident: { ...OUTAGE.incident, confirmed_by: null } }, setup(), /no confirmed_by/);
+  refuses({ ...OUTAGE, incident: { ...OUTAGE.incident, run: undefined } }, setup(), /no run/);
+  refuses({ ...OUTAGE, provider: undefined }, setup(), /no provider/);
 });
 
-test('outage refuses two runs with the same id', () => {
-  refuses({ incident: { ...INCIDENT, runs: [INCIDENT.runs[0], INCIDENT.runs[0]] } }, setup(), /two run ids/);
+test('outage refuses when run and confirmed_by are the same id', () => {
+  refuses({ ...OUTAGE, incident: { ...OUTAGE.incident, confirmed_by: OUTAGE.incident.run } }, setup(), /same run/);
+});
+
+test('outage refuses a run id that is not in the runs files', () => {
+  const opts = setup();
+  editRuns(opts, (lines) => lines.filter((line) => line.id !== OUTAGE.incident.confirmed_by));
+  refuses(OUTAGE, opts, /fra is not in data\/probes\/runs\/2026-11-18\/example.jsonl/);
+  refuses(OUTAGE, setup({ without: [RUNS_FILE] }), /iad is not in data\/probes\/runs/);
+});
+
+test('outage refuses a run line for another model', () => {
+  const opts = setup();
+  editRuns(opts, (lines) => lines.map((line) => ({ ...line, model: 'other-model' })));
+  refuses(OUTAGE, opts, /is not a example llama-3.3-70b run/);
 });
 
 test('outage refuses two runs from one region', () => {
-  const runs = [INCIDENT.runs[0], { ...INCIDENT.runs[1], region: 'iad' }];
-  refuses({ incident: { ...INCIDENT, runs } }, setup(), /two regions/);
+  const opts = setup();
+  editRuns(opts, (lines) => lines.map((line) => ({ ...line, region: 'iad' })));
+  refuses(OUTAGE, opts, /two regions/);
 });
 
 test('outage refuses when a run is ok', () => {
-  const runs = [INCIDENT.runs[0], { ...INCIDENT.runs[1], status: 'ok' }];
-  refuses({ incident: { ...INCIDENT, runs } }, setup(), /status ok/);
+  const opts = setup();
+  editRuns(opts, (lines) => lines.map((line) => (line.id === OUTAGE.incident.confirmed_by ? { ...line, status: 'ok' } : line)));
+  refuses(OUTAGE, opts, /status ok/);
 });
 
 test('recovered variant renders the template example once the outage post is logged', () => {
   const opts = { ...setup({ log: LOGGED_OUTAGE }), recovered: true };
-  const { path, draft } = render({ incident: INCIDENT }, opts);
+  const { path, draft } = render(OUTAGE, opts);
   assert.equal(draft.text, example('outage', 'recovered'));
   assert.equal(draft.variant, 'recovered');
+  assert.equal(draft.source.recovered_run.id, '2026-11-18T12:30:02Z-example-llama-3.3-70b-iad');
   assert.equal(path, join(opts.queue, '2026-11-18-outage-example-llama-3.3-70b-recovered.json'));
 });
 
-test('recovered variant refuses without an ok run after the incident', () => {
+test('recovered variant leaves the region out when no ok run has the end timestamp', () => {
   const opts = { ...setup({ log: LOGGED_OUTAGE }), recovered: true };
-  refuses({ incident: { ...INCIDENT, recovered_run: null } }, opts, /no ok run/);
-  refuses({ incident: { ...INCIDENT, recovered_run: { ...INCIDENT.recovered_run, ts: '2026-11-18T12:01:00Z' } } }, opts, /not later/);
+  editRuns(opts, (lines) => lines.filter((line) => line.ts !== OUTAGE.incident.end));
+  const { draft } = render(OUTAGE, opts);
+  assert.equal(draft.text, example('outage', 'recovered-no-region'));
+  assert.equal(draft.variant, 'recovered-no-region');
+  assert.equal(draft.source.recovered_run, null);
+});
+
+test('recovered variant refuses with no end or an end before the confirming run', () => {
+  const opts = { ...setup({ log: LOGGED_OUTAGE }), recovered: true };
+  refuses({ ...OUTAGE, incident: { ...OUTAGE.incident, end: null } }, opts, /no end/);
+  refuses({ ...OUTAGE, incident: { ...OUTAGE.incident, end: '2026-11-18T12:01:00Z' } }, opts, /not later/);
 });
 
 test('recovered variant refuses when no outage post was logged', () => {
-  refuses({ incident: INCIDENT }, { ...setup(), recovered: true }, /no outage post/);
+  refuses(OUTAGE, { ...setup(), recovered: true }, /no outage post/);
 });
 
 test('policy diff renders the template example', () => {
@@ -157,7 +207,7 @@ test('policy diff renders the template example', () => {
   const { path, draft } = render({ entry: POLICY }, opts);
   assert.equal(draft.text, example('policy-diff'));
   assert.equal(path, join(opts.queue, '2026-11-18-policy-diff-example-retention.json'));
-  assert.equal(draft.link, '{site}/changelog');
+  assert.equal(draft.link, `${REAL_SITE}/changelog`);
 });
 
 for (const key of ['before', 'after', 'snapshot_before', 'snapshot_after', 'field']) {
@@ -181,7 +231,7 @@ test('policy diff cuts long quotes at a word boundary and keeps both and the lin
   const [, before, after, link] = draft.text.split('\n');
   assert.match(before, /^Before: "Inputs are kept for 30 days and .*[a-z]\.\.\."$/);
   assert.match(after, /^After: "Inputs are deleted after 14 days and .*[a-z]\.\.\."$/);
-  assert.equal(link, '{site}/changelog');
+  assert.equal(link, `${REAL_SITE}/changelog`);
   assert.ok(draft.chars <= LIMIT && draft.chars > LIMIT - 20);
   for (const quote of [before, after]) assert.ok(entry.before.includes(quote.slice(9, -4)) || entry.after.includes(quote.slice(8, -4)));
 });
@@ -203,12 +253,12 @@ test('new provider renders the template example', () => {
   const { path, draft } = render({ entry: ADDED }, opts);
   assert.equal(draft.text, example('new-provider'));
   assert.equal(path, join(opts.queue, '2026-11-18-new-provider-example.json'));
-  assert.equal(draft.link, '{site}/providers/example');
+  assert.equal(draft.link, `${REAL_SITE}/providers/example`);
 });
 
 test('new provider leaves out the fields line when there is no registry file', () => {
   const { draft } = render({ entry: ADDED }, setup({ without: ['registry/example.json'] }));
-  assert.equal(draft.text, 'Added to the registry: Example AI.\nProviders tracked: 3.\n{site}/providers/example');
+  assert.equal(draft.text, `Added to the registry: Example AI.\nProviders tracked: 3.\n${REAL_SITE}/providers/example`);
 });
 
 test('new provider refuses a provider that is not in providers.json', () => {
@@ -260,6 +310,17 @@ test('weekly chart states the value and days of data when there is no point 7 da
   assert.equal(draft.image, null);
 });
 
+test('weekly chart writes the value with the decimals the prices page shows', () => {
+  const opts = setup({ without: ['probes/summary.json'] });
+  editData(opts, 'prices/index.json', (index) => {
+    index.series = [{ date: '2026-11-20', value: 0.9792, providers: 15, models: { 'llama-3.3-70b': { median: 0.9792, providers: 15 } }, rows: 'data/prices/daily/2026-11-20.json' }];
+  });
+  const { draft } = render({ weekly: true, date: '2026-11-20' }, opts);
+  assert.match(draft.text, /^Inference Index price index, Nov 20: \$0\.979 per 1M tokens\.\nNo value for Nov 13\. Days of data so far: 1\.\nBasket v1, 15 providers\.\n/);
+  editData(opts, 'prices/index.json', (index) => Object.assign(index.series[0], { value: 1.2345 }));
+  assert.match(render({ weekly: true, date: '2026-11-20' }, opts).draft.text, /: \$1\.23 per 1M tokens/);
+});
+
 test('weekly chart refuses a day that is not a Friday', () => {
   refuses({ weekly: true, date: '2026-11-19' }, setup(), /not a Friday/);
 });
@@ -287,10 +348,20 @@ test('a URL counts as 23 characters and wide characters count as 2', () => {
 });
 
 test('a draft is not sendable while the site url is null', () => {
-  const { draft } = render({ entry: POLICY }, setup());
+  const { draft } = render({ entry: POLICY }, setup({ config: { site_url: null, approved_templates: [] } }));
   assert.equal(draft.sendable, false);
   assert.equal(draft.status, 'draft');
   assert.match(draft.text, /\{site\}\/changelog$/);
+});
+
+test('with the real config every draft has the site url and none is sendable', () => {
+  const config = JSON.parse(readFileSync(join(POSTS, 'config.json'), 'utf8'));
+  const inputs = [{ entry: POLICY }, { entry: PRICE }, { entry: ADDED }, { entry: STATUS }, OUTAGE, { weekly: true, date: '2026-11-20', image: 'posts/queue/weekly/2026-11-20.png' }];
+  for (const input of inputs) {
+    const { draft } = render(input, setup({ config }));
+    assert.equal(draft.sendable, false, draft.template);
+    assert.match(draft.link, /^https:\/\/inference-index\.vercel\.app\//);
+  }
 });
 
 test('a draft is sendable only with a site url, an approved template and a config entry', () => {
@@ -312,7 +383,8 @@ test('the command line writes a draft from --changelog-index and from --incident
   const opts = setup();
   const run = (...args) => spawnSync(process.execPath, [join(HERE, 'render.mjs'), '--data', opts.data, '--queue', opts.queue, ...args], { encoding: 'utf8' });
   assert.equal(run('--changelog-index', '1').status, 0);
-  assert.equal(run('--incident', INCIDENT.id).status, 0);
+  assert.equal(run('--incident', INCIDENT_SELECTOR).status, 0);
+  assert.match(run('--incident', 'example/llama-3.3-70b/2026-11-18T09:00:00Z').stderr, /^refused: no incident example\/llama-3.3-70b\/2026-11-18T09:00:00Z/);
   assert.equal(run('--weekly', '--date', '2026-11-20').status, 0);
   assert.deepEqual(readdirSync(opts.queue), [
     '2026-11-18-outage-example-llama-3.3-70b.json',
@@ -330,13 +402,15 @@ test('the command line takes an entry on stdin and exits 1 with no file on a ref
   assert.match(refused.stderr, /^refused: policy entry has no after/);
   assert.throws(() => readdirSync(opts.queue), { code: 'ENOENT' });
 
-  const oneRegion = run({ ...INCIDENT, runs: [INCIDENT.runs[0]] });
-  assert.equal(oneRegion.status, 1);
+  const unconfirmed = run({ ...OUTAGE, incident: { ...OUTAGE.incident, confirmed_by: null } });
+  assert.equal(unconfirmed.status, 1);
+  assert.match(unconfirmed.stderr, /^refused: incident has no confirmed_by/);
   assert.throws(() => readdirSync(opts.queue), { code: 'ENOENT' });
 
   const written = run(STATUS);
   assert.equal(written.status, 0);
-  assert.deepEqual(readdirSync(opts.queue), ['2026-11-18-provider-gone-example-gone.json']);
+  assert.equal(run(OUTAGE).status, 0);
+  assert.deepEqual(readdirSync(opts.queue), ['2026-11-18-outage-example-llama-3.3-70b.json', '2026-11-18-provider-gone-example-gone.json']);
 });
 
 for (const name of TEMPLATE_NAMES) {
@@ -368,7 +442,7 @@ test('nothing under posts/ or in the renderer has an em dash, and the renderer h
   }
 });
 
-test('the post log and config start empty', () => {
+test('the post log is empty and the config approves no template', () => {
   assert.deepEqual(JSON.parse(readFileSync(join(POSTS, 'log.json'), 'utf8')), { posts: [] });
-  assert.deepEqual(JSON.parse(readFileSync(join(POSTS, 'config.json'), 'utf8')), { site_url: null, approved_templates: [] });
+  assert.deepEqual(JSON.parse(readFileSync(join(POSTS, 'config.json'), 'utf8')), { site_url: REAL_SITE, approved_templates: [] });
 });

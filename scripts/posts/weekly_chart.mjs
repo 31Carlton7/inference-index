@@ -283,7 +283,7 @@ async function readSiteUrl(configPath) {
 
 async function writePng(svg, out) {
   const { Resvg } = await import("@resvg/resvg-js").catch(() => {
-    throw new Error("@resvg/resvg-js is not installed. Run: npm install --save-dev @resvg/resvg-js");
+    throw new Error("@resvg/resvg-js is not installed. Run: npm install");
   });
   const png = new Resvg(svg, { fitTo: { mode: "width", value: WIDTH }, font: { defaultFontFamily: "Helvetica Neue" } }).render().asPng();
   await mkdir(path.dirname(out), { recursive: true });

@@ -28,7 +28,7 @@ Quotes are the provider's own words, so they keep the provider's punctuation, in
 
 ## Link
 
-`{site}/changelog`, the changelog page with the full before and after text and both snapshots. Route assumed: there is no `app/` folder on main yet.
+`{site}/changelog`, the changelog page with the full before and after text and both snapshots. The route is live, served by `app/changelog/page.tsx`.
 
 ## Fires when
 
