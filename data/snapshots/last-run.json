@@ -26,20 +26,19 @@
       "provider": "together",
       "page": "trust",
       "url": "https://trust.together.ai/",
-      "result": "baseline"
+      "result": "already taken today"
     },
     {
       "provider": "together",
       "page": "subprocessors",
       "url": "https://trust.together.ai/subprocessors",
-      "result": "baseline"
+      "result": "already taken today"
     },
     {
       "provider": "fireworks",
       "page": "privacy",
       "url": "https://fireworks.ai/privacy-policy",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "changed"
     },
     {
       "provider": "fireworks",
@@ -59,13 +58,13 @@
       "provider": "fireworks",
       "page": "trust",
       "url": "https://trust.fireworks.ai/",
-      "result": "baseline"
+      "result": "already taken today"
     },
     {
       "provider": "fireworks",
       "page": "subprocessors",
       "url": "https://trust.fireworks.ai/subprocessors",
-      "result": "baseline"
+      "result": "already taken today"
     },
     {
       "provider": "groq",
@@ -92,13 +91,13 @@
       "provider": "groq",
       "page": "trust",
       "url": "https://trust.groq.com/",
-      "result": "baseline"
+      "result": "already taken today"
     },
     {
       "provider": "groq",
       "page": "subprocessors",
       "url": "https://trust.groq.com/subprocessors",
-      "result": "baseline"
+      "result": "already taken today"
     },
     {
       "provider": "deepinfra",
@@ -153,7 +152,7 @@
       "provider": "cerebras",
       "page": "trust",
       "url": "https://trust.cerebras.ai/",
-      "result": "baseline"
+      "result": "already taken today"
     },
     {
       "provider": "amazon-bedrock",
@@ -243,7 +242,7 @@
       "provider": "azure-ai-foundry",
       "page": "trust",
       "url": "https://servicetrust.microsoft.com/",
-      "result": "baseline"
+      "result": "already taken today"
     },
     {
       "provider": "azure-ai-foundry",
@@ -263,7 +262,7 @@
       "provider": "novita",
       "page": "data_policy",
       "url": "https://trust.novita.ai/faq",
-      "result": "baseline"
+      "result": "already taken today"
     },
     {
       "provider": "novita",
@@ -276,18 +275,25 @@
       "provider": "novita",
       "page": "trust",
       "url": "https://trust.novita.ai/",
-      "result": "baseline"
+      "result": "already taken today"
     },
     {
       "provider": "novita",
       "page": "subprocessors",
       "url": "https://trust.novita.ai/subprocessors",
-      "result": "baseline"
+      "result": "already taken today"
     },
     {
       "provider": "sambanova",
       "page": "privacy",
       "url": "https://sambanova.ai/privacy-policy",
+      "result": "unchanged",
+      "latest": "2026-11-18"
+    },
+    {
+      "provider": "sambanova",
+      "page": "data_policy",
+      "url": "https://sambanova.ai/data-processing-agreement-sambanova",
       "result": "unchanged",
       "latest": "2026-11-18"
     },
@@ -302,14 +308,13 @@
       "provider": "sambanova",
       "page": "trust",
       "url": "https://trust.sambanova.ai/",
-      "result": "baseline"
+      "result": "already taken today"
     },
     {
       "provider": "sambanova",
       "page": "subprocessors",
-      "url": "https://sambanova.ai/data-processing-agreement-sambanova",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "url": "https://trust.sambanova.ai/subprocessors",
+      "result": "baseline"
     },
     {
       "provider": "nebius",
@@ -371,13 +376,13 @@
       "provider": "baseten",
       "page": "trust",
       "url": "https://trust.baseten.co/",
-      "result": "baseline"
+      "result": "already taken today"
     },
     {
       "provider": "baseten",
       "page": "subprocessors",
       "url": "https://trust.baseten.co/subprocessors",
-      "result": "baseline"
+      "result": "already taken today"
     },
     {
       "provider": "hyperbolic",
@@ -404,13 +409,13 @@
       "provider": "hyperbolic",
       "page": "trust",
       "url": "https://trust.hyperbolic.ai/",
-      "result": "baseline"
+      "result": "already taken today"
     },
     {
       "provider": "hyperbolic",
       "page": "subprocessors",
       "url": "https://trust.hyperbolic.ai/subprocessors",
-      "result": "baseline"
+      "result": "already taken today"
     },
     {
       "provider": "cloudflare-workers-ai",
