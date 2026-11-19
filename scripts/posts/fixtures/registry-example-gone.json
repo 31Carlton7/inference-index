@@ -1,0 +1,7 @@
+{
+  "id": "example-gone",
+  "updated": "2026-11-18",
+  "fields": {
+    "status": { "value": "shut down", "source": "https://example.net", "checked": "2026-11-18", "quote": "Example Gone stopped serving requests on November 18, 2026." }
+  }
+}

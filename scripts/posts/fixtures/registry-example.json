@@ -1,0 +1,16 @@
+{
+  "id": "example",
+  "updated": "2026-11-18",
+  "fields": {
+    "status": { "value": "live", "source": "https://example.com", "checked": "2026-11-18", "quote": "Example AI serves open models." },
+    "retention": { "value": "14 days", "source": "https://example.com/privacy", "checked": "2026-11-18", "quote": "We retain inputs for 14 days." },
+    "zdr": { "value": "on request", "source": "https://example.com/privacy", "checked": "2026-11-18", "quote": "Zero data retention is available on request." },
+    "zdr_how": { "value": "Email support", "source": "https://example.com/privacy", "checked": "2026-11-18", "quote": "Email support to turn it on." },
+    "training": { "value": "no", "source": "https://example.com/terms", "checked": "2026-11-18", "quote": "We do not train on customer data." },
+    "soc2": { "value": "Type II", "source": "https://example.com/docs", "checked": "2026-11-18", "quote": "Example AI holds a SOC 2 Type II report." },
+    "attestations": { "value": null, "not_stated": true, "checked": "2026-11-18", "searched": ["https://example.com/docs"] },
+    "subprocessors": { "value": null, "not_stated": true, "checked": "2026-11-18", "searched": ["https://example.com/privacy"] },
+    "regions": { "value": ["us-east"], "source": "https://example.com/docs", "checked": "2026-11-18", "quote": "Inference runs in us-east." },
+    "funding": { "value": null, "not_stated": true, "checked": "2026-11-18", "searched": ["https://example.com"] }
+  }
+}

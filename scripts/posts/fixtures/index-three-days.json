@@ -1,0 +1,8 @@
+{
+  "basket_version": 1,
+  "series": [
+    { "date": "2026-11-18", "value": 0.64, "providers": 12, "rows": "data/prices/daily/2026-11-18.json" },
+    { "date": "2026-11-19", "value": 0.64, "providers": 12, "rows": "data/prices/daily/2026-11-19.json" },
+    { "date": "2026-11-20", "value": 0.64, "providers": 12, "rows": "data/prices/daily/2026-11-20.json" }
+  ]
+}

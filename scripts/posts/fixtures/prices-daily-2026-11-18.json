@@ -1,0 +1,7 @@
+{
+  "date": "2026-11-18",
+  "rows": [
+    { "provider": "example", "model": "llama-3.3-70b", "input": 0.5, "output": 0.79, "source": "https://example.com/pricing", "checked": "2026-11-18" },
+    { "provider": "example-two", "model": "llama-3.3-70b", "input": 0.6, "output": 0.6, "source": "https://example.org/pricing", "checked": "2026-11-18" }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "entries": [
+    {
+      "date": "2026-11-18",
+      "provider": "example",
+      "kind": "policy",
+      "field": "retention",
+      "before": "We retain inputs for 30 days.",
+      "after": "We retain inputs for 14 days.",
+      "source": "https://example.com/privacy",
+      "snapshot_before": "data/snapshots/example/privacy/2026-11-17.txt",
+      "snapshot_after": "data/snapshots/example/privacy/2026-11-18.txt"
+    },
+    { "date": "2026-11-18", "provider": "example", "kind": "price", "source": "https://example.com/pricing" },
+    { "date": "2026-11-18", "provider": "example", "kind": "provider added" },
+    { "date": "2026-11-18", "provider": "example-gone", "kind": "status", "field": "status", "before": "live", "after": "shut down", "source": "https://example.net" },
+    { "date": "2026-11-18", "provider": "example-gone", "kind": "provider removed" }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "probe_models": [
+    { "id": "llama-3.3-70b", "name": "Llama 3.3 70B Instruct", "weights": "https://example.com/weights", "providers": { "example": "meta-llama/llama-3.3-70b-instruct" } }
+  ],
+  "basket": { "version": 1, "models": ["llama-3.3-70b"], "weights": { "input": 0.75, "output": 0.25 }, "note": "" }
+}

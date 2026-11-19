@@ -1,0 +1,7 @@
+{
+  "providers": [
+    { "id": "example", "name": "Example AI", "homepage": "https://example.com", "urls": { "docs": "https://example.com/docs", "pricing": "https://example.com/pricing", "privacy": "https://example.com/privacy", "terms": "https://example.com/terms", "trust": null, "status": null, "subprocessors": null }, "added": "2026-11-18" },
+    { "id": "example-two", "name": "Example Two", "homepage": "https://example.org", "urls": { "docs": null, "pricing": "https://example.org/pricing", "privacy": null, "terms": null, "trust": null, "status": null, "subprocessors": null }, "added": "2026-11-18" },
+    { "id": "example-gone", "name": "Example Gone", "homepage": "https://example.net", "urls": { "docs": null, "pricing": null, "privacy": null, "terms": null, "trust": null, "status": null, "subprocessors": null }, "added": "2026-11-18" }
+  ]
+}
