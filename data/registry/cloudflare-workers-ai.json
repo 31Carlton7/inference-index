@@ -1,0 +1,89 @@
+{
+  "id": "cloudflare-workers-ai",
+  "updated": "2026-11-18",
+  "fields": {
+    "status": {
+      "value": "live",
+      "source": "https://developers.cloudflare.com/workers-ai/",
+      "checked": "2026-11-18",
+      "quote": "Workers AI allows you to run AI models in a serverless way, without having to worry about scaling, maintaining, or paying for unused infrastructure."
+    },
+    "retention": {
+      "value": "not retained after the request is processed",
+      "source": "https://developers.cloudflare.com/workers-ai/platform/data-usage/",
+      "checked": "2026-11-18",
+      "quote": "For standard inference requests that do not invoke a stateful feature, Cloudflare does not retain inputs or outputs after they are no longer needed to process the request and deliver the response, subject to the limited exceptions below.",
+      "note": "The exceptions are storage the customer directs or a stateful feature needs (for example AI Gateway logging or caching, batch features) and content Cloudflare must analyze or retain for legal obligations; operational metadata is kept."
+    },
+    "zdr": {
+      "value": "default",
+      "source": "https://developers.cloudflare.com/workers-ai/platform/data-usage/",
+      "checked": "2026-11-18",
+      "quote": "Zero data retention: Workers AI processes Customer Content only for as long as needed to provide the service."
+    },
+    "zdr_how": {
+      "value": "Nothing to turn on for standard inference requests; avoid stateful features that store content",
+      "source": "https://developers.cloudflare.com/workers-ai/platform/data-usage/",
+      "checked": "2026-11-18",
+      "quote": "Our zero data retention commitment does not prevent storage that you direct or that is necessary to provide a stateful feature you select."
+    },
+    "training": {
+      "value": "no",
+      "source": "https://developers.cloudflare.com/workers-ai/platform/data-usage/",
+      "checked": "2026-11-18",
+      "quote": "No training: Cloudflare does not use Customer Content processed by Workers AI to train AI models.",
+      "note": "The service-specific terms word it as: Unless otherwise agreed, Cloudflare does not use any Customer Content to train generative AI tools."
+    },
+    "soc2": {
+      "value": "Type II",
+      "source": "https://www.cloudflare.com/trust-hub/compliance-resources/soc-2/",
+      "checked": "2026-11-18",
+      "quote": "Yes, Cloudflare has undertaken the AICPA SOC 2 Type II to attest to Security, Confidentiality, and Availability controls in place in accordance with the AICPA Trust Service Criteria.",
+      "note": "The same page lists Workers AI among the Developer Platform services in scope for the report."
+    },
+    "attestations": {
+      "value": [
+        "C5:2020",
+        "HIPAA"
+      ],
+      "source": "https://www.cloudflare.com/trust-hub/compliance-resources/c5/",
+      "checked": "2026-11-18",
+      "quote": "Developer Platform: Browser Rendering, Cloudflare Images, Cloudflare for SaaS, D1, Durable Objects, Hyperdrive, Cloudflare Workers KV, Cloudflare Pages, R2, Stream, Vectorize, Workers, AI Gateway, Cloudflare Workers AI",
+      "note": "The quote is from the C5:2020 in-scope list; Workers AI is also in the in-scope list for the HIPAA attestation at https://www.cloudflare.com/trust-hub/compliance-resources/hipaa/. Only the pages that name Workers AI are counted."
+    },
+    "subprocessors": {
+      "value": [
+        "CoreWeave, Inc.",
+        "Nebius BV",
+        "Google LLC",
+        "Oracle America, Inc.",
+        "Slack Technologies, Inc.",
+        "Zendesk, Inc.",
+        "Salesforce, Inc."
+      ],
+      "source": "https://www.cloudflare.com/gdpr/subprocessors/cloudflare-services/",
+      "checked": "2026-11-18",
+      "quote": "Cloudflare uses the following third-party entities as sub-processors for the activities listed below:",
+      "note": "CoreWeave (United States) and Nebius BV (England) are listed for Workers AI; Google and Oracle for the Developer Platform; Slack, Zendesk and Salesforce for customer support. Cloudflare Group subsidiaries are listed too."
+    },
+    "regions": {
+      "value": [
+        "Cloudflare's global network"
+      ],
+      "source": "https://developers.cloudflare.com/workers-ai/",
+      "checked": "2026-11-18",
+      "quote": "Run machine learning models, powered by serverless GPUs, on Cloudflare's global network.",
+      "note": "No list of inference locations was found; the sub-processor list places CoreWeave in the United States and Nebius BV in England for Workers AI."
+    },
+    "funding": {
+      "value": null,
+      "not_stated": true,
+      "checked": "2026-11-18",
+      "searched": [
+        "https://developers.cloudflare.com/workers-ai/",
+        "https://developers.cloudflare.com/workers-ai/platform/data-usage/",
+        "https://www.cloudflare.com/trust-hub/compliance-resources/"
+      ]
+    }
+  }
+}
