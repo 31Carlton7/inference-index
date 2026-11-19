@@ -17,6 +17,9 @@ const FAILED = ['error', 'timeout'];
 const TIMESTAMP = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?Z$/;
 const DAY_MS = 86_400_000;
 const FRIDAY = 5;
+const QUOTES = ['before', 'after'];
+const PAGE_WORDS = { data_policy: 'data handling' };
+const FIELD_WORDS = { zdr: 'zero data retention', zdr_how: 'zero data retention setup', soc2: 'SOC 2' };
 const SHORT_DATE = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
 
 const BUILDERS = {
@@ -134,38 +137,57 @@ function collapse(text) {
   return text.normalize('NFKC').replace(/\s+/g, ' ').trim();
 }
 
+function words(known, key) {
+  return known[key] ?? key.replaceAll('_', ' ');
+}
+
 function policyDiff(entry, opts) {
-  need(entry, ['provider', 'date', 'field', 'before', 'after', 'snapshot_before', 'snapshot_after'], 'policy entry');
+  need(entry, ['provider', 'date', 'snapshot_before', 'snapshot_after'], 'policy entry');
+  for (const key of QUOTES) {
+    if (typeof entry[key] !== 'string') throw new Refusal(`policy entry has no ${key}`);
+  }
   for (const snapshot of [entry.snapshot_before, entry.snapshot_after]) {
     if (!existsSync(join(opts.data, snapshot.replace(/^data\//, '')))) throw new Refusal(`${snapshot} does not exist`);
   }
+  if (!collapse(entry.before) && !collapse(entry.after)) throw new Refusal('before and after are both empty');
   if (collapse(entry.before) === collapse(entry.after)) throw new Refusal('before and after differ only in whitespace or formatting');
 
+  const page = entry.snapshot_after.split('/').at(-2);
   const values = {
     provider_name: providerName(opts, entry.provider),
-    field: entry.field,
-    page: entry.snapshot_after.split('/').at(-2),
+    field: entry.field ? words(FIELD_WORDS, entry.field) : null,
+    page: words(PAGE_WORDS, page),
     date: shortDate(entry.date),
     before: entry.before.replace(/\s+/g, ' ').trim(),
     after: entry.after.replace(/\s+/g, ' ').trim(),
   };
+  const quoted = QUOTES.filter((key) => values[key]);
+  let variant;
+  if (!values.before) variant = 'added';
+  else if (!values.after) variant = 'removed';
+  else if (!values.field) variant = 'no-field';
 
-  const template = readTemplate(opts.templates, 'policy-diff').variants.default;
+  const template = readTemplate(opts.templates, 'policy-diff').variants[variant ?? 'default'];
   const frame = fill(template, { ...values, before: '', after: '', site: null });
   const room = LIMIT - postLength(frame, frame.split('\n').at(-1));
   const [beforeLength, afterLength] = [textLength(values.before), textLength(values.after)];
   if (beforeLength + afterLength > room) {
-    const half = Math.floor(room / 2);
-    values.before = truncate(values.before, afterLength <= half ? room - afterLength : half);
-    values.after = truncate(values.after, beforeLength <= half ? room - beforeLength : half);
-    if (!values.before || !values.after) throw new Refusal(`both quotes do not fit in ${LIMIT} characters`);
+    if (quoted.length === 1) {
+      values[quoted[0]] = truncate(values[quoted[0]], room);
+    } else {
+      const half = Math.floor(room / 2);
+      values.before = truncate(values.before, afterLength <= half ? room - afterLength : half);
+      values.after = truncate(values.after, beforeLength <= half ? room - beforeLength : half);
+    }
+    if (quoted.some((key) => !values[key])) throw new Refusal(`the quoted text does not fit in ${LIMIT} characters`);
     if (values.before === values.after) throw new Refusal('the quotes read the same once cut to fit; this change needs a hand-picked excerpt');
   }
 
   return {
     template: 'policy-diff',
+    variant,
     date: entry.date,
-    slug: `${entry.provider}-${entry.field}`,
+    slug: `${entry.provider}-${entry.field || page}`,
     values,
     source: { type: 'changelog', entry, files: ['data/changelog.json', entry.snapshot_before, entry.snapshot_after] },
   };

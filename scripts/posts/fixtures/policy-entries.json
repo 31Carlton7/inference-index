@@ -1,0 +1,89 @@
+{
+  "no_field": {
+    "date": "2026-11-18",
+    "provider": "example",
+    "kind": "policy",
+    "field": null,
+    "before": "Disputes are resolved in the courts of Delaware.",
+    "after": "Disputes are resolved by binding arbitration.",
+    "source": "https://example.com/terms",
+    "snapshot_before": "data/snapshots/example/terms/2026-11-17.txt",
+    "snapshot_after": "data/snapshots/example/terms/2026-11-18.txt"
+  },
+  "added": {
+    "date": "2026-11-18",
+    "provider": "example",
+    "kind": "policy",
+    "field": "training",
+    "before": "",
+    "after": "We do not use API inputs or outputs to train our models.",
+    "source": "https://example.com/privacy",
+    "snapshot_before": "data/snapshots/example/privacy/2026-11-17.txt",
+    "snapshot_after": "data/snapshots/example/privacy/2026-11-18.txt"
+  },
+  "removed": {
+    "date": "2026-11-18",
+    "provider": "example",
+    "kind": "policy",
+    "field": "zdr",
+    "before": "Zero data retention is available on request.",
+    "after": "",
+    "source": "https://example.com/privacy",
+    "snapshot_before": "data/snapshots/example/privacy/2026-11-17.txt",
+    "snapshot_after": "data/snapshots/example/privacy/2026-11-18.txt"
+  },
+  "added_section": {
+    "date": "2026-11-18",
+    "provider": "example",
+    "kind": "policy",
+    "field": "zdr_how",
+    "before": "",
+    "after": "Customers on the Enterprise plan may ask us to turn on zero data retention for their organisation. When it is on, we do not write prompts or outputs to disk and we keep them in memory only for as long as it takes to return the response. Abuse monitoring for these organisations runs on request metadata, which holds no prompt or output text and is deleted after 30 days. Requests sent to our batch endpoint are not covered, because a batch has to be stored until it has been processed, and the stored files are deleted 24 hours after the batch completes. Fine-tuning jobs are not covered either, since the training files you upload stay in your account until you delete them. To ask for zero data retention, write to your account manager and name the organisation id it should apply to. We confirm in writing once it is on, and the change applies to requests made after that confirmation, not to data stored before it.",
+    "source": "https://example.com/privacy",
+    "snapshot_before": "data/snapshots/example/privacy/2026-11-17.txt",
+    "snapshot_after": "data/snapshots/example/privacy/2026-11-18.txt"
+  },
+  "data_policy": {
+    "date": "2026-11-18",
+    "provider": "example",
+    "kind": "policy",
+    "field": "zdr_how",
+    "before": "Contact sales to turn on zero data retention.",
+    "after": "Turn on zero data retention in the console under Settings.",
+    "source": "https://example.com/data_policy",
+    "snapshot_before": "data/snapshots/example/data_policy/2026-11-17.txt",
+    "snapshot_after": "data/snapshots/example/data_policy/2026-11-18.txt"
+  },
+  "both_empty": {
+    "date": "2026-11-18",
+    "provider": "example",
+    "kind": "policy",
+    "field": "retention",
+    "before": "",
+    "after": "",
+    "source": "https://example.com/privacy",
+    "snapshot_before": "data/snapshots/example/privacy/2026-11-17.txt",
+    "snapshot_after": "data/snapshots/example/privacy/2026-11-18.txt"
+  },
+  "missing_after": {
+    "date": "2026-11-18",
+    "provider": "example",
+    "kind": "policy",
+    "field": "retention",
+    "before": "We retain inputs for 30 days.",
+    "source": "https://example.com/privacy",
+    "snapshot_before": "data/snapshots/example/privacy/2026-11-17.txt",
+    "snapshot_after": "data/snapshots/example/privacy/2026-11-18.txt"
+  },
+  "whitespace_only": {
+    "date": "2026-11-18",
+    "provider": "example",
+    "kind": "policy",
+    "field": "retention",
+    "before": "We retain inputs for 30 days.",
+    "after": " We retain  inputs\nfor 30\u00a0days. ",
+    "source": "https://example.com/privacy",
+    "snapshot_before": "data/snapshots/example/privacy/2026-11-17.txt",
+    "snapshot_after": "data/snapshots/example/privacy/2026-11-18.txt"
+  }
+}

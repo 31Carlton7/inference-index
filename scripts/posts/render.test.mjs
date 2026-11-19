@@ -25,6 +25,10 @@ const LAYOUT = {
   'registry/example-gone.json': 'registry-example-gone.json',
   'snapshots/example/privacy/2026-11-17.txt': 'snapshot-privacy-2026-11-17.txt',
   'snapshots/example/privacy/2026-11-18.txt': 'snapshot-privacy-2026-11-18.txt',
+  'snapshots/example/terms/2026-11-17.txt': 'snapshot-privacy-2026-11-17.txt',
+  'snapshots/example/terms/2026-11-18.txt': 'snapshot-privacy-2026-11-18.txt',
+  'snapshots/example/data_policy/2026-11-17.txt': 'snapshot-privacy-2026-11-17.txt',
+  'snapshots/example/data_policy/2026-11-18.txt': 'snapshot-privacy-2026-11-18.txt',
   'probes/status.json': 'status-incidents.json',
   'probes/runs/2026-11-18/example.jsonl': 'runs-2026-11-18-example.jsonl',
   'probes/summary.json': 'summary-week.json',
@@ -33,6 +37,7 @@ const LAYOUT = {
 const fixture = (name) => JSON.parse(readFileSync(join(FIXTURES, name), 'utf8'));
 const ENTRIES = fixture('changelog-entries.json').entries;
 const [POLICY, PRICE, ADDED, STATUS, REMOVED] = ENTRIES;
+const POLICIES = fixture('policy-entries.json');
 const ROW = fixture('status-incidents.json').rows[0];
 const OUTAGE = { provider: ROW.provider, model: ROW.model, incident: ROW.incidents[0] };
 const INCIDENT_SELECTOR = `${ROW.provider}/${ROW.model}/${OUTAGE.incident.start}`;
@@ -210,18 +215,90 @@ test('policy diff renders the template example', () => {
   assert.equal(draft.link, `${REAL_SITE}/changelog`);
 });
 
-for (const key of ['before', 'after', 'snapshot_before', 'snapshot_after', 'field']) {
+for (const key of ['before', 'after', 'snapshot_before', 'snapshot_after']) {
   test(`policy diff refuses an entry with no ${key}`, () => {
     refuses({ entry: { ...POLICY, [key]: undefined } }, setup(), new RegExp(`no ${key}`));
+    refuses({ entry: { ...POLICY, [key]: null } }, setup(), new RegExp(`no ${key}`));
   });
 }
+
+test('policy diff refuses an entry whose after key is left out', () => {
+  assert.ok(!('after' in POLICIES.missing_after));
+  refuses({ entry: POLICIES.missing_after }, setup(), /no after/);
+});
+
+test('policy diff refuses when before and after are both empty', () => {
+  refuses({ entry: POLICIES.both_empty }, setup(), /both empty/);
+  refuses({ entry: { ...POLICIES.both_empty, after: ' \n ' } }, setup(), /both empty/);
+});
+
+for (const [name, variant, file] of [
+  ['no_field', 'no-field', 'example-terms'],
+  ['added', 'added', 'example-training'],
+  ['removed', 'removed', 'example-zdr'],
+]) {
+  test(`policy diff renders the ${variant} example`, () => {
+    const opts = setup();
+    const { path, draft } = render({ entry: POLICIES[name] }, opts);
+    assert.equal(draft.variant, variant);
+    assert.equal(draft.text, example('policy-diff', variant));
+    assert.equal(path, join(opts.queue, `2026-11-18-policy-diff-${file}.json`));
+    assert.equal(draft.link, `${REAL_SITE}/changelog`);
+  });
+}
+
+test('policy diff uses added and removed with or without a field', () => {
+  for (const name of ['added', 'removed']) {
+    const { draft } = render({ entry: { ...POLICIES[name], field: null } }, setup());
+    assert.equal(draft.text, example('policy-diff', name));
+  }
+});
+
+test('policy diff gives a long added section the whole room and keeps the link', () => {
+  const entry = POLICIES.added_section;
+  assert.ok(entry.after.length > 900);
+  const { draft } = render({ entry }, setup());
+  const [first, added, link, ...rest] = draft.text.split('\n');
+  assert.equal(first, 'Example AI added text to its privacy page on Nov 18.');
+  assert.match(added, /^Added: "Customers on the Enterprise plan .*[a-z]\.\.\."$/);
+  assert.ok(entry.after.startsWith(added.slice(8, -4)));
+  assert.equal(link, `${REAL_SITE}/changelog`);
+  assert.deepEqual(rest, []);
+  assert.equal(draft.chars, postLength(draft.text, link));
+  assert.ok(draft.chars <= LIMIT && draft.chars > LIMIT - 20);
+});
+
+test('policy diff cuts a long removed section the same way', () => {
+  const { added_section: section } = POLICIES;
+  const { draft } = render({ entry: { ...section, before: section.after, after: '' } }, setup());
+  assert.match(draft.text, /^Example AI removed text from its privacy page on Nov 18\.\nRemoved: "Customers .*\.\.\."\n\S+\/changelog$/);
+  assert.ok(draft.chars <= LIMIT && draft.chars > LIMIT - 20);
+});
+
+test('policy diff refuses an added quote whose first word does not fit', () => {
+  refuses({ entry: { ...POLICIES.added, after: 'a'.repeat(300) } }, setup(), /does not fit/);
+});
+
+test('policy diff prints words for the page and the field, never the key', () => {
+  const { draft } = render({ entry: POLICIES.data_policy }, setup());
+  assert.equal(draft.text.split('\n')[0], 'Example AI changed the zero data retention setup text on its data handling page on Nov 18.');
+  const first = (field, page) => {
+    const entry = { ...POLICY, field, snapshot_after: `data/snapshots/example/${page}/2026-11-18.txt` };
+    const layout = { [`snapshots/example/${page}/2026-11-18.txt`]: 'snapshot-privacy-2026-11-18.txt' };
+    return render({ entry }, setup({ replace: layout })).draft.text.split('\n')[0];
+  };
+  assert.equal(first('zdr', 'trust'), 'Example AI changed the zero data retention text on its trust page on Nov 18.');
+  assert.equal(first('soc2', 'subprocessors'), 'Example AI changed the SOC 2 text on its subprocessors page on Nov 18.');
+  assert.equal(first('data_residency', 'acceptable_use'), 'Example AI changed the data residency text on its acceptable use page on Nov 18.');
+});
 
 test('policy diff refuses when a snapshot file does not exist', () => {
   refuses({ entry: POLICY }, setup({ without: ['snapshots/example/privacy/2026-11-17.txt'] }), /2026-11-17.txt does not exist/);
 });
 
 test('policy diff refuses a whitespace only difference', () => {
-  refuses({ entry: { ...POLICY, after: ` We retain  inputs\nfor 30${String.fromCodePoint(0xa0)}days. ` } }, setup(), /whitespace or formatting/);
+  assert.notEqual(POLICIES.whitespace_only.before, POLICIES.whitespace_only.after);
+  refuses({ entry: POLICIES.whitespace_only }, setup(), /whitespace or formatting/);
 });
 
 test('policy diff cuts long quotes at a word boundary and keeps both and the link', () => {
@@ -434,7 +511,7 @@ test('nothing under posts/ or in the renderer has an em dash, and the renderer h
   const files = [
     ...readdirSync(POSTS, { recursive: true, withFileTypes: true }).filter((item) => /\.(md|json)$/.test(item.name)).map((item) => join(item.parentPath, item.name)),
     ...['render.mjs', 'template.mjs', 'render.test.mjs'].map((name) => join(HERE, name)),
-    ...Object.values(LAYOUT).map((name) => join(FIXTURES, name)),
+    ...[...Object.values(LAYOUT), 'policy-entries.json'].map((name) => join(FIXTURES, name)),
   ];
   for (const file of files) assert.doesNotMatch(readFileSync(file, 'utf8'), new RegExp(String.fromCodePoint(0x2014)), file);
   for (const name of ['render.mjs', 'template.mjs']) {

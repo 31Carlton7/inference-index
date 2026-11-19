@@ -37,7 +37,7 @@ The post text lives only in the template file. The renderer reads the fenced `te
 - `{slot}` is replaced with the value the Slots table names.
 - The last line is the link. `{site}` is `site_url` from `config.json`.
 - A line whose slot is marked optional and has no value is left out. A required slot with no value makes the renderer refuse.
-- A second block written as `text <name>` is a variant of the same template, for example `text recovered` in `outage.md`.
+- A second block written as `text <name>` is a variant of the same template, for example `text recovered` in `outage.md`. The renderer picks the variant from the data: `policy-diff.md` has `no-field`, `added` and `removed`.
 
 The links are the site's real routes: `/prices`, `/status`, `/changelog` and `/providers/{id}`.
 
@@ -75,7 +75,7 @@ node scripts/posts/render.mjs --data data --weekly --date 2026-11-20 --queue /tm
 
 Probe files live on the `data` branch, so `--probe-data` points at a checkout of it; without it the renderer looks under `--data`. `--queue` writes the draft somewhere other than `posts/queue`.
 
-The renderer refuses, with exit code 1, a one-line reason and no file written, when a guard in the template's "Does not fire when" list applies: a required field is missing, an incident does not have two run ids that are both in the runs files, both failed and from two regions, a policy entry lacks its before or after text, a price row is missing on either day, or the post is over 280 characters after the truncation rule.
+The renderer refuses, with exit code 1, a one-line reason and no file written, when a guard in the template's "Does not fire when" list applies: a required field is missing, an incident does not have two run ids that are both in the runs files, both failed and from two regions, a policy entry has no `before` or `after` key or both are empty, a price row is missing on either day, or the post is over 280 characters after the truncation rule.
 
 Tests: `node --test scripts/posts/*.test.mjs`. Fixtures are under `scripts/posts/fixtures/` and are all made up.
 
