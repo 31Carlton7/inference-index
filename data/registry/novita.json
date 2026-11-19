@@ -1,0 +1,74 @@
+{
+  "id": "novita",
+  "updated": "2026-11-18",
+  "fields": {
+    "status": {
+      "value": "live",
+      "source": "https://status.novita.ai/",
+      "checked": "2026-11-18",
+      "quote": "All services are online",
+      "note": "Novita's blog feed (https://blogs.novita.ai/rss.xml) has no post announcing an acquisition of the company."
+    },
+    "retention": {
+      "value": "Not retained beyond the time required to generate and deliver the output",
+      "source": "https://trust.novita.ai/faq",
+      "checked": "2026-11-18",
+      "quote": "Not retained beyond the time required to generate and deliver Output, except where required by applicable law.",
+      "note": "The same answer says technical metadata (request timestamps, error codes, usage metrics) is retained for 6 months, while the privacy policy says \"Technical Information: Retained for 2 years for security and analytics purposes\"."
+    },
+    "zdr": {
+      "value": "default",
+      "source": "https://trust.novita.ai/faq",
+      "checked": "2026-11-18",
+      "quote": "Zero Data Retention is the default for all endpoints, including serverless API calls."
+    },
+    "zdr_how": {
+      "value": "Nothing to turn on; it is the policy in the terms of service, with exceptions for legal requirements, providing the service and technical support",
+      "source": "https://novita.ai/legal/terms-of-service",
+      "checked": "2026-11-18",
+      "quote": "We have adopted a \"Zero Data Retention\" policy, which means that we will not, unless otherwise required by applicable law (or as necessary to provide the Services or technical support to you): (i) log your Content for human review; or (ii) retain your Content beyond the time it takes to generate Output and deliver that Output to you.",
+      "note": "The terms add that Novita may apply automated safety screening tools to content."
+    },
+    "training": {
+      "value": "no",
+      "source": "https://novita.ai/legal/terms-of-service",
+      "checked": "2026-11-18",
+      "quote": "By Default, Novita AI will not use your Content to train our own models or to improve the Services.",
+      "note": "The trust centre FAQ lists a \"Model provider\" as a sub-processor that receives API inputs and outputs for integrated models; the pages read do not say what those providers do with them."
+    },
+    "soc2": {
+      "value": "Type II",
+      "source": "https://trust.novita.ai/",
+      "checked": "2026-11-18",
+      "quote": "We are proud to be SOC 2 Type II Audited, and GDPR compliant.",
+      "note": "The report itself is gated; the trust centre FAQ says it is available under NDA for enterprise customers."
+    },
+    "attestations": {
+      "value": ["GDPR"],
+      "source": "https://trust.novita.ai/",
+      "checked": "2026-11-18",
+      "quote": "We are proud to be SOC 2 Type II Audited, and GDPR compliant.",
+      "note": "GDPR is Novita's own compliance statement, not a third-party attestation; the trust centre FAQ also lists CCPA compliance in the same way."
+    },
+    "subprocessors": {
+      "value": ["Amazon Web Services", "Slack", "Github", "Google Cloud", "Stripe", "Vercel", "Cloudflare Dashboard", "Google Analytics", "HubSpot", "Microsoft Clarity", "Tapfiliate", "Intercom", "Mailchimp"],
+      "source": "https://trust.novita.ai/subprocessors",
+      "checked": "2026-11-18",
+      "quote": "AWS acts as a primary infrastructure provider for hosting applications and storing data with various security and compliance certifications.",
+      "note": "The page is a list of 13 names with a description each and no introductory sentence; the quote is from the first entry. The trust centre FAQ also names an unnamed \"Model provider\" category for integrated models, which this list does not itemise."
+    },
+    "regions": {
+      "value": null,
+      "not_stated": true,
+      "checked": "2026-11-18",
+      "searched": ["https://trust.novita.ai/", "https://trust.novita.ai/faq", "https://novita.ai/legal/privacy-policy", "https://novita.ai/legal/terms-of-service", "https://novita.ai/", "https://docs.novita.ai/llms.txt", "https://novita.ai/docs/guides/llm-api.md", "https://novita.ai/docs/guides/llm-dedicated-endpoint.md"],
+      "note": "The trust centre FAQ says the infrastructure is hosted on AWS data centers without naming regions; the docs name regions only for the Sandbox product."
+    },
+    "funding": {
+      "value": null,
+      "not_stated": true,
+      "checked": "2026-11-18",
+      "searched": ["https://novita.ai/", "https://blogs.novita.ai/", "https://blogs.novita.ai/rss.xml", "https://blogs.novita.ai/tag/novita-ai-updates/", "https://trust.novita.ai/"]
+    }
+  }
+}
