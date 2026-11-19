@@ -29,6 +29,6 @@ When a page's text differs from the last stored copy, the changed passages are w
 
 - Documents behind an access request or an NDA. A trust centre that lists a report without a sentence about it is recorded as a listing, and the note says so.
 - Terms a provider agrees with one customer or one gateway. The registry records the public default for a customer buying direct.
-- Pages outside the five kinds above. A change announced only in a blog post or a docs changelog is found when the weekly review reads it, not by the daily job.
+- Pages outside the five kinds above. A change announced only in a blog post or a docs changelog is not caught by the daily job.
 - `regions` values are in each provider's own terms (continents, regions, endpoint types) and are not comparable across providers.
 - Lines that change on every fetch (relative timestamps, rotating model lists, request ids) are dropped before comparing, so a change inside such a line is not seen.
