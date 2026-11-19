@@ -38,7 +38,7 @@ Method version 1, Nov 18, 2026. A change to the prompt, the request settings or 
 
 ### The request
 
-Every 15 minutes, for each provider whose API key is set and each of the three models it serves, the job sends one streamed chat completion straight to that provider's own endpoint. Nothing goes through an aggregator, router or gateway. The endpoints are in `scripts/probe/endpoints.json`, each with the provider docs page it was read from.
+The job is scheduled every 15 minutes. On each run that actually starts, for each provider whose API key is set and each of the three models it serves, the job sends one streamed chat completion straight to that provider's own endpoint. Nothing goes through an aggregator, router or gateway. The endpoints are in `scripts/probe/endpoints.json`, each with the provider docs page it was read from.
 
 The prompt, verbatim, as a single user message with no system message:
 
@@ -77,7 +77,7 @@ Each request is appended as one line to `data/probes/runs/<date>/<provider>.json
 - `summary.json`: the last 7 days. `uptime` is `ok` runs over runs. Time to first token (p50, p95) and tokens per second (p50) are nearest-rank percentiles over the `ok` runs only.
 - `status.json`: the last 96 runs per provider and model, and incidents.
 
-Uptime here means "our request got a complete answer". It is one small request every 15 minutes from one place, not the provider's own availability figure.
+Uptime here means "our request got a complete answer". It is one small request per run from one place, scheduled every 15 minutes and often less frequent in practice (see Cadence and caveats), not the provider's own availability figure.
 
 ### Gaps
 
@@ -98,7 +98,7 @@ As of version 1 only one region is probing, so there are no incidents and none c
 
 ### Cadence and caveats
 
-- The job runs on GitHub's hosted runners at minutes 4, 19, 34 and 49 of each hour. GitHub's schedule is best effort: runs start late under load and some are dropped. Those show up as gaps. The `ts` on each raw line is when the request was really sent, and it is the only timing to trust.
+- The job runs on GitHub's hosted runners at minutes 4, 19, 34 and 49 of each hour. GitHub's schedule is best effort: runs start late under load and some are dropped. Those show up as gaps. The 15 minutes is the schedule we ask for, not a cadence we promise: `interval_minutes` in `status.json` is that schedule, and `runs` in `summary.json` is how many runs really happened, so the two together show the cadence achieved. In the first 12 hours after the workflow was added on Nov 19, 2026, GitHub started one scheduled run where about 48 were due. The `ts` on each raw line is when the request was really sent, and it is the only timing to trust.
 - GitHub turns scheduled workflows off in a public repository after 60 days with no repository activity. If the probes stop, check that first.
 - `region` on a scheduled run is `gha-` plus the airport code of the Cloudflare data centre nearest the runner (read from `cloudflare.com/cdn-cgi/trace`), or `gha-unknown`. Runners move between locations from run to run, so latency numbers mix several origins.
 - The three models are not the same weights everywhere (see Models), and a short prompt with 128 output tokens says little about long generations.
