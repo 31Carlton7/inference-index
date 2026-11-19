@@ -43,21 +43,39 @@
       "note": "The report is available under NDA through the trust centre, which lists a SOC 2 Type 2 report and a SOC 3 report dated 5.31.26."
     },
     "attestations": {
-      "value": ["HIPAA BAA", "ISO 27001", "PCI DSS SAQ D"],
+      "value": [
+        "HIPAA BAA",
+        "ISO 27001"
+      ],
       "source": "https://www.baseten.co/security-practices/",
       "checked": "2026-11-18",
       "quote": "HIPAA: Baseten offers HIPAA-eligible deployment configurations and enters into Business Associate Agreements (BAAs) with qualifying customers.",
-      "note": "ISO 27001:2022 and PCI DSS - SAQ D are listed under Compliance on https://trust.baseten.co/ with gated documents and no sentence; that page also lists FedRAMP 20x package documents, GDPR and CCPA."
+      "note": "ISO 27001:2022 is listed under Compliance on https://trust.baseten.co/ with a gated document and no sentence. That page also lists PCI DSS - SAQ D (a self-assessment), FedRAMP 20x package documents, GDPR and CCPA, which are not counted here."
     },
     "subprocessors": {
-      "value": ["Amazon Web Services", "Google Cloud", "WorkOS", "Pylon", "Slack", "Orb", "Hugging Face", "ClickHouse", "Cloudflare", "OVH Cloud", "PostHog", "SigNoz"],
+      "value": [
+        "Amazon Web Services",
+        "Google Cloud",
+        "WorkOS",
+        "Pylon",
+        "Slack",
+        "Orb",
+        "Hugging Face",
+        "ClickHouse",
+        "Cloudflare",
+        "OVH Cloud",
+        "PostHog",
+        "SigNoz"
+      ],
       "source": "https://trust.baseten.co/subprocessors",
       "checked": "2026-11-18",
       "quote": "Amazon Web Services • Cloud Infrastructure and Compute",
       "note": "The page is a list with no sentences; ClickHouse, Cloudflare, OVH Cloud, PostHog and SigNoz are marked as Baseten Sandboxes only, and other cloud compute providers (the trust centre updates name Buzz HPC and Datasection) are in a separate Compute Providers PDF that was not read."
     },
     "regions": {
-      "value": ["Not fixed: the regions serving a model can change"],
+      "value": [
+        "Not fixed: the regions serving a model can change"
+      ],
       "source": "https://docs.baseten.co/inference/model-apis/overview",
       "checked": "2026-11-18",
       "quote": "Model APIs use a shared endpoint, and the regions serving a model can change.",

@@ -14,7 +14,7 @@
       "source": "https://trust.novita.ai/faq",
       "checked": "2026-11-18",
       "quote": "Not retained beyond the time required to generate and deliver Output, except where required by applicable law.",
-      "note": "The same answer says technical metadata (request timestamps, error codes, usage metrics) is retained for 6 months, while the privacy policy says \"Technical Information: Retained for 2 years for security and analytics purposes\"."
+      "note": "The same answer says technical metadata (request timestamps, error codes, usage metrics) is retained for 6 months. The privacy policy (https://novita.ai/legal/privacy-policy) says \"Technical Information: Retained for 2 years for security and analytics purposes\"."
     },
     "zdr": {
       "value": "default",
@@ -44,14 +44,33 @@
       "note": "The report itself is gated; the trust centre FAQ says it is available under NDA for enterprise customers."
     },
     "attestations": {
-      "value": ["GDPR"],
-      "source": "https://trust.novita.ai/",
+      "value": null,
+      "not_stated": true,
       "checked": "2026-11-18",
-      "quote": "We are proud to be SOC 2 Type II Audited, and GDPR compliant.",
-      "note": "GDPR is Novita's own compliance statement, not a third-party attestation; the trust centre FAQ also lists CCPA compliance in the same way."
+      "searched": [
+        "https://trust.novita.ai/",
+        "https://trust.novita.ai/faq",
+        "https://novita.ai/legal/privacy-policy",
+        "https://novita.ai/legal/terms-of-service"
+      ],
+      "note": "The trust centre says \"We are proud to be SOC 2 Type II Audited, and GDPR compliant.\" and its FAQ lists CCPA compliance; these are Novita's own statements of compliance with a law, which this field does not count. SOC 2 is in its own field."
     },
     "subprocessors": {
-      "value": ["Amazon Web Services", "Slack", "Github", "Google Cloud", "Stripe", "Vercel", "Cloudflare Dashboard", "Google Analytics", "HubSpot", "Microsoft Clarity", "Tapfiliate", "Intercom", "Mailchimp"],
+      "value": [
+        "Amazon Web Services",
+        "Slack",
+        "Github",
+        "Google Cloud",
+        "Stripe",
+        "Vercel",
+        "Cloudflare Dashboard",
+        "Google Analytics",
+        "HubSpot",
+        "Microsoft Clarity",
+        "Tapfiliate",
+        "Intercom",
+        "Mailchimp"
+      ],
       "source": "https://trust.novita.ai/subprocessors",
       "checked": "2026-11-18",
       "quote": "AWS acts as a primary infrastructure provider for hosting applications and storing data with various security and compliance certifications.",
@@ -61,14 +80,29 @@
       "value": null,
       "not_stated": true,
       "checked": "2026-11-18",
-      "searched": ["https://trust.novita.ai/", "https://trust.novita.ai/faq", "https://novita.ai/legal/privacy-policy", "https://novita.ai/legal/terms-of-service", "https://novita.ai/", "https://docs.novita.ai/llms.txt", "https://novita.ai/docs/guides/llm-api.md", "https://novita.ai/docs/guides/llm-dedicated-endpoint.md"],
+      "searched": [
+        "https://trust.novita.ai/",
+        "https://trust.novita.ai/faq",
+        "https://novita.ai/legal/privacy-policy",
+        "https://novita.ai/legal/terms-of-service",
+        "https://novita.ai/",
+        "https://docs.novita.ai/llms.txt",
+        "https://novita.ai/docs/guides/llm-api.md",
+        "https://novita.ai/docs/guides/llm-dedicated-endpoint.md"
+      ],
       "note": "The trust centre FAQ says the infrastructure is hosted on AWS data centers without naming regions; the docs name regions only for the Sandbox product."
     },
     "funding": {
       "value": null,
       "not_stated": true,
       "checked": "2026-11-18",
-      "searched": ["https://novita.ai/", "https://blogs.novita.ai/", "https://blogs.novita.ai/rss.xml", "https://blogs.novita.ai/tag/novita-ai-updates/", "https://trust.novita.ai/"]
+      "searched": [
+        "https://novita.ai/",
+        "https://blogs.novita.ai/",
+        "https://blogs.novita.ai/rss.xml",
+        "https://blogs.novita.ai/tag/novita-ai-updates/",
+        "https://trust.novita.ai/"
+      ]
     }
   }
 }

@@ -16,7 +16,7 @@
       "note": "No number of days is given in the guide or the Terms of Service; the retained inputs and outputs are stored in Finland (EU)."
     },
     "zdr": {
-      "value": "on request",
+      "value": "self-serve",
       "source": "https://docs.tokenfactory.nebius.com/legal/legal-quick-guide",
       "checked": "2026-11-18",
       "quote": "For maximum privacy and control, you can enable Zero Data Retention in your account settings.",

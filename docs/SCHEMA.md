@@ -76,6 +76,11 @@ A url the provider does not have is `null`. `data_policy` is the page, outside t
 
 The values listed for `status`, `zdr`, `training` and `soc2` are the standard vocabulary. Use one of them whenever the page's statement fits. For `zdr`, `self-serve` is a setting any customer can switch on themselves, with no request to the provider. For `soc2`, `type not stated` is a page that names SOC 2 without saying Type I or Type II. When the statement fits none of them, the value is a short phrase in the page's own terms. `npm run validate` lists such values as warnings so they stay rare.
 
+Two rules of reading, applied to every record:
+
+- `zdr` is `default` when the provider's own page says in a sentence that prompts and outputs are not stored or retained after the request, whether or not it uses the words "zero data retention". When it does not use them, the `note` says so. Exceptions the page gives (a batch service, some models) go in the `note`.
+- `attestations` holds what a third party certifies or audits (an ISO certificate, a SOC 1 report, a HIPAA attestation report) and agreements the provider signs (a BAA). A provider's own statement that it complies with a law ("GDPR compliant", "HIPAA compliant") and self-assessments are not counted; they are quoted in the `note`.
+
 New keys may be added. Pages render any key they do not know with its raw value.
 
 ## data/changelog.json

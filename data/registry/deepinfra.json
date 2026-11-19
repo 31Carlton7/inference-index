@@ -37,27 +37,36 @@
       "note": "For Google and Anthropic models offered through DeepInfra, the receiving company's training policy applies."
     },
     "soc2": {
-      "value": "certified, type not stated",
+      "value": "type not stated",
       "source": "https://deepinfra.com/",
       "checked": "2026-11-18",
       "quote": "DeepInfra is SOC 2 and ISO 27001 certified.",
       "note": "No public DeepInfra page read says whether the report is Type I or Type II; the trust centre lists SOC 2 as Compliant."
     },
     "attestations": {
-      "value": ["ISO 27001", "HIPAA BAA"],
+      "value": [
+        "ISO 27001",
+        "HIPAA BAA"
+      ],
       "source": "https://deepinfra.com/",
       "checked": "2026-11-18",
       "quote": "DeepInfra is SOC 2 and ISO 27001 certified.",
       "note": "The trust centre FAQ (https://trust.deepinfra.com/faq) says \"DeepInfra signs a Business Associate Agreement (BAA) with customers on an enterprise agreement\", for models hosted by DeepInfra only; the trust centre lists GDPR as In progress."
     },
     "subprocessors": {
-      "value": ["AWS", "Stripe", "GCP"],
+      "value": [
+        "AWS",
+        "Stripe",
+        "GCP"
+      ],
       "source": "https://trust.deepinfra.com/subprocessors",
       "checked": "2026-11-18",
       "quote": "Here are the subprocessors that DeepInfra uses to process data in its infrastructure and business operations."
     },
     "regions": {
-      "value": ["United States"],
+      "value": [
+        "United States"
+      ],
       "source": "https://trust.deepinfra.com/faq",
       "checked": "2026-11-18",
       "quote": "All DeepInfra inference runs in data centers in the United States.",

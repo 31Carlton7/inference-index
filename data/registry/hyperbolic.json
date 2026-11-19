@@ -21,7 +21,7 @@
       "source": "https://www.hyperbolic.ai/privacy/faq",
       "checked": "2026-11-18",
       "quote": "Once the inference process is complete, the data is immediately discarded.",
-      "note": "The pages read do not use the term zero data retention; the value reflects the FAQ's statement that inputs are discarded for every request."
+      "note": "The pages read do not use the term zero data retention; the value rests on this sentence. The privacy policy says a conversation is stored as feedback if you rate an output, and the Flux post says some models are routed to third-party providers."
     },
     "zdr_how": {
       "value": "Nothing to turn on",
@@ -47,22 +47,46 @@
       "value": null,
       "not_stated": true,
       "checked": "2026-11-18",
-      "searched": ["https://www.hyperbolic.ai/docs/general/security-compliance", "https://trust.hyperbolic.ai/", "https://www.hyperbolic.ai/privacy", "https://www.hyperbolic.ai/privacy/faq", "https://www.hyperbolic.ai/terms"],
+      "searched": [
+        "https://www.hyperbolic.ai/docs/general/security-compliance",
+        "https://trust.hyperbolic.ai/",
+        "https://www.hyperbolic.ai/privacy",
+        "https://www.hyperbolic.ai/privacy/faq",
+        "https://www.hyperbolic.ai/terms"
+      ],
       "note": "The security page says \"Hyperbolic is not currently HIPAA-certified.\" and offers data processing agreements on request; the trust centre lists only SOC 2."
     },
     "subprocessors": {
-      "value": ["Amazon Web Services", "GitHub", "GitLab", "Google Workspace", "Pylon", "Supabase", "Vanta", "Vercel"],
+      "value": [
+        "Amazon Web Services",
+        "GitHub",
+        "GitLab",
+        "Google Workspace",
+        "Pylon",
+        "Supabase",
+        "Vanta",
+        "Vercel"
+      ],
       "source": "https://trust.hyperbolic.ai/subprocessors",
       "checked": "2026-11-18",
       "quote": "Amazon Web Services • Cloud provider",
       "note": "The page is a list of 8 names with no sentences; it does not name the third-party model providers that Hyperbolic's Flux post says some requests are routed to."
     },
     "regions": {
-      "value": ["us-west-2 (API edge)"],
-      "source": "https://www.hyperbolic.ai/blog/flux-inference-api",
+      "value": null,
+      "not_stated": true,
       "checked": "2026-11-18",
-      "quote": "The current edge is in us-west-2.",
-      "note": "This is where the inference API edge runs; the pages read do not name the data centres that serve Hyperbolic-hosted models, and externally routed models run at third-party providers."
+      "searched": [
+        "https://www.hyperbolic.ai/privacy/faq",
+        "https://www.hyperbolic.ai/terms",
+        "https://www.hyperbolic.ai/docs/general/security-compliance",
+        "https://trust.hyperbolic.ai/",
+        "https://www.hyperbolic.ai/privacy",
+        "https://trust.hyperbolic.ai/subprocessors",
+        "https://www.hyperbolic.ai/blog/flux-inference-api",
+        "https://www.hyperbolic.ai/blog/a1-funding"
+      ],
+      "note": "Hyperbolic's Flux post (https://www.hyperbolic.ai/blog/flux-inference-api) says \"The current edge is in us-west-2.\", which is where the API edge runs; the pages read do not say where inference runs."
     },
     "funding": {
       "value": "$30M Series A1 (October 2026)",

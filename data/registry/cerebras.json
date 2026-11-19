@@ -47,7 +47,7 @@
       "note": "Terms of Use effective August 27, 2024."
     },
     "soc2": {
-      "value": "listed, type not stated",
+      "value": "type not stated",
       "source": "https://trust.cerebras.ai/",
       "checked": "2026-11-18",
       "quote": "SOC 2",
@@ -83,7 +83,16 @@
       ]
     },
     "regions": {
-      "value": ["Santa Clara, CA", "Stockton, CA", "Dallas, TX", "Minneapolis, MN", "Oklahoma City, OK", "Montreal, Canada", "Midwest / Eastern US", "Europe"],
+      "value": [
+        "Santa Clara, CA",
+        "Stockton, CA",
+        "Dallas, TX",
+        "Minneapolis, MN",
+        "Oklahoma City, OK",
+        "Montreal, Canada",
+        "Midwest / Eastern US",
+        "Europe"
+      ],
       "source": "https://www.cerebras.ai/press-release/cerebras-announces-six-new-ai-datacenters-across-north-america-and-europe-to-deliver-industry-s",
       "checked": "2026-11-18",
       "quote": "March 11, 2025 — Sunnyvale, CA — Cerebras Systems, the pioneer in accelerating generative AI, today announced the launch of six new AI inference datacenters powered by Cerebras Wafer-Scale Engines.",

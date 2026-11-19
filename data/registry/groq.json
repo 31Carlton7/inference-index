@@ -17,7 +17,7 @@
       "note": "The same page says inputs and outputs may be temporarily logged for troubleshooting or abuse investigation and kept up to 30 days, batch files are kept up to 30 days, and fine-tuning data until deleted."
     },
     "zdr": {
-      "value": "on request",
+      "value": "self-serve",
       "source": "https://console.groq.com/docs/your-data",
       "checked": "2026-11-18",
       "quote": "All customers may enable Zero Data Retention (ZDR) in Data Controls settings.",
@@ -44,21 +44,47 @@
       "note": "The report itself is behind an access request."
     },
     "attestations": {
-      "value": ["HIPAA BAA"],
+      "value": [
+        "HIPAA BAA"
+      ],
       "source": "https://console.groq.com/docs/legal/customer-business-associate-addendum",
       "checked": "2026-11-18",
       "quote": "This Business Associate Addendum (“BAA”) is entered into between the Groq Contracting Party (“Business Associate” or “Groq”) and the customer agreeing to the terms below (“Customer”) for use of the applicable GroqCloud Services and supplements, amends, and is incorporated into the Groq Services Agreement (the “Agreement”) between the parties.",
       "note": "The trust centre also lists GDPR and HIPAA under Compliance, as labels without a sentence."
     },
     "subprocessors": {
-      "value": ["Stytch", "Google Cloud Platform", "Stripe", "CloudFlare", "Intercom", "Oracle Netsuite", "MailChimp", "Lago", "Anrok", "Hubspot", "Salesforce", "Tavily", "FoundryLabs (e2b)", "DataGrail", "PostHog", "Wiz", "Exa", "SupportNinja"],
+      "value": [
+        "Stytch",
+        "Google Cloud Platform",
+        "Stripe",
+        "CloudFlare",
+        "Intercom",
+        "Oracle Netsuite",
+        "MailChimp",
+        "Lago",
+        "Anrok",
+        "Hubspot",
+        "Salesforce",
+        "Tavily",
+        "FoundryLabs (e2b)",
+        "DataGrail",
+        "PostHog",
+        "Wiz",
+        "Exa",
+        "SupportNinja"
+      ],
       "source": "https://trust.groq.com/subprocessors",
       "checked": "2026-11-18",
       "quote": "Stytch • Identity intermediary",
       "note": "The page is a list of 18 rows, not prose; the quote is its first row and the value is every name listed."
     },
     "regions": {
-      "value": ["North America", "Europe", "Middle East", "Asia Pacific"],
+      "value": [
+        "North America",
+        "Europe",
+        "Middle East",
+        "Asia Pacific"
+      ],
       "source": "https://groq.com/newsroom/groq-closes-usd350-million-series-a-building-the-world-s-leading-ai-inference-cloud",
       "checked": "2026-11-18",
       "quote": "Groq today operates 13 data centers across North America, Europe, the Middle East, and Asia Pacific.",

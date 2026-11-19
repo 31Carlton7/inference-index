@@ -14,20 +14,38 @@
       "source": "https://sambanova.ai/data-processing-agreement-sambanova",
       "checked": "2026-11-18",
       "quote": "Prompts, inputs and completions submitted to or generated through the Services are processed transiently to generate the response and are retained for no more than 30 days solely for security, fraud and abuse monitoring and then deleted, except to the extent Customer elects to store such content within the Services.",
-      "note": "The SambaCloud product page (https://sambanova.ai/products/sambacloud) says \"SambaCloud never sees or collects any of your data or user prompts, ensuring full data privacy.\", which does not match the 30 days in the DPA."
+      "note": "The SambaCloud product page (https://sambanova.ai/products/sambacloud) says \"SambaCloud never sees or collects any of your data or user prompts, ensuring full data privacy.\" The value follows the DPA sentence quoted here."
     },
     "zdr": {
       "value": null,
       "not_stated": true,
       "checked": "2026-11-18",
-      "searched": ["https://sambanova.ai/legal-agreements", "https://sambanova.ai/cloud-end-user-license-agreement", "https://sambanova.ai/data-processing-agreement-sambanova", "https://sambanova.ai/privacy-policy", "https://sambanova.ai/products/sambacloud", "https://trust.sambanova.ai/", "https://docs.sambanova.ai/docs/en/get-started/overview", "https://docs.sambanova.ai/docs/_llms/v2-3-2.txt"],
+      "searched": [
+        "https://sambanova.ai/legal-agreements",
+        "https://sambanova.ai/cloud-end-user-license-agreement",
+        "https://sambanova.ai/data-processing-agreement-sambanova",
+        "https://sambanova.ai/privacy-policy",
+        "https://sambanova.ai/products/sambacloud",
+        "https://trust.sambanova.ai/",
+        "https://docs.sambanova.ai/docs/en/get-started/overview",
+        "https://docs.sambanova.ai/docs/_llms/v2-3-2.txt"
+      ],
       "note": "No page read offers zero data retention by name or says how to get a shorter period than the DPA's 30 days; the product page's \"never sees or collects\" sentence is marketing copy that the DPA contradicts."
     },
     "zdr_how": {
       "value": null,
       "not_stated": true,
       "checked": "2026-11-18",
-      "searched": ["https://sambanova.ai/legal-agreements", "https://sambanova.ai/cloud-end-user-license-agreement", "https://sambanova.ai/data-processing-agreement-sambanova", "https://sambanova.ai/privacy-policy", "https://sambanova.ai/products/sambacloud", "https://trust.sambanova.ai/", "https://docs.sambanova.ai/docs/en/get-started/overview", "https://docs.sambanova.ai/docs/_llms/v2-3-2.txt"]
+      "searched": [
+        "https://sambanova.ai/legal-agreements",
+        "https://sambanova.ai/cloud-end-user-license-agreement",
+        "https://sambanova.ai/data-processing-agreement-sambanova",
+        "https://sambanova.ai/privacy-policy",
+        "https://sambanova.ai/products/sambacloud",
+        "https://trust.sambanova.ai/",
+        "https://docs.sambanova.ai/docs/en/get-started/overview",
+        "https://docs.sambanova.ai/docs/_llms/v2-3-2.txt"
+      ]
     },
     "training": {
       "value": "no",
@@ -44,14 +62,41 @@
       "note": "The report itself is behind a request-access gate on the trust centre."
     },
     "attestations": {
-      "value": ["ISO 27001"],
+      "value": [
+        "ISO 27001"
+      ],
       "source": "https://trust.sambanova.ai/",
       "checked": "2026-11-18",
       "quote": "We hold SOC 2 Type 2 and ISO 27001 certifications, reflecting our commitment to robust security controls, rigorous risk management, and continuous improvement.",
       "note": "The trust centre lists the standard as ISO 27001:2022."
     },
     "subprocessors": {
-      "value": ["Amazon Web Services, Inc.", "Google LLC", "Microsoft Corporation", "SoftBank Group Corp.", "Vantage, LLC", "Colovore", "Equinix", "GitHub, Inc.", "Oracle Corporation", "Stripe, Inc.", "Metronome Technologies, Inc.", "Okta, Inc.", "Salesforce.com, Inc.", "Atlassian Corporation", "Bandwidth IG", "Mara Holdings", "Jamf", "KnowBe4", "SumoLogic", "Vanta", "Infercom", "Argyll", "Southern Cross", "Zendesk"],
+      "value": [
+        "Amazon Web Services, Inc.",
+        "Google LLC",
+        "Microsoft Corporation",
+        "SoftBank Group Corp.",
+        "Vantage, LLC",
+        "Colovore",
+        "Equinix",
+        "GitHub, Inc.",
+        "Oracle Corporation",
+        "Stripe, Inc.",
+        "Metronome Technologies, Inc.",
+        "Okta, Inc.",
+        "Salesforce.com, Inc.",
+        "Atlassian Corporation",
+        "Bandwidth IG",
+        "Mara Holdings",
+        "Jamf",
+        "KnowBe4",
+        "SumoLogic",
+        "Vanta",
+        "Infercom",
+        "Argyll",
+        "Southern Cross",
+        "Zendesk"
+      ],
       "source": "https://sambanova.ai/data-processing-agreement-sambanova",
       "checked": "2026-11-18",
       "quote": "The following entities are authorized to Process Customer Personal Data as Subprocessors as of the effective date of this DPA.",
@@ -61,7 +106,15 @@
       "value": null,
       "not_stated": true,
       "checked": "2026-11-18",
-      "searched": ["https://sambanova.ai/products/sambacloud", "https://docs.sambanova.ai/docs/en/get-started/overview", "https://docs.sambanova.ai/docs/en/get-started/api-keys-urls.md", "https://docs.sambanova.ai/docs/_llms/v2-3-2.txt", "https://sambanova.ai/cloud-end-user-license-agreement", "https://sambanova.ai/data-processing-agreement-sambanova", "https://trust.sambanova.ai/subprocessors"],
+      "searched": [
+        "https://sambanova.ai/products/sambacloud",
+        "https://docs.sambanova.ai/docs/en/get-started/overview",
+        "https://docs.sambanova.ai/docs/en/get-started/api-keys-urls.md",
+        "https://docs.sambanova.ai/docs/_llms/v2-3-2.txt",
+        "https://sambanova.ai/cloud-end-user-license-agreement",
+        "https://sambanova.ai/data-processing-agreement-sambanova",
+        "https://trust.sambanova.ai/subprocessors"
+      ],
       "note": "No page says where SambaCloud inference runs; the subprocessor lists place data centre providers in the USA, Japan, Germany, the United Kingdom and Australia without tying them to SambaCloud."
     },
     "funding": {

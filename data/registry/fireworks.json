@@ -44,21 +44,52 @@
       "quote": "SOC 2 Type II (certified)"
     },
     "attestations": {
-      "value": ["ISO 27001", "ISO 27701", "ISO 42001", "HIPAA"],
+      "value": [
+        "ISO 27001",
+        "ISO 27701",
+        "ISO 42001"
+      ],
       "source": "https://docs.fireworks.ai/guides/security_compliance/data_security",
       "checked": "2026-11-18",
       "quote": "Fireworks has achieved all three ISO certifications covering security, privacy, and AI management:",
-      "note": "The three are listed in the table under that sentence; the same page says \"Fireworks is HIPAA compliant\" and does not mention a BAA."
+      "note": "The three are listed in the table under that sentence. The same page says \"Fireworks is HIPAA compliant\" and does not mention a BAA; a provider's own statement of compliance with a law is not counted here."
     },
     "subprocessors": {
-      "value": ["Amazon Web Services", "Google Cloud Platform", "Oracle Cloud Infrastructure", "CloudFlare", "Vercel", "Pylon", "Linear", "Discord Inc.", "Slack", "Lambda Labs", "Crusoe", "Vultr", "CoreWeave", "DigitalOcean", "Fluidstack", "TensorWave", "IREN", "GMI", "Era4", "Alibaba Cloud", "Exa"],
+      "value": [
+        "Amazon Web Services",
+        "Google Cloud Platform",
+        "Oracle Cloud Infrastructure",
+        "CloudFlare",
+        "Vercel",
+        "Pylon",
+        "Linear",
+        "Discord Inc.",
+        "Slack",
+        "Lambda Labs",
+        "Crusoe",
+        "Vultr",
+        "CoreWeave",
+        "DigitalOcean",
+        "Fluidstack",
+        "TensorWave",
+        "IREN",
+        "GMI",
+        "Era4",
+        "Alibaba Cloud",
+        "Exa"
+      ],
       "source": "https://trust.fireworks.ai/subprocessors",
       "checked": "2026-11-18",
       "quote": "Amazon Web Services • Cloud infrastructure and service provider",
       "note": "The page is a list of 21 rows, not prose; the quote is its first row and the value is every name listed."
     },
     "regions": {
-      "value": ["US", "Canada", "Europe", "APAC"],
+      "value": [
+        "US",
+        "Canada",
+        "Europe",
+        "APAC"
+      ],
       "source": "https://docs.fireworks.ai/deployments/regions",
       "checked": "2026-11-18",
       "quote": "Supported multi-regions: GLOBAL, US, CANADA, EUROPE, APAC.",

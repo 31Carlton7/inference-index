@@ -17,7 +17,7 @@
       "note": "The docs say stored data can be deleted at any time but give no retention period; the privacy policy gives none either."
     },
     "zdr": {
-      "value": "on request",
+      "value": "self-serve",
       "source": "https://docs.together.ai/docs/zero-data-retention",
       "checked": "2026-11-18",
       "quote": "Together AI supports zero data retention (ZDR) at the organization level.",
@@ -44,21 +44,61 @@
       "note": "Trust centre update published June 17, 2026; the report itself is behind an access request."
     },
     "attestations": {
-      "value": ["ISO 27001:2022"],
+      "value": [
+        "ISO 27001:2022"
+      ],
       "source": "https://trust.together.ai/",
       "checked": "2026-11-18",
       "quote": "I am very pleased to announce that Together AI is officially ISO 27001:2022 certified!!!",
       "note": "Together's July 2025 blog post also says it adheres to HIPAA requirements and signs BAAs with partners, without naming an attestation."
     },
     "subprocessors": {
-      "value": ["Amazon Web Services", "Google Workspace", "Okta", "Stripe", "5C AI Group Inc.", "Applied Digital", "ClusterPower", "Crusoe Cloud", "Hypertec", "IREN", "Massed Compute", "Northern Data Group", "Oracle Cloud", "Ori Industries", "Voltage Park", "Vultr", "Pylon", "Salesforce", "Slack", "Zoom", "Amplitude", "Anthropic", "Calendly", "Cloudflare", "DocuSign", "Dropbox", "Gong", "MongoDB", "OpenAI", "OpenRouter", "Perplexity AI", "Snowflake", "Twilio", "Krea AI, Inc.", "International Business Machines (IBM)"],
+      "value": [
+        "Amazon Web Services",
+        "Google Workspace",
+        "Okta",
+        "Stripe",
+        "5C AI Group Inc.",
+        "Applied Digital",
+        "ClusterPower",
+        "Crusoe Cloud",
+        "Hypertec",
+        "IREN",
+        "Massed Compute",
+        "Northern Data Group",
+        "Oracle Cloud",
+        "Ori Industries",
+        "Voltage Park",
+        "Vultr",
+        "Pylon",
+        "Salesforce",
+        "Slack",
+        "Zoom",
+        "Amplitude",
+        "Anthropic",
+        "Calendly",
+        "Cloudflare",
+        "DocuSign",
+        "Dropbox",
+        "Gong",
+        "MongoDB",
+        "OpenAI",
+        "OpenRouter",
+        "Perplexity AI",
+        "Snowflake",
+        "Twilio",
+        "Krea AI, Inc.",
+        "International Business Machines (IBM)"
+      ],
       "source": "https://trust.together.ai/subprocessors",
       "checked": "2026-11-18",
       "quote": "Amazon Web Services • Hosting and cloud infrastructure",
       "note": "The page is a list of 35 rows, not prose; the quote is its first row and the value is every name listed."
     },
     "regions": {
-      "value": ["United States"],
+      "value": [
+        "United States"
+      ],
       "source": "https://docs.together.ai/docs/privacy-and-security",
       "checked": "2026-11-18",
       "quote": "For select serverless models, geo-specific inference keeps inference processing in the United States, with no GPUs to provision.",
