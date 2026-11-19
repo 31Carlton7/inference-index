@@ -78,7 +78,7 @@ write("registry/example-beta.json", {
     zdr: stated("beta", "no", "privacy", "We do not offer zero data retention."),
     zdr_how: notStated("beta", "privacy"),
     training: stated("beta", "opt-out", "terms", "You may opt out of our use of your content for training."),
-    soc2: notStated("beta", "trust", "privacy"),
+    soc2: stated("beta", "certified, type not stated", "trust", "Example Beta is SOC 2 certified."),
     attestations: notStated("beta", "trust"),
     subprocessors: notStated("beta", "privacy"),
     regions: notStated("beta", "docs"),
@@ -90,7 +90,15 @@ write("snapshots/example-alpha/privacy/" + day(3) + ".txt", "We retain inputs an
 write("snapshots/example-alpha/privacy/" + day(2) + ".txt", "We retain inputs and outputs for 30 days.\n");
 write("changelog.json", {
   entries: [
-    { date: day(1), provider: "example-beta", kind: "price", field: null, before: 0.2, after: 0.18, source: "https://beta.example.com/pricing" },
+    {
+      date: day(1),
+      provider: "example-beta",
+      kind: "price",
+      model: "example-model-large",
+      before: { input: 0.2, output: 0.79 },
+      after: { input: 0.18, output: 0.79 },
+      source: "https://beta.example.com/pricing",
+    },
     {
       date: day(2),
       provider: "example-alpha",
@@ -112,7 +120,8 @@ write("models.json", {
     id,
     name: id.replace("example-model-", "Example Model ").replace(/\b[a-z]/, (letter) => letter.toUpperCase()),
     weights: `https://huggingface.co/example/${id}`,
-    providers: { "example-alpha": id, "example-beta": `example/${id}` },
+    providers: { "example-alpha": id, "example-beta": `example/${id}`, "example-gamma": id },
+    quantization: { "example-beta": "fp8" },
   })),
   basket: { version: 1, models, weights: { input: 0.75, output: 0.25 }, note: "Fixture basket." },
 });
@@ -125,6 +134,8 @@ for (let daysAgo = 13; daysAgo >= 0; daysAgo--) {
   const drift = daysAgo * 0.004;
   write(`prices/daily/${date}.json`, {
     date,
+    basket_version: 1,
+    missing: models.map((model) => ({ provider: "example-gamma", model, reason: "https://gamma.example.com/pricing returned 403" })),
     rows: providers.slice(0, 2).flatMap((provider, p) =>
       models.map((model, m) => ({
         provider: provider.id,
@@ -136,7 +147,10 @@ for (let daysAgo = 13; daysAgo >= 0; daysAgo--) {
       })),
     ),
   });
-  series.push({ date, value: Number((0.52 + drift + (daysAgo % 3) * 0.006).toFixed(3)), providers: 2, rows: `data/prices/daily/${date}.json` });
+  series.push({ date, value: Number((0.52 + drift + (daysAgo % 3) * 0.006).toFixed(3)), providers: 2,
+    models: Object.fromEntries(models.map((model, m) => [model, { median: Number((0.3 + m * 0.6 + drift).toFixed(3)), providers: 2 }])),
+    rows: `data/prices/daily/${date}.json`,
+  });
 }
 write("prices/index.json", { basket_version: 1, series });
 
@@ -173,7 +187,8 @@ for (const provider of ["example-alpha", "example-beta"]) {
       uptime: Number((ok / runs.length).toFixed(4)),
       ttft_ms_p50: provider === "example-alpha" ? 212 : 348,
       ttft_ms_p95: provider === "example-alpha" ? 480 : 1210,
-      tps_p50: provider === "example-alpha" ? 79.1 : 142.6,
+      // Example Beta reports no token counts for the small model, so it has no tokens per second.
+      tps_p50: provider === "example-alpha" ? 79.1 : model === models[1] ? null : 142.6,
       first_run: runs[0][0],
       last_run: runs.at(-1)[0],
       last_status: runs.at(-1)[1],
@@ -183,13 +198,77 @@ for (const provider of ["example-alpha", "example-beta"]) {
 write("probes/status.json", { generated: stamp(now), interval_minutes: 15, rows: statusRows });
 write("probes/summary.json", { generated: stamp(now), window_days: 7, rows: summaryRows });
 
+const referenceRun = `${today}-reference-${models[0]}`;
+const noiseFloor = { reference_runs: 3, pairs: 3, mean: 0.98, min: 0.96 };
+const fidelityRow = (provider, fields) => ({
+  provider,
+  model: models[0],
+  reference_run: referenceRun,
+  runs: [`${today}T13:05:02Z-${provider}-${models[0]}-fidelity-01`],
+  runs_file: `data/fidelity/runs/${today}/${provider}.jsonl`,
+  experimental: true,
+  noise_floor: noiseFloor,
+  prompts_scored: 20,
+  logprob_gap: null,
+  reference_source: "reference-example",
+  ...fields,
+});
 const fidelity = {
   date: today,
   prompts_version: 1,
+  scoring_version: 1,
+  experimental: true,
+  references: [
+    {
+      id: referenceRun,
+      model: models[0],
+      source: "reference-example",
+      runs: ["01", "02", "03"].map((pass) => `${today}T13:0${pass[1]}:02Z-reference-example-${models[0]}-fidelity-${pass}`),
+      runs_file: `data/fidelity/runs/${today}/reference.jsonl`,
+    },
+  ],
   rows: [
-    { provider: "example-alpha", model: models[0], score: 0.97, reference_run: `${today}-reference-${models[0]}`, runs: [`${today}T13:00:02Z-example-alpha-${models[0]}-fidelity-01`], runs_file: `data/fidelity/runs/${today}/example-alpha.jsonl` },
-    { provider: "example-beta", model: models[0], score: 0.912, reference_run: `${today}-reference-${models[0]}`, runs: [`${today}T13:00:04Z-example-beta-${models[0]}-fidelity-01`], runs_file: `data/fidelity/runs/${today}/example-beta.jsonl` },
+    fidelityRow("example-alpha", {
+      score: 0.97,
+      state: "repeated",
+      vs_noise_floor: "within",
+      exact_matches: 17,
+      stated_quantization: null,
+      previous: { date: day(1), score: 0.975, vs_noise_floor: "within", reference_source: "reference-example" },
+    }),
+    fidelityRow("example-beta", {
+      score: 0.912,
+      state: "unconfirmed",
+      vs_noise_floor: "diverges",
+      exact_matches: 11,
+      stated_quantization: "fp8",
+      previous: null,
+    }),
+  ],
+  unscored: [
+    { provider: "example-alpha", model: models[1], reason: "no reference run" },
+    { provider: "example-gamma", model: models[0], reason: "no prompt could be compared with the reference" },
   ],
 };
 write(`fidelity/${today}.json`, fidelity);
 write("fidelity/latest.json", fidelity);
+
+const exchange = (role, provider, run) => ({
+  run,
+  role,
+  provider,
+  model: models[0],
+  prompt: "fixed-01",
+  ts: `${today}T13:05:03.412Z`,
+  request: { model: models[0], messages: [{ role: "user", content: "Say hello." }], stream: false, temperature: 0, max_tokens: 48 },
+  http_status: 200,
+  response: { choices: [{ message: { role: "assistant", content: "Hello." } }] },
+  error: null,
+});
+for (const row of fidelity.rows) {
+  write(`fidelity/runs/${today}/${row.provider}.jsonl`, JSON.stringify(exchange("provider", row.provider, row.runs[0])) + "\n");
+}
+write(
+  `fidelity/runs/${today}/reference.jsonl`,
+  fidelity.references[0].runs.map((run) => JSON.stringify(exchange("reference", "reference-example", run))).join("\n") + "\n",
+);

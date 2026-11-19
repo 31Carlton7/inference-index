@@ -64,6 +64,7 @@ export const probeModel = z.object({
   name: z.string().min(1),
   weights: url,
   providers: z.record(providerId, z.string().min(1)),
+  quantization: z.record(providerId, z.string().min(1)).optional(),
 });
 
 export const modelsFile = z.object({
@@ -85,12 +86,24 @@ export const priceRow = z.object({
   checked: date,
 });
 
-export const dailyPricesFile = z.object({ date, rows: z.array(priceRow) });
+export const missingPrice = z.object({
+  provider: providerId,
+  model: z.string().min(1),
+  reason: z.string().min(1),
+});
+
+export const dailyPricesFile = z.object({
+  date,
+  basket_version: z.number().int().positive(),
+  rows: z.array(priceRow),
+  missing: z.array(missingPrice),
+});
 
 export const priceIndexPoint = z.object({
   date,
   value: z.number().nonnegative(),
   providers: z.number().int().nonnegative(),
+  models: z.record(z.string(), z.object({ median: z.number().nonnegative(), providers: z.number().int().nonnegative() })),
   rows: repoPath,
 });
 
@@ -110,10 +123,10 @@ export const probeRun = z.object({
   status: runStatus,
   http_status: z.number().int().nullable(),
   ttft_ms: z.number().nullable(),
-  ttft_kind: z.enum(["content", "reasoning"]).nullable().optional(),
+  ttft_kind: z.enum(["content", "reasoning"]).nullable(),
   total_ms: z.number().nullable(),
   output_tokens: z.number().int().nullable(),
-  tokens_source: z.enum(["usage", "none"]).optional(),
+  tokens_source: z.enum(["usage", "none"]),
   tps: z.number().nullable(),
   error: z.string().nullable(),
   confirms: z.string().min(1).optional(),
@@ -160,19 +173,64 @@ export const probeStatusFile = z.object({
   rows: z.array(probeStatusRow),
 });
 
+const score = z.number().min(0).max(1);
+const vsNoiseFloor = z.enum(["within", "diverges", "no noise floor"]);
+
+export const fidelityReference = z.object({
+  id: z.string().min(1),
+  model: z.string().min(1),
+  source: z.string().min(1),
+  runs: z.array(z.string().min(1)).min(1),
+  runs_file: repoPath,
+});
+
 export const fidelityRow = z.object({
   provider: providerId,
   model: z.string().min(1),
-  score: z.number().min(0).max(1),
+  score,
   reference_run: z.string().min(1),
   runs: z.array(z.string().min(1)).min(1),
   runs_file: repoPath,
+  experimental: z.literal(true),
+  state: z.enum(["unconfirmed", "repeated"]),
+  vs_noise_floor: vsNoiseFloor,
+  noise_floor: z
+    .object({
+      reference_runs: z.number().int().positive(),
+      pairs: z.number().int().positive(),
+      mean: score,
+      min: score,
+    })
+    .nullable(),
+  prompts_scored: z.number().int().positive(),
+  exact_matches: z.number().int().nonnegative(),
+  logprob_gap: z.number().nonnegative().nullable(),
+  stated_quantization: z.string().min(1).nullable(),
+  reference_source: z.string().min(1),
+  previous: z.object({ date, score, vs_noise_floor: vsNoiseFloor, reference_source: z.string().min(1) }).nullable(),
 });
 
 export const fidelityFile = z.object({
   date,
   prompts_version: z.number().int().positive(),
+  scoring_version: z.number().int().positive(),
+  experimental: z.literal(true),
+  references: z.array(fidelityReference),
   rows: z.array(fidelityRow),
+  unscored: z.array(z.object({ provider: providerId, model: z.string().min(1), reason: z.string().min(1) })),
+});
+
+export const fidelityExchange = z.object({
+  run: z.string().min(1),
+  role: z.enum(["provider", "reference"]),
+  provider: z.string().min(1),
+  model: z.string().min(1),
+  prompt: z.string().min(1),
+  ts: timestamp,
+  request: z.record(z.string(), z.unknown()),
+  http_status: z.number().int().nullable(),
+  response: z.unknown(),
+  error: z.string().nullable(),
 });
 
 export type StatedField = z.infer<typeof statedField>;
@@ -184,6 +242,7 @@ export type ChangelogEntry = z.infer<typeof changelogEntry>;
 export type ProbeModel = z.infer<typeof probeModel>;
 export type ModelsFile = z.infer<typeof modelsFile>;
 export type PriceRow = z.infer<typeof priceRow>;
+export type MissingPrice = z.infer<typeof missingPrice>;
 export type DailyPricesFile = z.infer<typeof dailyPricesFile>;
 export type PriceIndexPoint = z.infer<typeof priceIndexPoint>;
 export type PriceIndexFile = z.infer<typeof priceIndexFile>;

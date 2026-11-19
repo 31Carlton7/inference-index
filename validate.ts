@@ -9,6 +9,7 @@ import {
   REGISTRY_FIELDS,
   changelogFile,
   dailyPricesFile,
+  fidelityExchange,
   fidelityFile,
   modelsFile,
   notStatedField,
@@ -150,6 +151,10 @@ for (const file of files) {
       requireKnownProvider(file, entry.provider, `entries.${index}.provider`);
       requireRepoFile(file, entry.snapshot_before, `entries.${index}.snapshot_before`);
       requireRepoFile(file, entry.snapshot_after, `entries.${index}.snapshot_after`);
+      const hasPricePair = [entry.before, entry.after].some((side) => typeof side === "object" && side !== null);
+      if (hasPricePair && (entry.kind !== "price" || !entry.model)) {
+        report(file, `entries.${index}: an input and output price pair belongs to a "price" entry with a model`);
+      }
       if (index > 0 && entry.date > entries[index - 1].date) {
         report(file, `entries.${index}: entries must be newest first`);
       }
@@ -180,6 +185,9 @@ for (const file of files) {
     if (!models) continue;
     for (const model of models.probe_models) {
       for (const id of Object.keys(model.providers)) requireKnownProvider(file, id, `${model.id}.providers`);
+      for (const id of Object.keys(model.quantization ?? {})) {
+        if (!(id in model.providers)) report(file, `${model.id}.quantization: "${id}" is not in ${model.id}.providers`);
+      }
     }
     const { input, output } = models.basket.weights;
     if (Math.abs(input + output - 1) > 1e-9) report(file, "basket.weights must sum to 1");
@@ -191,6 +199,12 @@ for (const file of files) {
     if (!daily) continue;
     if (`${daily.date}.json` !== name) report(file, `date "${daily.date}" does not match the file name`);
     daily.rows.forEach((row, index) => requireKnownProvider(file, row.provider, `rows.${index}.provider`));
+    daily.missing.forEach((gap, index) => {
+      requireKnownProvider(file, gap.provider, `missing.${index}.provider`);
+      if (daily.rows.some((row) => row.provider === gap.provider && row.model === gap.model)) {
+        report(file, `missing.${index}: ${gap.provider} ${gap.model} also has a row`);
+      }
+    });
   }
 
   if (file === path.join("prices", "index.json")) {
@@ -223,9 +237,30 @@ for (const file of files) {
   if (parts[0] === "fidelity" && parts.length === 2 && name.endsWith(".json")) {
     checkedFiles.add(file);
     const fidelity = checkFile(file, fidelityFile);
-    if (fidelity && name !== "latest.json" && `${fidelity.date}.json` !== name) {
+    if (!fidelity) continue;
+    if (name !== "latest.json" && `${fidelity.date}.json` !== name) {
       report(file, `date "${fidelity.date}" does not match the file name`);
     }
+    const referenceIds = new Set(fidelity.references.map((reference) => reference.id));
+    fidelity.rows.forEach((row, index) => {
+      requireKnownProvider(file, row.provider, `rows.${index}.provider`);
+      if (!referenceIds.has(row.reference_run)) report(file, `rows.${index}.reference_run: "${row.reference_run}" is not in references`);
+      if ((row.noise_floor === null) !== (row.vs_noise_floor === "no noise floor")) {
+        report(file, `rows.${index}.vs_noise_floor: "${row.vs_noise_floor}" does not fit noise_floor`);
+      }
+    });
+  }
+
+  if (parts[0] === "fidelity" && parts[1] === "runs" && parts.length === 4 && name.endsWith(".jsonl")) {
+    checkedFiles.add(file);
+    const lines = readFileSync(path.join(dataDir, file), "utf8").split("\n");
+    lines.forEach((line, index) => {
+      if (line.trim() === "") return;
+      const exchange = check(`${file}:${index + 1}`, fidelityExchange, parseJson(`${file}:${index + 1}`, line));
+      if (!exchange) return;
+      const expectedName = exchange.role === "reference" ? "reference.jsonl" : `${exchange.provider}.jsonl`;
+      if (expectedName !== name) report(`${file}:${index + 1}`, `a ${exchange.role} line for "${exchange.provider}" belongs in ${expectedName}`);
+    });
   }
 }
 
