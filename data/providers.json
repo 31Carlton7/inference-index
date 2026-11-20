@@ -122,7 +122,7 @@
         "privacy": "https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy",
         "data_policy": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/abuse-monitoring",
         "terms": "https://www.microsoft.com/licensing/terms/productoffering/MicrosoftAzure/MCA",
-        "trust": "https://servicetrust.microsoft.com/",
+        "trust": "https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-soc-2",
         "status": "https://azure.status.microsoft/en-us/status",
         "subprocessors": "https://www.microsoft.com/en-us/trust-center/privacy/data-access"
       },

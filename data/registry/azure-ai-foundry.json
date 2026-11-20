@@ -1,6 +1,6 @@
 {
   "id": "azure-ai-foundry",
-  "updated": "2026-11-18",
+  "updated": "2026-11-20",
   "fields": {
     "status": {
       "value": "live",
@@ -40,7 +40,7 @@
     "soc2": {
       "value": "Type II",
       "source": "https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-soc-2",
-      "checked": "2026-11-18",
+      "checked": "2026-11-20",
       "quote": "Microsoft Azure, Dynamics 365, and other Microsoft cloud services undergo rigorous independent third-party SOC 2 Type 2 audits conducted by a reputable certified public accountant (CPA) firm.",
       "note": "This is Azure's report; the page defers the list of services in scope to the report itself, and no web page read names Foundry models as in scope, though the data privacy page calls Foundry an Azure service and points to Azure compliance offerings."
     },

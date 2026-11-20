@@ -1,219 +1,95 @@
-Service Trust PortalMy LibraryMy Download HistoryAll Documents
-More
-Cancel
-Search
-LegacyNew v2.0
-Sign in
-ME
-Service Trust Portal
-Learn how Microsoft cloud services protect your data, and how you can manage cloud data security and compliance for your organization.
-Watch how Microsoft builds privacy and security to work hand-in-hand
-SearchAsk AI
-Ask a Microsoft Expert
-Discover what's new
-Most viewed
-New
-Security
-Compliance
-Certifications
-Reports
-
-Explore all resources
-Azure - Compliance Offerings (September 2026)
-October 30, 2026
-Azure - Compliance Offerings (September 2026)
-Microsoft Azure Compliance Offerings
-View Report
-Microsoft General - Online Services Subprocessors List (2026-11-04)
-November 04, 2026
-Microsoft General - Online Services Subprocessors List (2026-1...
-The Microsoft Online Services Subprocessor List identifies subprocessors authorized to subprocess customer data or personal data in Micro...
-View Report
-Azure + Dynamics 365 + Online Services (Public & Government) SOC Bridge Letter (July 1, 2026 - Se...
-Requires Sign-In
-October 05, 2026
-Azure + Dynamics 365 + Online Services (Public & Government) S...
-Azure + Dynamics 365 + Online Services (Public & Government) SOC Bridge Letter (July 1, 2026 - September 30, 2026)
-View Report
-Sign in to view this document
-Microsoft 365 - SOC Bridge Letter (October 2026)
-Requires Sign-In
-September 30, 2026
-Microsoft 365 - SOC Bridge Letter (October 2026)
-Microsoft 365 - SOC Bridge Letter (October 2026)
-View Report
-Sign in to view this document
-Microsoft 365 Central Services - SOC 2 Type 2 Report (9-30-2025)
-Requires Sign-In
-September 30, 2025
-Microsoft 365 Central Services - SOC 2 Type 2 Report (9-30-2025)
-Microsoft 365 Central Services - SOC 2 Type 2 Report (9-30-2025)
-View Report
-Sign in to view this document
-Azure + Dynamics 365 + Online Services - Public & Government SOC 2 Type II Report (10-01-2025 to ...
-Requires Sign-In
-November 07, 2026
-Azure + Dynamics 365 + Online Services - Public & Government S...
-This document details audit assessment performed by a third-party independent auditor on Azure + Dynamics 365 + Online Services systems, ...
-View Report
-Sign in to view this document
-Azure DevOps - SOC Bridge Letter (October 2025 - September 2026)
-September 30, 2026
-Azure DevOps - SOC Bridge Letter (October 2025 - September 2026)
-Azure DevOps SOC Bridge Letter for the period of October 1st 2025 through September 30th 2026
-View Report
-Azure - Dynamics 365 - Online Services - ISO 27001 and ISO 27701 Certificate (6.25.2026)
-Requires Sign-In
-June 25, 2026
-Azure - Dynamics 365 - Online Services - ISO 27001 and ISO 277...
-Certificate demonstrating Microsoft Azure, Dynamics 365, and Other Online Services' compliance with ISO 27001 and 27701 framework
-View Report
-Sign in to view this document
-Microsoft Professional Services - ISO 27001, ISO 27018, and ISO 27701 Assessment Report (2026)
-Requires Sign-In
-October 01, 2026
-Microsoft Professional Services - ISO 27001, ISO 27018, and IS...
-Independent BSI surveillance assessment report for Microsoft Professional Services covering ISO/IEC 27001:2022, ISO/IEC 27018:2019, and I...
-View Report
-Sign in to view this document
-Azure + Dynamics 365 + Online Services - Public & Government SOC 1 Type II Report (10-01-2025 to ...
-Requires Sign-In
-November 07, 2026
-Azure + Dynamics 365 + Online Services - Public & Government S...
-This document details audit assessment performed by a third party independent auditor on Azure + Dynamics 365 + Online Services Public & ...
-View Report
-Sign in to view this document
-Microsoft 365 - ISO 27001:2022 Certificate (2024-2027)
-Requires Sign-In
-February 28, 2026
-Microsoft 365 - ISO 27001:2022 Certificate (2024-2027)
-Microsoft 365 - ISO 27001:2022 Certificate (2024-2027)
-View Report
-Sign in to view this document
-Azure DevOps - ISO/IEC 27001:2013 Certificate (2023)
-ComplianceDocuments
-September 04, 2023
-Azure DevOps - ISO/IEC 27001:2013 Certificate (2023)
-ISO 27001:2013 Certificate
-View Report
-Microsoft General - ERCM - Business Continuity and Disaster Recovery Plan Validation Report (2026...
-Requires Sign-In
-October 15, 2026
-Microsoft General - ERCM - Business Continuity and Disaster Re...
-This report describes validation and maintenance of Business Continuity and Disaster Recovery plans for selected Microsoft online service...
-View Report
-Sign in to view this document
-Azure DevOps ISMS ISO 27001.2022 Certificate 619017 (2025 version)
-October 31, 2026
-Azure DevOps ISMS ISO 27001.2022 Certificate 619017 (2025 vers...
-2025 Azure DevOps ISO/IEC 27001:2022 certificate (2025 version, current version)
-View Report
-Azure - Dynamics 365 - Online Services - ISO 27001, 27017, 27018 and 27701 Statement of Applicabi...
-Requires Sign-In
-February 25, 2026
-Azure - Dynamics 365 - Online Services - ISO 27001, 27017, 270...
-Microsoft Azure, Dynamics and Online Services - ISO 27001, 27017, 27018 and 27701 Statement of Applicability (Dated 02.25.2026)
-View Report
-Sign in to view this document
-Microsoft 365 - SOC 1 Type 1 Report (05-15-2026)
-Requires Sign-In
-May 15, 2026
-Microsoft 365 - SOC 1 Type 1 Report (05-15-2026)
-Microsoft 365 - SOC 1 Type 1 Report (05-15-2026)
-View Report
-Sign in to view this document
-Azure + Dynamics 365 + Online Services – Public & Government C5 Report (04-01-2025 to 3-31-2026)
-Requires Sign-In
-July 07, 2026
-Azure + Dynamics 365 + Online Services – Public & Government C...
-Microsoft Azure and Azure Government Cloud Computing Compliance Criteria Catalogue (C5) Report
-View Report
-Sign in to view this document
-Microsoft 365 Microservices (Type 2) - SOC 2 Type 2 Report (9-30-2025)
-Requires Sign-In
-September 30, 2025
-Microsoft 365 Microservices (Type 2) - SOC 2 Type 2 Report (9-...
-Microsoft 365 Microservices (Type 2) - SOC 2 Type 2 Report (9-30-2025)
-View Report
-Sign in to view this document
-Microsoft 365 Microservices (Type 1) - SOC 2 Type 1 Report (9-30-2025)
-Requires Sign-In
-September 30, 2025
-Microsoft 365 Microservices (Type 1) - SOC 2 Type 1 Report (9...
-Microsoft 365 Microservices (Type 1) - SOC 2 Type 1 Report (9-30-2025)
-View Report
-Sign in to view this document
-M365 (2026 September) Uplift_PCIDSS_v4.0.1_AOC_Service-Providers-FINAL-SIGNED
-Requires Sign-In
-October 05, 2026
-M365 (2026 September) Uplift_PCIDSS_v4.0.1_AOC_Service-Provide...
-M365 (2026 September) Uplift_PCIDSS_v4.0.1_AOC_Service-Providers-FINAL-SIGNED
-View Report
-Sign in to view this document
-‹ Previous12345Next ›
-Learn about Compliance, Security, and more
-Build Your Compliance Expertise
-Develop a deeper understanding of cloud compliance and security with our educational resources.
-Explore all topics
-Interactive tutorials
-Step-by-step guidance on using compliance tools effectively
-Learn More
-Webinars and videos
-Expert-led sessions on compliance topics and best practices
-Learn More
-Documentation library
-Comprehensive guides for implementing compliance controls
-Learn More
-Use case scenarios
-Real-world examples of compliance implementations across industries
-Learn More
-Featured Lessons, Videos, Webinars, and Certifications
+Skip to main content
+Skip to Ask Learn chat experience
+This browser is no longer supported.
+Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+Download Microsoft Edge
+More info about Internet Explorer and Microsoft Edge
+Table of contents
+Exit editor mode
+Ask Learn
+Ask Learn
+Reading mode
+Table of contents
+Read in English
+Add
+Add to Plans
+Edit
+Copy Markdown
+Print
+Note
+Access to this page requires authorization. You can try signing in or changing directories.
+Access to this page requires authorization. You can try changing directories.
+System and Organization Controls (SOC) 2 Type 2
+Feedback
+Summarize this article for me
+In this article
+SOC 2 Type 2 overview
+System and Organization Controls (SOC) for Service Organizations are internal control reports created by the American Institute of Certified Public Accountants (AICPA). They're intended to examine services provided by a service organization so that end users can assess and address the risk associated with an outsourced service.
+A SOC 2 Type 2 attestation is performed under:
+SSAE No. 18, Attestation Standards: Clarification and Recodification, which includes AT-C section 105, Concepts Common to All Attestation Engagements, and AT-C section 205, Examination Engagements (AICPA, Professional Standards).
+SOC 2 Reporting on an Examination of Controls at a Service Organization Relevant to Security, Availability, Processing Integrity, Confidentiality, or Privacy (AICPA Guide).
+TSP section 100, 2017 Trust Services Criteria for Security, Availability, Processing Integrity, Confidentiality, and Privacy (AICPA, 2017 Trust Services Criteria).
+At the conclusion of a SOC 2 audit, the auditor renders an opinion in a SOC 2 Type 2 report, which describes the cloud service provider’s (CSP’s) system and assesses the fairness of the CSP’s description of its controls. It also evaluates whether the CSP’s controls are designed appropriately, were in operation on a specified date, and were operating effectively over a specified time period.
+Azure and SOC 2 Type 2
+Microsoft Azure, Dynamics 365, and other Microsoft cloud services undergo rigorous independent third-party SOC 2 Type 2 audits conducted by a reputable certified public accountant (CPA) firm. For more information, see the Azure SOC 2 Type 2 attestation report. Azure SOC 2 Type 2 reports are relevant to trust services criteria for system security, availability, processing integrity, and confidentiality.
+Moreover, the Azure SOC 2 Type 2 attestation report addresses the requirements set forth in the Cloud Security Alliance (CSA) Cloud Controls Matrix (CCM) version 4 and the Cloud Computing Compliance Criteria Catalogue (C5:2020) created by the German Federal Office for Information Security (BSI). For more information, you can review the following Azure compliance offerings:
+CSA STAR Attestation
+Germany C5:2020
+Applicability
+Azure
+Azure Government
+Services in scope
+For a list of Microsoft cloud services in audit scope, see the Azure SOC 2 Type 2 attestation report or Cloud services in audit scope:
+Azure
+Dynamics 365
 Microsoft 365
-Manage data loss prevention policies and reports in Microsoft 365
-Learn how to manage data loss prevention policies and mitigate data loss prevention policy violations.
-Learn More
-Microsoft Purview Compliance Manager
-Microsoft Applied Skills: Implement information protection and data loss prevention by using Microsoft Purview
-To earn this Microsoft Applied Skills credential, learners demonstrate the ability to implement Microsoft Purview Information Protection and Microsoft Purview Data Loss Prevention. They validate their ability to discover, classify, and...
-Learn More
-Microsoft 365 Apps
-Microsoft Applied Skills: Prepare security and compliance to support Microsoft 365 Copilot
-To earn this Microsoft Applied Skills credential, learners demonstrate the ability to prepare Microsoft 365 security and compliance to support Microsoft Copilot for Microsoft 365.
-Learn More
-Microsoft Defender XDR
-Microsoft Applied Skills: Defend against cyberthreats with Microsoft Defender XDR
-To earn this Microsoft Applied Skills credential, learners demonstrate the ability to use Microsoft Defender XDR to detect and respond to cyberthreats.
-Learn More
-Microsoft Defender XDR
-Microsoft Applied Skills: Defend against cyberthreats with Microsoft Defender XDR
-To earn this Microsoft Applied Skills credential, learners demonstrate the ability to use Microsoft Defender XDR to detect and respond to cyberthreats.
-Learn More
-We're Here to Support Your Success
-Get the assistance you need to maximize the value of Microsoft's compliance offerings
-Ask a Microsoft Expert
-Community forums
-Connect with peers and Microsoft experts to discuss compliance challenges
-Learn More
-Dedicated support options
-Access specialized compliance and security support services
-Learn More
-Feedback channels
-Share your suggestions to help us improve our compliance resources
-Learn More
-Regional support Guidance
-Get assistance with region-specific compliance requirements
-Learn More
-Report a ProblemGive Feedback
-Additional Resources
-Check out additional resources
-Frequently Asked Questions
-Visit FAQs
-English (United States)
+Power Platform
+For Azure DevOps, see the standalone Azure DevOps SOC 2 Type 2 attestation report.
+Office 365 and SOC 2 Type 2
+For more information about Office 365 compliance, see Office 365 SOC 2 documentation.
+Audit reports
+The Azure SOC 2 Type 2 attestation report covers Azure, Dynamics 365, Power Platform, and select Microsoft 365 cloud services. You can access Azure SOC audit reports and bridge letters from the Service Trust Portal (STP) SOC reports section. For instructions on how to access audit reports, see Audit documentation.
+The Azure DevOps SOC 2 Type 2 attestation report is available separately from the Service Trust Portal SOC reports section.
+Frequently asked questions
+How often are Azure SOC 2 reports issued?
+SOC reports for Azure, Dynamics 365, and other online services are based on a rolling 12-month run window (audit period) with new reports issued semi-annually (period ends are 31-Mar and 30-Sep). It takes approximately six weeks to produce and publish the attestation report following the end of the audit period. Bridge letters are issued during the first week of each quarter to cover the prior three-month period. For example, the January letter covers 1-Oct through 31-Dec, the April letter covers 1-Jan through 31-Mar, the July letter covers 1-Apr through 30-Jun, and the October letter covers 1-Jul through 30-Sep.
+Where can I get the Azure SOC audit documentation including bridge letters?
+For links to audit documentation, see Audit reports.
+If you're an Azure DevOps customers who can't access the Service Trust Portal, you can email Azure DevOps for its SOC 1 and SOC 2 reports. This email is to request Azure DevOps SOC reports only.
+Where can I find an assessment of the Cloud Security Alliance CCM controls implementation?
+The Azure SOC 2 Type 2 audit is based on the American Institute of Certified Public Accountants (AICPA) Trust Services Principles and Criteria, including security, availability, confidentiality, and processing integrity, and the criteria in the Cloud Security Alliance (CSA) Cloud Controls Matrix (CCM) version 4. The objective is to meet both the AICPA criteria and requirements set forth in the CCM. The Azure SOC 2 Type 2 audit incorporates the CCM controls assessment as required by the CSA STAR Attestation. For more information, see the Azure SOC 2 Type 2 attestation report.
+Does the Azure SOC 2 Type 2 attestation also include compliance coverage for Germany C5:2020?
+Yes. A C5:2020 audit can be combined with a SOC 2 audit to leverage parts of the system description and audit results for overlapping controls. Azure publishes a combined attestation report (C5:2020, SOC 2 Type 2, CSA STAR Attestation) based on the audit assessment performed by an independent auditor, which demonstrates proof of compliance with Germany C5:2020.
+Where can I see management responses to exceptions noted?
+Management responses are located towards the end of the SOC attestation report. Search the document for "Management Response".
+Where can I see user entity responsibilities?
+User entity responsibilities are located at the very end of the SOC attestation report. Search the document for "User Entity Responsibilities".
+Resources
+Azure compliance documentation
+Azure enables a world of compliance
+Microsoft 365 compliance offerings
+Compliance on the Microsoft Trust Center
+Service Trust Portal SOC attestation reports
+AICPA SOC for Service Organizations
+SSAE No. 18, Attestation Standards: Clarification and Recodification (AICPA Professional Standards)
+SOC 2 Reporting on an Examination of Controls at a Service Organization Relevant to Security, Availability, Processing Integrity, Confidentiality, or Privacy (AICPA Guide, available for purchase)
+TSP section 100 (AICPA 2017 Trust Services Criteria, includes March 2020 updates)
+Additional resources
+Last updated on
+2023-04-05
+In this article
+en-us
 Your Privacy Choices
+Theme
+Light
+Dark
+High contrast
+AI Disclaimer
+Previous Versions
+Blog
+Contribute
+Privacy
 Consumer Health Privacy
-Privacy and cookies
-Terms of use
-Technical support
+Terms of Use
 Trademarks
-© Microsoft 2022
 © Microsoft 2026
