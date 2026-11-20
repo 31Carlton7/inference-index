@@ -186,6 +186,7 @@ function policyDiff(entry, opts) {
     date: entry.date,
     slug: `${entry.provider}-${entry.field || page}`,
     values,
+    needsReview: !entry.field,
     source: { type: 'changelog', entry, files: ['data/changelog.json', entry.snapshot_before, entry.snapshot_after] },
   };
 }
@@ -404,6 +405,7 @@ export function render(input, options) {
       site !== null &&
       template.approved &&
       config.approved_templates.includes(built.template) &&
+      !built.needsReview &&
       (built.template !== 'weekly-chart' || image !== null),
   };
   const base = `${built.date}-${built.template}-${built.slug}`;

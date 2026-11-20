@@ -109,6 +109,8 @@ Which variant:
 
 A string of only whitespace counts as an empty string.
 
+An entry with `"field": null` is never sendable in any variant. Its draft waits for Carlton even once this template is approved.
+
 ## Does not fire when
 
 - The `before` or `after` key is missing or `null`. Only an empty string means text was added or removed.

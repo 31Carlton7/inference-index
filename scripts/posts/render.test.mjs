@@ -515,6 +515,7 @@ test('a draft is sendable only with a site url, an approved template and a confi
   assert.equal(draft.sendable, true);
   assert.equal(draft.link, 'https://inference-index.example/changelog');
   assert.equal(render({ entry: POLICY }, { ...setup({ config: { ...config, approved_templates: [] } }), templates }).draft.sendable, false);
+  assert.equal(render({ entry: { ...POLICY, field: null } }, { ...setup({ config }), templates }).draft.sendable, false);
 });
 
 test('the command line writes a draft from --changelog-index and from --incident', () => {

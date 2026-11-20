@@ -50,6 +50,7 @@ A draft is `"sendable": true` only when all of these hold:
 - `site_url` in `config.json` is set. It is. If it were `null` the draft would keep the literal `{site}`.
 - The template's Status is `approved` and its name is in `approved_templates`.
 - For `weekly-chart`, the draft has its chart image.
+- For `policy-diff`, the entry names a registry field. A change with `"field": null` is always a draft for Carlton, even once the template is approved, because nothing in the data says whether it is about how the provider handles customer data.
 
 A draft that is not sendable stays in the queue.
 
