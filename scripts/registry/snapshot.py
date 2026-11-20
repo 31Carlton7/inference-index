@@ -15,6 +15,7 @@ import difflib
 import json
 import os
 import pathlib
+import re
 import shutil
 import subprocess
 import urllib.error
@@ -44,6 +45,9 @@ CHALLENGE_TITLES = ["Just a moment", "Attention Required", "Access Denied"]
 VOLATILE_LINE_PREFIXES = ("This is the Trace Id:",)
 # DeepInfra's site footer rotates a list of model names under these headings.
 ROTATING_LIST_HEADINGS = ("Latest Models", "Featured Models")
+
+# Microsoft's Service Trust Portal prints a view count under each document's date.
+DOCUMENT_DATE = re.compile(r"[A-Z][a-z]+ \d{2}, \d{4}")
 
 # Next.js sometimes streams <title> into the body instead of the head.
 HIDDEN_TAGS = {"script", "style", "noscript", "svg", "template", "head", "title"}
@@ -90,13 +94,16 @@ def is_volatile(line):
 def tidy_lines(text):
     lines = []
     follows_rotating_heading = False
+    follows_document_date = False
     for line in text.splitlines():
         line = " ".join(line.split())
         if not line:
             continue
-        if not follows_rotating_heading and not is_volatile(line):
+        is_view_count = follows_document_date and line.isdigit()
+        if not follows_rotating_heading and not is_view_count and not is_volatile(line):
             lines.append(line)
         follows_rotating_heading = line in ROTATING_LIST_HEADINGS
+        follows_document_date = DOCUMENT_DATE.fullmatch(line) is not None
     return "\n".join(lines) + "\n"
 
 
