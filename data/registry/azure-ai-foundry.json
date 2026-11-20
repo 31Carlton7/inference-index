@@ -42,20 +42,36 @@
       "source": "https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-soc-2",
       "checked": "2026-11-20",
       "quote": "Microsoft Azure, Dynamics 365, and other Microsoft cloud services undergo rigorous independent third-party SOC 2 Type 2 audits conducted by a reputable certified public accountant (CPA) firm.",
-      "note": "This is Azure's report; the page defers the list of services in scope to the report itself, and no web page read names Foundry models as in scope, though the data privacy page calls Foundry an Azure service and points to Azure compliance offerings."
+      "note": "This is Azure's report, and the SOC 2 page sends readers to the report or to Azure's services in audit scope page (https://learn.microsoft.com/en-us/azure/compliance/offerings/cloud-services-in-audit-scope) for the services it covers. That page names no service and points to Appendix A of Microsoft Azure Compliance Offerings (https://api.servicetrust.microsoft.com/api/v2/downloadDocuments/7adf2d9e-d7b5-4e71-bad8-713e6a183cf3), where the row \"Microsoft Foundry: Foundry Models\" is marked under \"SOC 1, 2, 3\", with the footnote that this \"is limited to Foundry Models sold by Azure\". The appendix does not give the report type."
     },
     "attestations": {
-      "value": null,
-      "not_stated": true,
-      "checked": "2026-11-18",
-      "searched": [
-        "https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy",
-        "https://learn.microsoft.com/en-us/azure/foundry-classic/how-to/concept-data-privacy",
-        "https://learn.microsoft.com/en-us/azure/compliance/offerings/cloud-services-in-audit-scope",
-        "https://learn.microsoft.com/en-us/azure/azure-government/compliance/azure-services-in-fedramp-auditscope",
-        "https://servicetrust.microsoft.com/"
+      "value": [
+        "CSA STAR Certification",
+        "CSA STAR Attestation",
+        "ISO 27001",
+        "ISO 27018",
+        "ISO 27017",
+        "ISO 27701",
+        "ISO 9001",
+        "ISO 22301",
+        "ISO 20000-1",
+        "SOC 1",
+        "SOC 3",
+        "GSMA SAS-SM",
+        "HIPAA BAA",
+        "HITRUST",
+        "K-ISMS",
+        "PCI 3DS",
+        "PCI DSS",
+        "Germany C5",
+        "Singapore MTCS Level 3",
+        "Spain ENS High",
+        "Singapore OSPAR"
       ],
-      "note": "Azure's per-service audit scope is published in PDF appendices; the FedRAMP scope page lists Azure OpenAI and Foundry Tools but not the Foundry model catalog."
+      "source": "https://api.servicetrust.microsoft.com/api/v2/downloadDocuments/7adf2d9e-d7b5-4e71-bad8-713e6a183cf3",
+      "checked": "2026-11-20",
+      "quote": "The scope of certification for Microsoft Foundry is limited to the services and controls operated by Microsoft within Azure and the scope of certification for Microsoft Foundry Models is limited to Foundry Models sold by Azure. All components operated by third-party model providers, and externally managed APIs or services, are excluded from scope unless explicitly stated otherwise.",
+      "note": "These are Azure's certificates and reports, not ones for Foundry alone. Azure's services in audit scope page (https://learn.microsoft.com/en-us/azure/compliance/offerings/cloud-services-in-audit-scope) names no service and points to this PDF, Microsoft Azure Compliance Offerings (October 2026), the Download at https://servicetrust.microsoft.com/DocumentPage/7adf2d9e-d7b5-4e71-bad8-713e6a183cf3. In its \"Appendix A: Azure Services in Audit Scope\" the row \"Microsoft Foundry: Foundry Models\" has a check mark in all 17 columns, and the quote is that row's footnote. The PDF's text keeps the row and its marks but not which column each mark is under, so the columns were read from where the marks and headings sit on the page. SOC 2, from the \"SOC 1, 2, 3\" column, is in the SOC 2 field."
     },
     "subprocessors": {
       "value": null,
