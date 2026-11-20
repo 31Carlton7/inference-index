@@ -54,12 +54,14 @@
         "ISO 27701",
         "ISO 22301",
         "ISO 20000",
-        "CSA STAR Level 2"
+        "CSA STAR Level 2",
+        "C5",
+        "PCI DSS"
       ],
       "source": "https://aws.amazon.com/bedrock/faqs/",
       "checked": "2026-11-20",
       "quote": "Amazon Bedrock is in scope for common compliance standards such as Fedramp Moderate, Service and Organization Control (SOC), International Organization for Standardization (ISO), Health Insurance Portability and Accountability Act (HIPAA) eligibility, and customers can use Bedrock in compliance with the General Data Protection Regulation (GDPR). Amazon Bedrock is included in the scope of the SOC 1, 2, 3 reports, allowing customers to gain insights into our security controls. We demonstrate compliance through extensive third-party audits of our AWS controls. Amazon Bedrock is one of the AWS services under ISO Compliance for the ISO 9001, ISO 27001, ISO 27017, ISO 27018, ISO 27701, ISO 22301, and ISO 20000 standards. Amazon Bedrock is CSA Security Trust Assurance and Risk (STAR) Level 2 certified, which validates the use of best practices and the security posture of AWS cloud offerings.",
-      "note": "The same passage names HIPAA eligibility and GDPR; those are AWS's own statements about a law, not a third-party attestation, and are not counted here. AWS's scope pages name the service too: \"Amazon Bedrock [excludes Amazon Bedrock Marketplace]\" is marked under \"SOC 1,2,3\" at https://aws.amazon.com/compliance/services-in-scope/SOC/, \"Amazon Bedrock [excludes amazon Bedrock Marketplace]\" is in the list of services covered by AWS's ISO and CSA STAR certifications at https://aws.amazon.com/compliance/iso-certified/, and \"Amazon Bedrock **\" is a row at https://aws.amazon.com/compliance/services-in-scope/FedRAMP/."
+      "note": "The same passage names HIPAA eligibility and GDPR; those are AWS's own statements about a law, not a third-party attestation, and are not counted here. AWS's scope pages name the service too: \"Amazon Bedrock [excludes Amazon Bedrock Marketplace]\" is marked under \"SOC 1,2,3\" at https://aws.amazon.com/compliance/services-in-scope/SOC/, \"Amazon Bedrock [excludes amazon Bedrock Marketplace]\" is in the list of services covered by AWS's ISO and CSA STAR certifications at https://aws.amazon.com/compliance/iso-certified/, and \"Amazon Bedrock **\" is a row at https://aws.amazon.com/compliance/services-in-scope/FedRAMP/. C5 and PCI DSS are not in the FAQ passage and come from the scope pages: at https://aws.amazon.com/compliance/services-in-scope/C5/ the row \"Amazon Bedrock [excludes Amazon Bedrock Marketplace]\" has a check mark under the single heading \"C5\", and at https://aws.amazon.com/compliance/services-in-scope/PCI/ the same row has a check mark under \"PCI DSS\". The PCI page has four columns and its text does not keep which column a mark is under, so that row was read from the page's table."
     },
     "subprocessors": {
       "value": [
