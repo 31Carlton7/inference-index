@@ -259,7 +259,7 @@
       "provider": "azure-ai-foundry",
       "page": "audit_scope",
       "url": "https://api.servicetrust.microsoft.com/api/v2/downloadDocuments/7adf2d9e-d7b5-4e71-bad8-713e6a183cf3",
-      "result": "baseline"
+      "result": "already taken today"
     },
     {
       "provider": "novita",
