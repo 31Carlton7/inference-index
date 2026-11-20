@@ -23,7 +23,7 @@ Two readings are applied the same way to every provider:
 
 A job runs once a day (`scripts/registry/snapshot.py`, 13:17 UTC). For every provider it fetches the privacy policy, the data handling page, the terms, the trust centre and the subprocessor list, and stores the page text under `data/snapshots/`. Pages that only show content after their scripts run are rendered in headless Chrome. PDF terms are converted to text.
 
-When a page's text differs from the last stored copy, the changed passages are written as drafts. A draft reaches the changelog only after a person or the registry reviewer has read it, cut it down to the sentences that changed, and named the registry field it is about, if any. The changelog gives the text before and after. It does not say whether a change is better or worse.
+When a page's text differs from the last stored copy, the changed passages are written as drafts. A draft reaches the changelog only after a person or the registry reviewer has read it, cut it down to the sentences that changed, and named the registry field it is about, if any. When only a few words changed inside a long sentence, the entry quotes the clause around them and not the whole sentence. The quote is still the page's own words in one unbroken run, with nothing left out in the middle, and the full passage is in the two snapshots the entry links to. The changelog gives the text before and after. It does not say whether a change is better or worse.
 
 ## Pages shared with a whole cloud
 
