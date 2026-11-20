@@ -36,7 +36,7 @@
         },
         "deepseek-v4.1-flash-1017": {
           "median": 0.525,
-          "providers": 8
+          "providers": 9
         }
       },
       "rows": "data/prices/daily/2026-11-20.json"
