@@ -21,7 +21,7 @@ import urllib.error
 import urllib.request
 from html.parser import HTMLParser
 
-POLICY_PAGES = ["privacy", "data_policy", "terms", "trust", "subprocessors"]
+POLICY_PAGES = ["privacy", "data_policy", "terms", "trust", "subprocessors", "audit_scope"]
 
 USER_AGENT = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "

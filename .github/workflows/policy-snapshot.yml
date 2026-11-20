@@ -37,21 +37,34 @@ jobs:
           git commit -m "Policy snapshot $(date -u +%F)"
           git pull --rebase origin main
           git push origin HEAD:main
-      - name: Open an issue when a policy page changed
+      - name: Open an issue when a policy page changed or could not be read
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          drafts="data/changelog-drafts/$(date -u +%F).json"
-          if [ ! -f "$drafts" ]; then
+          today="$(date -u +%F)"
+          drafts="data/changelog-drafts/$today.json"
+          unreadable="$(grep -c '^  unreadable:' snapshot-summary.txt || true)"
+          if [ ! -f "$drafts" ] && [ "$unreadable" = "0" ]; then
             exit 0
           fi
           {
-            echo "The daily snapshot found policy text that differs from the last snapshot."
-            echo
-            echo "Drafts: \`$drafts\`. Nothing is in the changelog yet. Read each one with \`python3 scripts/registry/review.py list\`, then accept or reject it."
-            echo
+            if [ -f "$drafts" ]; then
+              echo "The daily snapshot found policy text that differs from the last snapshot."
+              echo
+              echo "Drafts: \`$drafts\`. Nothing is in the changelog yet. Read each one with \`python3 scripts/registry/review.py list\`, then accept or reject it."
+              echo
+            fi
+            if [ "$unreadable" != "0" ]; then
+              echo "$unreadable page(s) could not be read. Check whether each address moved or was withdrawn."
+              echo
+            fi
             echo '```'
             cat snapshot-summary.txt
             echo '```'
           } > issue-body.md
-          gh issue create --title "Policy pages changed on $(date -u +%F)" --body-file issue-body.md
+          if [ -f "$drafts" ]; then
+            title="Policy pages changed on $today"
+          else
+            title="Policy pages unreadable on $today"
+          fi
+          gh issue create --title "$title" --body-file issue-body.md
