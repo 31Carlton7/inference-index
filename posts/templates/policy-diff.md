@@ -72,7 +72,18 @@ A post never prints a raw key. A key that is in neither table is printed with it
 | `regions` | regions |
 | `funding` | funding |
 
-Truncation rule. If the post is over 280 characters, the quoted text gets the room left after the other text and the link. In `added` and `removed` the one quote gets all of it. Where there are two quotes they share it: a quote shorter than half of the room stays whole and the other gets the rest; otherwise each gets half. A quote that is cut is cut at a word boundary and ends with `...` inside the quotation marks. Every quote the variant has always appears and the link is always kept.
+Truncation rule. If the post is over 280 characters, the quoted text gets the room left after the other text and the link. In `added` and `removed` the one quote gets all of it: it keeps its first words, is cut at a word boundary and ends with `...` inside the quotation marks. Every quote the variant has always appears and the link is always kept.
+
+Where there are two quotes they share the room, and a quote shorter than half of it stays whole. A quote that does not fit is cut around the words that changed: the renderer finds the words the two quotes share at the start and at the end, keeps what differs between them, and adds the same shared words on each side of both quotes until the room runs out. Each excerpt is one unbroken run of the provider's words, with `...` at whichever end was cut, the start, the end or both. If the part that differs is itself too long, it keeps its first words and ends with `...`.
+
+Example of a cut around the change, made-up values. The sentence is 259 characters long and only the number of days changed:
+
+```text
+Example AI changed the retention text on its privacy page on Nov 18.
+Before: "...on servers in the United States for 30 days so that our trust and safety team..."
+After: "...on servers in the United States for 14 days so that our trust and safety team..."
+{site}/changelog
+```
 
 Quotes are the provider's own words, so they keep the provider's punctuation, including any dash.
 
@@ -104,8 +115,8 @@ A string of only whitespace counts as an empty string.
 - `before` and `after` are both empty.
 - Either snapshot path is missing, or the file it names does not exist.
 - The difference is whitespace or formatting only.
-- The two quotes read the same once cut to fit. The post would show no change, so the renderer refuses and the excerpt has to be picked by hand.
-- The quoted text cannot fit in 280 characters with the link, even cut to its first word.
+- The two quotes read the same once cut around the change. The post would show no change, so the renderer refuses and the excerpt has to be picked by hand.
+- The quoted text cannot fit in 280 characters with the link, even cut to the first word that changed.
 
 ## Example
 

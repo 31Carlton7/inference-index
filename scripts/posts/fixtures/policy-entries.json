@@ -85,5 +85,71 @@
     "source": "https://example.com/privacy",
     "snapshot_before": "data/snapshots/example/privacy/2026-11-17.txt",
     "snapshot_after": "data/snapshots/example/privacy/2026-11-18.txt"
+  },
+  "change_at_end": {
+    "date": "2026-11-18",
+    "provider": "example",
+    "kind": "policy",
+    "field": "retention",
+    "before": "We keep the content of every request and response on our servers so that we can investigate abuse and fix problems with the service, and we delete it after 30 days.",
+    "after": "We keep the content of every request and response on our servers so that we can investigate abuse and fix problems with the service, and we delete it after 14 days.",
+    "source": "https://example.com/privacy",
+    "snapshot_before": "data/snapshots/example/privacy/2026-11-17.txt",
+    "snapshot_after": "data/snapshots/example/privacy/2026-11-18.txt"
+  },
+  "change_in_middle": {
+    "date": "2026-11-18",
+    "provider": "example",
+    "kind": "policy",
+    "field": "retention",
+    "before": "When you send a request to our API, we store the prompt and the response on servers in the United States for 30 days so that our trust and safety team can investigate reports of abuse, after which they are deleted from our primary systems and from our backups.",
+    "after": "When you send a request to our API, we store the prompt and the response on servers in the United States for 14 days so that our trust and safety team can investigate reports of abuse, after which they are deleted from our primary systems and from our backups.",
+    "source": "https://example.com/privacy",
+    "snapshot_before": "data/snapshots/example/privacy/2026-11-17.txt",
+    "snapshot_after": "data/snapshots/example/privacy/2026-11-18.txt"
+  },
+  "change_at_start": {
+    "date": "2026-11-18",
+    "provider": "example",
+    "kind": "policy",
+    "field": "retention",
+    "before": "Thirty days after a request completes we delete the prompt and the response from our primary systems, and backups that hold them are overwritten on a rolling schedule that can take up to a further two weeks to finish.",
+    "after": "Fourteen days after a request completes we delete the prompt and the response from our primary systems, and backups that hold them are overwritten on a rolling schedule that can take up to a further two weeks to finish.",
+    "source": "https://example.com/privacy",
+    "snapshot_before": "data/snapshots/example/privacy/2026-11-17.txt",
+    "snapshot_after": "data/snapshots/example/privacy/2026-11-18.txt"
+  },
+  "insertion": {
+    "date": "2026-11-18",
+    "provider": "example",
+    "kind": "policy",
+    "field": "subprocessors",
+    "before": "We share request metadata with the subprocessors that help us run the service, including Example Cloud, Example Logs, Example Billing and Example Support, each of which is bound by a data processing agreement that limits what it may do with the data.",
+    "after": "We share request metadata with the subprocessors that help us run the service, including Example Cloud, Example Logs, Example Search, Example Billing and Example Support, each of which is bound by a data processing agreement that limits what it may do with the data.",
+    "source": "https://example.com/privacy",
+    "snapshot_before": "data/snapshots/example/privacy/2026-11-17.txt",
+    "snapshot_after": "data/snapshots/example/privacy/2026-11-18.txt"
+  },
+  "long_change": {
+    "date": "2026-11-18",
+    "provider": "example",
+    "kind": "policy",
+    "field": "retention",
+    "before": "Prompts and responses are encrypted in transit and at rest. We keep them for 30 days so that our trust and safety team can look into reports of abuse, and after that they are deleted from our primary systems and from every backup we hold. You can ask us for a copy of your data at any time by writing to our privacy team.",
+    "after": "Prompts and responses are encrypted in transit and at rest. Unless your organisation has turned on zero data retention, they are stored for up to 14 days in the region you picked when you made your account, and then removed on a rolling schedule. You can ask us for a copy of your data at any time by writing to our privacy team.",
+    "source": "https://example.com/privacy",
+    "snapshot_before": "data/snapshots/example/privacy/2026-11-17.txt",
+    "snapshot_after": "data/snapshots/example/privacy/2026-11-18.txt"
+  },
+  "same_after_cut": {
+    "date": "2026-11-18",
+    "provider": "example",
+    "kind": "policy",
+    "field": "retention",
+    "before": "We delete inputs after thirty calendar-days-calendar-days-calendar-days-calendar-days-calendar-days-calendar-days-calendar-days-calendar-days-calendar-days-calendar-days-calendar-days-calendar-days-calendar-days-calendar-days-calendar-days-calendar-days-calendar-days-calendar-days-calendar-days-calendar-days",
+    "after": "We delete inputs after thirty...",
+    "source": "https://example.com/privacy",
+    "snapshot_before": "data/snapshots/example/privacy/2026-11-17.txt",
+    "snapshot_after": "data/snapshots/example/privacy/2026-11-18.txt"
   }
 }

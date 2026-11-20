@@ -330,9 +330,60 @@ test('policy diff leaves a short quote whole and gives the rest to the long one'
   assert.ok(draft.chars <= LIMIT);
 });
 
-test('policy diff refuses when the cut quotes read the same', () => {
-  const shared = 'We keep the content of every request and response on our servers so that we can investigate abuse and fix problems with the service, and we delete it after';
-  refuses({ entry: { ...POLICY, before: `${shared} 30 days.`, after: `${shared} 14 days.` } }, setup(), /read the same/);
+function cutQuotes(entry) {
+  const { draft } = render({ entry }, setup());
+  const [, before, after, link, ...rest] = draft.text.split('\n');
+  assert.equal(link, `${REAL_SITE}/changelog`);
+  assert.deepEqual(rest, []);
+  assert.equal(draft.chars, postLength(draft.text, link));
+  assert.ok(draft.chars <= LIMIT);
+  const quotes = [before.slice('Before: "'.length, -1), after.slice('After: "'.length, -1)];
+  for (const [i, key] of ['before', 'after'].entries()) assert.ok(entry[key].includes(quotes[i].replace(/^\.\.\.|\.\.\.$/g, '')), quotes[i]);
+  return quotes;
+}
+
+test('policy diff keeps a change at the end of long quotes and cuts the start', () => {
+  const [before, after] = cutQuotes(POLICIES.change_at_end);
+  assert.match(before, /^\.\.\.[a-z].* and we delete it after 30 days\.$/);
+  assert.equal(after, before.replace('30', '14'));
+  const [bare] = cutQuotes({ ...POLICIES.change_at_end, field: null });
+  assert.match(bare, /^\.\.\.[a-z].* and we delete it after 30 days\.$/);
+});
+
+test('policy diff cuts both ends around a change in the middle and matches the rule example', () => {
+  const [before, after] = cutQuotes(POLICIES.change_in_middle);
+  assert.match(before, /^\.\.\.[a-z].* for 30 days so .*[a-z]\.\.\.$/);
+  assert.equal(after, before.replace('30', '14'));
+  const [, shown] = readTemplate(TEMPLATES, 'policy-diff').sections.Slots.match(/```text\n([\s\S]*?)\n```/);
+  assert.equal(render({ entry: POLICIES.change_in_middle }, setup()).draft.text, shown.replace('{site}', REAL_SITE));
+});
+
+test('policy diff cuts only the end when the change is at the start', () => {
+  const [before, after] = cutQuotes(POLICIES.change_at_start);
+  assert.match(before, /^Thirty days after a request completes .*[a-z]\.\.\.$/);
+  assert.equal(after, before.replace('Thirty', 'Fourteen'));
+});
+
+test('policy diff shows the shared words around text put into a sentence', () => {
+  const [before, after] = cutQuotes(POLICIES.insertion);
+  assert.match(before, /^\.\.\..* Example Logs, Example Billing .*\.\.\.$/);
+  assert.equal(after, before.replace('Example Logs, ', 'Example Logs, Example Search, '));
+});
+
+test('policy diff keeps the first words of a long changed passage and the words before it', () => {
+  const [before, after] = cutQuotes(POLICIES.long_change);
+  assert.match(before, /^\.\.\.(.*) at rest\. We keep them for .*[a-z]\.\.\.$/);
+  assert.match(after, /^\.\.\.(.*) at rest\. Unless your organisation .*[a-z]\.\.\.$/);
+  assert.equal(before.split(' We keep ')[0], after.split(' Unless your ')[0]);
+});
+
+test('policy diff refuses when the quotes read the same once cut around the change', () => {
+  refuses({ entry: POLICIES.same_after_cut }, setup(), /read the same/);
+});
+
+test('policy diff refuses when the first changed word does not fit', () => {
+  const shared = 'We delete inputs after';
+  refuses({ entry: { ...POLICY, before: `${shared} ${'a'.repeat(300)}`, after: `${shared} ${'b'.repeat(300)}` } }, setup(), /does not fit/);
 });
 
 test('new provider renders the template example', () => {

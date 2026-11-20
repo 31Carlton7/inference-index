@@ -66,3 +66,45 @@ export function truncate(text, max) {
   while (kept < words.length && textLength(`${words.slice(0, kept + 1).join(' ')}...`) <= max) kept += 1;
   return kept ? `${words.slice(0, kept).join(' ')}...` : null;
 }
+
+export function cutAroundChange(quotes, room) {
+  const words = quotes.map((quote) => quote.split(' '));
+  const shortest = Math.min(words[0].length, words[1].length);
+  let head = 0;
+  while (head < shortest && words[0][head] === words[1][head]) head += 1;
+  let tail = 0;
+  while (tail < shortest - head && words[0].at(-1 - tail) === words[1].at(-1 - tail)) tail += 1;
+
+  const half = Math.floor(room / 2);
+  const whole = quotes.map((quote) => textLength(quote) <= half);
+  const changeEnds = words.map((list) => list.length - tail);
+  const excerpt = (i, { lead, stops, trail }) => {
+    if (whole[i]) return quotes[i];
+    const start = head - lead;
+    const end = stops[i] + trail;
+    if (start === end) return null;
+    return `${start > 0 ? '...' : ''}${words[i].slice(start, end).join(' ')}${end < words[i].length ? '...' : ''}`;
+  };
+  const fits = (cut) => textLength(excerpt(0, cut) ?? '') + textLength(excerpt(1, cut) ?? '') <= room;
+
+  let cut = { lead: 0, stops: changeEnds, trail: 0 };
+  if (!fits(cut)) cut = { ...cut, stops: changeEnds.map((end) => Math.min(end, head + 1)) };
+  if (!fits(cut)) return [null, null];
+
+  const grow = (change) => {
+    const next = { ...cut, ...change };
+    if (!fits(next)) return false;
+    cut = next;
+    return true;
+  };
+  for (let grew = true; grew; ) {
+    grew = false;
+    if (cut.lead < head && grow({ lead: cut.lead + 1 })) grew = true;
+    for (const i of [0, 1]) {
+      if (cut.stops[i] < changeEnds[i] && grow({ stops: cut.stops.with(i, cut.stops[i] + 1) })) grew = true;
+    }
+    const changesWhole = cut.stops.every((stop, i) => stop === changeEnds[i]);
+    if (changesWhole && cut.trail < tail && grow({ trail: cut.trail + 1 })) grew = true;
+  }
+  return [excerpt(0, cut), excerpt(1, cut)];
+}

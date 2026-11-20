@@ -3,7 +3,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { parseArgs } from 'node:util';
-import { LIMIT, Refusal, fill, postLength, readTemplate, textLength, truncate } from './template.mjs';
+import { LIMIT, Refusal, cutAroundChange, fill, postLength, readTemplate, textLength, truncate } from './template.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 const DEFAULTS = {
@@ -170,14 +170,11 @@ function policyDiff(entry, opts) {
   const template = readTemplate(opts.templates, 'policy-diff').variants[variant ?? 'default'];
   const frame = fill(template, { ...values, before: '', after: '', site: null });
   const room = LIMIT - postLength(frame, frame.split('\n').at(-1));
-  const [beforeLength, afterLength] = [textLength(values.before), textLength(values.after)];
-  if (beforeLength + afterLength > room) {
+  if (textLength(values.before) + textLength(values.after) > room) {
     if (quoted.length === 1) {
       values[quoted[0]] = truncate(values[quoted[0]], room);
     } else {
-      const half = Math.floor(room / 2);
-      values.before = truncate(values.before, afterLength <= half ? room - afterLength : half);
-      values.after = truncate(values.after, beforeLength <= half ? room - beforeLength : half);
+      [values.before, values.after] = cutAroundChange([values.before, values.after], room);
     }
     if (quoted.some((key) => !values[key])) throw new Refusal(`the quoted text does not fit in ${LIMIT} characters`);
     if (values.before === values.after) throw new Refusal('the quotes read the same once cut to fit; this change needs a hand-picked excerpt');
