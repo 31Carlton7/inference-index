@@ -1,4 +1,6 @@
+import { diffWords } from "diff";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { formatDate, formatUsd, shortUrl } from "@/lib/format";
 import { mainFileUrl } from "@/lib/links";
 import { REGISTRY_FIELDS, type ChangelogEntry } from "@/lib/schema";
@@ -13,11 +15,22 @@ function sideText(value: ChangelogEntry["before"]): string | number {
   return value;
 }
 
-function Side({ side, value, snapshot }: { side: "before" | "after"; value: ChangelogEntry["before"]; snapshot?: string | null }) {
+function markedText(side: "before" | "after", before: string, after: string): ReactNode[] {
+  return diffWords(before, after).flatMap((part, index): ReactNode[] => {
+    if (part.added) return side === "after" ? [<ins key={index}>{part.value}</ins>] : [];
+    if (part.removed) return side === "before" ? [<del key={index}>{part.value}</del>] : [];
+    return [part.value];
+  });
+}
+
+function Side({ side, entry }: { side: "before" | "after"; entry: ChangelogEntry }) {
+  const value = entry[side];
+  const snapshot = side === "before" ? entry.snapshot_before : entry.snapshot_after;
+  const bothText = typeof entry.before === "string" && typeof entry.after === "string";
   return (
     <div className={side}>
       <span className="side">{side === "before" ? "Before" : "After"}</span>
-      <p>{sideText(value)}</p>
+      <p>{bothText ? markedText(side, entry.before as string, entry.after as string) : sideText(value)}</p>
       {snapshot && (
         <a className="snapshot" href={mainFileUrl(snapshot)}>
           Snapshot of the page
@@ -53,8 +66,8 @@ export function ChangeList({ entries, providerNames, modelNames }: {
             </a>
           </div>
           <div className="diff">
-            <Side side="before" value={entry.before} snapshot={entry.snapshot_before} />
-            <Side side="after" value={entry.after} snapshot={entry.snapshot_after} />
+            <Side side="before" entry={entry} />
+            <Side side="after" entry={entry} />
           </div>
         </article>
       ))}

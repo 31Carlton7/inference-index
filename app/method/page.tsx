@@ -132,7 +132,8 @@ export default function MethodPage() {
             providers added to or removed from the list are recorded the same way.
           </p>
           <p>
-            The before and after are given as they were. A change is not described as better or worse.
+            The before and after are given as they were, with the words that differ between them marked. A change is
+            not described as better or worse.
           </p>
         </section>
 

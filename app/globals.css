@@ -16,6 +16,8 @@
   --run-error: light-dark(#d03b3b, #e66767);
   --removed: light-dark(#f7e4de, #3a2320);
   --added: light-dark(#e1efdc, #1f3220);
+  --removed-mark: light-dark(#eeb9ab, #7a3a31);
+  --added-mark: light-dark(#b4dba6, #2f6b33);
 
   --serif: var(--font-newsreader), "Iowan Old Style", Georgia, serif;
   --sans: var(--font-plex-sans), system-ui, sans-serif;
@@ -620,6 +622,22 @@ th[aria-sort="none"] .sort-mark {
   line-height: 1.45;
   overflow-wrap: break-word;
   white-space: pre-wrap;
+}
+
+.diff del,
+.diff ins {
+  border-radius: 3px;
+  padding: 0.0625rem 0.125rem;
+  text-decoration: none;
+  box-decoration-break: clone;
+}
+
+.diff del {
+  background: var(--removed-mark);
+}
+
+.diff ins {
+  background: var(--added-mark);
 }
 
 .diff .snapshot {

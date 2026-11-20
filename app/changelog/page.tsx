@@ -18,10 +18,10 @@ export default function ChangelogPage() {
         <h1>What changed, and when</h1>
         <p className="lede">
           When a provider&rsquo;s policy page, price or status changes, the text before and after is recorded here as
-          it was, without comment. Snapshots link to the stored copy of the page on each date.{" "}
+          it was, without comment. Words that differ between the two are marked. Snapshots link to the stored copy of the page on each date.{" "}
           <Link href="/method#changes">How changes are detected</Link>.
         </p>
-        {entries.length > 0 && <p className="dateline">{entries.length} recorded changes</p>}
+        {entries.length > 0 && <p className="dateline">{entries.length} recorded {entries.length === 1 ? "change" : "changes"}</p>}
       </header>
       {entries.length === 0 ? (
         <Empty title="No changes recorded yet">
