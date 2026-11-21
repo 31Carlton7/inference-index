@@ -1,0 +1,52 @@
+{
+  "entries": [
+    {
+      "date": "2026-11-21",
+      "provider": "sambanova",
+      "kind": "policy",
+      "field": null,
+      "page": "trust",
+      "before": "Firewall access restricted",
+      "after": "",
+      "source": "https://trust.sambanova.ai/",
+      "snapshot_before": "data/snapshots/sambanova/trust/2026-11-20.txt",
+      "snapshot_after": "data/snapshots/sambanova/trust/2026-11-21.txt"
+    },
+    {
+      "date": "2026-11-21",
+      "provider": "sambanova",
+      "kind": "policy",
+      "field": null,
+      "page": "trust",
+      "before": "View 5 more Infrastructure security controls",
+      "after": "Remote access MFA enforced\nView 1 more Infrastructure security control",
+      "source": "https://trust.sambanova.ai/",
+      "snapshot_before": "data/snapshots/sambanova/trust/2026-11-20.txt",
+      "snapshot_after": "data/snapshots/sambanova/trust/2026-11-21.txt"
+    },
+    {
+      "date": "2026-11-21",
+      "provider": "sambanova",
+      "kind": "policy",
+      "field": null,
+      "page": "trust",
+      "before": "Code of Conduct acknowledged by employees and enforced\nConfidentiality Agreement acknowledged by employees\nView 4 more Organizational security controls\nProduct security\nDevelopment lifecycle established\nSecure development life cycle",
+      "after": "MDM system utilized\nOrganizational roles, responsibilities and authorities",
+      "source": "https://trust.sambanova.ai/",
+      "snapshot_before": "data/snapshots/sambanova/trust/2026-11-20.txt",
+      "snapshot_after": "data/snapshots/sambanova/trust/2026-11-21.txt"
+    },
+    {
+      "date": "2026-11-21",
+      "provider": "sambanova",
+      "kind": "policy",
+      "field": null,
+      "page": "trust",
+      "before": "Continuity and Disaster Recovery plans established\nIncident response policies established\nIncident management procedures followed\nView 4 more Internal security procedures controls\nData and privacy\nData retention procedures established\nData classification policy established\nEncryption key access restricted\nView 1 more Data and privacy control",
+      "after": "Risks assessments performed\nBoard charter documented",
+      "source": "https://trust.sambanova.ai/",
+      "snapshot_before": "data/snapshots/sambanova/trust/2026-11-20.txt",
+      "snapshot_after": "data/snapshots/sambanova/trust/2026-11-21.txt"
+    }
+  ]
+}

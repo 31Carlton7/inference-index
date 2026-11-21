@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-20",
+  "date": "2026-11-21",
   "pages": [
     {
       "provider": "together",
@@ -26,7 +26,8 @@
       "provider": "together",
       "page": "trust",
       "url": "https://trust.together.ai/",
-      "result": "already taken today"
+      "result": "unchanged",
+      "latest": "2026-11-20"
     },
     {
       "provider": "together",
@@ -60,7 +61,8 @@
       "provider": "fireworks",
       "page": "trust",
       "url": "https://trust.fireworks.ai/",
-      "result": "already taken today"
+      "result": "unchanged",
+      "latest": "2026-11-20"
     },
     {
       "provider": "fireworks",
@@ -94,7 +96,8 @@
       "provider": "groq",
       "page": "trust",
       "url": "https://trust.groq.com/",
-      "result": "already taken today"
+      "result": "unchanged",
+      "latest": "2026-11-20"
     },
     {
       "provider": "groq",
@@ -128,7 +131,8 @@
       "provider": "deepinfra",
       "page": "trust",
       "url": "https://trust.deepinfra.com/",
-      "result": "already taken today"
+      "result": "unchanged",
+      "latest": "2026-11-20"
     },
     {
       "provider": "deepinfra",
@@ -246,7 +250,8 @@
       "provider": "azure-ai-foundry",
       "page": "trust",
       "url": "https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-soc-2",
-      "result": "already taken today"
+      "result": "unchanged",
+      "latest": "2026-11-20"
     },
     {
       "provider": "azure-ai-foundry",
@@ -259,7 +264,8 @@
       "provider": "azure-ai-foundry",
       "page": "audit_scope",
       "url": "https://api.servicetrust.microsoft.com/api/v2/downloadDocuments/7adf2d9e-d7b5-4e71-bad8-713e6a183cf3",
-      "result": "already taken today"
+      "result": "unchanged",
+      "latest": "2026-11-20"
     },
     {
       "provider": "novita",
@@ -321,7 +327,7 @@
       "provider": "sambanova",
       "page": "trust",
       "url": "https://trust.sambanova.ai/",
-      "result": "already taken today"
+      "result": "changed"
     },
     {
       "provider": "sambanova",
@@ -390,7 +396,8 @@
       "provider": "baseten",
       "page": "trust",
       "url": "https://trust.baseten.co/",
-      "result": "already taken today"
+      "result": "unchanged",
+      "latest": "2026-11-20"
     },
     {
       "provider": "baseten",
@@ -424,7 +431,8 @@
       "provider": "hyperbolic",
       "page": "trust",
       "url": "https://trust.hyperbolic.ai/",
-      "result": "already taken today"
+      "result": "unchanged",
+      "latest": "2026-11-20"
     },
     {
       "provider": "hyperbolic",
