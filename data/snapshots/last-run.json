@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-21",
+  "date": "2026-11-22",
   "pages": [
     {
       "provider": "together",
@@ -327,7 +327,8 @@
       "provider": "sambanova",
       "page": "trust",
       "url": "https://trust.sambanova.ai/",
-      "result": "changed"
+      "result": "unchanged",
+      "latest": "2026-11-21"
     },
     {
       "provider": "sambanova",
@@ -382,8 +383,7 @@
       "provider": "baseten",
       "page": "data_policy",
       "url": "https://docs.baseten.co/security",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "changed"
     },
     {
       "provider": "baseten",
@@ -396,8 +396,7 @@
       "provider": "baseten",
       "page": "trust",
       "url": "https://trust.baseten.co/",
-      "result": "unchanged",
-      "latest": "2026-11-20"
+      "result": "changed"
     },
     {
       "provider": "baseten",

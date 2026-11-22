@@ -1,0 +1,28 @@
+{
+  "entries": [
+    {
+      "date": "2026-11-22",
+      "provider": "baseten",
+      "kind": "policy",
+      "field": null,
+      "page": "data_policy",
+      "before": "Baseten encrypts your content in transit, encrypts the content it controls at rest, and doesn’t use it for model training. You control who can access your organization and where your models run. For the full commitments, see Baseten’s Security Practices.",
+      "after": "Baseten encrypts your content in transit, encrypts the content it controls at rest, and doesn’t use it for model training. You control who can access your organization and where your models run. For the full commitments, see Baseten’s Security Practices. For the engineering behind them, read how Baseten secures its multi-cloud fleet.",
+      "source": "https://docs.baseten.co/security",
+      "snapshot_before": "data/snapshots/baseten/data_policy/2026-11-18.txt",
+      "snapshot_after": "data/snapshots/baseten/data_policy/2026-11-22.txt"
+    },
+    {
+      "date": "2026-11-22",
+      "provider": "baseten",
+      "kind": "policy",
+      "field": null,
+      "page": "trust",
+      "before": "View 4 more Organizational security controls",
+      "after": "View 5 more Organizational security controls",
+      "source": "https://trust.baseten.co/",
+      "snapshot_before": "data/snapshots/baseten/trust/2026-11-20.txt",
+      "snapshot_after": "data/snapshots/baseten/trust/2026-11-22.txt"
+    }
+  ]
+}
