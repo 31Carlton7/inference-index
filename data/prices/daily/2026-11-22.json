@@ -1,0 +1,301 @@
+{
+  "date": "2026-11-22",
+  "basket_version": 1,
+  "rows": [
+    {
+      "provider": "together",
+      "model": "gpt-oss-120b",
+      "input": 0.15,
+      "output": 0.6,
+      "source": "https://docs.together.ai/docs/serverless/models.md",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:36:54.911Z"
+    },
+    {
+      "provider": "together",
+      "model": "glm-5.3",
+      "input": 1.4,
+      "output": 4.4,
+      "source": "https://docs.together.ai/docs/serverless/models.md",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:36:54.911Z"
+    },
+    {
+      "provider": "together",
+      "model": "deepseek-v4.1-flash-1017",
+      "input": 0.3,
+      "output": 1.2,
+      "source": "https://docs.together.ai/docs/serverless/models.md",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:36:54.911Z"
+    },
+    {
+      "provider": "fireworks",
+      "model": "glm-5.3",
+      "input": 1.4,
+      "output": 4.4,
+      "source": "https://docs.fireworks.ai/serverless/pricing.md",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:36:55.207Z"
+    },
+    {
+      "provider": "fireworks",
+      "model": "deepseek-v4.1-flash-1017",
+      "input": 0.3,
+      "output": 1.2,
+      "source": "https://docs.fireworks.ai/serverless/pricing.md",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:36:55.207Z"
+    },
+    {
+      "provider": "groq",
+      "model": "gpt-oss-120b",
+      "input": 0.15,
+      "output": 0.6,
+      "source": "https://console.groq.com/docs/models.md",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:36:55.835Z"
+    },
+    {
+      "provider": "deepinfra",
+      "model": "gpt-oss-120b",
+      "input": 0.037,
+      "output": 0.17,
+      "source": "https://api.deepinfra.com/v1/openai/models",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:36:56.277Z"
+    },
+    {
+      "provider": "deepinfra",
+      "model": "glm-5.3",
+      "input": 0.9,
+      "output": 4,
+      "source": "https://api.deepinfra.com/v1/openai/models",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:36:56.277Z"
+    },
+    {
+      "provider": "deepinfra",
+      "model": "deepseek-v4.1-flash-1017",
+      "input": 0.2,
+      "output": 0.6,
+      "source": "https://api.deepinfra.com/v1/openai/models",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:36:56.277Z"
+    },
+    {
+      "provider": "cerebras",
+      "model": "gpt-oss-120b",
+      "input": 0.35,
+      "output": 0.75,
+      "source": "https://api.cerebras.ai/public/v1/models",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:36:56.588Z"
+    },
+    {
+      "provider": "amazon-bedrock",
+      "model": "gpt-oss-120b",
+      "input": 0.15,
+      "output": 0.6,
+      "source": "https://aws.amazon.com/bedrock/pricing/",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:36:56.894Z"
+    },
+    {
+      "provider": "google-vertex-ai",
+      "model": "gpt-oss-120b",
+      "input": 0.09,
+      "output": 0.36,
+      "source": "https://cloud.google.com/model-garden/partner-models/pricing",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:36:57.420Z"
+    },
+    {
+      "provider": "google-vertex-ai",
+      "model": "deepseek-v4.1-flash-1017",
+      "input": 0.3,
+      "output": 1.2,
+      "source": "https://cloud.google.com/model-garden/partner-models/pricing",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:36:57.420Z"
+    },
+    {
+      "provider": "azure-ai-foundry",
+      "model": "gpt-oss-120b",
+      "input": 0.15,
+      "output": 0.6,
+      "source": "https://prices.azure.com/api/retail/prices?$filter=armRegionName%20eq%20'eastus'%20and%20productName%20eq%20'Azure%20OpenAI%20OSS%20Models'",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:36:57.692Z"
+    },
+    {
+      "provider": "novita",
+      "model": "gpt-oss-120b",
+      "input": 0.05,
+      "output": 0.25,
+      "source": "https://novita.ai/pricing",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:36:58.491Z"
+    },
+    {
+      "provider": "novita",
+      "model": "glm-5.3",
+      "input": 1.4,
+      "output": 4.4,
+      "source": "https://novita.ai/pricing",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:36:58.491Z"
+    },
+    {
+      "provider": "novita",
+      "model": "deepseek-v4.1-flash-1017",
+      "input": 0.3,
+      "output": 1.2,
+      "source": "https://novita.ai/pricing",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:36:58.491Z"
+    },
+    {
+      "provider": "sambanova",
+      "model": "gpt-oss-120b",
+      "input": 0.22,
+      "output": 0.59,
+      "source": "https://api.sambanova.ai/v1/models",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:36:59.051Z"
+    },
+    {
+      "provider": "sambanova",
+      "model": "glm-5.3",
+      "input": 2.8,
+      "output": 8.8,
+      "source": "https://api.sambanova.ai/v1/models",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:36:59.051Z"
+    },
+    {
+      "provider": "nebius",
+      "model": "gpt-oss-120b",
+      "input": 0.15,
+      "output": 0.6,
+      "source": "https://tokenfactory.nebius.com/api/public/models_info",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:36:59.473Z"
+    },
+    {
+      "provider": "nebius",
+      "model": "glm-5.3",
+      "input": 1.4,
+      "output": 4.4,
+      "source": "https://tokenfactory.nebius.com/api/public/models_info",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:36:59.473Z"
+    },
+    {
+      "provider": "nebius",
+      "model": "deepseek-v4.1-flash-1017",
+      "input": 0.3,
+      "output": 1.2,
+      "source": "https://tokenfactory.nebius.com/api/public/models_info",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:36:59.473Z"
+    },
+    {
+      "provider": "baseten",
+      "model": "gpt-oss-120b",
+      "input": 0.1,
+      "output": 0.5,
+      "source": "https://www.baseten.co/pricing/",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:36:59.859Z"
+    },
+    {
+      "provider": "baseten",
+      "model": "glm-5.3",
+      "input": 1.4,
+      "output": 4.4,
+      "source": "https://www.baseten.co/pricing/",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:36:59.859Z"
+    },
+    {
+      "provider": "baseten",
+      "model": "deepseek-v4.1-flash-1017",
+      "input": 0.3,
+      "output": 1.2,
+      "source": "https://www.baseten.co/pricing/",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:36:59.859Z"
+    },
+    {
+      "provider": "hyperbolic",
+      "model": "glm-5.3",
+      "input": 1.4,
+      "output": 4.4,
+      "source": "https://www.hyperbolic.ai/docs/inference/overview.md",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:37:00.395Z"
+    },
+    {
+      "provider": "cloudflare-workers-ai",
+      "model": "gpt-oss-120b",
+      "input": 0.35,
+      "output": 0.75,
+      "source": "https://developers.cloudflare.com/workers-ai/platform/pricing/index.md",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:37:00.503Z"
+    },
+    {
+      "provider": "cloudflare-workers-ai",
+      "model": "glm-5.3",
+      "input": 1.4,
+      "output": 4.4,
+      "source": "https://developers.cloudflare.com/workers-ai/platform/pricing/index.md",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:37:00.503Z"
+    },
+    {
+      "provider": "cloudflare-workers-ai",
+      "model": "deepseek-v4.1-flash-1017",
+      "input": 0.3,
+      "output": 1.2,
+      "source": "https://developers.cloudflare.com/workers-ai/platform/pricing/index.md",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:37:00.503Z"
+    },
+    {
+      "provider": "parasail",
+      "model": "gpt-oss-120b",
+      "input": 0.1,
+      "output": 0.75,
+      "source": "https://docs.parasail.io/parasail-docs/products/overview/models.md",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:37:01.063Z"
+    },
+    {
+      "provider": "parasail",
+      "model": "glm-5.3",
+      "input": 1.4,
+      "output": 4.4,
+      "source": "https://docs.parasail.io/parasail-docs/products/overview/models.md",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:37:01.063Z"
+    },
+    {
+      "provider": "parasail",
+      "model": "deepseek-v4.1-flash-1017",
+      "input": 0.3,
+      "output": 1.2,
+      "source": "https://docs.parasail.io/parasail-docs/products/overview/models.md",
+      "checked": "2026-11-22",
+      "read_at": "2026-11-22T14:37:01.063Z"
+    }
+  ],
+  "missing": [
+    {
+      "provider": "fireworks",
+      "model": "gpt-oss-120b",
+      "reason": "expected one row for \"OpenAI GPT OSS 120B\", found 0"
+    }
+  ]
+}
