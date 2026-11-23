@@ -19,7 +19,7 @@ The changelog entry only says which provider and which day. The prices come from
 |---|---|---|
 | `provider_name` | `data/providers.json` `providers[].name`, matched on the entry's `provider` | as written |
 | `model_name` | `data/models.json` `probe_models[].name` for the row's `model`; the model id if it has no name there | as written |
-| `date` | `data/changelog.json` `entries[].date`, the day our daily read first showed the new price; the provider may have made the change earlier that day or late the day before | `Nov 18` |
+| `date` | `data/changelog.json` `entries[].date`, the day our daily read first showed the new price; the provider made the change some time after our previous successful read of the page, which is not always the day before | `Nov 18` |
 | `input_before`, `output_before` | `data/prices/daily/<date minus 1 day>.json` `rows[].input`, `rows[].output` for this provider and model | `$0.59`; up to four decimals when the price needs them (`$0.035`) |
 | `input_after`, `output_after` | `data/prices/daily/<date>.json` `rows[].input`, `rows[].output` for this provider and model | same |
 | `input_change`, `output_change` | computed from those two numbers only: (after - before) / before | one decimal with a sign, `-15.3%`, `+4.2%`; `0.0%` when it rounds to zero |

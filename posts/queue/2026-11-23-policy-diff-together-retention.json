@@ -1,8 +1,8 @@
 {
   "template": "policy-diff",
   "variant": null,
-  "text": "Together AI's data handling page has new retention text as of Nov 23.\nBefore: \"By default, Together stores the prompts you send and the responses models...\"\nAfter: \"New organizations start with zero data retention (ZDR) enabled. When prompt storage is...\"\nhttps://inference-index.vercel.app/changelog",
-  "chars": 279,
+  "text": "Together AI: new retention text on the data handling page as of Nov 23.\nBefore: \"By default, Together stores the prompts you send and the responses models...\"\nAfter: \"New organizations start with zero data retention (ZDR) enabled. When prompt storage...\"\nhttps://inference-index.vercel.app/changelog",
+  "chars": 278,
   "link": "https://inference-index.vercel.app/changelog",
   "image": null,
   "source": {
@@ -24,7 +24,7 @@
       "data/snapshots/together/data_policy/2026-11-23.txt"
     ]
   },
-  "created": "2026-11-23T14:38:30.231Z",
+  "created": "2026-11-23T14:39:26.995Z",
   "status": "draft",
   "sendable": false
 }

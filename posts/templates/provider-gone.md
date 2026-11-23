@@ -15,7 +15,7 @@ One post when a provider's registry status changes to `acquired` or `shut down`.
 |---|---|---|
 | `provider_name` | `data/providers.json` `providers[].name`, matched on the entry's `provider` | as written |
 | `status` | `data/registry/<provider-id>.json` `fields.status.value` | `acquired` or `shut down`, as written |
-| `date` | `data/changelog.json` `entries[].date` | `Nov 18` |
+| `date` | `data/changelog.json` `entries[].date`, the day the registry recorded the status, not the day the provider shut down or was acquired | `Nov 18` |
 | `provider_id` | `entries[].provider` | as written |
 
 ## Link

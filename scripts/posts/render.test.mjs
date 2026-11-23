@@ -269,7 +269,7 @@ test('policy diff gives a long added section the whole room and keeps the link',
   assert.ok(entry.after.length > 900);
   const { draft } = render({ entry }, setup());
   const [first, added, link, ...rest] = draft.text.split('\n');
-  assert.equal(first, "Text added to Example AI's privacy page as of Nov 18.");
+  assert.equal(first, "Example AI: text added to the privacy page as of Nov 18.");
   assert.match(added, /^Added: "Customers on the Enterprise plan .*[a-z]\.\.\."$/);
   assert.ok(entry.after.startsWith(added.slice(8, -4)));
   assert.equal(link, `${REAL_SITE}/changelog`);
@@ -281,7 +281,7 @@ test('policy diff gives a long added section the whole room and keeps the link',
 test('policy diff cuts a long removed section the same way', () => {
   const { added_section: section } = POLICIES;
   const { draft } = render({ entry: { ...section, before: section.after, after: '' } }, setup());
-  assert.match(draft.text, /^Text removed from Example AI's privacy page as of Nov 18\.\nRemoved: "Customers .*\.\.\."\n\S+\/changelog$/);
+  assert.match(draft.text, /^Example AI: text removed from the privacy page as of Nov 18\.\nRemoved: "Customers .*\.\.\."\n\S+\/changelog$/);
   assert.ok(draft.chars <= LIMIT && draft.chars > LIMIT - 20);
 });
 
@@ -291,15 +291,15 @@ test('policy diff refuses an added quote whose first word does not fit', () => {
 
 test('policy diff prints words for the page and the field, never the key', () => {
   const { draft } = render({ entry: POLICIES.data_policy }, setup());
-  assert.equal(draft.text.split('\n')[0], "Example AI's data handling page has new zero data retention setup text as of Nov 18.");
+  assert.equal(draft.text.split('\n')[0], "Example AI: new zero data retention setup text on the data handling page as of Nov 18.");
   const first = (field, page) => {
     const entry = { ...POLICY, field, snapshot_after: `data/snapshots/example/${page}/2026-11-18.txt` };
     const layout = { [`snapshots/example/${page}/2026-11-18.txt`]: 'snapshot-privacy-2026-11-18.txt' };
     return render({ entry }, setup({ replace: layout })).draft.text.split('\n')[0];
   };
-  assert.equal(first('zdr', 'trust'), "Example AI's trust page has new zero data retention text as of Nov 18.");
-  assert.equal(first('soc2', 'subprocessors'), "Example AI's subprocessors page has new SOC 2 text as of Nov 18.");
-  assert.equal(first('data_residency', 'acceptable_use'), "Example AI's acceptable use page has new data residency text as of Nov 18.");
+  assert.equal(first('zdr', 'trust'), "Example AI: new zero data retention text on the trust page as of Nov 18.");
+  assert.equal(first('soc2', 'subprocessors'), "Example AI: new SOC 2 text on the subprocessors page as of Nov 18.");
+  assert.equal(first('data_residency', 'acceptable_use'), "Example AI: new data residency text on the acceptable use page as of Nov 18.");
 });
 
 test('policy diff refuses when a snapshot file does not exist', () => {

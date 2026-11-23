@@ -1,8 +1,8 @@
 {
   "template": "policy-diff",
   "variant": "added",
-  "text": "Text added to Novita AI's subprocessors page as of Nov 23.\nAdded: \"Model Providers Offered at the customer's discretion. To explore the available options, please visit novita.ai/models and refer to the models designated \"Partner\" Partner APIs...\"\nhttps://inference-index.vercel.app/changelog",
-  "chars": 277,
+  "text": "Novita AI: text added to the subprocessors page as of Nov 23.\nAdded: \"Model Providers Offered at the customer's discretion. To explore the available options, please visit novita.ai/models and refer to the models designated \"Partner\" Partner APIs...\"\nhttps://inference-index.vercel.app/changelog",
+  "chars": 280,
   "link": "https://inference-index.vercel.app/changelog",
   "image": null,
   "source": {
@@ -24,7 +24,7 @@
       "data/snapshots/novita/subprocessors/2026-11-23.txt"
     ]
   },
-  "created": "2026-11-23T14:38:30.163Z",
+  "created": "2026-11-23T14:39:26.925Z",
   "status": "draft",
   "sendable": false
 }

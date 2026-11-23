@@ -1,7 +1,7 @@
 {
   "template": "policy-diff",
   "variant": null,
-  "text": "Together AI's data handling page has new zero data retention text as of Nov 23.\nBefore: \"Prompt storage: On by default. Stores prompts and model responses for product...\"\nAfter: \"Prompt storage: Off by default for new organizations. Stores prompts and...\"\nhttps://inference-index.vercel.app/changelog",
+  "text": "Together AI: new zero data retention text on the data handling page as of Nov 23.\nBefore: \"Prompt storage: On by default. Stores prompts and model responses for...\"\nAfter: \"Prompt storage: Off by default for new organizations. Stores prompts and model...\"\nhttps://inference-index.vercel.app/changelog",
   "chars": 279,
   "link": "https://inference-index.vercel.app/changelog",
   "image": null,
@@ -24,7 +24,7 @@
       "data/snapshots/together/data_policy/2026-11-23.txt"
     ]
   },
-  "created": "2026-11-23T14:38:30.198Z",
+  "created": "2026-11-23T14:39:26.961Z",
   "status": "draft",
   "sendable": false
 }
