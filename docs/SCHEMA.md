@@ -109,7 +109,7 @@ Newest first. Written when a registry field or a policy page changes.
 
 When a provider's `status` field changes, a `status` entry is written by hand in the same commit as the record: `field` is `"status"`, `before` and `after` are the old and new values, and `source` is the provider's or acquirer's own announcement. When a provider is added, a `provider added` entry with `provider` and `date` goes in the same commit as its row in `data/providers.json`. The post for each fires only from that entry.
 
-When a provider is added to or removed from a model in `data/models.json`, a `model` entry goes in the same commit: `model` is the model id, `before` and `after` are `"served"` and `"not served"` (or the reverse), `field` is `null`, and `source` is the provider's own page that shows it. `date` is the day of the first read that saw the change, not the day the provider made it; if the provider states its own date, that goes in `note`. No post is rendered from a `model` entry.
+When a provider is added to or removed from a model in `data/models.json`, a `model` entry goes in the same commit: `model` is the model id, `before` and `after` are `"served"` and `"not served"` (or the reverse), `field` is `null`, and `source` is the provider's own page that shows it. `date` is the day of the first read that saw the change, not the day the provider made it; if the provider states its own date, that goes in `note`. No post is rendered from a `model` entry. Any entry may carry `note`: one plain sentence of context, shown under the entry.
 
 A `price` entry is written by the daily price run and has a `model` key. Its `before` and `after` are the two prices in USD per million tokens, as stored in the daily files:
 

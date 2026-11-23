@@ -69,6 +69,7 @@ export function ChangeList({ entries, providerNames, modelNames }: {
             <Side side="before" entry={entry} />
             <Side side="after" entry={entry} />
           </div>
+          {entry.note && <p className="aside change-note">{entry.note}</p>}
         </article>
       ))}
     </div>

@@ -55,6 +55,7 @@ export const changelogEntry = z.object({
   source: url,
   snapshot_before: repoPath.nullable().optional(),
   snapshot_after: repoPath.nullable().optional(),
+  note: z.string().min(1).optional(),
 });
 
 export const changelogFile = z.object({ entries: z.array(changelogEntry) });

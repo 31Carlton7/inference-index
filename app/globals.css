@@ -647,6 +647,11 @@ th[aria-sort="none"] .sort-mark {
   color: var(--ink-soft);
 }
 
+.change-note {
+  margin-top: 0.5rem;
+  max-width: 44rem;
+}
+
 @media (max-width: 40rem) {
   .diff {
     grid-template-columns: 1fr;
