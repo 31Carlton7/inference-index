@@ -2,7 +2,7 @@
 
 What the probe and fidelity schedules cost per month at list prices, against the $50 a month cap that covers the whole project.
 
-Written Nov 18, 2026 from the prices in `data/prices/daily/2026-11-19.json`. Nothing has been spent yet: no provider key exists, so no probe or fidelity request has been made. To recompute after a price, model or schedule change:
+Written Nov 18, 2026 from the prices in `data/prices/daily/2026-11-19.json`, when the total was $31.88 over 32 priced pairs. Recomputed Nov 23, 2026 from `data/prices/daily/2026-11-23.json` after two changes: Fireworks stopped serving gpt-oss-120b on serverless (see [method-probes.md](method-probes.md)), which takes $0.27 off, and Vertex AI's DeepSeek V4.1 Flash 1017 has had a price row since Nov 20, which adds $0.53. Nothing has been spent yet: no provider key exists, so no probe or fidelity request has been made. To recompute after a price, model or schedule change:
 
 ```
 node scripts/spend/model.mjs
@@ -12,7 +12,7 @@ The script reads the pairs from `data/models.json`, the newest file in `data/pri
 
 ## Result
 
-**$31.88 a month, 64% of the cap**, if every provider has a key. $26.79 is probes, $2.98 is fidelity, and $5.00 is Cloudflare's plan minimum (its token usage falls inside its free daily allowance). On top of that, $20 of one-time prepaid deposits that the usage then draws down.
+**$32.15 a month, 64% of the cap**, if every provider has a key. $27.03 is probes, $3.01 is fidelity, and $5.00 is Cloudflare's plan minimum (its token usage falls inside its free daily allowance). On top of that, $20 of one-time prepaid deposits that the usage then draws down.
 
 Spend only starts for a provider when its key exists, so the real figure climbs toward this one as keys arrive.
 
@@ -22,29 +22,29 @@ Spend only starts for a provider when its key exists, so the real figure climbs 
 | sambanova | 2 | $3.91 | $0.36 |  |  | $4.27 |  |
 | parasail | 3 | $2.62 | $0.24 |  |  | $2.86 |  |
 | together | 3 | $2.57 | $0.28 |  |  | $2.85 | $15.00 |
-| fireworks | 3 | $2.57 | $0.24 |  |  | $2.80 |  |
 | nebius | 3 | $2.57 | $0.24 |  |  | $2.80 |  |
 | baseten | 3 | $2.52 | $0.23 |  |  | $2.75 |  |
 | novita | 3 | $2.42 | $0.22 |  |  | $2.64 |  |
+| fireworks | 2 | $2.32 | $0.21 |  |  | $2.53 |  |
 | hyperbolic | 1 | $1.83 | $0.51 |  |  | $2.34 | $5.00 |
 | deepinfra | 3 | $1.94 | $0.17 |  |  | $2.12 |  |
+| google-vertex-ai | 2 | $0.64 | $0.06 |  |  | $0.69 |  |
 | cerebras | 1 | $0.32 | $0.03 |  |  | $0.36 |  |
 | groq | 1 | $0.25 | $0.02 |  |  | $0.27 |  |
 | amazon-bedrock | 1 | $0.25 | $0.02 |  |  | $0.27 |  |
 | azure-ai-foundry | 1 | $0.25 | $0.02 |  |  | $0.27 |  |
-| google-vertex-ai | 1 | $0.15 | $0.01 |  |  | $0.16 |  |
 | deepseek-api (fidelity reference only) | 0 | $0.00 | $0.13 |  |  | $0.13 |  |
-| **total** | 32 | $26.79 | $2.98 | | | **$31.88** | $20.00 |
+| **total** | 32 | $27.03 | $3.01 | | | **$32.15** | $20.00 |
 
 By model, probes only:
 
 | model | pairs | probes per month | share |
 |---|---:|---:|---:|
-| gpt-oss-120b | 14 | $3.18 | 12% |
+| gpt-oss-120b | 13 | $2.94 | 11% |
 | GLM-5.3 | 10 | $19.93 | 74% |
-| DeepSeek V4.1 Flash 1017 | 8 | $3.68 | 14% |
+| DeepSeek V4.1 Flash 1017 | 9 | $4.17 | 15% |
 
-`data/models.json` has 33 provider and model pairs (14 + 10 + 9). 32 have a price row. **Vertex AI's DeepSeek V4.1 Flash 1017 has no price row** (Google's page does not name the 1017 snapshot, see [method-prices.md](method-prices.md)), so it is not in the total. If it were billed at the $0.30 and $1.20 most providers charge, it would add about $0.49 a month; that is a guess at the price, which is why it is left out.
+`data/models.json` has 32 provider and model pairs (13 + 10 + 9), and all 32 have a price row. On Nov 18 it had 33 (14 + 10 + 9), of which Vertex AI's DeepSeek V4.1 Flash 1017 had no price row and was left out of the total.
 
 ## The arithmetic
 
@@ -78,10 +78,10 @@ The reference is run three times a day. When the reference is a listed provider 
 gpt-oss-120b reasons before it answers, and the probe sends no `reasoning_effort`, so it runs at the provider's default. The question is whether reasoning is billed inside `max_tokens` or on top of it.
 
 - Cerebras documents it: "Reasoning tokens count toward `max_completion_tokens` and the completion-token usage reported by the API." Inside the cap.
-- Groq's reasoning page describes `max_completion_tokens` as the maximum length of the response and does not say how reasoning is counted. Fireworks' reasoning page does not say either.
+- Groq's reasoning page describes `max_completion_tokens` as the maximum length of the response and does not say how reasoning is counted. Fireworks' reasoning page did not say either when it still served the model.
 - The other eleven providers' pages were not checked for this.
 
-The model above assumes the cap holds everywhere, so a gpt-oss probe is billed at most 128 output tokens. That is unverified for 13 of 14 providers. If every one of them billed 512 output tokens per probe instead of 128, gpt-oss probes would cost $8.82 more a month, taking the total to about $40.70. The probe stores `output_tokens` from each response's `usage`, so the first day of real runs settles this per provider: any pair reporting more than 128 is billing reasoning outside the cap.
+The model above assumes the cap holds everywhere, so a gpt-oss probe is billed at most 128 output tokens. That is unverified for 12 of 13 providers. If every one of them billed 512 output tokens per probe instead of 128, gpt-oss probes would cost $8.14 more a month, taking the total to about $40.29. The probe stores `output_tokens` from each response's `usage`, so the first day of real runs settles this per provider: any pair reporting more than 128 is billing reasoning outside the cap.
 
 One consequence that is not about spend: with a 128-token cap that includes reasoning, a gpt-oss probe may be mostly or entirely reasoning text. That is the probe owner's call and is noted here only because it follows from the same fact.
 
@@ -111,19 +111,19 @@ Deposits are not extra spend. They are prepayment that the monthly usage draws d
 
 ## Fidelity cadence
 
-Daily. A daily run costs $2.98 a month at list price and a weekly one $0.43. After Cloudflare's free allowance the choice moves the total by $2.34. Daily means a result can be `repeated` after two days instead of two weeks, which is what the two-run rule in [method-fidelity.md](method-fidelity.md) needs.
+Daily. A daily run costs $3.01 a month at list price and a weekly one $0.43. After Cloudflare's free allowance the choice moves the total by $2.37. Daily means a result can be `repeated` after two days instead of two weeks, which is what the two-run rule in [method-fidelity.md](method-fidelity.md) needs.
 
 ## Headroom and the cut
 
-$31.88 leaves $18.12 under the cap for everything else the project pays for. The known things that could eat into it: reasoning billed outside the cap (up to about $8.82, above), the unpriced Vertex pair (about $0.49), and price rises on GLM-5.3.
+$32.15 leaves $17.85 under the cap for everything else the project pays for. The known things that could eat into it: reasoning billed outside the cap (up to about $8.14, above) and price rises on GLM-5.3.
 
 The full schedule fits, so no cut is applied. If spend needs to come down, GLM-5.3 is three quarters of the probe bill and the place to cut:
 
 | cut | saves per month | new total |
 |---|---:|---:|
-| Probe GLM-5.3 every 30 minutes instead of 15 (48 runs a day) | $9.05 | $22.83 |
-| Lower the probe's `max_tokens` from 128 to 64 for all models | $11.12 | $20.76 |
-| Fidelity weekly instead of daily | $2.34 | $29.54 |
+| Probe GLM-5.3 every 30 minutes instead of 15 (48 runs a day) | $9.05 | $23.10 |
+| Lower the probe's `max_tokens` from 128 to 64 for all models | $11.23 | $20.92 |
+| Fidelity weekly instead of daily | $2.37 | $29.78 |
 
 Savings are after Cloudflare's free allowance, which already covers its share. The first is the recommended one: it halves the resolution of one model's status line and leaves the speed measurements alone. The second changes what tokens per second is measured over and would be a probe method version bump.
 

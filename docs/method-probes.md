@@ -4,15 +4,17 @@ The probes and the price index use the same three open-weight models. They were 
 
 | model | lab | weights | providers serving it |
 |---|---|---|---|
-| gpt-oss-120b | OpenAI | [openai/gpt-oss-120b](https://huggingface.co/openai/gpt-oss-120b), Apache 2.0 | 14 of 15 |
+| gpt-oss-120b | OpenAI | [openai/gpt-oss-120b](https://huggingface.co/openai/gpt-oss-120b), Apache 2.0 | 13 of 15 |
 | GLM-5.3 | Z.ai | [zai-org/GLM-5.3](https://huggingface.co/zai-org/GLM-5.3) | 10 of 15 |
 | DeepSeek V4.1 Flash 1017 | DeepSeek | [deepseek-ai/DeepSeek-V4.1-Flash-1017](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017), MIT | 9 of 15 |
 
 Who serves each one:
 
-- **gpt-oss-120b**: Together, Fireworks, Groq, DeepInfra, Cerebras, Amazon Bedrock, Google Vertex AI, Azure AI Foundry, Novita, SambaNova, Nebius, Baseten, Cloudflare Workers AI, Parasail. Not Hyperbolic, whose catalog has it hidden.
+- **gpt-oss-120b**: Together, Groq, DeepInfra, Cerebras, Amazon Bedrock, Google Vertex AI, Azure AI Foundry, Novita, SambaNova, Nebius, Baseten, Cloudflare Workers AI, Parasail. Not Hyperbolic, whose catalog has it hidden, and not Fireworks since Nov 22, 2026 (below).
 - **GLM-5.3**: Together, Fireworks, DeepInfra, Novita, SambaNova, Nebius, Baseten, Hyperbolic, Cloudflare Workers AI, Parasail. Vertex AI lists GLM 5.2 only. Azure lists GLM 5.3 Flash only.
 - **DeepSeek V4.1 Flash 1017**: Together, Fireworks, DeepInfra, Google Vertex AI, Novita, Nebius, Baseten, Cloudflare Workers AI, Parasail.
+
+On Nov 23, 2026 Fireworks came out of the gpt-oss-120b list, which had 14 of 15 on Nov 18: its changelog entry of Oct 19 said the model "will be decommissioned on November 7, 2026" on serverless only, our daily read of its serverless pricing table last found the row on Nov 21 and found none from Nov 22, and its model page read "Serverless: Not Supported" on Nov 23 ([changelog](https://docs.fireworks.ai/updates/changelog.md), [serverless pricing](https://docs.fireworks.ai/serverless/pricing.md), [model page](https://fireworks.ai/models/fireworks/gpt-oss-120b)).
 
 Every provider serves at least one of the three. Groq, Cerebras, Bedrock, Azure and Hyperbolic serve exactly one.
 
