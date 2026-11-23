@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-22",
+  "date": "2026-11-23",
   "pages": [
     {
       "provider": "together",
@@ -12,8 +12,7 @@
       "provider": "together",
       "page": "data_policy",
       "url": "https://docs.together.ai/docs/privacy-and-security",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "changed"
     },
     {
       "provider": "together",
@@ -131,8 +130,7 @@
       "provider": "deepinfra",
       "page": "trust",
       "url": "https://trust.deepinfra.com/",
-      "result": "unchanged",
-      "latest": "2026-11-20"
+      "result": "changed"
     },
     {
       "provider": "deepinfra",
@@ -299,8 +297,7 @@
       "provider": "novita",
       "page": "subprocessors",
       "url": "https://trust.novita.ai/subprocessors",
-      "result": "unchanged",
-      "latest": "2026-11-19"
+      "result": "changed"
     },
     {
       "provider": "sambanova",
@@ -383,7 +380,8 @@
       "provider": "baseten",
       "page": "data_policy",
       "url": "https://docs.baseten.co/security",
-      "result": "changed"
+      "result": "unchanged",
+      "latest": "2026-11-22"
     },
     {
       "provider": "baseten",
@@ -396,7 +394,8 @@
       "provider": "baseten",
       "page": "trust",
       "url": "https://trust.baseten.co/",
-      "result": "changed"
+      "result": "unchanged",
+      "latest": "2026-11-20"
     },
     {
       "provider": "baseten",
