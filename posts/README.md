@@ -4,6 +4,8 @@ What the project account posts, where each post comes from, and the record of wh
 
 Nothing here posts to X. The site is live at `https://inference-index.vercel.app` and `site_url` in `config.json` points at it. There is no project account yet and no template is approved. The renderer in `scripts/posts/` only writes draft files. It has no code that talks to X or to any network.
 
+A `model` changelog entry (a provider starting or ceasing to serve a tracked model) has no template. The renderer prints that no post is rendered, exits 0 and writes nothing to the queue.
+
 ```
 templates/    the six post templates
 queue/        drafts waiting to be sent, one JSON file each

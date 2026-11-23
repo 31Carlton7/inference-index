@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-18",
+  "provider": "example",
+  "kind": "model",
+  "model": "llama-3.3-70b",
+  "field": null,
+  "before": "served",
+  "after": "not served",
+  "source": "https://example.com/models/llama-3.3-70b",
+  "note": "Example AI's changelog announced the end of pay-per-token serving for this model."
+}

@@ -370,6 +370,8 @@ function weeklyChart(input, opts) {
   };
 }
 
+const NO_POST = ['model'];
+
 function build(input, opts) {
   if (input.weekly) return weeklyChart(input, opts);
   if (input.incident) return outage(input, opts);
@@ -382,6 +384,7 @@ export function render(input, options) {
   const opts = { ...DEFAULTS, probeData: options.data, ...options };
   const config = JSON.parse(readFileSync(opts.config, 'utf8'));
   const site = config.site_url?.replace(/\/$/, '') ?? null;
+  if (NO_POST.includes(input.entry?.kind)) return null;
   const built = build(input, opts);
   const template = readTemplate(opts.templates, built.template);
 
@@ -461,7 +464,13 @@ function main() {
   if (args.queue) opts.queue = args.queue;
 
   try {
-    const { path, draft } = render(selectInput(args, opts), opts);
+    const input = selectInput(args, opts);
+    const rendered = render(input, opts);
+    if (!rendered) {
+      console.log(`no post is rendered from a ${input.entry.kind} entry`);
+      return;
+    }
+    const { path, draft } = rendered;
     console.log(`${path}\n${draft.chars} characters, sendable: ${draft.sendable}\n\n${draft.text}`);
   } catch (error) {
     if (!(error instanceof Refusal)) throw error;

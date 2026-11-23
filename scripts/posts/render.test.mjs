@@ -467,6 +467,12 @@ test('weekly chart refuses a Friday with no index point', () => {
   refuses({ weekly: true, date: '2026-11-27' }, setup(), /no point for 2026-11-27/);
 });
 
+test('a model entry renders no post and queues nothing', () => {
+  const opts = setup();
+  assert.equal(render({ entry: fixture('changelog-model-entry.json') }, opts), null);
+  assert.throws(() => readdirSync(opts.queue), { code: 'ENOENT' });
+});
+
 test('refuses a changelog kind with no template', () => {
   refuses({ entry: { ...ADDED, kind: 'funding' } }, setup(), /no template for changelog kind funding/);
 });
