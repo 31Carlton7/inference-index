@@ -47,7 +47,7 @@ const pricePair = z.object({ input: z.number().nonnegative(), output: z.number()
 export const changelogEntry = z.object({
   date,
   provider: providerId,
-  kind: z.enum(["policy", "price", "provider added", "provider removed", "status"]),
+  kind: z.enum(["policy", "price", "model", "provider added", "provider removed", "status"]),
   field: z.string().min(1).nullable().optional(),
   model: z.string().min(1).optional(),
   before: z.union([z.string(), z.number(), pricePair]).nullable(),

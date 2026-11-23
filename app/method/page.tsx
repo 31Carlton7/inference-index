@@ -128,8 +128,10 @@ export default function MethodPage() {
           <p>
             The text of each tracked policy page is saved as a snapshot on the day it is fetched. When a page differs
             from its previous snapshot, the <Link href="/changelog">changelog</Link> records the date, the text before
-            and the text after, the page&rsquo;s URL and links to both snapshots. Price changes, status changes, and
-            providers added to or removed from the list are recorded the same way.
+            and the text after, the page&rsquo;s URL and links to both snapshots. Price changes, status changes,
+            providers added to or removed from the list, and a provider starting or ceasing to serve a tracked
+            model are recorded the same way. An entry&rsquo;s date is the day the change was first read, which may
+            be later than the day the provider made it.
           </p>
           <p>
             The before and after are given as they were, with the words that differ between them marked. A change is
