@@ -34,6 +34,17 @@
       "snapshot_after": "data/snapshots/together/data_policy/2026-11-23.txt"
     },
     {
+      "date": "2026-11-22",
+      "provider": "fireworks",
+      "kind": "model",
+      "model": "gpt-oss-120b",
+      "field": null,
+      "before": "served",
+      "after": "not served",
+      "source": "https://fireworks.ai/models/fireworks/gpt-oss-120b",
+      "note": "Fireworks' changelog announced the serverless decommission of this model for November 7, 2026; its pricing row was still listed at our November 21 read and was gone at our November 22 read, and the day serving stopped is not known."
+    },
+    {
       "date": "2026-11-19",
       "provider": "amazon-bedrock",
       "kind": "policy",
