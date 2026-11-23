@@ -78,7 +78,7 @@ class VisibleText(HTMLParser):
             self.pieces.append(text)
 
 
-HIDDEN_CONTROLS_COUNT = re.compile(r"View \d+ more .+ controls?")
+HIDDEN_CONTROLS_COUNT = re.compile(r"View \d+ more (.+ )?controls?")
 
 
 def is_volatile(line):
@@ -91,7 +91,7 @@ def is_volatile(line):
     if line.startswith("Last updated ") and line.endswith(" UTC."):
         return True
     # Trust centres count the controls their preview leaves out:
-    # "View 4 more Organizational security controls".
+    # "View 4 more Organizational security controls", "View 33 more controls".
     return bool(HIDDEN_CONTROLS_COUNT.fullmatch(line))
 
 

@@ -1,6 +1,6 @@
 {
   "id": "together",
-  "updated": "2026-11-18",
+  "updated": "2026-11-23",
   "fields": {
     "status": {
       "value": "live",
@@ -10,31 +10,32 @@
       "note": "Together's press page and blog list no acquisition of the company; its latest company announcement is the July 2026 Series C."
     },
     "retention": {
-      "value": "Stored by default; no period stated",
+      "value": "Not stored by default for new organizations; no period stated when prompt storage is on",
       "source": "https://docs.together.ai/docs/privacy-and-security",
-      "checked": "2026-11-18",
-      "quote": "By default, Together stores the prompts you send and the responses models return, and may use them for product improvements.",
-      "note": "The docs say stored data can be deleted at any time but give no retention period; the privacy policy gives none either."
+      "checked": "2026-11-23",
+      "quote": "New organizations start with zero data retention (ZDR) enabled.",
+      "note": "The page states the default for new organizations only. With prompt storage on, it says prompts and responses are stored and can be deleted at any time, and gives no retention period; the privacy policy gives none either."
     },
     "zdr": {
-      "value": "self-serve",
+      "value": "default",
       "source": "https://docs.together.ai/docs/zero-data-retention",
-      "checked": "2026-11-18",
-      "quote": "Together AI supports zero data retention (ZDR) at the organization level.",
-      "note": "Off by default and switched on by an organization admin in settings, with no request to Together; turning it on also turns off passthrough models."
+      "checked": "2026-11-23",
+      "quote": "Together AI enables zero data retention (ZDR) by default for new organizations.",
+      "note": "The page states the default for new organizations only; an organization with prompt storage turned on turns it off to enable ZDR, which also turns off passthrough models."
     },
     "zdr_how": {
-      "value": "An organization admin turns off Prompt storage in the Privacy section of Organization Settings",
-      "source": "https://docs.together.ai/docs/privacy-and-security",
-      "checked": "2026-11-18",
-      "quote": "Organization admins can turn storage off in privacy settings, which enables zero data retention (ZDR): request content is then not persisted or used for any secondary purpose."
+      "value": "Enabled by default for new organizations; otherwise an organization admin turns off Prompt storage in the Privacy section of Organization Settings",
+      "source": "https://docs.together.ai/docs/zero-data-retention",
+      "checked": "2026-11-23",
+      "quote": "If your organization has prompt storage turned on, turn it off to enable ZDR.",
+      "note": "The privacy and security docs page says only organization admins can change the toggles in the Privacy section of Organization Settings."
     },
     "training": {
       "value": "opt-in",
       "source": "https://www.together.ai/privacy",
       "checked": "2026-11-18",
       "quote": "We do not use any data collected from you to train our models without your explicit opt-in and consent.",
-      "note": "Stored prompts and responses may still be used for product improvements unless prompt storage is turned off."
+      "note": "When prompt storage is on, stored prompts and responses may be used for product improvements."
     },
     "soc2": {
       "value": "Type II",

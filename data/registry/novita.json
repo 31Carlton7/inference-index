@@ -1,6 +1,6 @@
 {
   "id": "novita",
-  "updated": "2026-11-18",
+  "updated": "2026-11-23",
   "fields": {
     "status": {
       "value": "live",
@@ -69,12 +69,13 @@
         "Microsoft Clarity",
         "Tapfiliate",
         "Intercom",
-        "Mailchimp"
+        "Mailchimp",
+        "Model Providers"
       ],
       "source": "https://trust.novita.ai/subprocessors",
-      "checked": "2026-11-18",
+      "checked": "2026-11-23",
       "quote": "AWS acts as a primary infrastructure provider for hosting applications and storing data with various security and compliance certifications.",
-      "note": "The page is a list of 13 names with a description each and no introductory sentence; the quote is from the first entry. The trust centre FAQ also names an unnamed \"Model provider\" category for integrated models, which this list does not itemise."
+      "note": "The page is a list of 14 entries with a description each and no introductory sentence; the quote is from the first entry. The last entry, Model Providers, is a category and not a company name: the page says of it \"Offered at the customer's discretion. To explore the available options, please visit novita.ai/models and refer to the models designated \\\"Partner\\\"\"."
     },
     "regions": {
       "value": null,

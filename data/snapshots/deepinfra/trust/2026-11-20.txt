@@ -44,12 +44,10 @@ Data security
 Identify Validation
 Termination of Employment
 Multi-factor Authentication
-View 5 more controls
 Network security
 Impact analysis
 Limit Network Connections
 External System Connections
-View 5 more controls
 App security
 Conspicuous Link To Privacy Notice
 Secure system modification
@@ -58,12 +56,10 @@ Endpoint security
 Malicious Code Protection (Anti-Malware)
 Full Device or Container-based Encryption
 Endpoint Security Validation
-View 2 more controls
 Corporate security
 Code of Business Conduct
 Organizational Structure
 Roles & Responsibilities
-View 33 more controls
 Resources
 Details
 All
