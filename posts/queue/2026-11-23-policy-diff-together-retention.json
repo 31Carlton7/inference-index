@@ -1,0 +1,30 @@
+{
+  "template": "policy-diff",
+  "variant": null,
+  "text": "Together AI changed the retention text on its data handling page on Nov 23.\nBefore: \"By default, Together stores the prompts you send and the responses models...\"\nAfter: \"New organizations start with zero data retention (ZDR) enabled. When prompt...\"\nhttps://inference-index.vercel.app/changelog",
+  "chars": 274,
+  "link": "https://inference-index.vercel.app/changelog",
+  "image": null,
+  "source": {
+    "type": "changelog",
+    "entry": {
+      "date": "2026-11-23",
+      "provider": "together",
+      "kind": "policy",
+      "field": "retention",
+      "before": "By default, Together stores the prompts you send and the responses models return, and may use them for product improvements. This data is not shared with third parties, and you can delete it at any time. Organization admins can turn storage off in privacy settings, which enables zero data retention (ZDR): request content is then not persisted or used for any secondary purpose. See zero data retention for what ZDR covers, how to enable it, and what Together retains.",
+      "after": "New organizations start with zero data retention (ZDR) enabled. When prompt storage is on, Together stores your prompts and model responses and may use them for product improvements. Together does not share this stored data with third parties, and you can delete it at any time.",
+      "source": "https://docs.together.ai/docs/privacy-and-security",
+      "snapshot_before": "data/snapshots/together/data_policy/2026-11-18.txt",
+      "snapshot_after": "data/snapshots/together/data_policy/2026-11-23.txt"
+    },
+    "files": [
+      "data/changelog.json",
+      "data/snapshots/together/data_policy/2026-11-18.txt",
+      "data/snapshots/together/data_policy/2026-11-23.txt"
+    ]
+  },
+  "created": "2026-11-23T14:35:27.803Z",
+  "status": "draft",
+  "sendable": false
+}
