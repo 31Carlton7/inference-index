@@ -14,6 +14,7 @@ log.json      every post that went out and the data it came from
 ## Rules for every post
 
 - A post states what changed, the number, and the link. Nothing else.
+- A date on a policy or price post is the day our daily read first showed the new text or price, written "as of". A post never says which day the provider made the change.
 - Verbs are neutral: changed, lowered, raised, added, removed. No adjectives the data does not support, no predictions, nothing about a provider's motive.
 - No hashtags, no emojis, no @-mentions of providers.
 - One standalone post per event. Never a thread.

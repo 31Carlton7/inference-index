@@ -5,7 +5,7 @@ One post when the text of a provider's policy page changed. It quotes the old an
 ## Template
 
 ```text
-{provider_name} changed the {field} text on its {page} page on {date}.
+{provider_name}'s {page} page has new {field} text as of {date}.
 Before: "{before}"
 After: "{after}"
 {site}/changelog
@@ -14,7 +14,7 @@ After: "{after}"
 Variant `no-field`, when the entry's `field` is `null` because the change is not about a registry field:
 
 ```text no-field
-{provider_name} changed text on its {page} page on {date}.
+{provider_name}'s {page} page has new text as of {date}.
 Before: "{before}"
 After: "{after}"
 {site}/changelog
@@ -23,7 +23,7 @@ After: "{after}"
 Variant `added`, when `before` is an empty string: text was added, nothing was reworded.
 
 ```text added
-{provider_name} added text to its {page} page on {date}.
+Text added to {provider_name}'s {page} page as of {date}.
 Added: "{after}"
 {site}/changelog
 ```
@@ -31,7 +31,7 @@ Added: "{after}"
 Variant `removed`, when `after` is an empty string: text was removed, nothing was reworded.
 
 ```text removed
-{provider_name} removed text from its {page} page on {date}.
+Text removed from {provider_name}'s {page} page as of {date}.
 Removed: "{before}"
 {site}/changelog
 ```
@@ -45,7 +45,7 @@ Removed: "{before}"
 | `provider_name` | `data/providers.json` `providers[].name`, matched on the entry's `provider` | as written |
 | `field` | `data/changelog.json` `entries[].field`, a registry key | the words in the field table below, `retention` |
 | `page` | the `<page>` part of `entries[].snapshot_after` (`data/snapshots/<provider-id>/<page>/<date>.txt`), a key of `urls` | the words in the page table below, `privacy` |
-| `date` | `entries[].date` | `Nov 18` |
+| `date` | `entries[].date`, the day our daily read first showed the new text; the provider may have made the change earlier that day or late the day before | `Nov 18` |
 | `before` | `entries[].before` | verbatim, with runs of whitespace and line breaks turned into one space |
 | `after` | `entries[].after` | same |
 
@@ -79,7 +79,7 @@ Where there are two quotes they share the room, and a quote shorter than half of
 Example of a cut around the change, made-up values. The sentence is 259 characters long and only the number of days changed:
 
 ```text
-Example AI changed the retention text on its privacy page on Nov 18.
+Example AI's privacy page has new retention text as of Nov 18.
 Before: "...on servers in the United States for 30 days so that our trust and safety team..."
 After: "...on servers in the United States for 14 days so that our trust and safety team..."
 {site}/changelog
@@ -125,7 +125,7 @@ An entry with `"field": null` is never sendable in any variant. Its draft waits 
 Example, made-up values. Example AI is not a real provider.
 
 ```text
-Example AI changed the retention text on its privacy page on Nov 18.
+Example AI's privacy page has new retention text as of Nov 18.
 Before: "We retain inputs for 30 days."
 After: "We retain inputs for 14 days."
 {site}/changelog
@@ -134,7 +134,7 @@ After: "We retain inputs for 14 days."
 Variant `no-field`, made-up values:
 
 ```text no-field
-Example AI changed text on its terms page on Nov 18.
+Example AI's terms page has new text as of Nov 18.
 Before: "Disputes are resolved in the courts of Delaware."
 After: "Disputes are resolved by binding arbitration."
 {site}/changelog
@@ -143,7 +143,7 @@ After: "Disputes are resolved by binding arbitration."
 Variant `added`, made-up values:
 
 ```text added
-Example AI added text to its privacy page on Nov 18.
+Text added to Example AI's privacy page as of Nov 18.
 Added: "We do not use API inputs or outputs to train our models."
 {site}/changelog
 ```
@@ -151,7 +151,7 @@ Added: "We do not use API inputs or outputs to train our models."
 Variant `removed`, made-up values:
 
 ```text removed
-Example AI removed text from its privacy page on Nov 18.
+Text removed from Example AI's privacy page as of Nov 18.
 Removed: "Zero data retention is available on request."
 {site}/changelog
 ```
