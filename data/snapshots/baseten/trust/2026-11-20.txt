@@ -57,22 +57,18 @@ Infrastructure security
 Unique account authentication enforced
 Access control procedures established
 Access revoked upon termination
-View 8 more Infrastructure security controls
 Organizational security
 Asset disposal procedures utilized
 Production inventory maintained
 Anti-malware technology utilized
-View 4 more Organizational security controls
 Product security
 Data encryption utilized
 Control self-assessments conducted
 Penetration testing performed
-View 2 more Product security controls
 Internal security procedures
 Continuity and Disaster Recovery plans established
 Continuity and Disaster Recovery plans tested
 Cybersecurity insurance maintained
-View 25 more Internal security procedures controls
 Data and privacy
 Data retention procedures established
 Customer data deleted upon leaving

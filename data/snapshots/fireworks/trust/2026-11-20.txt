@@ -53,12 +53,10 @@ Infrastructure security
 Access control procedures established
 Remote access MFA enforced
 Remote access encrypted enforced
-View 1 more Infrastructure security control
 Organizational security
 Asset disposal procedures utilized
 Production inventory maintained
 Anti-malware technology utilized
-View 6 more Organizational security controls
 Product security
 Data encryption utilized
 Control self-assessments conducted
@@ -67,7 +65,6 @@ Internal security procedures
 Continuity and Disaster Recovery plans established
 Development lifecycle established
 Whistleblower policy established
-View 18 more Internal security procedures controls
 Data and privacy
 Data retention procedures established
 Customer data deleted upon leaving

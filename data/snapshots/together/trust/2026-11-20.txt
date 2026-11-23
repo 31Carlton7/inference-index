@@ -43,7 +43,6 @@ Internal security procedures
 Continuity and Disaster Recovery plans established
 Whistleblower policy established
 Board charter documented
-View 2 more Internal security procedures controls
 Data and privacy
 Data retention procedures established
 Data classification policy established
@@ -51,7 +50,6 @@ Infrastructure security
 Key management
 Electronic messaging
 Securing application services on public networks
-View 26 more Infrastructure security controls
 Subprocessors
 View all
 Amazon Web Services • Hosting and cloud infrastructure

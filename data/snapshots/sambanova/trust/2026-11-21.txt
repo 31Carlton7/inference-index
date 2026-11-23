@@ -28,7 +28,6 @@ Infrastructure security
 Production application access restricted
 Production network access restricted
 Remote access MFA enforced
-View 1 more Infrastructure security control
 Organizational security
 Anti-malware technology utilized
 MDM system utilized

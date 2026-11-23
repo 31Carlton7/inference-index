@@ -18,22 +18,18 @@ Infrastructure security
 Unique production database authentication enforced
 Encryption key access restricted
 Unique account authentication enforced
-View 18 more Infrastructure security controls
 Organizational security
 Asset disposal procedures utilized
 Production inventory maintained
 Portable media encrypted
-View 8 more Organizational security controls
 Product security
 Data encryption utilized
 Control self-assessments conducted
 Penetration testing performed
-View 2 more Product security controls
 Internal security procedures
 Continuity and Disaster Recovery plans established
 Continuity and Disaster Recovery plans tested
 Cybersecurity insurance maintained
-View 34 more Internal security procedures controls
 Data and privacy
 Data retention procedures established
 Customer data deleted upon leaving

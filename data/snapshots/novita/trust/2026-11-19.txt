@@ -26,22 +26,18 @@ Infrastructure security
 Encryption key access restricted
 Access control procedures established
 Unique network system authentication enforced
-View 5 more Infrastructure security controls
 Organizational security
 Production inventory maintained
 Anti-malware technology utilized
 Employee background checks performed
-View 9 more Organizational security controls
 Product security
 Control self-assessments conducted
 Vulnerability and system monitoring procedures established
 Data encryption utilized
-View 1 more Product security control
 Internal security procedures
 Continuity and Disaster Recovery plans established
 Continuity and Disaster Recovery plans tested
 Development lifecycle established
-View 24 more Internal security procedures controls
 Data and privacy
 Data retention procedures established
 Data classification policy established

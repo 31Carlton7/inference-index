@@ -15,6 +15,7 @@ import difflib
 import json
 import os
 import pathlib
+import re
 import shutil
 import subprocess
 import urllib.error
@@ -77,6 +78,9 @@ class VisibleText(HTMLParser):
             self.pieces.append(text)
 
 
+HIDDEN_CONTROLS_COUNT = re.compile(r"View \d+ more .+ controls?")
+
+
 def is_volatile(line):
     if line.startswith(VOLATILE_LINE_PREFIXES):
         return True
@@ -84,7 +88,11 @@ def is_volatile(line):
     if line.startswith("Updated ") and line.endswith(" ago"):
         return True
     # Google's docs restamp every page daily: "Last updated 2026-11-18 UTC."
-    return line.startswith("Last updated ") and line.endswith(" UTC.")
+    if line.startswith("Last updated ") and line.endswith(" UTC."):
+        return True
+    # Trust centres count the controls their preview leaves out:
+    # "View 4 more Organizational security controls".
+    return bool(HIDDEN_CONTROLS_COUNT.fullmatch(line))
 
 
 def tidy_lines(text):
