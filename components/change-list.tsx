@@ -10,7 +10,7 @@ function fieldLabel(key: string): string {
 }
 
 function sideText(value: ChangelogEntry["before"]): string | number {
-  if (value === null) return "—";
+  if (value === null || value === "") return "—";
   if (typeof value === "object") return `${formatUsd(value.input)} input, ${formatUsd(value.output)} output, per 1M tokens`;
   return value;
 }
@@ -26,7 +26,7 @@ function markedText(side: "before" | "after", before: string, after: string): Re
 function Side({ side, entry }: { side: "before" | "after"; entry: ChangelogEntry }) {
   const value = entry[side];
   const snapshot = side === "before" ? entry.snapshot_before : entry.snapshot_after;
-  const bothText = typeof entry.before === "string" && typeof entry.after === "string";
+  const bothText = typeof entry.before === "string" && typeof entry.after === "string" && value !== "";
   return (
     <div className={side}>
       <span className="side">{side === "before" ? "Before" : "After"}</span>
