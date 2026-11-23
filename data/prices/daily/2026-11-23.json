@@ -291,11 +291,5 @@
       "read_at": "2026-11-23T15:01:30.743Z"
     }
   ],
-  "missing": [
-    {
-      "provider": "fireworks",
-      "model": "gpt-oss-120b",
-      "reason": "expected one row for \"OpenAI GPT OSS 120B\", found 0"
-    }
-  ]
+  "missing": []
 }
