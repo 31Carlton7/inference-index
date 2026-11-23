@@ -62,7 +62,7 @@ Why a plain mean across models: the result stays in dollars per million tokens a
 - The index is computed over the providers that are present, and the counts are published beside it.
 - If any basket model has fewer than three providers on a day, there is no index value for that day. The chart shows a gap.
 
-Known gap: Google's pricing page lists "DeepSeek-V4.1-Flash" without naming the 1017 snapshot, so Vertex AI has no DeepSeek row.
+Past gap: on Nov 19, 2026, Google's pricing page listed "DeepSeek-V4.1-Flash" without naming the 1017 snapshot, so Vertex AI has no DeepSeek row for that day. The page has named the snapshot since Nov 20, and the row has been read from then on.
 
 ## More than one run on a day
 
