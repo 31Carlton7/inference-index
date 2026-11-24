@@ -1,0 +1,30 @@
+{
+  "template": "policy-diff",
+  "variant": "added",
+  "text": "Amazon Bedrock: text added to the data handling page as of Nov 24.\nAdded: \"Your mode sets the most retention that you allow. It doesn't cause Amazon Bedrock to retain inputs and outputs for a model that can process your requests without retention.\"\nhttps://inference-index.vercel.app/changelog",
+  "chars": 272,
+  "link": "https://inference-index.vercel.app/changelog",
+  "image": null,
+  "source": {
+    "type": "changelog",
+    "entry": {
+      "date": "2026-11-24",
+      "provider": "amazon-bedrock",
+      "kind": "policy",
+      "field": "retention",
+      "before": "",
+      "after": "Your mode sets the most retention that you allow. It doesn't cause Amazon Bedrock to retain inputs and outputs for a model that can process your requests without retention.",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html",
+      "snapshot_before": "data/snapshots/amazon-bedrock/data_policy/2026-11-18.txt",
+      "snapshot_after": "data/snapshots/amazon-bedrock/data_policy/2026-11-24.txt"
+    },
+    "files": [
+      "data/changelog.json",
+      "data/snapshots/amazon-bedrock/data_policy/2026-11-18.txt",
+      "data/snapshots/amazon-bedrock/data_policy/2026-11-24.txt"
+    ]
+  },
+  "created": "2026-11-24T14:36:18.682Z",
+  "status": "draft",
+  "sendable": false
+}

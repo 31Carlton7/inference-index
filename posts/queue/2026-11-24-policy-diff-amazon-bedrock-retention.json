@@ -1,0 +1,30 @@
+{
+  "template": "policy-diff",
+  "variant": null,
+  "text": "Amazon Bedrock: new retention text on the data handling page as of Nov 24.\nBefore: \"...Chat Completions, and Responses APIs.\"\nAfter: \"...Chat Completions, and Responses APIs, and the InvokeModel and Converse APIs on the bedrock-runtime endpoint.\"\nhttps://inference-index.vercel.app/changelog",
+  "chars": 270,
+  "link": "https://inference-index.vercel.app/changelog",
+  "image": null,
+  "source": {
+    "type": "changelog",
+    "entry": {
+      "date": "2026-11-24",
+      "provider": "amazon-bedrock",
+      "kind": "policy",
+      "field": "retention",
+      "before": "the setting is enforced consistently across the Messages, Chat Completions, and Responses APIs.",
+      "after": "the setting is enforced consistently across the Messages, Chat Completions, and Responses APIs, and the InvokeModel and Converse APIs on the bedrock-runtime endpoint.",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html",
+      "snapshot_before": "data/snapshots/amazon-bedrock/data_policy/2026-11-18.txt",
+      "snapshot_after": "data/snapshots/amazon-bedrock/data_policy/2026-11-24.txt"
+    },
+    "files": [
+      "data/changelog.json",
+      "data/snapshots/amazon-bedrock/data_policy/2026-11-18.txt",
+      "data/snapshots/amazon-bedrock/data_policy/2026-11-24.txt"
+    ]
+  },
+  "created": "2026-11-24T14:36:18.608Z",
+  "status": "draft",
+  "sendable": false
+}

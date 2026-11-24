@@ -1,0 +1,30 @@
+{
+  "template": "policy-diff",
+  "variant": null,
+  "text": "Amazon Bedrock: new zero data retention text on the data handling page as of Nov 24.\nBefore: \"...to previous model retention behavior; if ZDR applied previously, then ZDR still applies.\"\nAfter: \"There is no change to previous model retention behavior.\"\nhttps://inference-index.vercel.app/changelog",
+  "chars": 276,
+  "link": "https://inference-index.vercel.app/changelog",
+  "image": null,
+  "source": {
+    "type": "changelog",
+    "entry": {
+      "date": "2026-11-24",
+      "provider": "amazon-bedrock",
+      "kind": "policy",
+      "field": "zdr",
+      "before": "There is no change to previous model retention behavior; if ZDR applied previously, then ZDR still applies.",
+      "after": "There is no change to previous model retention behavior.",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html",
+      "snapshot_before": "data/snapshots/amazon-bedrock/data_policy/2026-11-18.txt",
+      "snapshot_after": "data/snapshots/amazon-bedrock/data_policy/2026-11-24.txt"
+    },
+    "files": [
+      "data/changelog.json",
+      "data/snapshots/amazon-bedrock/data_policy/2026-11-18.txt",
+      "data/snapshots/amazon-bedrock/data_policy/2026-11-24.txt"
+    ]
+  },
+  "created": "2026-11-24T14:36:18.645Z",
+  "status": "draft",
+  "sendable": false
+}
