@@ -54,26 +54,6 @@ Baseten Cloud Compute Providers.pdf
 Vulnerability Disclosure Policy.pdf
 Controls
 View all
-Infrastructure security
-Unique account authentication enforced
-Access control procedures established
-Access revoked upon termination
-Organizational security
-Asset disposal procedures utilized
-Production inventory maintained
-Anti-malware technology utilized
-Product security
-Data encryption utilized
-Control self-assessments conducted
-Penetration testing performed
-Internal security procedures
-Continuity and Disaster Recovery plans established
-Continuity and Disaster Recovery plans tested
-Cybersecurity insurance maintained
-Data and privacy
-Data retention procedures established
-Customer data deleted upon leaving
-Data classification policy established
 Subprocessors
 View all
 Amazon Web Services • Cloud Infrastructure and Compute

@@ -22,26 +22,6 @@ Engagement Letter
 SOC2 Type II Audit report
 Controls
 View all
-Infrastructure security
-Encryption key access restricted
-Access control procedures established
-Unique network system authentication enforced
-Organizational security
-Production inventory maintained
-Anti-malware technology utilized
-Employee background checks performed
-Product security
-Control self-assessments conducted
-Vulnerability and system monitoring procedures established
-Data encryption utilized
-Internal security procedures
-Continuity and Disaster Recovery plans established
-Continuity and Disaster Recovery plans tested
-Development lifecycle established
-Data and privacy
-Data retention procedures established
-Data classification policy established
-Customer data deleted upon leaving
 Subprocessors
 View all
 Amazon Web Services • Cloud Infrastructure & AI Services

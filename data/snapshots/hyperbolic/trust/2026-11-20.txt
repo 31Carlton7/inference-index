@@ -14,26 +14,6 @@ Compliance
 SOC 2
 Controls
 View all
-Infrastructure security
-Unique production database authentication enforced
-Encryption key access restricted
-Unique account authentication enforced
-Organizational security
-Asset disposal procedures utilized
-Production inventory maintained
-Portable media encrypted
-Product security
-Data encryption utilized
-Control self-assessments conducted
-Penetration testing performed
-Internal security procedures
-Continuity and Disaster Recovery plans established
-Continuity and Disaster Recovery plans tested
-Cybersecurity insurance maintained
-Data and privacy
-Data retention procedures established
-Customer data deleted upon leaving
-Data classification policy established
 Subprocessors
 View all
 Amazon Web Services • Cloud provider

@@ -96,16 +96,23 @@ def is_volatile(line):
 
 
 def tidy_lines(text):
-    lines = []
+    lines = [" ".join(line.split()) for line in text.splitlines()]
+    lines = [line for line in lines if line]
+    kept = []
     follows_rotating_heading = False
-    for line in text.splitlines():
-        line = " ".join(line.split())
-        if not line:
+    in_controls_preview = False
+    for number, line in enumerate(lines):
+        # Trust centre overviews show a few controls under "Controls", "View all"
+        # and pick different ones on each load. The preview ends at the next
+        # section, which is the next heading with "View all" under it.
+        if lines[number + 1:number + 2] == ["View all"]:
+            in_controls_preview = line == "Controls"
+        elif in_controls_preview and line != "View all":
             continue
         if not follows_rotating_heading and not is_volatile(line):
-            lines.append(line)
+            kept.append(line)
         follows_rotating_heading = line in ROTATING_LIST_HEADINGS
-    return "\n".join(lines) + "\n"
+    return "\n".join(kept) + "\n"
 
 
 def html_to_text(html):
@@ -224,6 +231,12 @@ def main():
 
             latest_file = earlier_files[-1]
             latest_text = latest_file.read_text()
+            # Some script-rendered pages come back in one of two layouts. A page
+            # counts as changed only when two more reads also differ.
+            for _ in range(2):
+                if text == latest_text:
+                    break
+                text = fetch_policy_text(url)[0] or text
             if text == latest_text:
                 outcome["result"] = "unchanged"
                 outcome["latest"] = latest_file.stem

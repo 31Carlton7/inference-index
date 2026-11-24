@@ -24,22 +24,6 @@ SOC 2 Type 2
 SambaNova2026-ISO 27001.2022 Certificate
 Controls
 View all
-Infrastructure security
-Production application access restricted
-Firewall access restricted
-Production network access restricted
-Organizational security
-Anti-malware technology utilized
-Code of Conduct acknowledged by employees and enforced
-Confidentiality Agreement acknowledged by employees
-Internal security procedures
-Risks assessments performed
-Risk management program established
-Classification of information
-Data and privacy
-Data retention procedures established
-Data classification policy established
-Classification of information
 Subprocessors
 View all
 Amazon Web Services • Cloud provider

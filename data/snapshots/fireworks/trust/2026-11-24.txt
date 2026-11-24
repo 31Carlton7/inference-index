@@ -49,26 +49,6 @@ Fireworks on Foundry - Data, Privacy, and Security Whitepaper
 Fireworks - Zero Data Retention & Data Handling Whitepaper
 Controls
 View all
-Infrastructure security
-Access control procedures established
-Remote access MFA enforced
-Remote access encrypted enforced
-Organizational security
-Asset disposal procedures utilized
-Production inventory maintained
-Portable media encrypted
-Product security
-Data encryption utilized
-Control self-assessments conducted
-Vulnerability and system monitoring procedures established
-Internal security procedures
-Continuity and Disaster Recovery plans established
-Development lifecycle established
-Whistleblower policy established
-Data and privacy
-Data retention procedures established
-Customer data deleted upon leaving
-Data classification policy established
 Subprocessors
 View all
 Amazon Web Services • Cloud infrastructure and service provider
