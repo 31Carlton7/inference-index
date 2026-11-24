@@ -100,6 +100,26 @@
         }
       },
       "rows": "data/prices/daily/2026-11-23.json"
+    },
+    {
+      "date": "2026-11-24",
+      "value": 0.9792,
+      "providers": 15,
+      "models": {
+        "gpt-oss-120b": {
+          "median": 0.2625,
+          "providers": 13
+        },
+        "glm-5.3": {
+          "median": 2.15,
+          "providers": 10
+        },
+        "deepseek-v4.1-flash-1017": {
+          "median": 0.525,
+          "providers": 9
+        }
+      },
+      "rows": "data/prices/daily/2026-11-24.json"
     }
   ]
 }
