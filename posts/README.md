@@ -54,6 +54,7 @@ A draft is `"sendable": true` only when all of these hold:
 - The template's Status is `approved` and its name is in `approved_templates`.
 - For `weekly-chart`, the draft has its chart image.
 - For `policy-diff`, the entry names a registry field. A change with `"field": null` is always a draft for Carlton, even once the template is approved, because nothing in the data says whether it is about how the provider handles customer data.
+- For `policy-diff`, it is the only policy entry in `data/changelog.json` from that provider page on that day (same `provider`, `date` and `snapshot_after`). When one page produces more than one entry on a day, none of them is sendable. At most one is picked for Carlton: the one whose quotes show the change in the fewest words.
 
 A draft that is not sendable stays in the queue.
 

@@ -524,6 +524,25 @@ test('a draft is sendable only with a site url, an approved template and a confi
   assert.equal(render({ entry: { ...POLICY, field: null } }, { ...setup({ config }), templates }).draft.sendable, false);
 });
 
+test('two policy entries from one page on one day are never sendable', () => {
+  const config = { site_url: REAL_SITE, approved_templates: ['policy-diff'] };
+  const templates = mkdtempSync(join(tmpdir(), 'templates-'));
+  cpSync(TEMPLATES, templates, { recursive: true });
+  const approved = readFileSync(join(templates, 'policy-diff.md'), 'utf8').replace('## Status\n\nnot approved', '## Status\n\napproved');
+  writeFileSync(join(templates, 'policy-diff.md'), approved);
+  const withEntries = (entries) => {
+    const opts = { ...setup({ config }), templates };
+    writeFileSync(join(opts.data, 'changelog.json'), JSON.stringify({ entries }));
+    return render({ entry: POLICY }, opts).draft.sendable;
+  };
+
+  const second = { ...POLICY, field: 'training', before: '', after: 'We do not use API inputs to train our models.' };
+  assert.equal(withEntries([POLICY, second]), false);
+  assert.equal(withEntries([POLICY, { ...second, date: '2026-11-17' }]), true);
+  assert.equal(withEntries([POLICY, { ...second, snapshot_after: 'data/snapshots/example/terms/2026-11-18.txt' }]), true);
+  assert.equal(withEntries([POLICY, { ...second, provider: 'other' }]), true);
+});
+
 test('the command line writes a draft from --changelog-index and from --incident', () => {
   const opts = setup();
   const run = (...args) => spawnSync(process.execPath, [join(HERE, 'render.mjs'), '--data', opts.data, '--queue', opts.queue, ...args], { encoding: 'utf8' });

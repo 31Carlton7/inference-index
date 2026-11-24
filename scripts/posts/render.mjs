@@ -141,6 +141,17 @@ function words(known, key) {
   return known[key] ?? key.replaceAll('_', ' ');
 }
 
+function samePageEntries(entry, opts) {
+  const entries = read(opts.data, 'changelog.json', { optional: true })?.entries ?? [];
+  return entries.filter(
+    (other) =>
+      other.kind === 'policy' &&
+      other.provider === entry.provider &&
+      other.date === entry.date &&
+      other.snapshot_after === entry.snapshot_after,
+  ).length;
+}
+
 function policyDiff(entry, opts) {
   need(entry, ['provider', 'date', 'snapshot_before', 'snapshot_after'], 'policy entry');
   for (const key of QUOTES) {
@@ -186,7 +197,7 @@ function policyDiff(entry, opts) {
     date: entry.date,
     slug: `${entry.provider}-${entry.field || page}`,
     values,
-    needsReview: !entry.field,
+    needsReview: !entry.field || samePageEntries(entry, opts) > 1,
     source: { type: 'changelog', entry, files: ['data/changelog.json', entry.snapshot_before, entry.snapshot_after] },
   };
 }
