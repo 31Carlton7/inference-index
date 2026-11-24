@@ -1,6 +1,138 @@
 {
   "entries": [
     {
+      "date": "2026-11-24",
+      "provider": "amazon-bedrock",
+      "kind": "policy",
+      "field": "retention",
+      "before": "the setting is enforced consistently across the Messages, Chat Completions, and Responses APIs.",
+      "after": "the setting is enforced consistently across the Messages, Chat Completions, and Responses APIs, and the InvokeModel and Converse APIs on the bedrock-runtime endpoint.",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html",
+      "snapshot_before": "data/snapshots/amazon-bedrock/data_policy/2026-11-18.txt",
+      "snapshot_after": "data/snapshots/amazon-bedrock/data_policy/2026-11-24.txt"
+    },
+    {
+      "date": "2026-11-24",
+      "provider": "amazon-bedrock",
+      "kind": "policy",
+      "field": "zdr",
+      "before": "There is no change to previous model retention behavior; if ZDR applied previously, then ZDR still applies.",
+      "after": "There is no change to previous model retention behavior.",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html",
+      "snapshot_before": "data/snapshots/amazon-bedrock/data_policy/2026-11-18.txt",
+      "snapshot_after": "data/snapshots/amazon-bedrock/data_policy/2026-11-24.txt"
+    },
+    {
+      "date": "2026-11-24",
+      "provider": "amazon-bedrock",
+      "kind": "policy",
+      "field": "retention",
+      "before": "This mode allows your inputs and outputs to be retained for human review by AWS.",
+      "after": "This mode allows your inputs and outputs to be retained for automated or human review by AWS, unless a trusted access program changes who reviews them.",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html",
+      "snapshot_before": "data/snapshots/amazon-bedrock/data_policy/2026-11-18.txt",
+      "snapshot_after": "data/snapshots/amazon-bedrock/data_policy/2026-11-24.txt"
+    },
+    {
+      "date": "2026-11-24",
+      "provider": "amazon-bedrock",
+      "kind": "policy",
+      "field": "retention",
+      "before": "",
+      "after": "Your mode sets the most retention that you allow. It doesn't cause Amazon Bedrock to retain inputs and outputs for a model that can process your requests without retention.",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html",
+      "snapshot_before": "data/snapshots/amazon-bedrock/data_policy/2026-11-18.txt",
+      "snapshot_after": "data/snapshots/amazon-bedrock/data_policy/2026-11-24.txt"
+    },
+    {
+      "date": "2026-11-24",
+      "provider": "amazon-bedrock",
+      "kind": "policy",
+      "field": "zdr_how",
+      "before": "Projects are specific to the bedrock-mantle endpoint. The Bedrock control plane and Runtime APIs have no project concept, so bedrock-runtime requests cannot be project-scoped.",
+      "after": "You can set a data retention mode on a project. Unless the mode is inherit, it takes precedence over your account mode for requests that you send through the project. To create projects and send requests through them, see Projects.\nFor a project on the bedrock-mantle endpoint, set data_retention on the project.",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html",
+      "snapshot_before": "data/snapshots/amazon-bedrock/data_policy/2026-11-18.txt",
+      "snapshot_after": "data/snapshots/amazon-bedrock/data_policy/2026-11-24.txt"
+    },
+    {
+      "date": "2026-11-24",
+      "provider": "amazon-bedrock",
+      "kind": "policy",
+      "field": "zdr",
+      "before": "You must explicitly set your data retention mode to aws_review, or to the legacy provider_data_share, before you can invoke these models. If your effective mode is none or default, these models will be unavailable.",
+      "after": "You must explicitly set your data retention mode to aws_review, or to the legacy provider_data_share, before you can invoke these models, including when your account is enrolled in Anthropic Enterprise Frontier Safeguards (EFS) or Anthropic Enterprise Data Controls (EDC). If your effective mode is none or default, or if you haven't set a mode, these models will be unavailable. If your account is approved for ZDR on the model, you can also use none or default.",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html",
+      "snapshot_before": "data/snapshots/amazon-bedrock/data_policy/2026-11-18.txt",
+      "snapshot_after": "data/snapshots/amazon-bedrock/data_policy/2026-11-24.txt"
+    },
+    {
+      "date": "2026-11-24",
+      "provider": "amazon-bedrock",
+      "kind": "policy",
+      "field": "zdr_how",
+      "before": "ZDR for Claude models that require data retention is granted to customers who are eligible for the Enterprise Frontier Safeguards program. To find out whether you're eligible, contact your AWS account team or AWS Support. For more information, see Model-specific abuse detection.",
+      "after": "If you're eligible for Anthropic Enterprise Frontier Safeguards (EFS), you can get ZDR for certain Claude models that require data retention. If you enroll in EFS or Anthropic Enterprise Data Controls (EDC) without ZDR, or after your ZDR period ends, Amazon Bedrock retains your inputs and outputs for those models. The program's page describes where Amazon Bedrock stores them, for how long, and who reviews them. For more information, see Enterprise Frontier Safeguards (EFS) and Enterprise Data Controls (EDC) for Anthropic models and Model-specific abuse detection.",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html",
+      "snapshot_before": "data/snapshots/amazon-bedrock/data_policy/2026-11-18.txt",
+      "snapshot_after": "data/snapshots/amazon-bedrock/data_policy/2026-11-24.txt"
+    },
+    {
+      "date": "2026-11-24",
+      "provider": "amazon-bedrock",
+      "kind": "policy",
+      "field": "retention",
+      "before": "Your content is not shared with the model provider.",
+      "after": "Your content is not shared with the model provider. If your account is enrolled in EFS or EDC, the program's page describes where Amazon Bedrock stores your retained inputs and outputs and who reviews them.",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html",
+      "snapshot_before": "data/snapshots/amazon-bedrock/data_policy/2026-11-18.txt",
+      "snapshot_after": "data/snapshots/amazon-bedrock/data_policy/2026-11-24.txt"
+    },
+    {
+      "date": "2026-11-24",
+      "provider": "amazon-bedrock",
+      "kind": "policy",
+      "field": "retention",
+      "before": "If cross-region inference is enabled for these models, retained inputs and outputs are stored in destination Regions (that is, the Region where your inference request is processed).",
+      "after": "",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html",
+      "snapshot_before": "data/snapshots/amazon-bedrock/data_policy/2026-11-18.txt",
+      "snapshot_after": "data/snapshots/amazon-bedrock/data_policy/2026-11-24.txt"
+    },
+    {
+      "date": "2026-11-24",
+      "provider": "amazon-bedrock",
+      "kind": "policy",
+      "field": "retention",
+      "before": "",
+      "after": "By default, Amazon Bedrock stores retained inputs and outputs in Amazon-managed storage. Some trusted access programs let you store them in your own Amazon S3 bucket instead. For details, see the program's page.",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html",
+      "snapshot_before": "data/snapshots/amazon-bedrock/data_policy/2026-11-18.txt",
+      "snapshot_after": "data/snapshots/amazon-bedrock/data_policy/2026-11-24.txt"
+    },
+    {
+      "date": "2026-11-24",
+      "provider": "google-vertex-ai",
+      "kind": "policy",
+      "field": null,
+      "before": "17. Survival.",
+      "after": "17. Google Cloud Platform Access Tools. a. Additional Definitions. “Access Point” means a Google API, model context protocol (MCP) server, endpoint, tool interface, connector, proxy, command line interface, or third-party service that Customer can connect to a Service to allow Customer to access or obtain data from or in the Service. “Access Tool” means any AI Agent, AI Harness, software, application, AI model, service employing an AI model, or other tool that can be used to obtain or access data via an Access Point. “AI Agent” has the meaning given in Section 14 (Definitions) under “AI/ML Services” in the “Service Terms” section below. “AI Harness” means the software layer that can deploy an AI Agent, invoke tools or APIs, or orchestrate tasks across one or more AI Agents. “Google Technical Information” means information related to the Services obtained or derived from access to or interaction with the Access Point(s) (including embeddings, memory stores, topology or organization, IAM, architecture, costs, tool schema, graphs, profiles, summaries, and findings) or from failure patterns established from calls to Access Points. Google Technical Information does not include any Customer Data. “Third-Party Access Tool” means (i) any Access Tool that is (A) provided or operated by a third party or (B) deployed or executed via a third-party AI Harness, or (ii) an Unregistered AI Agent. “Unregistered AI Agent” means an AI Agent that is (i) created or used by Customer to access an Access Point, and (ii) not deployed via, or registered with, an Agentic AI Service. b. Additional Terms. If Customer uses or authorizes any Access Tool to access or interact with any Access Point, then the following terms apply: i. Customer may not engage in any of the activities in subsections (A) through (F) below: (A) Store any Google Technical Information for more than 30 days; (B) Process any Google Technical Information for any purpose other than to fulfill active, Customer-authorized tasks; (C) Retain any Google Technical Information after Customer disconnects the Access Tool or revokes its access to the Access Point(s); (D) Scrape or perform systematic probing of the Access Point(s), or any skills, documentation, or outputs, beyond what is required for a Customer-authorized task; (E) Use any Google Technical Information for model training, fine-tuning, evaluation dataset building, or model distillation; or (F) Use any Google Technical Information to develop or improve a product or service that is similar to any Service. If Google reasonably believes that the Access Tool has engaged in any of the activities in subsections (A) through (F) above, Google may immediately (1) restrict or remove the Access Tool’s access to the Access Point(s) and corresponding Service(s); or (2) suspend or terminate Customer’s access to or use of the Access Point(s) or corresponding Service(s), as necessary in Google’s determination to stop the activity. ii. Customer acknowledges that there are risks inherent to implementing a Third-Party Access Tool on an Access Point, including the potential for: (A) the Third-Party Access Tool training its underlying model(s) on Customer Data; (B) unauthorized access to Customer Data obtained by or via the Third-Party Access Tool; and (C) compromise of Customer’s Account credentials by or via the Third-Party Access Tool, if it obtains or uses them. Customer agrees that Google will have no responsibility or liability for or from these or any other acts or omissions of a Third-Party Access Tool. 18. Survival.",
+      "source": "https://cloud.google.com/terms/service-terms",
+      "snapshot_before": "data/snapshots/google-vertex-ai/terms/2026-11-18.txt",
+      "snapshot_after": "data/snapshots/google-vertex-ai/terms/2026-11-24.txt"
+    },
+    {
+      "date": "2026-11-24",
+      "provider": "baseten",
+      "kind": "policy",
+      "field": null,
+      "before": "If you believe you've discovered a security vulnerability in our services, please report it to security@baseten.co with details of your findings. We will review all legitimate reports and work to investigate and remediate validated vulnerabilities as appropriate.",
+      "after": "Please read our full Vulnerability Disclosure Policy to see what's in scope, the rules of the engagement, and how to report findings, and what to expect from us. We will review all legitimate reports and work to investigate and remediate validated vulnerabilities as appropriate.",
+      "source": "https://trust.baseten.co/",
+      "snapshot_before": "data/snapshots/baseten/trust/2026-11-20.txt",
+      "snapshot_after": "data/snapshots/baseten/trust/2026-11-24.txt"
+    },
+    {
       "date": "2026-11-23",
       "provider": "novita",
       "kind": "policy",

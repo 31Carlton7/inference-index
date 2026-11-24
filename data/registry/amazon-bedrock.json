@@ -1,6 +1,6 @@
 {
   "id": "amazon-bedrock",
-  "updated": "2026-11-20",
+  "updated": "2026-11-24",
   "fields": {
     "status": {
       "value": "live",
@@ -11,21 +11,21 @@
     "retention": {
       "value": "up to 30 days for certain models; otherwise the model's default",
       "source": "https://aws.amazon.com/service-terms/",
-      "checked": "2026-11-18",
+      "checked": "2026-11-24",
       "quote": "For certain models identified on the Bedrock abuse detection page, as part of providing the Service, Amazon Bedrock stores Service inputs and outputs for up to 30 days (unless otherwise required by law) solely to detect activity that violates our, or third-party model providers’, terms of service or use policies.",
       "note": "The abuse detection page names only OpenAI models other than the gpt-oss ones (classifier-flagged traffic) and Claude Fable 5, 5.1 and 5.2 (all traffic) as retained; it names no open-weight model."
     },
     "zdr": {
       "value": "default",
       "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html",
-      "checked": "2026-11-18",
+      "checked": "2026-11-24",
       "quote": "If a model's allowed_modes includes none, we won't persist anything.",
       "note": "Zero retention applies per model: models that require retention for abuse detection are excepted, and ZDR on those is by request through the AWS account team."
     },
     "zdr_how": {
       "value": "Set data_retention_mode to none for the account (per Region) or project; for models that require retention, ask the AWS account manager",
       "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html",
-      "checked": "2026-11-18",
+      "checked": "2026-11-24",
       "quote": "If you require guaranteed zero retention, set data_retention_mode to none.",
       "note": "With mode none, requests to a model that requires retention are blocked; the same page says to contact your AWS account manager about ZDR eligibility for those models."
     },
