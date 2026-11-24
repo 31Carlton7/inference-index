@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-23",
+  "date": "2026-11-24",
   "pages": [
     {
       "provider": "together",
@@ -60,8 +60,7 @@
       "provider": "fireworks",
       "page": "trust",
       "url": "https://trust.fireworks.ai/",
-      "result": "unchanged",
-      "latest": "2026-11-20"
+      "result": "changed"
     },
     {
       "provider": "fireworks",
@@ -130,7 +129,8 @@
       "provider": "deepinfra",
       "page": "trust",
       "url": "https://trust.deepinfra.com/",
-      "result": "changed"
+      "result": "unchanged",
+      "latest": "2026-11-20"
     },
     {
       "provider": "deepinfra",
@@ -157,8 +157,7 @@
       "provider": "cerebras",
       "page": "trust",
       "url": "https://trust.cerebras.ai/",
-      "result": "unchanged",
-      "latest": "2026-11-19"
+      "result": "changed"
     },
     {
       "provider": "amazon-bedrock",
@@ -171,15 +170,13 @@
       "provider": "amazon-bedrock",
       "page": "data_policy",
       "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "changed"
     },
     {
       "provider": "amazon-bedrock",
       "page": "terms",
       "url": "https://aws.amazon.com/service-terms/",
-      "result": "unchanged",
-      "latest": "2026-11-19"
+      "result": "changed"
     },
     {
       "provider": "amazon-bedrock",
@@ -206,8 +203,7 @@
       "provider": "google-vertex-ai",
       "page": "terms",
       "url": "https://cloud.google.com/terms/service-terms",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "changed"
     },
     {
       "provider": "google-vertex-ai",
@@ -297,7 +293,8 @@
       "provider": "novita",
       "page": "subprocessors",
       "url": "https://trust.novita.ai/subprocessors",
-      "result": "changed"
+      "result": "unchanged",
+      "latest": "2026-11-23"
     },
     {
       "provider": "sambanova",
@@ -324,8 +321,7 @@
       "provider": "sambanova",
       "page": "trust",
       "url": "https://trust.sambanova.ai/",
-      "result": "unchanged",
-      "latest": "2026-11-21"
+      "result": "changed"
     },
     {
       "provider": "sambanova",
@@ -373,36 +369,31 @@
       "provider": "baseten",
       "page": "privacy",
       "url": "https://www.baseten.co/privacy-policy/",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "changed"
     },
     {
       "provider": "baseten",
       "page": "data_policy",
       "url": "https://docs.baseten.co/security",
-      "result": "unchanged",
-      "latest": "2026-11-22"
+      "result": "changed"
     },
     {
       "provider": "baseten",
       "page": "terms",
       "url": "https://www.baseten.co/terms-and-conditions/",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "changed"
     },
     {
       "provider": "baseten",
       "page": "trust",
       "url": "https://trust.baseten.co/",
-      "result": "unchanged",
-      "latest": "2026-11-20"
+      "result": "changed"
     },
     {
       "provider": "baseten",
       "page": "subprocessors",
       "url": "https://trust.baseten.co/subprocessors",
-      "result": "unchanged",
-      "latest": "2026-11-19"
+      "result": "changed"
     },
     {
       "provider": "hyperbolic",

@@ -1,0 +1,234 @@
+Documentation Index
+Fetch the complete documentation index at: /llms.txt
+Use this file to discover all available pages before exploring further.
+Skip to main content
+Assistant
+Responses are generated using AI and may contain mistakes.
+Suggestions
+How can I run my own dedicated inference?
+Baseten home page
+Search...
+⌘K
+Get started
+Overview
+Quickstart
+Security
+How Baseten works
+Manage Baseten with an agent
+Model APIs
+Overview
+Reasoning
+Vision
+Audio
+Web search
+Deferred tool loading
+Decision models
+Use models in coding agents
+Pricing and limits
+Deprecation
+Inference
+Overview
+Call your model
+Streaming
+Speech and audio
+Async inference
+Structured outputs
+JSON mode
+Function calling
+Configure HTTP clients
+Files and binary data
+Integrations
+Training
+Overview
+Learn post-training
+Loops
+Overview
+Quickstart
+Concepts
+Supported models
+Guides
+Features
+RL Rollouts
+Jobs
+Overview
+Quickstart
+Train on your data
+Concepts
+Lifecycle
+Management
+Remote access
+Slurm
+Load checkpoints
+Deployment
+Engine Builder
+Baseten Grid
+PREVIEW
+Overview
+Supported agents and models
+For admins
+For developers
+Frontier Gateway
+Overview
+Get started
+Endpoints
+Groups and API keys
+Rate and usage limits
+Billing events
+Call a model
+Sandboxes
+NEW
+Overview
+Manage sandboxes
+Manage images
+Previews
+Volumes
+Access tokens
+Observability
+Development
+Overview
+Configure a model server
+The development loop
+Configuration
+Model class
+Custom Docker containers
+Transports
+Weights and caching
+Volumes
+Operations
+Performance optimization
+Develop a Chain
+Deployment
+Overview
+Deployments
+Environments
+Rolling deployments
+Regional environments
+Regional deployments
+Resources
+Manage
+Autoscaling
+CI/CD
+Engines
+Overview
+BEI
+Engine-Builder-LLM
+BIS-LLM
+Performance
+Model Labs
+Overview
+Distribution Platform
+Overview
+Manage your model
+Report usage
+Access
+Insights
+Organization
+Organization settings
+Billing and usage
+Access control
+Teams
+Authenticate to Baseten
+SSO and SCIM
+API keys
+Workload identity
+PRIVATE PREVIEW
+Access external resources
+Secrets
+OIDC
+AWS AssumeRole
+Restricted environments
+Audit logs
+Hosting options
+Overview
+Baseten Cloud
+Single-tenant
+Self-hosted
+Observability
+Logs
+Metrics
+Status and health
+Secure model inference
+Export metrics
+Tracing
+Troubleshooting
+Deployments
+SSH
+Inference
+Loops
+Inference errors
+Support
+Return to Baseten
+Documentation
+Examples
+Reference
+Baseten home page
+Search...
+⌘KAsk Assistant⌘I
+Support
+Return to Baseten
+Return to Baseten
+Search...
+Navigation
+Get started
+Security at Baseten
+Documentation
+Examples
+Reference
+Get started
+Security at Baseten
+Copy pageCopy page
+How Baseten protects your data, and the controls you use to secure your organization.
+Copy pageCopy page
+Baseten encrypts your content in transit, encrypts the content it controls at rest, and doesn’t use it for model training. You control who can access your organization and where your models run. For the full commitments, see Baseten’s Security Practices. For the engineering behind them, read how Baseten secures its multi-cloud fleet.
+Data handling
+Baseten doesn’t use your content for model training, fine-tuning, or improvement of any algorithms. What Baseten stores depends on the product:
+Model APIs: Requests run under a zero data retention (ZDR) policy. Baseten doesn’t store model inputs or outputs.
+Dedicated Inference: Synchronous requests run under ZDR by default, so Baseten processes your model inputs and outputs without storing them.
+Training and Loops:
+Loops deletes training data and prompts once it processes them.
+Checkpoints from your training jobs and Loops runs stay available to deploy or reuse until you delete them. To delete them, see delete training projects and jobs and delete Loops runs and checkpoints.
+To skip repeated downloads between training jobs, you can turn on the training cache in your job’s configuration. The cache then keeps the files your jobs write to it, and deleting the project permanently deletes them.
+Baseten Delivery Network (BDN): To reduce cold-start time, you can turn on BDN in your model’s configuration. BDN then mirrors your weights to Baseten and caches them near your replicas, so each replica reads from the cache as it starts. Baseten permanently deletes cached weights on request.
+Sandboxes:
+A sandbox keeps its files until it expires or you delete it. Set an expiration policy to control when Baseten deletes the sandbox and its files.
+To keep files after a sandbox is gone, you can mount a volume. The volume then keeps its files until you delete it.
+Baseten encrypts your content in transit with TLS 1.2 or higher. At rest, Baseten encrypts the content it controls with AES-256, or equivalent or stronger encryption depending on the cloud provider.
+To keep weights and request payloads encrypted with keys you own, your model can exchange a runtime OIDC token for credentials to a key management service (KMS) you run. It then asks that KMS to unwrap the data key and uses the key to decrypt and encrypt the data. See bring your own key (BYOK) encryption for recipes with model code.
+Compliance
+Baseten Cloud and single-tenant hosting support SOC 2 Type II, HIPAA, and GDPR compliance programs. See Baseten’s current certifications and attestations in the Baseten Trust Center, and request the SOC 2 Type II report there under a non-disclosure agreement.
+Access control
+SSO and SCIM: Authenticate users through your identity provider with single sign-on (SSO), and provision accounts and roles with System for Cross-domain Identity Management (SCIM). Available on the Enterprise plan.
+Roles: Assign roles that set who can deploy, manage, and call models.
+Restricted environments: Allow only designated users to change environments such as production.
+API keys: Scope team keys to specific models or environments, set an expiration when you create a key, and rotate a key to replace one without interrupting the workloads that use it. Personal keys require an expiration.
+Workload identity federation: Exchange tokens from GitHub Actions, AWS, Google Cloud, or Azure for Baseten access tokens that expire within 1 hour, in place of stored API keys. Available in Private Preview.
+Audit logs: Review configuration changes and lifecycle events for models, Chains, secrets, API keys, environments, and users. On the Enterprise plan, export audit events to destinations such as Amazon S3, Datadog, and Splunk.
+OpenID Connect (OIDC): Give deployments and training jobs short-lived tokens for your cloud resources and Hugging Face repositories in place of long-lived credentials.
+Secrets: Store credentials that Baseten encrypts and injects into your model’s environment at runtime. To replace a stored credential, rotate the secret.
+Hosting and network controls
+Baseten Cloud: Baseten operates the infrastructure on its multi-cloud fleet.
+Single-tenant: Baseten operates compute and networking dedicated to your organization, with optional private connectivity. Available with custom pricing on the Enterprise plan.
+Self-hosted: The workload plane runs in your own cloud account, and inference payloads stay inside your VPC. Available with custom pricing on the Enterprise plan.
+Regional environments: Constrain replicas to a designated geographic region and route requests through a region-specific endpoint. Baseten configures them on request.
+Egress restrictions: Limit a deployment’s outbound traffic to an allow list of IP ranges and domains. Baseten enables them for your organization on request.
+Report a vulnerability
+To report a suspected vulnerability, email security@baseten.co with the details of what you found.
+Was this page helpful?
+YesNo
+Previous
+How Baseten works
+The moving parts behind training, deployment, request routing, autoscaling, and environment promotion on Baseten.
+Next
+⌘I
+On this page
+Back to top
+Data handling
+Compliance
+Access control
+Hosting and network controls
+Report a vulnerability
+Baseten home page
+githublinkedinx
+Return to BasetenChangelogSupportStatus
+githublinkedinx
+githublinkedinx

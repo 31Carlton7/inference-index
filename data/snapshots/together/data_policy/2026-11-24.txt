@@ -1,0 +1,172 @@
+Documentation Index
+Fetch the complete documentation index at: /llms.txt
+Use this file to discover all available pages before exploring further.
+Skip to main content
+Assistant
+Responses are generated using AI and may contain mistakes.
+Together AI docs home page
+Documentation
+Guides
+Learn
+Demos
+API reference
+CLI
+Changelog
+Sign in
+Search...
+Navigation
+ADMINISTRATION
+Privacy and security
+Search...
+⌘K
+GET STARTED
+Overview
+Quickstart
+Coding agent setup
+Together Link
+BETA
+Recommended models
+SERVERLESS
+Overview
+Available models
+Geo-specific inference
+Rate limits
+Provisioned throughput
+INFERENCE APIS
+Overview
+OpenAI compatibility
+Messages API
+NEW
+Responses API
+NEW
+SDK integrations
+Chat & text
+Function calling
+Image generation
+Video generation
+Vision
+Speech-to-text
+Text-to-speech
+Rerank
+Batch processing
+DEDICATED MODEL INFERENCE
+Overview
+Quickstart
+Concepts
+Pricing
+Choose a model
+Deploy a model
+Route traffic
+Send requests
+Monitor endpoints
+DEDICATED CONTAINER INFERENCE
+Overview
+Quickstart
+Tutorials
+Reference
+POST-TRAINING
+Overview
+NEW
+SFT quickstart
+GRPO quickstart
+Concepts
+Supported models
+Pricing
+Rollout price estimator
+Choose a training method
+Train with the cookbook
+Train with the SDK
+Manage a training run
+Deploy
+FINE-TUNING
+Overview
+Quickstart
+Pricing
+Data preparation
+Choose a base model
+Training methods
+Manage jobs
+Deploy a fine-tuned model
+GPU CLUSTERS
+Overview
+Quickstart
+Concepts
+Pricing
+Cluster management
+Run workloads
+Integrations
+CODE EXECUTION
+Code sandbox
+Legacy SDK
+ADMINISTRATION
+Manage your account
+Authentication
+IAM model
+Organizations
+Projects
+Roles & permissions (RBAC)
+Single sign-on (SSO)
+Privacy and security
+Zero data retention
+Usage analytics
+Billing
+Support
+ADMINISTRATION
+Privacy and security
+Copy pageCopy page
+How Together handles your inputs, outputs, and account data, plus enterprise options for data residency and private networking.
+Copy pageCopy page
+What Together stores
+New organizations start with zero data retention (ZDR) enabled. When prompt storage is on, Together stores your prompts and model responses and may use them for product improvements. Together does not share this stored data with third parties, and you can delete it at any time.
+Training opt-in
+Data sharing for training other models is opt-in and not enabled by default. Check or change this setting in the Privacy section of Organization Settings. See the privacy policy for the full legal picture.
+Organization privacy settings
+Only organization admins can change the three toggles in the Privacy section of Organization Settings:
+Prompt storage: Off by default for new organizations. Stores prompts and model responses for product improvements. Turn it off to enable ZDR, which also turns off passthrough models.
+Passthrough models: Allows models that forward prompts and responses to third-party providers. You can turn on passthrough models only while prompt storage is on.
+Model training: Off by default. Allows your organization’s data to be used for training models released by Together AI and partners.
+If your organization is on the Limited tier, add a payment method before you change these settings.
+Account vs. organization settings
+You may see a privacy toggle on both your personal account profile and your organization settings. These control different scopes:
+The account setting applies only to traffic you send under your personal account when it isn’t attached to an organization.
+The organization setting governs all traffic sent under that organization’s projects and API keys, regardless of which member makes the request.
+When a request uses an organization’s API key, the organization setting is what applies. To turn data sharing off for your team, change it in organization settings, not on your personal profile.
+Passthrough third-party models
+Some models are offered as passthrough, which means Together forwards your prompts and responses directly to the upstream provider. The provider handles that data under its own data policy.
+The Passthrough models toggle in organization privacy settings controls whether your organization can use these models, independent of the training opt-in. To keep all traffic on Together’s infrastructure, turn it off. Non-passthrough models keep working as normal.
+Enterprise data residency and private networking
+For select serverless models, geo-specific inference keeps inference processing in the United States, with no GPUs to provision. The guarantee applies to requests sent to us-api.together.ai. It covers only where those requests are processed, not where data is stored, logged, or routed.
+For other data-residency, regulatory, or compliance requirements, such as GDPR, Together supports private networking and virtual private cloud (VPC) deployments, including in EU regions. Use a dedicated endpoint, or contact sales to discuss the right setup for your workload.
+Vulnerability disclosure
+Together AI accepts security vulnerability reports through its HackerOne program. The program is private, so viewing it and submitting reports requires a HackerOne account. Program details are published in the standard security.txt file. If you believe you’ve found a security issue, submit it through HackerOne rather than a support ticket.
+Third-party model providers
+Models published by third-party authors (DeepSeek, Qwen, Mistral, etc.) and hosted on Together run on Together’s own infrastructure. They do not call out to the model author. The model author has no access to your requests or API calls.
+For example, DeepSeek models are hosted in Together’s secure North America data centers. DeepSeek itself receives no user requests or API traffic from this deployment.
+Models on Together are hosted at full precision. Together does not distill them, force system prompts, or layer censorship on top. The version you call is the version the model author published.
+Was this page helpful?
+YesNo
+Single sign-on (SSO)
+Previous
+Zero data retention
+Next
+⌘I
+On this page
+Back to top
+What Together stores
+Training opt-in
+Organization privacy settings
+Account vs. organization settings
+Passthrough third-party models
+Enterprise data residency and private networking
+Vulnerability disclosure
+Third-party model providers
+Together AI docs home page
+Company
+About usCareers
+Examples
+CookbooksDemo apps
+Resources
+PricingSupport
+Legal
+Cookie policyConsent preferences
+Powered byThis documentation is built and hosted on Mintlify, a developer documentation platform
