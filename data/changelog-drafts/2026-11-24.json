@@ -1,0 +1,40 @@
+{
+  "entries": [
+    {
+      "date": "2026-11-24",
+      "provider": "together",
+      "kind": "policy",
+      "field": null,
+      "page": "trust",
+      "before": "",
+      "after": "Organizational security\nAnti-malware technology utilized\nPassword policy enforced\nMDM system utilized\nProduct security\nControl self-assessments conducted\nData transmission encrypted\nVulnerability and system monitoring procedures established\nInternal security procedures\nContinuity and Disaster Recovery plans established\nWhistleblower policy established\nBoard charter documented\nData and privacy\nData retention procedures established\nData classification policy established\nInfrastructure security\nKey management\nElectronic messaging\nSecuring application services on public networks",
+      "source": "https://trust.together.ai/",
+      "snapshot_before": "data/snapshots/together/trust/2026-11-20.txt",
+      "snapshot_after": "data/snapshots/together/trust/2026-11-24.txt"
+    },
+    {
+      "date": "2026-11-24",
+      "provider": "novita",
+      "kind": "policy",
+      "field": null,
+      "page": "trust",
+      "before": "",
+      "after": "Infrastructure security\nEncryption key access restricted\nAccess control procedures established\nUnique network system authentication enforced\nOrganizational security\nProduction inventory maintained\nAnti-malware technology utilized\nEmployee background checks performed\nProduct security\nControl self-assessments conducted\nVulnerability and system monitoring procedures established\nData encryption utilized\nInternal security procedures\nContinuity and Disaster Recovery plans established\nContinuity and Disaster Recovery plans tested\nDevelopment lifecycle established\nData and privacy\nData retention procedures established\nData classification policy established\nCustomer data deleted upon leaving",
+      "source": "https://trust.novita.ai/",
+      "snapshot_before": "data/snapshots/novita/trust/2026-11-19.txt",
+      "snapshot_after": "data/snapshots/novita/trust/2026-11-24.txt"
+    },
+    {
+      "date": "2026-11-24",
+      "provider": "hyperbolic",
+      "kind": "policy",
+      "field": null,
+      "page": "trust",
+      "before": "",
+      "after": "Infrastructure security\nUnique production database authentication enforced\nEncryption key access restricted\nUnique account authentication enforced\nOrganizational security\nAsset disposal procedures utilized\nProduction inventory maintained\nPortable media encrypted\nProduct security\nData encryption utilized\nControl self-assessments conducted\nPenetration testing performed\nInternal security procedures\nContinuity and Disaster Recovery plans established\nContinuity and Disaster Recovery plans tested\nCybersecurity insurance maintained\nData and privacy\nData retention procedures established\nCustomer data deleted upon leaving\nData classification policy established",
+      "source": "https://trust.hyperbolic.ai/",
+      "snapshot_before": "data/snapshots/hyperbolic/trust/2026-11-20.txt",
+      "snapshot_after": "data/snapshots/hyperbolic/trust/2026-11-24.txt"
+    }
+  ]
+}
