@@ -97,7 +97,9 @@ def is_volatile(line):
 
 def tidy_lines(text):
     lines = [" ".join(line.split()) for line in text.splitlines()]
-    lines = [line for line in lines if line]
+    # Volatile lines go first: "Updated 22 minutes ago" can sit between
+    # "Controls" and "View all".
+    lines = [line for line in lines if line and not is_volatile(line)]
     kept = []
     follows_rotating_heading = False
     in_controls_preview = False
@@ -109,7 +111,7 @@ def tidy_lines(text):
             in_controls_preview = line == "Controls"
         elif in_controls_preview and line != "View all":
             continue
-        if not follows_rotating_heading and not is_volatile(line):
+        if not follows_rotating_heading:
             kept.append(line)
         follows_rotating_heading = line in ROTATING_LIST_HEADINGS
     return "\n".join(kept) + "\n"
