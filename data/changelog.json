@@ -1,6 +1,28 @@
 {
   "entries": [
     {
+      "date": "2026-11-25",
+      "provider": "google-vertex-ai",
+      "kind": "policy",
+      "field": null,
+      "before": "TELUS International AI Inc.\nSpeech-to-Text\nAll\nVoice Transcription\nBulgaria, Finland, and India\n2251 South Decatur Boulevard, Las Vegas, NV 89102\nUnited States of America\n26-3123158(Tax ID)\nTELUS Corporation",
+      "after": "",
+      "source": "https://cloud.google.com/terms/subprocessors",
+      "snapshot_before": "data/snapshots/google-vertex-ai/subprocessors/2026-11-18.txt",
+      "snapshot_after": "data/snapshots/google-vertex-ai/subprocessors/2026-11-25.txt"
+    },
+    {
+      "date": "2026-11-25",
+      "provider": "google-vertex-ai",
+      "kind": "policy",
+      "field": null,
+      "before": "LXT AI Inc.\nSpeech-to-Text\nAll\nVoice Transcription\nCanada, India, Romania\n4312 Village Centre Court, Mississauga, Ontario, Canada, L4Z 1S2\nCanada\n892607-7\nLXT AI Global Holding CO",
+      "after": "",
+      "source": "https://cloud.google.com/terms/subprocessors",
+      "snapshot_before": "data/snapshots/google-vertex-ai/subprocessors/2026-11-18.txt",
+      "snapshot_after": "data/snapshots/google-vertex-ai/subprocessors/2026-11-25.txt"
+    },
+    {
       "date": "2026-11-24",
       "provider": "amazon-bedrock",
       "kind": "policy",

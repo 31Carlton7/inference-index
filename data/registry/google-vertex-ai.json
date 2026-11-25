@@ -1,6 +1,6 @@
 {
   "id": "google-vertex-ai",
-  "updated": "2026-11-18",
+  "updated": "2026-11-25",
   "fields": {
     "status": {
       "value": "live",
@@ -80,7 +80,7 @@
         "Virtusa SuperholdCo Inc"
       ],
       "source": "https://cloud.google.com/terms/subprocessors",
-      "checked": "2026-11-18",
+      "checked": "2026-11-25",
       "quote": "Google and its affiliates engage the third-party entities in the table below to perform limited activities in connection with the Google Cloud Platform Services.",
       "note": "These are the third-party rows listed for all Google Cloud Platform services or for Generative AI Services (technical support, data labeling, security risk detection); the page also lists Google affiliates, and no model publisher appears as a subprocessor."
     },
