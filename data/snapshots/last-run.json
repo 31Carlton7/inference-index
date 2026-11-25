@@ -47,7 +47,7 @@
       "provider": "fireworks",
       "page": "data_policy",
       "url": "https://docs.fireworks.ai/guides/security_compliance/data_handling",
-      "result": "changed"
+      "result": "already taken today"
     },
     {
       "provider": "fireworks",
@@ -221,7 +221,7 @@
       "provider": "google-vertex-ai",
       "page": "subprocessors",
       "url": "https://cloud.google.com/terms/subprocessors",
-      "result": "changed"
+      "result": "already taken today"
     },
     {
       "provider": "azure-ai-foundry",
