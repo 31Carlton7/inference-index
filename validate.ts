@@ -3,7 +3,7 @@
 
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
-import type { z } from "zod";
+import { z } from "zod";
 import {
   PROVIDER_URL_KEYS,
   REGISTRY_FIELDS,
@@ -177,6 +177,15 @@ for (const file of files) {
     requireKnownProvider(file, provider, "provider");
     const urlKeys = providerUrlKeys.get(provider);
     if (urlKeys && !urlKeys.has(page)) report(file, `"${page}" is not a key of ${provider}'s urls`);
+  }
+
+  if (parts[0] === "changelog-drafts") {
+    checkedFiles.add(file);
+    if (parts.length !== 2 || !/^\d{4}-\d{2}-\d{2}\.json$/.test(name)) {
+      report(file, "expected changelog-drafts/<date>.json");
+      continue;
+    }
+    checkFile(file, z.object({ entries: z.array(z.object({ provider: z.string(), before: z.string(), after: z.string() }).passthrough()) }));
   }
 
   if (file === "models.json") {

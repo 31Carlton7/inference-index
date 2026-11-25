@@ -135,6 +135,10 @@ The text of each policy page as fetched on that date. `<page>` is one of the `ur
 
 `data/snapshots/last-run.json` is the snapshot job's own log of its latest run. The site does not read it.
 
+## data/changelog-drafts/<date>.json
+
+The snapshot job's unreviewed differences for one day: `{ "entries": [...] }`, each with at least `provider`, `before` and `after`. These are working files. The site does not read them, nothing is published from them, and a draft becomes a changelog entry only when it is accepted in review. The file is removed once every draft in it has been accepted or rejected, so one that is present means a review is pending, not that something is wrong.
+
 ## data/models.json
 
 ```json
