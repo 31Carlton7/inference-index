@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-24",
+  "date": "2026-11-25",
   "pages": [
     {
       "provider": "together",
@@ -12,7 +12,8 @@
       "provider": "together",
       "page": "data_policy",
       "url": "https://docs.together.ai/docs/privacy-and-security",
-      "result": "already taken today"
+      "result": "unchanged",
+      "latest": "2026-11-24"
     },
     {
       "provider": "together",
@@ -25,7 +26,8 @@
       "provider": "together",
       "page": "trust",
       "url": "https://trust.together.ai/",
-      "result": "changed"
+      "result": "unchanged",
+      "latest": "2026-11-20"
     },
     {
       "provider": "together",
@@ -45,8 +47,7 @@
       "provider": "fireworks",
       "page": "data_policy",
       "url": "https://docs.fireworks.ai/guides/security_compliance/data_handling",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "changed"
     },
     {
       "provider": "fireworks",
@@ -59,7 +60,8 @@
       "provider": "fireworks",
       "page": "trust",
       "url": "https://trust.fireworks.ai/",
-      "result": "already taken today"
+      "result": "unchanged",
+      "latest": "2026-11-24"
     },
     {
       "provider": "fireworks",
@@ -170,13 +172,15 @@
       "provider": "amazon-bedrock",
       "page": "data_policy",
       "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html",
-      "result": "already taken today"
+      "result": "unchanged",
+      "latest": "2026-11-24"
     },
     {
       "provider": "amazon-bedrock",
       "page": "terms",
       "url": "https://aws.amazon.com/service-terms/",
-      "result": "already taken today"
+      "result": "unchanged",
+      "latest": "2026-11-24"
     },
     {
       "provider": "amazon-bedrock",
@@ -203,7 +207,8 @@
       "provider": "google-vertex-ai",
       "page": "terms",
       "url": "https://cloud.google.com/terms/service-terms",
-      "result": "already taken today"
+      "result": "unchanged",
+      "latest": "2026-11-24"
     },
     {
       "provider": "google-vertex-ai",
@@ -216,8 +221,7 @@
       "provider": "google-vertex-ai",
       "page": "subprocessors",
       "url": "https://cloud.google.com/terms/subprocessors",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "changed"
     },
     {
       "provider": "azure-ai-foundry",
@@ -286,7 +290,8 @@
       "provider": "novita",
       "page": "trust",
       "url": "https://trust.novita.ai/",
-      "result": "changed"
+      "result": "unchanged",
+      "latest": "2026-11-19"
     },
     {
       "provider": "novita",
@@ -320,7 +325,8 @@
       "provider": "sambanova",
       "page": "trust",
       "url": "https://trust.sambanova.ai/",
-      "result": "already taken today"
+      "result": "unchanged",
+      "latest": "2026-11-24"
     },
     {
       "provider": "sambanova",
@@ -368,31 +374,36 @@
       "provider": "baseten",
       "page": "privacy",
       "url": "https://www.baseten.co/privacy-policy/",
-      "result": "already taken today"
+      "result": "unchanged",
+      "latest": "2026-11-24"
     },
     {
       "provider": "baseten",
       "page": "data_policy",
       "url": "https://docs.baseten.co/security",
-      "result": "already taken today"
+      "result": "unchanged",
+      "latest": "2026-11-24"
     },
     {
       "provider": "baseten",
       "page": "terms",
       "url": "https://www.baseten.co/terms-and-conditions/",
-      "result": "already taken today"
+      "result": "unchanged",
+      "latest": "2026-11-24"
     },
     {
       "provider": "baseten",
       "page": "trust",
       "url": "https://trust.baseten.co/",
-      "result": "already taken today"
+      "result": "unchanged",
+      "latest": "2026-11-24"
     },
     {
       "provider": "baseten",
       "page": "subprocessors",
       "url": "https://trust.baseten.co/subprocessors",
-      "result": "already taken today"
+      "result": "unchanged",
+      "latest": "2026-11-24"
     },
     {
       "provider": "hyperbolic",
@@ -419,7 +430,8 @@
       "provider": "hyperbolic",
       "page": "trust",
       "url": "https://trust.hyperbolic.ai/",
-      "result": "changed"
+      "result": "unchanged",
+      "latest": "2026-11-20"
     },
     {
       "provider": "hyperbolic",
