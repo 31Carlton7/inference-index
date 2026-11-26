@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-25",
+  "date": "2026-11-26",
   "pages": [
     {
       "provider": "together",
@@ -47,7 +47,8 @@
       "provider": "fireworks",
       "page": "data_policy",
       "url": "https://docs.fireworks.ai/guides/security_compliance/data_handling",
-      "result": "already taken today"
+      "result": "unchanged",
+      "latest": "2026-11-25"
     },
     {
       "provider": "fireworks",
@@ -130,8 +131,7 @@
       "provider": "deepinfra",
       "page": "trust",
       "url": "https://trust.deepinfra.com/",
-      "result": "unchanged",
-      "latest": "2026-11-20"
+      "result": "changed"
     },
     {
       "provider": "deepinfra",
@@ -221,7 +221,8 @@
       "provider": "google-vertex-ai",
       "page": "subprocessors",
       "url": "https://cloud.google.com/terms/subprocessors",
-      "result": "already taken today"
+      "result": "unchanged",
+      "latest": "2026-11-25"
     },
     {
       "provider": "azure-ai-foundry",
@@ -283,8 +284,7 @@
       "provider": "novita",
       "page": "terms",
       "url": "https://novita.ai/legal/terms-of-service",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "changed"
     },
     {
       "provider": "novita",
@@ -297,8 +297,7 @@
       "provider": "novita",
       "page": "subprocessors",
       "url": "https://trust.novita.ai/subprocessors",
-      "result": "unchanged",
-      "latest": "2026-11-23"
+      "result": "changed"
     },
     {
       "provider": "sambanova",
@@ -339,8 +338,7 @@
       "provider": "nebius",
       "page": "privacy",
       "url": "https://docs.nebius.com/legal/privacy",
-      "result": "unchanged",
-      "latest": "2026-11-18"
+      "result": "changed"
     },
     {
       "provider": "nebius",
