@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-26",
+  "date": "2026-11-27",
   "pages": [
     {
       "provider": "together",
@@ -131,7 +131,8 @@
       "provider": "deepinfra",
       "page": "trust",
       "url": "https://trust.deepinfra.com/",
-      "result": "changed"
+      "result": "unchanged",
+      "latest": "2026-11-26"
     },
     {
       "provider": "deepinfra",
@@ -277,14 +278,14 @@
       "provider": "novita",
       "page": "data_policy",
       "url": "https://trust.novita.ai/faq",
-      "result": "unchanged",
-      "latest": "2026-11-19"
+      "result": "changed"
     },
     {
       "provider": "novita",
       "page": "terms",
       "url": "https://novita.ai/legal/terms-of-service",
-      "result": "changed"
+      "result": "unchanged",
+      "latest": "2026-11-26"
     },
     {
       "provider": "novita",
@@ -297,7 +298,8 @@
       "provider": "novita",
       "page": "subprocessors",
       "url": "https://trust.novita.ai/subprocessors",
-      "result": "changed"
+      "result": "unchanged",
+      "latest": "2026-11-26"
     },
     {
       "provider": "sambanova",
@@ -338,7 +340,8 @@
       "provider": "nebius",
       "page": "privacy",
       "url": "https://docs.nebius.com/legal/privacy",
-      "result": "changed"
+      "result": "unchanged",
+      "latest": "2026-11-26"
     },
     {
       "provider": "nebius",

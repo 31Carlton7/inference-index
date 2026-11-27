@@ -1,0 +1,28 @@
+{
+  "entries": [
+    {
+      "date": "2026-11-27",
+      "provider": "novita",
+      "kind": "policy",
+      "field": null,
+      "page": "data_policy",
+      "before": "• API inputs & outputs: Processed transiently for inference only. Not retained beyond the time required to generate and deliver Output, except where required by applicable law. Zero Data Retention is the default for all endpoints, including serverless API calls.",
+      "after": "• API inputs & outputs: Processed transiently for inference only. Not retained beyond the time required to generate and deliver Output, except where required by applicable law. For clarity, this commitment applies solely to Novita AI’s own processing of your content in connection with Novita-Managed Models. It does not apply to your content submitted to, or processed through, Third-Party APIs, which is subject to the applicable Model Terms and the relevant third-party provider’s own policies. A list of Third-Party APIs and links to the applicable Model Terms is maintained at https://novita.ai/models and may be updated from time to time.",
+      "source": "https://trust.novita.ai/faq",
+      "snapshot_before": "data/snapshots/novita/data_policy/2026-11-19.txt",
+      "snapshot_after": "data/snapshots/novita/data_policy/2026-11-27.txt"
+    },
+    {
+      "date": "2026-11-27",
+      "provider": "novita",
+      "kind": "policy",
+      "field": null,
+      "page": "data_policy",
+      "before": "Our no-retention commitment applies to the substantive content of your API inputs and outputs across all endpoints, including serverless API calls. Technical metadata for operational purposes (e.g., request timestamps, error codes, usage metrics) is handled as described in our Privacy Policy and applicable Data Processing Agreement.",
+      "after": "Technical metadata for operational purposes (e.g., request timestamps, error codes, usage metrics) is handled as described in our Privacy Policy and applicable Data Processing Agreement.",
+      "source": "https://trust.novita.ai/faq",
+      "snapshot_before": "data/snapshots/novita/data_policy/2026-11-19.txt",
+      "snapshot_after": "data/snapshots/novita/data_policy/2026-11-27.txt"
+    }
+  ]
+}
